@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Apologetics Nigeria — Give a reason for the hope</title>
+<meta name="description" content="Apologetics Nigeria partners with churches, pastors, and ministry groups to equip believers to defend the faith and share the gospel — with clarity, confidence, and joy." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#17130E;
+    --ink-soft:#211B14;
+    --parchment:#F4EEE2;
+    --parchment-2:#EDE5D5;
+    --gold:#A8862B;
+    --gold-bright:#D3A63D;
+    --stone:#6E6457;
+    --stone-light:#A99F8E;
+    --line-dark:rgba(244,238,226,.14);
+    --line-light:rgba(23,19,14,.12);
+    --maxw:1200px;
+    --pad-sec:clamp(4.5rem,10vw,9rem);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    background:var(--parchment);
+    color:var(--ink);
+    font-family:"Inter",system-ui,sans-serif;
+    font-size:clamp(1rem,.55vw + .9rem,1.075rem);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--gold);color:var(--parchment)}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.25rem,5vw,2.75rem)}
+
+  .eyebrow{
+    font-family:"JetBrains Mono",monospace;
+    font-size:.72rem;font-weight:500;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--gold);
+    display:inline-flex;align-items:center;gap:.6rem;
+  }
+  .eyebrow::before{content:"";width:1.6rem;height:1px;background:var(--gold);display:inline-block}
+  section.dark .eyebrow{color:var(--gold-bright)}
+
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:400;line-height:1.04;letter-spacing:-.015em}
+  .display{font-size:clamp(2.7rem,7.5vw,6rem);font-weight:380}
+  .h2{font-size:clamp(2rem,4.6vw,3.5rem);font-weight:400}
+  .lede{font-size:clamp(1.15rem,1.4vw,1.45rem);line-height:1.55;color:var(--stone)}
+  section.dark .lede{color:var(--stone-light)}
+  em.acc{font-style:italic;color:var(--gold)}
+  section.dark em.acc{color:var(--gold-bright)}
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    transition:background .4s ease,border-color .4s ease,backdrop-filter .4s ease;
+    border-bottom:1px solid transparent;
+  }
+  header.nav.scrolled{
+    background:rgba(244,238,226,.86);
+    backdrop-filter:saturate(140%) blur(12px);
+    border-bottom:1px solid var(--line-light);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:inline-flex;align-items:center;gap:.6rem}
+  .brand-logo{height:38px;width:auto;display:block;transition:filter .4s}
+  .brand-text{font-family:"Fraunces",serif;font-size:1.18rem;font-weight:500;letter-spacing:-.01em;color:var(--parchment);transition:color .4s}
+  .brand-text b{color:var(--gold-bright);font-weight:500}
+  header.nav.scrolled .brand-text{color:var(--ink)}
+  header.nav.scrolled .brand-text b{color:var(--gold)}
+  .nav-links{display:flex;align-items:center;gap:2.1rem}
+  .nav-links a.lk{
+    font-family:"JetBrains Mono",monospace;font-size:.74rem;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--parchment);opacity:.82;transition:opacity .25s,color .4s;
+  }
+  header.nav.scrolled .nav-links a.lk{color:var(--ink)}
+  .nav-links a.lk:hover{opacity:1;color:var(--gold-bright)}
+  header.nav.scrolled .nav-links a.lk:hover{color:var(--gold)}
+  .btn{
+    font-family:"JetBrains Mono",monospace;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;
+    font-weight:500;padding:.7rem 1.3rem;border-radius:100px;border:1px solid currentColor;
+    display:inline-flex;align-items:center;gap:.5rem;transition:all .25s ease;cursor:pointer;white-space:nowrap;
+  }
+  .btn-gold{background:var(--gold);color:#1a1408;border-color:var(--gold)}
+  .btn-gold:hover{background:var(--gold-bright);border-color:var(--gold-bright);transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:var(--parchment)}
+  .btn-ghost:hover{background:var(--parchment);color:var(--ink);transform:translateY(-2px)}
+  header.nav.scrolled .btn-ghost{color:var(--ink)}
+  header.nav.scrolled .btn-ghost:hover{background:var(--ink);color:var(--parchment)}
+  .nav-toggle{display:none;background:none;border:none;cursor:pointer;width:30px;height:22px;position:relative}
+  .nav-toggle span{position:absolute;left:0;width:100%;height:2px;background:var(--parchment);transition:all .3s}
+  header.nav.scrolled .nav-toggle span{background:var(--ink)}
+  .nav-toggle span:nth-child(1){top:0}
+  .nav-toggle span:nth-child(2){top:10px}
+  .nav-toggle span:nth-child(3){top:20px}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:var(--ink);color:var(--parchment);position:relative;
+    min-height:100svh;display:flex;align-items:center;
+    padding:140px 0 80px;overflow:hidden;
+  }
+  .hero::after{ /* subtle vignette + grain feel via radial */
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(120% 80% at 85% 10%,rgba(211,166,61,.10),transparent 55%),
+              radial-gradient(90% 70% at 0% 100%,rgba(211,166,61,.06),transparent 60%);
+  }
+  .hero .wrap{position:relative;z-index:2;width:100%}
+  .hero .eyebrow{margin-bottom:2rem}
+  .hero h1{max-width:16ch;margin-bottom:1.9rem}
+  .hero .lede{max-width:46ch;margin-bottom:2.6rem}
+  .hero-cta{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+  .hero-foot{
+    position:absolute;left:0;right:0;bottom:1.8rem;z-index:2;
+  }
+  .hero-foot .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+  .verse-note{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.08em;color:var(--stone-light)}
+  .verse-note b{color:var(--gold-bright);font-weight:500}
+  .scroll-hint{font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--stone-light);display:flex;align-items:center;gap:.6rem}
+  .scroll-hint .ln{width:34px;height:1px;background:var(--stone-light);position:relative;overflow:hidden}
+  .scroll-hint .ln::after{content:"";position:absolute;inset:0;background:var(--gold-bright);transform:translateX(-100%);animation:slide 2.4s ease-in-out infinite}
+  @keyframes slide{0%{transform:translateX(-100%)}50%{transform:translateX(0)}100%{transform:translateX(100%)}}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:var(--pad-sec) 0}
+  section.dark{background:var(--ink);color:var(--parchment)}
+  section.tint{background:var(--parchment-2)}
+  .sec-head{max-width:62ch}
+  .sec-head .eyebrow{margin-bottom:1.5rem}
+  .sec-head h2{margin-bottom:1.4rem}
+
+  /* VISION */
+  .vision-grid{display:grid;grid-template-columns:1fr;gap:2.2rem;margin-top:1rem}
+  .pullquote{
+    font-family:"Fraunces",serif;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1.28;font-weight:380;
+    border-left:3px solid var(--gold);padding-left:1.6rem;color:var(--ink);max-width:30ch;
+  }
+  section.dark .pullquote{color:var(--parchment);border-left-color:var(--gold-bright)}
+  .vision-body{max-width:60ch}
+  .vision-body p{margin-bottom:1.1rem;color:var(--stone)}
+  @media(min-width:880px){
+    .vision-grid{grid-template-columns:1.05fr .95fr;gap:4rem;align-items:start}
+  }
+
+  /* NEED — stats */
+  .need-lede{max-width:30ch;margin-bottom:clamp(3rem,6vw,5rem);font-family:"Fraunces",serif;font-size:clamp(1.7rem,3.4vw,2.7rem);line-height:1.22;font-weight:360}
+  .stat{
+    display:grid;grid-template-columns:1fr;gap:.6rem;
+    padding:clamp(2rem,4vw,3rem) 0;border-top:1px solid var(--line-dark);
+  }
+  .stat:last-of-type{border-bottom:1px solid var(--line-dark)}
+  .stat .num{font-family:"Fraunces",serif;font-weight:340;font-size:clamp(3.6rem,12vw,8.5rem);line-height:.9;color:var(--gold-bright);letter-spacing:-.02em}
+  .stat .txt{max-width:42ch}
+  .stat .txt p{font-size:clamp(1.05rem,1.3vw,1.25rem);color:var(--parchment);margin-bottom:.7rem;line-height:1.4}
+  .stat .src{font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--stone-light)}
+  @media(min-width:760px){
+    .stat{grid-template-columns:minmax(0,4.2fr) minmax(0,5.8fr);gap:2.5rem;align-items:center}
+  }
+  .need-foot{margin-top:clamp(2.5rem,5vw,4rem);font-family:"Fraunces",serif;font-size:clamp(1.3rem,2.2vw,1.85rem);line-height:1.34;font-weight:360;max-width:34ch;color:var(--parchment)}
+  .need-foot em{color:var(--gold-bright);font-style:italic}
+
+  /* HOW WE WORK */
+  .work-list{margin-top:clamp(2rem,4vw,3.5rem);border-top:1px solid var(--line-light)}
+  .work-item{
+    display:grid;grid-template-columns:1fr;gap:.5rem;
+    padding:clamp(1.6rem,3vw,2.3rem) 0;border-bottom:1px solid var(--line-light);
+    transition:padding-left .3s ease;
+  }
+  .work-item:hover{padding-left:.8rem}
+  .work-item .tag{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);padding-top:.35rem}
+  .work-item .desc{max-width:60ch}
+  .work-item .desc h3{font-size:clamp(1.3rem,2vw,1.7rem);margin-bottom:.4rem;font-weight:400}
+  .work-item .desc p{color:var(--stone)}
+  @media(min-width:760px){
+    .work-item{grid-template-columns:minmax(0,3fr) minmax(0,7fr);gap:2.5rem;align-items:baseline}
+  }
+
+  /* CURRICULUM CTA */
+  .ccta-inner{display:flex;flex-direction:column;gap:2rem;align-items:flex-start}
+  .ccta-text{max-width:64ch}
+  .ccta-text .eyebrow{margin-bottom:1.4rem}
+  .ccta-text h2{margin-bottom:1.2rem}
+  .ccta-lede{max-width:62ch}
+  .ccta-action{flex-shrink:0}
+  .btn-dark{background:var(--ink);color:var(--parchment);border-color:var(--ink)}
+  .btn-dark:hover{background:transparent;color:var(--ink);transform:translateY(-2px)}
+  @media(min-width:900px){
+    .ccta-inner{flex-direction:row;justify-content:space-between;align-items:flex-end;gap:3rem}
+  }
+
+  /* SCRIPTURE */
+  .scripture{background:var(--ink);color:var(--parchment);text-align:center}
+  .scripture .wrap{max-width:980px}
+  .scripture blockquote{font-family:"Fraunces",serif;font-weight:340;font-size:clamp(1.6rem,4vw,3rem);line-height:1.3;letter-spacing:-.01em}
+  .scripture blockquote em{font-style:italic;color:var(--gold-bright)}
+  .scripture cite{display:block;margin-top:1.8rem;font-family:"JetBrains Mono",monospace;font-style:normal;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--stone-light)}
+
+  /* PARTNER + GIVE */
+  .ways{display:grid;grid-template-columns:1fr;gap:1.6rem;margin-top:clamp(2rem,4vw,3rem)}
+  .way{padding:1.8rem 0;border-top:2px solid var(--ink)}
+  .way .wnum{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+  .way h3{font-size:clamp(1.4rem,2vw,1.8rem);font-weight:400;margin:.7rem 0 .5rem}
+  .way p{color:var(--stone);max-width:34ch}
+  @media(min-width:760px){.ways{grid-template-columns:repeat(3,1fr);gap:2.5rem}}
+
+  .give{margin-top:clamp(3.5rem,7vw,6rem);background:var(--ink);color:var(--parchment);border-radius:18px;padding:clamp(2rem,5vw,3.6rem);position:relative;overflow:hidden}
+  .give::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(80% 120% at 100% 0%,rgba(211,166,61,.12),transparent 55%)}
+  .give .gwrap{position:relative;z-index:2}
+  .give .eyebrow{color:var(--gold-bright);margin-bottom:1.3rem}
+  .give h3{font-size:clamp(1.7rem,3.2vw,2.6rem);font-weight:380;margin-bottom:1rem;max-width:20ch}
+  .give .gnote{color:var(--stone-light);max-width:54ch;margin-bottom:2rem}
+  .give-cta{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;margin-bottom:2.6rem}
+  .give-cta .micro{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.06em;color:var(--stone-light)}
+  .give-foot{margin-top:1.5rem;font-family:"Fraunces",serif;font-style:italic;font-size:clamp(1.05rem,1.6vw,1.25rem);color:var(--gold-bright);line-height:1.4}
+  .give-foot .ast{font-style:normal;opacity:.8;margin-right:.15rem}
+
+  /* FOOTER / CONTACT */
+  footer.site{background:var(--ink);color:var(--parchment);padding:clamp(4rem,8vw,7rem) 0 2.5rem;border-top:1px solid var(--line-dark)}
+  .foot-top{display:grid;grid-template-columns:1fr;gap:2.5rem;margin-bottom:clamp(3rem,6vw,5rem)}
+  .foot-top h2{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:380;max-width:14ch}
+  .foot-contact{display:flex;flex-direction:column;gap:1.1rem}
+  .foot-contact a,.foot-contact span{display:flex;align-items:center;gap:.8rem;font-family:"JetBrains Mono",monospace;font-size:.82rem;letter-spacing:.05em;color:var(--parchment);overflow-wrap:anywhere}
+  .foot-contact a:hover{color:var(--gold-bright)}
+  .foot-contact .k{color:var(--stone-light);text-transform:uppercase;font-size:.7rem;letter-spacing:.12em;min-width:8.5rem;flex-shrink:0}
+  @media(min-width:820px){.foot-top{grid-template-columns:1.3fr 1fr;align-items:start;gap:4rem}}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding-top:2rem;border-top:1px solid var(--line-dark)}
+  .foot-tag{font-family:"Fraunces",serif;font-style:italic;font-size:1rem;color:var(--stone-light);max-width:42ch}
+  .foot-copy{font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stone-light)}
+
+  /* ---------- SMALL SCREENS ---------- */
+  @media(max-width:540px){
+    .hero{min-height:auto;padding:120px 0 56px;flex-direction:column;justify-content:center;align-items:stretch}
+    .hero-foot{position:static;margin-top:2.6rem}
+    .hero-foot .wrap{flex-direction:column;flex-wrap:nowrap;align-items:flex-start;gap:1rem}
+    .verse-note{width:100%;overflow-wrap:anywhere}
+    .hero .lede{margin-bottom:2.1rem}
+    .hero-cta{width:100%}
+    .hero-cta .btn{flex:1;justify-content:center}
+    .foot-contact a,.foot-contact span{flex-wrap:wrap;gap:.2rem .7rem}
+    .foot-contact .k{min-width:0}
+    .stat .num{line-height:.92}
+    .give{border-radius:14px}
+  }
+  @media(max-width:380px){
+    .display{font-size:2.45rem}
+    .stat .num{font-size:3.1rem}
+  }
+
+  /* ---------- MOBILE NAV ---------- */
+  @media(max-width:880px){
+    .nav-links{
+      position:fixed;inset:0;background:var(--ink);flex-direction:column;justify-content:center;
+      gap:2rem;transform:translateY(-100%);transition:transform .45s cubic-bezier(.7,0,.2,1);
+    }
+    .nav-links.open{transform:translateY(0)}
+    .nav-links a.lk{font-size:1.1rem;color:var(--parchment)!important}
+    .nav-links .btn{font-size:.9rem}
+    .nav-toggle{display:block;z-index:120}
+    .nav-toggle.open span{background:var(--parchment)}
+    .nav-toggle.open span:nth-child(1){top:10px;transform:rotate(45deg)}
+    .nav-toggle.open span:nth-child(2){opacity:0}
+    .nav-toggle.open span:nth-child(3){top:10px;transform:rotate(-45deg)}
+  }
+
+  /* ---------- REVEAL ANIM ---------- */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.6,.2,1),transform .8s cubic-bezier(.2,.6,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+  .hero .reveal{transform:translateY(34px)}
+
+  :focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+    .reveal{opacity:1;transform:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand" aria-label="Apologetics Nigeria — home">
+      <img src="logo.png" alt="Apologetics Nigeria" class="brand-logo" id="brandLogo"
+           onload="var t=document.getElementById('brandText'); if(t){t.style.display='none';}"
+           onerror="this.remove();" />
+      <span class="brand-text" id="brandText">Apologetics<b>.</b>NG</span>
+    </a>
+    <nav class="nav-links" id="navlinks">
+      <a href="#vision" class="lk">Vision</a>
+      <a href="#need" class="lk">The&nbsp;Need</a>
+      <a href="#work" class="lk">How&nbsp;We&nbsp;Work</a>
+      <a href="#partner" class="lk">Partner</a>
+      <a href="#give" class="btn btn-gold">Give</a>
+    </nav>
+    <button class="nav-toggle" id="navtoggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <p class="eyebrow reveal">Non-denominational apologetics · Nigeria</p>
+    <h1 class="display reveal d1">Give a <em class="acc">reason</em> for the hope.</h1>
+    <p class="lede reveal d2">We partner with churches, pastors, and ministry groups to equip believers to defend the faith and share the gospel — with clarity, confidence, and joy.</p>
+    <div class="hero-cta reveal d3">
+      <a href="#partner" class="btn btn-gold">Partner with us</a>
+      <a href="#give" class="btn btn-ghost">Support the work</a>
+    </div>
+  </div>
+  <div class="hero-foot">
+    <div class="wrap">
+      <span class="verse-note">1 PETER 3:15 — <b>“…always be prepared to give an answer.”</b></span>
+      <span class="scroll-hint">Scroll <span class="ln"></span></span>
+    </div>
+  </div>
+</section>
+
+<!-- VISION -->
+<section id="vision">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">The vision</p>
+      <h2 class="h2">We build conviction <em class="acc">inside</em> the local church.</h2>
+    </div>
+    <div class="vision-grid">
+      <div class="vision-body reveal">
+        <p>Apologetics Nigeria exists to build apologetics capacity where believers already serve — so that every partner church becomes a place where hard questions are welcomed, faith is grounded, and the gospel is shared with conviction.</p>
+        <p>We don't pull believers out of their churches. We come alongside the church, equip its people, and leave it stronger from the inside.</p>
+      </div>
+      <p class="pullquote reveal d1">Defending the faith isn't fearful. Done well, it deepens a believer's own joy.</p>
+    </div>
+  </div>
+</section>
+
+<!-- NEED -->
+<section class="dark" id="need">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">The need · why now</p>
+    </div>
+    <p class="need-lede reveal">Nigeria has no shortage of Christianity. It has a shortage of <em class="acc">grounding</em>.</p>
+
+    <div class="stat reveal">
+      <div class="num" data-count="39" data-suffix="%">39%</div>
+      <div class="txt">
+        <p>The share of Nigeria's population projected to be Christian by 2050 — down from roughly 43–46% today, as the Muslim share rises toward 58%.</p>
+        <p class="src">Source — Pew Research Center</p>
+      </div>
+    </div>
+
+    <div class="stat reveal">
+      <div class="num">80–90%</div>
+      <div class="txt">
+        <p>Of pastors and church leaders across Africa have little or no formal biblical or theological training. Where training is scarce, false teaching meets little resistance.</p>
+        <p class="src">Source — World Evangelical Alliance · Langham Partnership</p>
+      </div>
+    </div>
+
+    <div class="stat reveal">
+      <div class="num" style="font-size:clamp(2.6rem,7vw,5.5rem)">Rising</div>
+      <div class="txt">
+        <p>Irreligion among young Nigerians — sharpest among men under 30 — driven not by science, but by disillusionment with a faith many were never truly taught.</p>
+        <p class="src">Source — World Values Survey, 2025</p>
+      </div>
+    </div>
+
+    <p class="need-foot reveal">A faith inherited but not understood does not survive the questions of a <em>new generation</em>.</p>
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">How we work</p>
+      <h2 class="h2">Small, faithful, and built to last.</h2>
+    </div>
+    <div class="work-list">
+      <div class="work-item reveal">
+        <span class="tag">The church first</span>
+        <div class="desc"><h3>We serve, not compete</h3><p>We equip a church's own people and leave the capability inside the church — never gathering a following of our own.</p></div>
+      </div>
+      <div class="work-item reveal">
+        <span class="tag">Train the trainers</span>
+        <div class="desc"><h3>Multiply through leaders</h3><p>Wherever possible we equip existing leaders to carry apologetics forward themselves, so a small team can strengthen many congregations.</p></div>
+      </div>
+      <div class="work-item reveal">
+        <span class="tag">Curriculum</span>
+        <div class="desc"><h3>A clear foundations track</h3><p>Twelve weeks moving from the existence of God, through the person and work of Jesus, to engaging Islam and atheism and starting real conversations.</p></div>
+      </div>
+      <div class="work-item reveal">
+        <span class="tag">Media engine</span>
+        <div class="desc"><h3>Reach a generation online</h3><p>Films, a podcast, courses, and social content — so the teaching reaches those who live online, not only those in the room.</p></div>
+      </div>
+      <div class="work-item reveal">
+        <span class="tag">Little by little</span>
+        <div class="desc"><h3>Grown on proven fruit</h3><p>A few committed partner churches first, real fruit documented, then expansion only on a foundation that has proven solid.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM CTA -->
+<section class="tint" id="curriculum">
+  <div class="wrap ccta-inner">
+    <div class="ccta-text">
+      <p class="eyebrow">The curriculum</p>
+      <h2 class="h2">A complete 12-week curriculum — <em class="acc">yours when you partner</em>.</h2>
+      <p class="lede ccta-lede">We teach a clear, structured foundations track — from the existence of God to engaging Islam and atheism and starting real conversations — contextualised for the questions Nigerians are actually asking. Reach out and we'll walk you through the full outline.</p>
+    </div>
+    <div class="ccta-action">
+      <a href="#contact" class="btn btn-dark">Request the curriculum →</a>
+    </div>
+  </div>
+</section>
+
+<!-- SCRIPTURE -->
+<section class="scripture">
+  <div class="wrap">
+    <blockquote class="reveal">Always be prepared to give an answer to everyone who asks you to give the reason for the hope that you have. But do this with <em>gentleness and respect</em>.</blockquote>
+    <cite class="reveal d1">1 Peter 3:15</cite>
+  </div>
+</section>
+
+<!-- PARTNER + GIVE -->
+<section id="partner">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Stand with us</p>
+      <h2 class="h2">Three ways to partner.</h2>
+    </div>
+    <div class="ways">
+      <div class="way reveal">
+        <span class="wnum">01 / Invite</span>
+        <h3>Open the door</h3>
+        <p>Host training, a workshop, or a conversation for the believers and leaders in your church or ministry.</p>
+      </div>
+      <div class="way reveal d1">
+        <span class="wnum">02 / Pray</span>
+        <h3>Stand in the gap</h3>
+        <p>Pray for grounded believers, a defended faith, and a generation that can give a reason for its hope.</p>
+      </div>
+      <div class="way reveal d2">
+        <span class="wnum">03 / Give</span>
+        <h3>Fuel the work</h3>
+        <p>Support with a one-off gift, a monthly partnership, or by sponsoring a specific training, film, or resource.</p>
+      </div>
+    </div>
+
+    <!-- GIVE -->
+    <div class="give" id="give">
+      <div class="gwrap">
+        <p class="eyebrow">Give &amp; sponsor</p>
+        <h3>Help equip a generation to stand.</h3>
+        <p class="gnote">Recurring monthly partnership is the most valuable kind of support — it gives the work stability — while sponsorships let us take on larger projects. As our registration with the Corporate Affairs Commission (CAC) is completed, a dedicated ministry account will follow.</p>
+        <div class="give-cta">
+          <a href="https://revolut.me/adenirtmtv" target="_blank" rel="noopener" class="btn btn-gold">Give here →</a>
+        </div>
+        <p class="give-foot"><span class="ast">*</span> Every penny goes into the spread of the gospel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site" id="contact">
+  <div class="wrap">
+    <div class="foot-top">
+      <h2 class="reveal">Let's talk about your church.</h2>
+      <div class="foot-contact reveal d1">
+        <a href="mailto:hello@apologeticsnigeria.org"><span class="k">Email</span> hello@apologeticsnigeria.org</a>
+        <a href="#"><span class="k">WhatsApp</span> + [ your number ]</a>
+        <a href="#"><span class="k">TikTok</span> @apologeticsnigeria</a>
+        <span><span class="k">Based in</span> Lagos, Nigeria</span>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p class="foot-tag">Grounded believers · defended faith · a generation that can give a reason for its hope.</p>
+      <p class="foot-copy">© 2026 Apologetics Nigeria</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // sticky nav state
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  // mobile menu
+  const toggle = document.getElementById('navtoggle');
+  const links = document.getElementById('navlinks');
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    links.classList.remove('open'); toggle.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false'); document.body.style.overflow='';
+  }));
+
+  // reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.12, rootMargin:'0px 0px -6% 0px'});
+  revealEls.forEach(el => io.observe(el));
+  // safety net: nothing should ever remain invisible
+  setTimeout(() => revealEls.forEach(el => el.classList.add('in')), 2600);
+
+  // hero load-in
+  window.addEventListener('load', () => {
+    document.querySelectorAll('.hero .reveal').forEach(el => el.classList.add('in'));
+  });
+
+  // count-up for the 39% stat
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const counter = document.querySelector('.num[data-count]');
+  if(counter && !prefersReduced){
+    const target = +counter.dataset.count, suffix = counter.dataset.suffix || '';
+    const cio = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if(e.isIntersecting){
+          let cur = 0; const step = Math.max(1, Math.round(target/40));
+          const tick = () => { cur = Math.min(target, cur+step); counter.textContent = cur+suffix; if(cur<target) requestAnimationFrame(tick); };
+          tick(); cio.unobserve(e.target);
+        }
+      });
+    }, {threshold:.6});
+    cio.observe(counter);
+  }
+</script>
+</body>
+</html>
