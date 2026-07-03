@@ -10,16 +10,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
   :root{
-    --ink:#17130E;
-    --ink-soft:#211B14;
-    --parchment:#F4EEE2;
-    --parchment-2:#EDE5D5;
+    --ink:#0F0F0F;
+    --ink-soft:#181818;
+    --parchment:#FFFFFF;
+    --parchment-2:#F4F4F3;
     --gold:#A8862B;
     --gold-bright:#D3A63D;
-    --stone:#6E6457;
-    --stone-light:#A99F8E;
-    --line-dark:rgba(244,238,226,.14);
-    --line-light:rgba(23,19,14,.12);
+    --stone:#585858;
+    --stone-light:#9A9A9A;
+    --line-dark:rgba(255,255,255,.14);
+    --line-light:rgba(0,0,0,.12);
     --maxw:1200px;
     --pad-sec:clamp(4.5rem,10vw,9rem);
   }
@@ -65,7 +65,7 @@
     border-bottom:1px solid transparent;
   }
   header.nav.scrolled{
-    background:rgba(244,238,226,.86);
+    background:rgba(255,255,255,.88);
     backdrop-filter:saturate(140%) blur(12px);
     border-bottom:1px solid var(--line-light);
   }
@@ -89,7 +89,7 @@
     font-weight:500;padding:.7rem 1.3rem;border-radius:100px;border:1px solid currentColor;
     display:inline-flex;align-items:center;gap:.5rem;transition:all .25s ease;cursor:pointer;white-space:nowrap;
   }
-  .btn-gold{background:var(--gold);color:#1a1408;border-color:var(--gold)}
+  .btn-gold{background:var(--gold);color:#141414;border-color:var(--gold)}
   .btn-gold:hover{background:var(--gold-bright);border-color:var(--gold-bright);transform:translateY(-2px)}
   .btn-ghost{background:transparent;color:var(--parchment)}
   .btn-ghost:hover{background:var(--parchment);color:var(--ink);transform:translateY(-2px)}
@@ -234,6 +234,42 @@
   .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding-top:2rem;border-top:1px solid var(--line-dark)}
   .foot-tag{font-family:"Fraunces",serif;font-style:italic;font-size:1rem;color:var(--stone-light);max-width:42ch}
   .foot-copy{font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stone-light)}
+
+  /* ---------- CONTACT + FORM ---------- */
+  .contact{background:var(--ink);color:var(--parchment)}
+  .contact-grid{display:grid;grid-template-columns:1fr;gap:clamp(2.5rem,5vw,4rem)}
+  .contact-intro .eyebrow{margin-bottom:1.3rem}
+  .contact-intro h2{margin-bottom:1.2rem}
+  .contact-lede{max-width:40ch;margin-bottom:2.2rem;color:var(--stone-light)}
+  .contact-methods{display:flex;flex-direction:column;gap:1rem}
+  .contact-methods a,.contact-methods span{display:flex;gap:.8rem;font-family:"JetBrains Mono",monospace;font-size:.82rem;letter-spacing:.04em;color:var(--parchment);overflow-wrap:anywhere}
+  .contact-methods a:hover{color:var(--gold-bright)}
+  .contact-methods .k{color:var(--stone-light);text-transform:uppercase;font-size:.7rem;letter-spacing:.12em;min-width:7.5rem;flex-shrink:0}
+  @media(min-width:900px){.contact-grid{grid-template-columns:.92fr 1.08fr;gap:5rem;align-items:start}}
+
+  .contact-form{display:flex;flex-direction:column;gap:1.25rem}
+  .field{display:flex;flex-direction:column;gap:.5rem}
+  .field label{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stone-light)}
+  .field label .opt{text-transform:none;letter-spacing:0;opacity:.7}
+  .field input,.field select,.field textarea{
+    width:100%;background:transparent;border:1px solid var(--line-dark);border-radius:9px;
+    padding:.85rem 1rem;color:var(--parchment);font-family:"Inter",sans-serif;font-size:1rem;line-height:1.4;
+    transition:border-color .25s ease,background .25s ease;
+  }
+  .field textarea{resize:vertical;min-height:130px}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold-bright);background:rgba(255,255,255,.035)}
+  .field input:-webkit-autofill{-webkit-text-fill-color:var(--parchment);transition:background-color 9999s}
+  .select-wrap{position:relative}
+  .select-wrap::after{content:"";position:absolute;right:1rem;top:50%;width:.55rem;height:.55rem;border-right:2px solid var(--gold-bright);border-bottom:2px solid var(--gold-bright);transform:translateY(-70%) rotate(45deg);pointer-events:none}
+  .field select{appearance:none;-webkit-appearance:none;cursor:pointer;padding-right:2.4rem}
+  .field select option{color:#111;background:#fff}
+  .contact-form .btn{align-self:flex-start;margin-top:.4rem;cursor:pointer}
+  .form-status{font-family:"JetBrains Mono",monospace;font-size:.8rem;letter-spacing:.02em;min-height:1.2em;line-height:1.4}
+  .form-status.ok{color:var(--gold-bright)}
+  .form-status.err{color:#e79a9a}
+
+  footer.site{background:var(--ink);color:var(--parchment);padding:2.6rem 0;border-top:1px solid var(--line-dark)}
+  footer.site .foot-bottom{border-top:none;padding-top:0}
 
   /* ---------- SMALL SCREENS ---------- */
   @media(max-width:540px){
@@ -422,7 +458,7 @@
       <p class="lede ccta-lede">We teach a clear, structured foundations track — from the existence of God to engaging Islam and atheism and starting real conversations — contextualised for the questions Nigerians are actually asking. Reach out and we'll walk you through the full outline.</p>
     </div>
     <div class="ccta-action">
-      <a href="#contact" class="btn btn-dark">Request the curriculum →</a>
+      <a href="#contact" class="btn btn-dark" id="reqCurriculum">Request the curriculum →</a>
     </div>
   </div>
 </section>
@@ -475,22 +511,63 @@
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="site" id="contact">
-  <div class="wrap">
-    <div class="foot-top">
-      <h2 class="reveal">Let's talk about your church.</h2>
-      <div class="foot-contact reveal d1">
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-intro">
+      <p class="eyebrow reveal">Get in touch</p>
+      <h2 class="h2 reveal">Let's talk about your church.</h2>
+      <p class="lede contact-lede reveal">Whether you'd like to invite us, request the curriculum, explore partnership, or support the work — we'd love to hear from you.</p>
+      <div class="contact-methods reveal d1">
         <a href="mailto:hello@apologeticsnigeria.org"><span class="k">Email</span> hello@apologeticsnigeria.org</a>
         <a href="#"><span class="k">WhatsApp</span> + [ your number ]</a>
         <a href="#"><span class="k">TikTok</span> @apologeticsnigeria</a>
         <span><span class="k">Based in</span> Lagos, Nigeria</span>
       </div>
     </div>
-    <div class="foot-bottom">
-      <p class="foot-tag">Grounded believers · defended faith · a generation that can give a reason for its hope.</p>
-      <p class="foot-copy">© 2026 Apologetics Nigeria</p>
-    </div>
+
+    <form class="contact-form reveal d1" id="contactForm" action="https://formspree.io/f/mkolkrqb" method="POST">
+      <input type="hidden" name="_subject" value="New enquiry — Apologetics Nigeria website" />
+      <div class="field">
+        <label for="cf-name">Name</label>
+        <input type="text" id="cf-name" name="name" required autocomplete="name" />
+      </div>
+      <div class="field">
+        <label for="cf-email">Email</label>
+        <input type="email" id="cf-email" name="email" required autocomplete="email" />
+      </div>
+      <div class="field">
+        <label for="cf-org">Church / Organisation <span class="opt">(optional)</span></label>
+        <input type="text" id="cf-org" name="organisation" autocomplete="organization" />
+      </div>
+      <div class="field">
+        <label for="cf-reason">I'm reaching out about</label>
+        <div class="select-wrap">
+          <select id="cf-reason" name="reason">
+            <option>Partnering with us</option>
+            <option>Inviting us to train</option>
+            <option>Requesting the curriculum</option>
+            <option>Supporting &amp; giving</option>
+            <option>Just saying hello</option>
+            <option>Something else</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-gold" id="cf-submit">Send message →</button>
+      <p class="form-status" id="cf-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site">
+  <div class="wrap foot-bottom">
+    <p class="foot-tag">Grounded believers · defended faith · a generation that can give a reason for its hope.</p>
+    <p class="foot-copy">© 2026 Apologetics Nigeria</p>
   </div>
 </footer>
 
@@ -543,6 +620,49 @@
       });
     }, {threshold:.6});
     cio.observe(counter);
+  }
+
+  // pre-select "Requesting the curriculum" when arriving from the curriculum CTA
+  const reqBtn = document.getElementById('reqCurriculum');
+  const reasonSel = document.getElementById('cf-reason');
+  if(reqBtn && reasonSel){
+    reqBtn.addEventListener('click', () => { reasonSel.value = 'Requesting the curriculum'; });
+  }
+
+  // contact form — AJAX submit to Formspree, styled inline status
+  const form = document.getElementById('contactForm');
+  if(form){
+    const statusEl = document.getElementById('cf-status');
+    const submitBtn = document.getElementById('cf-submit');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      statusEl.className = 'form-status';
+      statusEl.textContent = 'Sending…';
+      const originalLabel = submitBtn.textContent;
+      submitBtn.disabled = true; submitBtn.textContent = 'Sending…';
+      try{
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if(res.ok){
+          form.reset();
+          statusEl.classList.add('ok');
+          statusEl.textContent = 'Thank you — your message has been sent. We\u2019ll be in touch soon.';
+        } else {
+          let msg = 'Something went wrong. Please try again, or email us directly.';
+          try { const data = await res.json(); if(data && data.errors) msg = data.errors.map(x => x.message).join(', '); } catch(_){}
+          statusEl.classList.add('err');
+          statusEl.textContent = msg;
+        }
+      } catch(err){
+        statusEl.classList.add('err');
+        statusEl.textContent = 'Network error. Please try again, or email us directly.';
+      } finally {
+        submitBtn.disabled = false; submitBtn.textContent = originalLabel;
+      }
+    });
   }
 </script>
 </body>
