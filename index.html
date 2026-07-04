@@ -71,7 +71,8 @@
   }
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
   .brand{display:inline-flex;align-items:center;gap:.6rem}
-  .brand-logo{height:38px;width:auto;display:block;transition:filter .4s}
+  .brand-logo{height:34px;width:auto;display:block;transition:filter .4s;filter:invert(1)}
+  header.nav.scrolled .brand-logo{filter:none}
   .brand-text{font-family:"Fraunces",serif;font-size:1.18rem;font-weight:500;letter-spacing:-.01em;color:var(--parchment);transition:color .4s}
   .brand-text b{color:var(--gold-bright);font-weight:500}
   header.nav.scrolled .brand-text{color:var(--ink)}
@@ -270,6 +271,31 @@
 
   footer.site{background:var(--ink);color:var(--parchment);padding:2.6rem 0;border-top:1px solid var(--line-dark)}
   footer.site .foot-bottom{border-top:none;padding-top:0}
+  .foot-inner{display:flex;flex-direction:column;gap:1.5rem}
+  .foot-logo{height:46px;width:auto;filter:invert(1);opacity:.9}
+
+  /* ---------- WATCH ---------- */
+  .watch{background:var(--ink);color:var(--parchment)}
+  .watch .sec-head{margin-bottom:clamp(2.2rem,4vw,3.4rem)}
+  .watch-lede{max-width:52ch;color:var(--stone-light)}
+  .video-grid{display:grid;grid-template-columns:1fr;gap:clamp(1.5rem,3vw,2.2rem)}
+  @media(min-width:640px){.video-grid{grid-template-columns:1fr 1fr}}
+  @media(min-width:1000px){.video-grid{grid-template-columns:repeat(3,1fr)}}
+  .video-card{display:flex;flex-direction:column;gap:1rem}
+  .video-thumb{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#0A0A0A center/cover no-repeat;cursor:pointer;border:1px solid var(--line-dark)}
+  .video-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+  .video-card:hover .video-thumb img{transform:scale(1.05)}
+  .video-thumb .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
+  .video-thumb .play::before{content:"";width:66px;height:66px;border-radius:50%;background:rgba(15,15,15,.55);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.32);transition:background .3s,border-color .3s,transform .3s}
+  .video-thumb .play::after{content:"";position:absolute;width:0;height:0;border-left:19px solid var(--gold-bright);border-top:12px solid transparent;border-bottom:12px solid transparent;margin-left:5px;transition:border-color .3s}
+  .video-card:hover .play::before{background:var(--gold);border-color:var(--gold);transform:scale(1.08)}
+  .video-card:hover .play::after{border-left-color:#141414}
+  .video-thumb.placeholder{background:linear-gradient(135deg,#1c1c1c 0%,#0B0B0B 100%)}
+  .video-thumb iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .video-thumb:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
+  .video-meta{display:flex;flex-direction:column;gap:.45rem}
+  .video-meta .tag{font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-bright)}
+  .video-meta h3{font-family:"Fraunces",serif;font-size:1.15rem;font-weight:400;line-height:1.25;color:var(--parchment)}
 
   /* ---------- SMALL SCREENS ---------- */
   @media(max-width:540px){
@@ -327,15 +353,14 @@
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
     <a href="#top" class="brand" aria-label="Apologetics Nigeria — home">
-      <img src="logo.png" alt="Apologetics Nigeria" class="brand-logo" id="brandLogo"
-           onload="var t=document.getElementById('brandText'); if(t){t.style.display='none';}"
-           onerror="this.remove();" />
+      <img src="logo.png" alt="" class="brand-logo" id="brandLogo" onerror="this.remove();" />
       <span class="brand-text" id="brandText">Apologetics<b>.</b>NG</span>
     </a>
     <nav class="nav-links" id="navlinks">
       <a href="#vision" class="lk">Vision</a>
       <a href="#need" class="lk">The&nbsp;Need</a>
       <a href="#work" class="lk">How&nbsp;We&nbsp;Work</a>
+      <a href="#watch" class="lk">Watch</a>
       <a href="#partner" class="lk">Partner</a>
       <a href="#give" class="btn btn-gold">Give</a>
     </nav>
@@ -449,6 +474,32 @@
   </div>
 </section>
 
+<!-- WATCH -->
+<section class="watch" id="watch">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Watch · apologetics in action</p>
+      <h2 class="h2">See the faith <em class="acc">defended</em>.</h2>
+      <p class="lede watch-lede">Real conversations and teaching on the questions that matter most — starting with a series engaging Islam. Tap any video to watch it right here.</p>
+    </div>
+    <div class="video-grid">
+      <!-- To add a video: set data-id to the YouTube video ID, update the <img> src to the same ID, and edit the tag + title. -->
+      <div class="video-card reveal">
+        <div class="video-thumb placeholder" data-id=""><span class="play" aria-hidden="true"></span></div>
+        <div class="video-meta"><span class="tag">Islam · Apologetics</span><h3>Your video title goes here</h3></div>
+      </div>
+      <div class="video-card reveal d1">
+        <div class="video-thumb placeholder" data-id=""><span class="play" aria-hidden="true"></span></div>
+        <div class="video-meta"><span class="tag">Islam · Apologetics</span><h3>Your video title goes here</h3></div>
+      </div>
+      <div class="video-card reveal d2">
+        <div class="video-thumb placeholder" data-id=""><span class="play" aria-hidden="true"></span></div>
+        <div class="video-meta"><span class="tag">Islam · Apologetics</span><h3>Your video title goes here</h3></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CURRICULUM CTA -->
 <section class="tint" id="curriculum">
   <div class="wrap ccta-inner">
@@ -503,7 +554,7 @@
         <h3>Help equip a generation to stand.</h3>
         <p class="gnote">Recurring monthly partnership is the most valuable kind of support — it gives the work stability — while sponsorships let us take on larger projects. As our registration with the Corporate Affairs Commission (CAC) is completed, a dedicated ministry account will follow.</p>
         <div class="give-cta">
-          <a href="https://revolut.me/adenirtmtv" target="_blank" rel="noopener" class="btn btn-gold">Give here →</a>
+          <a href="https://buy.stripe.com/cNieVe85O0jq3eQ2up1wY00" target="_blank" rel="noopener" class="btn btn-gold">Give here →</a>
         </div>
         <p class="give-foot"><span class="ast">*</span> Every penny goes into the spread of the gospel.</p>
       </div>
@@ -520,7 +571,6 @@
       <p class="lede contact-lede reveal">Whether you'd like to invite us, request the curriculum, explore partnership, or support the work — we'd love to hear from you.</p>
       <div class="contact-methods reveal d1">
         <a href="mailto:hello@apologeticsnigeria.org"><span class="k">Email</span> hello@apologeticsnigeria.org</a>
-        <a href="#"><span class="k">WhatsApp</span> + [ your number ]</a>
         <a href="https://www.instagram.com/apologeticsnigeria/"><span class="k">Instagram</span> @apologeticsnigeria</a>
         <span><span class="k">Based in</span> Lagos, Nigeria</span>
       </div>
@@ -565,9 +615,12 @@
 
 <!-- FOOTER -->
 <footer class="site">
-  <div class="wrap foot-bottom">
-    <p class="foot-tag">Grounded believers · defended faith · a generation that can give a reason for its hope.</p>
-    <p class="foot-copy">© 2026 Apologetics Nigeria</p>
+  <div class="wrap foot-inner">
+    <img src="logo.png" alt="Apologetics Nigeria" class="foot-logo" onerror="this.remove();" />
+    <div class="foot-bottom">
+      <p class="foot-tag">Grounded believers · defended faith · a generation that can give a reason for its hope.</p>
+      <p class="foot-copy">© 2026 Apologetics Nigeria</p>
+    </div>
   </div>
 </footer>
 
@@ -628,6 +681,27 @@
   if(reqBtn && reasonSel){
     reqBtn.addEventListener('click', () => { reasonSel.value = 'Requesting the curriculum'; });
   }
+
+  // watch — click a thumbnail to load the inline player (facade pattern, no external navigation)
+  document.querySelectorAll('.video-thumb[data-id]').forEach((thumb) => {
+    const id = thumb.getAttribute('data-id');
+    if(!id) return; // placeholder card, no video wired yet
+    thumb.setAttribute('role','button');
+    thumb.setAttribute('tabindex','0');
+    thumb.setAttribute('aria-label','Play video');
+    const play = () => {
+      if(thumb.querySelector('iframe')) return;
+      const iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1&playsinline=1';
+      iframe.title = 'Video player';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.setAttribute('allowfullscreen','');
+      thumb.innerHTML = '';
+      thumb.appendChild(iframe);
+    };
+    thumb.addEventListener('click', play);
+    thumb.addEventListener('keydown', (e) => { if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); play(); } });
+  });
 
   // contact form — AJAX submit to Formspree, styled inline status
   const form = document.getElementById('contactForm');
