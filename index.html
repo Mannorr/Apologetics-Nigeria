@@ -5,6 +5,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Apologetics Nigeria — Give a reason for the hope</title>
 <meta name="description" content="Apologetics Nigeria partners with churches, pastors, and ministry groups to equip believers to defend the faith and share the gospel — with clarity, confidence, and joy." />
+<meta name="keywords" content="apologetics Nigeria, Christian apologetics, defend the faith, evangelism, answering Islam, church training, gospel, Jesus, Bible reliability" />
+<meta name="author" content="Apologetics Nigeria" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#040C0E" />
+<!-- Canonical: replace with your live domain -->
+<link rel="canonical" href="https://apologeticsnigeria.org/" />
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+<!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Apologetics Nigeria" />
+<meta property="og:title" content="Apologetics Nigeria — Give a reason for the hope" />
+<meta property="og:description" content="A non-denominational apologetics ministry equipping the Nigerian church to defend the faith and share the gospel — with clarity, confidence, and joy." />
+<meta property="og:url" content="https://apologeticsnigeria.org/" />
+<meta property="og:image" content="https://apologeticsnigeria.org/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Apologetics Nigeria — Give a reason for the hope" />
+
+<!-- Twitter / X card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Apologetics Nigeria — Give a reason for the hope" />
+<meta name="twitter:description" content="Equipping the Nigerian church to defend the faith and share the gospel — with clarity, confidence, and joy." />
+<meta name="twitter:image" content="https://apologeticsnigeria.org/og-image.png" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&display=swap" rel="stylesheet" />
@@ -236,6 +264,52 @@
   .foot-tag{font-family:"Newsreader",serif;font-style:italic;font-size:1rem;color:var(--stone-light);max-width:42ch}
   .foot-copy{font-family:"Inter",sans-serif;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stone-light)}
 
+  /* ---------- ABOUT / FOUNDER ---------- */
+  .about{background:var(--ink);color:var(--parchment)}
+  .about-inner{display:grid;grid-template-columns:1fr;gap:clamp(2.5rem,5vw,3.5rem);align-items:start}
+  @media(min-width:900px){.about-inner{grid-template-columns:.78fr 1.22fr;gap:clamp(3rem,5vw,5rem)}}
+  .founder{display:flex;flex-direction:column;gap:1.3rem;max-width:360px}
+  .founder-photo{position:relative;aspect-ratio:4/5;border-radius:10px;overflow:hidden;background:linear-gradient(150deg,#0C1719 0%,#050D0F 100%);border:1px solid var(--line-dark)}
+  .founder-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
+  .founder-initials{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:"Newsreader",Georgia,serif;font-size:5rem;font-weight:500;color:rgba(201,162,90,.32);letter-spacing:.06em}
+  .founder-name{font-family:"Newsreader",Georgia,serif;font-weight:440;font-size:1.5rem;color:var(--parchment);margin-bottom:.4rem;line-height:1.1}
+  .founder-role{font-family:"Inter",sans-serif;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:.5rem}
+  .founder-pillars{font-family:"Inter",sans-serif;font-size:.85rem;color:var(--stone-light)}
+  .about-copy .eyebrow{margin-bottom:1.3rem}
+  .about-copy h2{margin-bottom:1.4rem}
+  .about-copy p{color:var(--stone-light);margin-bottom:1.1rem;line-height:1.72;max-width:62ch}
+  .about-copy p:last-child{margin-bottom:0}
+
+  /* ---------- STATEMENT OF FAITH ---------- */
+  .beliefs{background:var(--parchment)}
+  .beliefs-intro{max-width:60ch}
+  .beliefs-grid{display:grid;grid-template-columns:1fr;gap:1.9rem clamp(2.5rem,4vw,3.5rem);margin-top:clamp(2.5rem,5vw,3.5rem)}
+  @media(min-width:700px){.beliefs-grid{grid-template-columns:1fr 1fr}}
+  @media(min-width:1050px){.beliefs-grid{grid-template-columns:repeat(3,1fr)}}
+  .belief{border-top:1px solid var(--line-light);padding-top:1.25rem}
+  .belief h3{font-family:"Newsreader",Georgia,serif;font-weight:450;font-size:1.22rem;color:var(--ink);margin-bottom:.5rem;line-height:1.15;display:flex;align-items:baseline;gap:.6rem}
+  .belief h3 .bnum{font-family:"Inter",sans-serif;font-size:.72rem;font-weight:600;color:var(--gold);letter-spacing:.08em}
+  .belief p{color:var(--stone);line-height:1.6;font-size:.98rem}
+
+  /* ---------- NEWSLETTER ---------- */
+  .newsletter{background:var(--parchment-2)}
+  .news-inner{display:grid;grid-template-columns:1fr;gap:2.4rem;align-items:center}
+  @media(min-width:900px){.news-inner{grid-template-columns:1.05fr .95fr;gap:4rem}}
+  .news-copy .eyebrow{margin-bottom:1.2rem}
+  .news-copy h2{margin-bottom:1rem}
+  .news-lede{max-width:46ch;color:var(--stone)}
+  .news-form{width:100%}
+  .news-row{display:flex;flex-direction:column;gap:.8rem}
+  @media(min-width:520px){.news-row{flex-direction:row}}
+  .news-row input{flex:1;min-width:0;background:#fff;border:1px solid var(--line-light);border-radius:3px;padding:.95rem 1.1rem;font-family:"Inter",sans-serif;font-size:1rem;color:var(--ink);transition:border-color .25s}
+  .news-row input::placeholder{color:var(--stone-light)}
+  .news-row input:focus{outline:none;border-color:var(--gold)}
+  .news-row .btn{white-space:nowrap;cursor:pointer}
+  .newsletter .form-status{margin-top:1rem;font-family:"Inter",sans-serif;font-size:.82rem;min-height:1.2em}
+  .newsletter .form-status.ok{color:var(--gold)}
+  .newsletter .form-status.err{color:#b3402f}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
   /* ---------- CONTACT + FORM ---------- */
   .contact{background:var(--ink);color:var(--parchment)}
   .contact-grid{display:grid;grid-template-columns:1fr;gap:clamp(2.5rem,5vw,4rem)}
@@ -392,6 +466,7 @@
     </a>
     <nav class="nav-links" id="navlinks">
       <a href="#watch" class="lk">Watch</a>
+      <a href="#about" class="lk">About</a>
       <a href="#vision" class="lk">Vision</a>
       <a href="#need" class="lk">The&nbsp;Need</a>
       <a href="#work" class="lk">How&nbsp;We&nbsp;Work</a>
@@ -576,6 +651,53 @@
   </div>
 </section>
 
+<!-- ABOUT / FOUNDER -->
+<section class="about" id="about">
+  <div class="wrap about-inner">
+    <div class="founder reveal">
+      <div class="founder-photo">
+        <img src="founder.jpg" alt="Oluwanifemi Adeniran" onerror="this.style.display='none'" />
+        <span class="founder-initials" aria-hidden="true">OA</span>
+      </div>
+      <div class="founder-id">
+        <h3 class="founder-name">Oluwanifemi Adeniran</h3>
+        <p class="founder-role">Founder &amp; Lead Apologist</p>
+        <p class="founder-pillars">Apologetics • Evangelism • Discipleship</p>
+      </div>
+    </div>
+    <div class="about-copy reveal d1">
+      <p class="eyebrow">Who's behind this</p>
+      <h2 class="h2">Meet the founder.</h2>
+      <p>Oluwanifemi Adeniran founded Apologetics Nigeria out of a simple conviction: the church here deserves to be equipped — not merely encouraged, but genuinely prepared to answer the hardest questions of its generation.</p>
+      <p>For several years he served in apologetics ministry with churches across Ireland and the United Kingdom, teaching young believers to think clearly, hold their faith with conviction, and give an honest, gracious defense of the gospel. That work has now come home to Nigeria.</p>
+      <p>He brings together the two disciplines this ministry depends on — serious theological study and the craft of clear, compelling communication. He is currently pursuing graduate study in theology, working toward a doctorate in apologetics, and continues to teach, film, and engage these questions publicly.</p>
+      <p>His conviction is plain: the answer to a generation's doubts is not less Christianity, but a deeper, better-understood faith — carried by a church that knows what it believes, and why.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STATEMENT OF FAITH -->
+<section class="beliefs" id="beliefs">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">What we believe</p>
+      <h2 class="h2">Our statement of faith.</h2>
+      <p class="lede beliefs-intro">Apologetics Nigeria is a non-denominational Christian ministry. We hold to the historic Christian faith — summarised in these affirmations, and the ground on which we teach and partner with churches.</p>
+    </div>
+    <div class="beliefs-grid">
+      <div class="belief reveal"><h3><span class="bnum">01</span>The Scriptures</h3><p>The Bible is the inspired and authoritative Word of God — our final rule for faith and life.</p></div>
+      <div class="belief reveal d1"><h3><span class="bnum">02</span>One God</h3><p>There is one God, eternally existing in three persons: the Father, the Son, and the Holy Spirit.</p></div>
+      <div class="belief reveal"><h3><span class="bnum">03</span>Jesus Christ</h3><p>Jesus is fully God and fully man — born of a virgin, sinless in life, crucified for our sins, and raised bodily from the dead.</p></div>
+      <div class="belief reveal d1"><h3><span class="bnum">04</span>Humanity</h3><p>Every person is made in God's image yet fallen in sin, and cannot save themselves by their own effort.</p></div>
+      <div class="belief reveal"><h3><span class="bnum">05</span>Salvation</h3><p>Salvation is a gift of God's grace, received through faith in Jesus Christ alone — not earned by works.</p></div>
+      <div class="belief reveal d1"><h3><span class="bnum">06</span>The Holy Spirit</h3><p>The Holy Spirit indwells, transforms, and empowers every believer to live and to witness for Christ.</p></div>
+      <div class="belief reveal"><h3><span class="bnum">07</span>The Church</h3><p>The church is the body of Christ, called to worship God, grow in truth, and make disciples of all nations.</p></div>
+      <div class="belief reveal d1"><h3><span class="bnum">08</span>The Great Commission</h3><p>Every believer is called to share and defend the gospel — with clarity, courage, and love.</p></div>
+      <div class="belief reveal"><h3><span class="bnum">09</span>The Hope to Come</h3><p>Jesus Christ will return in glory to judge the living and the dead, and to make all things new.</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- CURRICULUM CTA -->
 <section class="tint" id="curriculum">
   <div class="wrap ccta-inner">
@@ -635,6 +757,27 @@
         <p class="give-foot"><span class="ast">*</span> Every penny goes into the spread of the gospel.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter" id="newsletter">
+  <div class="wrap news-inner">
+    <div class="news-copy reveal">
+      <p class="eyebrow">Stay equipped</p>
+      <h2 class="h2">Answers, <em class="acc">in your inbox</em>.</h2>
+      <p class="lede news-lede">Occasional emails with new videos, clear answers to the questions believers are actually asked, and resources to help you defend your faith. No spam — unsubscribe anytime.</p>
+    </div>
+    <form class="news-form reveal d1" id="newsForm" action="https://formspree.io/f/mkolkrqb" method="POST">
+      <input type="hidden" name="_subject" value="New newsletter signup — Apologetics Nigeria" />
+      <input type="hidden" name="form-type" value="newsletter" />
+      <label class="sr-only" for="news-email">Email address</label>
+      <div class="news-row">
+        <input type="email" id="news-email" name="email" placeholder="your@email.com" required autocomplete="email" />
+        <button type="submit" class="btn btn-gold" id="news-submit">Subscribe →</button>
+      </div>
+      <p class="form-status" id="news-status" role="status" aria-live="polite"></p>
+    </form>
   </div>
 </section>
 
@@ -791,6 +934,27 @@
     });
   });
 
+  // newsletter — AJAX subscribe to Formspree
+  (function(){
+    const form = document.getElementById('newsForm');
+    if(!form) return;
+    const statusEl = document.getElementById('news-status');
+    const submitBtn = document.getElementById('news-submit');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      statusEl.className = 'form-status';
+      statusEl.textContent = 'Subscribing…';
+      const original = submitBtn.textContent;
+      submitBtn.disabled = true; submitBtn.textContent = 'Subscribing…';
+      try{
+        const res = await fetch(form.action, { method:'POST', body:new FormData(form), headers:{'Accept':'application/json'} });
+        if(res.ok){ form.reset(); statusEl.classList.add('ok'); statusEl.textContent = 'You\u2019re in — thank you. Watch your inbox.'; }
+        else { statusEl.classList.add('err'); statusEl.textContent = 'Something went wrong. Please try again.'; }
+      }catch(err){ statusEl.classList.add('err'); statusEl.textContent = 'Network error. Please try again.'; }
+      finally{ submitBtn.disabled = false; submitBtn.textContent = original; }
+    });
+  })();
+
   // contact form — AJAX submit to Formspree, styled inline status
   const form = document.getElementById('contactForm');
   if(form){
@@ -826,6 +990,20 @@
       }
     });
   }
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Apologetics Nigeria",
+  "alternateName": "Apologetics NG",
+  "description": "A non-denominational Christian apologetics ministry equipping the Nigerian church to defend the faith and share the gospel with clarity, confidence, and joy.",
+  "url": "https://apologeticsnigeria.org/",
+  "logo": "https://apologeticsnigeria.org/apple-touch-icon.png",
+  "image": "https://apologeticsnigeria.org/og-image.png",
+  "sameAs": ["https://www.instagram.com/apologeticsnigeria/"],
+  "areaServed": { "@type": "Country", "name": "Nigeria" }
+}
 </script>
 </body>
 </html>
