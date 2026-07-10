@@ -274,6 +274,40 @@
   .foot-inner{display:flex;flex-direction:column;gap:1.5rem}
   .foot-logo{height:46px;width:auto;filter:invert(1);opacity:.9}
 
+  /* ---------- LIBRARY (Peterson Academy-style video grid) ---------- */
+  .library{background:var(--ink);color:var(--parchment);padding-top:clamp(3.5rem,7vw,6rem)}
+  .library-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:clamp(1.8rem,3vw,2.6rem)}
+  .library-title{font-family:"Newsreader",Georgia,serif;font-weight:380;font-size:clamp(1.9rem,4vw,3.3rem);line-height:1.06;letter-spacing:-.015em;color:var(--parchment);max-width:20ch}
+  .library-title em.acc{font-style:italic;color:var(--gold-bright)}
+  .library-link{font-family:"Inter",sans-serif;font-size:.74rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--parchment);border-bottom:1px solid var(--gold);padding-bottom:.35rem;white-space:nowrap;transition:color .25s,border-color .25s}
+  .library-link:hover{color:var(--gold-bright);border-color:var(--gold-bright)}
+  .library-tabs{display:flex;gap:clamp(1.3rem,3vw,2.4rem);border-bottom:1px solid var(--line-dark);margin-bottom:clamp(2rem,4vw,3rem);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .library-tabs::-webkit-scrollbar{display:none}
+  .tab{font-family:"Inter",sans-serif;font-size:.88rem;letter-spacing:.01em;color:var(--stone-light);background:none;border:none;cursor:pointer;padding:0 0 .9rem;position:relative;white-space:nowrap;transition:color .25s}
+  .tab::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--gold-bright);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+  .tab:hover{color:var(--parchment)}
+  .tab.is-active{color:var(--parchment)}
+  .tab.is-active::after{transform:scaleX(1)}
+  .library-grid{display:grid;grid-template-columns:1fr;gap:clamp(1.6rem,2.4vw,2.1rem) clamp(1.1rem,1.8vw,1.6rem)}
+  @media(min-width:520px){.library-grid{grid-template-columns:1fr 1fr}}
+  @media(min-width:900px){.library-grid{grid-template-columns:repeat(4,1fr)}}
+  .course-card{display:flex;flex-direction:column;gap:.85rem}
+  .course-card.is-hidden{display:none}
+  .course-thumb{position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#000 center/cover no-repeat;cursor:pointer;border:1px solid var(--line-dark)}
+  .course-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease,opacity .3s}
+  .course-card:hover .course-thumb img{transform:scale(1.05);opacity:.85}
+  .course-thumb .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s;pointer-events:none}
+  .course-card:hover .course-thumb .play{opacity:1}
+  .course-thumb .play::before{content:"";width:54px;height:54px;border-radius:50%;background:rgba(4,12,14,.5);backdrop-filter:blur(4px);border:1px solid rgba(246,242,233,.4)}
+  .course-thumb .play::after{content:"";position:absolute;width:0;height:0;border-left:16px solid var(--parchment);border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px}
+  .course-thumb.placeholder{background:linear-gradient(135deg,#0C1719 0%,#050D0F 100%)}
+  .course-thumb.placeholder .play{opacity:.45}
+  .course-thumb iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .course-thumb:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
+  .course-meta{display:flex;flex-direction:column;gap:.3rem}
+  .course-title{font-family:"Newsreader",Georgia,serif;font-weight:430;font-size:1.08rem;line-height:1.2;color:var(--parchment)}
+  .course-tags{font-family:"Inter",sans-serif;font-size:.78rem;color:var(--stone-light);letter-spacing:.01em}
+
   /* ---------- WATCH ---------- */
   .watch{background:var(--ink);color:var(--parchment)}
   .watch .sec-head{margin-bottom:clamp(2.2rem,4vw,3.4rem)}
@@ -354,13 +388,13 @@
   <div class="wrap nav-inner">
     <a href="#top" class="brand" aria-label="Apologetics Nigeria — home">
       <img src="logo.png" alt="" class="brand-logo" id="brandLogo" onerror="this.remove();" />
-    
+      <span class="brand-text" id="brandText">Apologetics<b>.</b>NG</span>
     </a>
     <nav class="nav-links" id="navlinks">
+      <a href="#watch" class="lk">Watch</a>
       <a href="#vision" class="lk">Vision</a>
       <a href="#need" class="lk">The&nbsp;Need</a>
       <a href="#work" class="lk">How&nbsp;We&nbsp;Work</a>
-      <a href="#watch" class="lk">Watch</a>
       <a href="#partner" class="lk">Partner</a>
       <a href="#give" class="btn btn-gold">Give</a>
     </nav>
@@ -385,6 +419,74 @@
     <div class="wrap">
       <span class="verse-note">1 PETER 3:15 — <b>“…always be prepared to give an answer.”</b></span>
       <span class="scroll-hint">Scroll <span class="ln"></span></span>
+    </div>
+  </div>
+</section>
+
+<!-- LIBRARY (video grid — Peterson Academy style) -->
+<section class="library" id="watch">
+  <div class="wrap">
+    <div class="library-head reveal">
+      <h2 class="library-title">Hours of apologetics, <em class="acc">in full view</em>.</h2>
+      <a class="library-link" href="#">Explore the channel →</a>
+    </div>
+    <div class="library-tabs reveal" role="tablist" aria-label="Filter lectures by topic">
+      <button class="tab is-active" data-cat="all" role="tab" aria-selected="true">All</button>
+      <button class="tab" data-cat="islam" role="tab" aria-selected="false">Islam</button>
+      <button class="tab" data-cat="atheism" role="tab" aria-selected="false">Atheism</button>
+      <button class="tab" data-cat="jesus" role="tab" aria-selected="false">Jesus</button>
+      <button class="tab" data-cat="bible" role="tab" aria-selected="false">The Bible</button>
+      <button class="tab" data-cat="foundations" role="tab" aria-selected="false">Foundations</button>
+    </div>
+    <div class="library-grid">
+      <!-- Card: set data-cat to a topic; set data-id + the two thumbnail IDs to the YouTube video ID; the tag line captions it. Add <h3 class="course-title">Title</h3> before .course-tags for a serif title. -->
+      <article class="course-card reveal" data-cat="islam">
+        <div class="course-thumb" data-id="ePMjFrWp1JY">
+          <img src="https://i.ytimg.com/vi/ePMjFrWp1JY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/ePMjFrWp1JY/hqdefault.jpg'" alt="" loading="lazy" />
+          <span class="play" aria-hidden="true"></span>
+        </div>
+        <div class="course-meta"><p class="course-tags">Islam • Apologetics</p></div>
+      </article>
+      <article class="course-card reveal" data-cat="islam">
+        <div class="course-thumb" data-id="w4HFMAChOQY">
+          <img src="https://i.ytimg.com/vi/w4HFMAChOQY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/w4HFMAChOQY/hqdefault.jpg'" alt="" loading="lazy" />
+          <span class="play" aria-hidden="true"></span>
+        </div>
+        <div class="course-meta"><p class="course-tags">Islam • Apologetics</p></div>
+      </article>
+      <article class="course-card reveal" data-cat="islam">
+        <div class="course-thumb" data-id="6XhMBhPiGL0">
+          <img src="https://i.ytimg.com/vi/6XhMBhPiGL0/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/6XhMBhPiGL0/hqdefault.jpg'" alt="" loading="lazy" />
+          <span class="play" aria-hidden="true"></span>
+        </div>
+        <div class="course-meta"><p class="course-tags">Islam • Apologetics</p></div>
+      </article>
+      <article class="course-card reveal" data-cat="islam">
+        <div class="course-thumb" data-id="_fmgTmWfdFE">
+          <img src="https://i.ytimg.com/vi/_fmgTmWfdFE/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/_fmgTmWfdFE/hqdefault.jpg'" alt="" loading="lazy" />
+          <span class="play" aria-hidden="true"></span>
+        </div>
+        <div class="course-meta"><p class="course-tags">Islam • Apologetics</p></div>
+      </article>
+      <article class="course-card reveal" data-cat="islam">
+        <div class="course-thumb" data-id="2ulInp-C-rg">
+          <img src="https://i.ytimg.com/vi/2ulInp-C-rg/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/2ulInp-C-rg/hqdefault.jpg'" alt="" loading="lazy" />
+          <span class="play" aria-hidden="true"></span>
+        </div>
+        <div class="course-meta"><p class="course-tags">Islam • Apologetics</p></div>
+      </article>
+      <article class="course-card reveal" data-cat="atheism">
+        <div class="course-thumb placeholder"><span class="play" aria-hidden="true"></span></div>
+        <div class="course-meta"><p class="course-tags">Coming soon</p></div>
+      </article>
+      <article class="course-card reveal" data-cat="jesus">
+        <div class="course-thumb placeholder"><span class="play" aria-hidden="true"></span></div>
+        <div class="course-meta"><p class="course-tags">Coming soon</p></div>
+      </article>
+      <article class="course-card reveal" data-cat="bible">
+        <div class="course-thumb placeholder"><span class="play" aria-hidden="true"></span></div>
+        <div class="course-meta"><p class="course-tags">Coming soon</p></div>
+      </article>
     </div>
   </div>
 </section>
@@ -469,55 +571,6 @@
       <div class="work-item reveal">
         <span class="tag">Little by little</span>
         <div class="desc"><h3>Grown on proven fruit</h3><p>A few committed partner churches first, real fruit documented, then expansion only on a foundation that has proven solid.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WATCH -->
-<section class="watch" id="watch">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="eyebrow">Watch · apologetics in action</p>
-      <h2 class="h2">See the faith <em class="acc">defended</em>.</h2>
-      <p class="lede watch-lede">Real conversations and teaching on the questions that matter most — starting with a series engaging Islam. Tap any video to watch it right here.</p>
-    </div>
-    <div class="video-grid">
-      <!-- To add/edit: change data-id and the two thumbnail IDs to the YouTube video ID; edit the tag; add an <h3> title inside .video-meta if you want a caption. -->
-      <div class="video-card reveal">
-        <div class="video-thumb" data-id="ePMjFrWp1JY">
-          <img src="https://i.ytimg.com/vi/ePMjFrWp1JY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/ePMjFrWp1JY/hqdefault.jpg'" alt="" loading="lazy" />
-          <span class="play" aria-hidden="true"></span>
-        </div>
-        <div class="video-meta"><span class="tag">Islam · Apologetics</span></div>
-      </div>
-      <div class="video-card reveal d1">
-        <div class="video-thumb" data-id="w4HFMAChOQY">
-          <img src="https://i.ytimg.com/vi/w4HFMAChOQY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/w4HFMAChOQY/hqdefault.jpg'" alt="" loading="lazy" />
-          <span class="play" aria-hidden="true"></span>
-        </div>
-        <div class="video-meta"><span class="tag">Islam · Apologetics</span></div>
-      </div>
-      <div class="video-card reveal d2">
-        <div class="video-thumb" data-id="6XhMBhPiGL0">
-          <img src="https://i.ytimg.com/vi/6XhMBhPiGL0/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/6XhMBhPiGL0/hqdefault.jpg'" alt="" loading="lazy" />
-          <span class="play" aria-hidden="true"></span>
-        </div>
-        <div class="video-meta"><span class="tag">Islam · Apologetics</span></div>
-      </div>
-      <div class="video-card reveal">
-        <div class="video-thumb" data-id="_fmgTmWfdFE">
-          <img src="https://i.ytimg.com/vi/_fmgTmWfdFE/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/_fmgTmWfdFE/hqdefault.jpg'" alt="" loading="lazy" />
-          <span class="play" aria-hidden="true"></span>
-        </div>
-        <div class="video-meta"><span class="tag">Islam · Apologetics</span></div>
-      </div>
-      <div class="video-card reveal d1">
-        <div class="video-thumb" data-id="2ulInp-C-rg">
-          <img src="https://i.ytimg.com/vi/2ulInp-C-rg/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/2ulInp-C-rg/hqdefault.jpg'" alt="" loading="lazy" />
-          <span class="play" aria-hidden="true"></span>
-        </div>
-        <div class="video-meta"><span class="tag">Islam · Apologetics</span></div>
       </div>
     </div>
   </div>
@@ -706,7 +759,7 @@
   }
 
   // watch — click a thumbnail to load the inline player (facade pattern, no external navigation)
-  document.querySelectorAll('.video-thumb[data-id]').forEach((thumb) => {
+  document.querySelectorAll('.course-thumb[data-id]').forEach((thumb) => {
     const id = thumb.getAttribute('data-id');
     if(!id) return; // placeholder card, no video wired yet
     thumb.setAttribute('role','button');
@@ -724,6 +777,18 @@
     };
     thumb.addEventListener('click', play);
     thumb.addEventListener('keydown', (e) => { if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); play(); } });
+  });
+
+  // library — topic tab filter
+  const libTabs = document.querySelectorAll('.library-tabs .tab');
+  const libCards = document.querySelectorAll('.library-grid .course-card');
+  libTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      libTabs.forEach((x) => { x.classList.remove('is-active'); x.setAttribute('aria-selected','false'); });
+      tab.classList.add('is-active'); tab.setAttribute('aria-selected','true');
+      const cat = tab.dataset.cat;
+      libCards.forEach((c) => c.classList.toggle('is-hidden', !(cat === 'all' || c.dataset.cat === cat)));
+    });
   });
 
   // contact form — AJAX submit to Formspree, styled inline status
