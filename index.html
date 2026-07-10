@@ -7,19 +7,19 @@
 <meta name="description" content="Apologetics Nigeria partners with churches, pastors, and ministry groups to equip believers to defend the faith and share the gospel — with clarity, confidence, and joy." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&display=swap" rel="stylesheet" />
 <style>
   :root{
-    --ink:#0F0F0F;
-    --ink-soft:#181818;
-    --parchment:#FFFFFF;
-    --parchment-2:#F4F4F3;
-    --gold:#A8862B;
-    --gold-bright:#D3A63D;
-    --stone:#585858;
-    --stone-light:#9A9A9A;
-    --line-dark:rgba(255,255,255,.14);
-    --line-light:rgba(0,0,0,.12);
+    --ink:#040C0E;
+    --ink-soft:#0C1719;
+    --parchment:#F6F2E9;
+    --parchment-2:#EDE7DA;
+    --gold:#A9803F;
+    --gold-bright:#C9A25A;
+    --stone:#6B6659;
+    --stone-light:#8B958F;
+    --line-dark:rgba(246,242,233,.13);
+    --line-light:rgba(4,12,14,.11);
     --maxw:1200px;
     --pad-sec:clamp(4.5rem,10vw,9rem);
   }
@@ -42,7 +42,7 @@
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.25rem,5vw,2.75rem)}
 
   .eyebrow{
-    font-family:"JetBrains Mono",monospace;
+    font-family:"Inter",sans-serif;
     font-size:.72rem;font-weight:500;letter-spacing:.22em;
     text-transform:uppercase;color:var(--gold);
     display:inline-flex;align-items:center;gap:.6rem;
@@ -50,7 +50,7 @@
   .eyebrow::before{content:"";width:1.6rem;height:1px;background:var(--gold);display:inline-block}
   section.dark .eyebrow{color:var(--gold-bright)}
 
-  h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:400;line-height:1.04;letter-spacing:-.015em}
+  h1,h2,h3{font-family:"Newsreader",Georgia,serif;font-weight:400;line-height:1.04;letter-spacing:-.015em}
   .display{font-size:clamp(2.7rem,7.5vw,6rem);font-weight:380}
   .h2{font-size:clamp(2rem,4.6vw,3.5rem);font-weight:400}
   .lede{font-size:clamp(1.15rem,1.4vw,1.45rem);line-height:1.55;color:var(--stone)}
@@ -65,7 +65,7 @@
     border-bottom:1px solid transparent;
   }
   header.nav.scrolled{
-    background:rgba(255,255,255,.88);
+    background:rgba(246,242,233,.9);
     backdrop-filter:saturate(140%) blur(12px);
     border-bottom:1px solid var(--line-light);
   }
@@ -73,21 +73,21 @@
   .brand{display:inline-flex;align-items:center;gap:.6rem}
   .brand-logo{height:34px;width:auto;display:block;transition:filter .4s;filter:invert(1)}
   header.nav.scrolled .brand-logo{filter:none}
-  .brand-text{font-family:"Fraunces",serif;font-size:1.18rem;font-weight:500;letter-spacing:-.01em;color:var(--parchment);transition:color .4s}
+  .brand-text{font-family:"Newsreader",serif;font-size:1.18rem;font-weight:500;letter-spacing:-.01em;color:var(--parchment);transition:color .4s}
   .brand-text b{color:var(--gold-bright);font-weight:500}
   header.nav.scrolled .brand-text{color:var(--ink)}
   header.nav.scrolled .brand-text b{color:var(--gold)}
   .nav-links{display:flex;align-items:center;gap:2.1rem}
   .nav-links a.lk{
-    font-family:"JetBrains Mono",monospace;font-size:.74rem;letter-spacing:.1em;
+    font-family:"Inter",sans-serif;font-size:.74rem;letter-spacing:.1em;
     text-transform:uppercase;color:var(--parchment);opacity:.82;transition:opacity .25s,color .4s;
   }
   header.nav.scrolled .nav-links a.lk{color:var(--ink)}
   .nav-links a.lk:hover{opacity:1;color:var(--gold-bright)}
   header.nav.scrolled .nav-links a.lk:hover{color:var(--gold)}
   .btn{
-    font-family:"JetBrains Mono",monospace;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;
-    font-weight:500;padding:.7rem 1.3rem;border-radius:100px;border:1px solid currentColor;
+    font-family:"Inter",sans-serif;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;
+    font-weight:500;padding:.7rem 1.3rem;border-radius:3px;border:1px solid currentColor;
     display:inline-flex;align-items:center;gap:.5rem;transition:all .25s ease;cursor:pointer;white-space:nowrap;
   }
   .btn-gold{background:var(--gold);color:#141414;border-color:var(--gold)}
@@ -111,8 +111,8 @@
   }
   .hero::after{ /* subtle vignette + grain feel via radial */
     content:"";position:absolute;inset:0;pointer-events:none;
-    background:radial-gradient(120% 80% at 85% 10%,rgba(211,166,61,.10),transparent 55%),
-              radial-gradient(90% 70% at 0% 100%,rgba(211,166,61,.06),transparent 60%);
+    background:radial-gradient(120% 80% at 85% 10%,rgba(201,162,90,.10),transparent 55%),
+              radial-gradient(90% 70% at 0% 100%,rgba(201,162,90,.06),transparent 60%);
   }
   .hero .wrap{position:relative;z-index:2;width:100%}
   .hero .eyebrow{margin-bottom:2rem}
@@ -123,9 +123,9 @@
     position:absolute;left:0;right:0;bottom:1.8rem;z-index:2;
   }
   .hero-foot .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
-  .verse-note{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.08em;color:var(--stone-light)}
+  .verse-note{font-family:"Inter",sans-serif;font-size:.72rem;letter-spacing:.08em;color:var(--stone-light)}
   .verse-note b{color:var(--gold-bright);font-weight:500}
-  .scroll-hint{font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--stone-light);display:flex;align-items:center;gap:.6rem}
+  .scroll-hint{font-family:"Inter",sans-serif;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--stone-light);display:flex;align-items:center;gap:.6rem}
   .scroll-hint .ln{width:34px;height:1px;background:var(--stone-light);position:relative;overflow:hidden}
   .scroll-hint .ln::after{content:"";position:absolute;inset:0;background:var(--gold-bright);transform:translateX(-100%);animation:slide 2.4s ease-in-out infinite}
   @keyframes slide{0%{transform:translateX(-100%)}50%{transform:translateX(0)}100%{transform:translateX(100%)}}
@@ -141,7 +141,7 @@
   /* VISION */
   .vision-grid{display:grid;grid-template-columns:1fr;gap:2.2rem;margin-top:1rem}
   .pullquote{
-    font-family:"Fraunces",serif;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1.28;font-weight:380;
+    font-family:"Newsreader",serif;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1.28;font-weight:380;
     border-left:3px solid var(--gold);padding-left:1.6rem;color:var(--ink);max-width:30ch;
   }
   section.dark .pullquote{color:var(--parchment);border-left-color:var(--gold-bright)}
@@ -152,20 +152,20 @@
   }
 
   /* NEED — stats */
-  .need-lede{max-width:30ch;margin-bottom:clamp(3rem,6vw,5rem);font-family:"Fraunces",serif;font-size:clamp(1.7rem,3.4vw,2.7rem);line-height:1.22;font-weight:360}
+  .need-lede{max-width:30ch;margin-bottom:clamp(3rem,6vw,5rem);font-family:"Newsreader",serif;font-size:clamp(1.7rem,3.4vw,2.7rem);line-height:1.22;font-weight:360}
   .stat{
     display:grid;grid-template-columns:1fr;gap:.6rem;
     padding:clamp(2rem,4vw,3rem) 0;border-top:1px solid var(--line-dark);
   }
   .stat:last-of-type{border-bottom:1px solid var(--line-dark)}
-  .stat .num{font-family:"Fraunces",serif;font-weight:340;font-size:clamp(3.6rem,12vw,8.5rem);line-height:.9;color:var(--gold-bright);letter-spacing:-.02em}
+  .stat .num{font-family:"Newsreader",serif;font-weight:340;font-size:clamp(3.6rem,12vw,8.5rem);line-height:.9;color:var(--gold-bright);letter-spacing:-.02em}
   .stat .txt{max-width:42ch}
   .stat .txt p{font-size:clamp(1.05rem,1.3vw,1.25rem);color:var(--parchment);margin-bottom:.7rem;line-height:1.4}
-  .stat .src{font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--stone-light)}
+  .stat .src{font-family:"Inter",sans-serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--stone-light)}
   @media(min-width:760px){
     .stat{grid-template-columns:minmax(0,4.2fr) minmax(0,5.8fr);gap:2.5rem;align-items:center}
   }
-  .need-foot{margin-top:clamp(2.5rem,5vw,4rem);font-family:"Fraunces",serif;font-size:clamp(1.3rem,2.2vw,1.85rem);line-height:1.34;font-weight:360;max-width:34ch;color:var(--parchment)}
+  .need-foot{margin-top:clamp(2.5rem,5vw,4rem);font-family:"Newsreader",serif;font-size:clamp(1.3rem,2.2vw,1.85rem);line-height:1.34;font-weight:360;max-width:34ch;color:var(--parchment)}
   .need-foot em{color:var(--gold-bright);font-style:italic}
 
   /* HOW WE WORK */
@@ -176,7 +176,7 @@
     transition:padding-left .3s ease;
   }
   .work-item:hover{padding-left:.8rem}
-  .work-item .tag{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);padding-top:.35rem}
+  .work-item .tag{font-family:"Inter",sans-serif;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);padding-top:.35rem}
   .work-item .desc{max-width:60ch}
   .work-item .desc h3{font-size:clamp(1.3rem,2vw,1.7rem);margin-bottom:.4rem;font-weight:400}
   .work-item .desc p{color:var(--stone)}
@@ -200,27 +200,27 @@
   /* SCRIPTURE */
   .scripture{background:var(--ink);color:var(--parchment);text-align:center}
   .scripture .wrap{max-width:980px}
-  .scripture blockquote{font-family:"Fraunces",serif;font-weight:340;font-size:clamp(1.6rem,4vw,3rem);line-height:1.3;letter-spacing:-.01em}
+  .scripture blockquote{font-family:"Newsreader",serif;font-weight:340;font-size:clamp(1.6rem,4vw,3rem);line-height:1.3;letter-spacing:-.01em}
   .scripture blockquote em{font-style:italic;color:var(--gold-bright)}
-  .scripture cite{display:block;margin-top:1.8rem;font-family:"JetBrains Mono",monospace;font-style:normal;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--stone-light)}
+  .scripture cite{display:block;margin-top:1.8rem;font-family:"Inter",sans-serif;font-style:normal;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--stone-light)}
 
   /* PARTNER + GIVE */
   .ways{display:grid;grid-template-columns:1fr;gap:1.6rem;margin-top:clamp(2rem,4vw,3rem)}
   .way{padding:1.8rem 0;border-top:2px solid var(--ink)}
-  .way .wnum{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+  .way .wnum{font-family:"Inter",sans-serif;font-size:.72rem;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
   .way h3{font-size:clamp(1.4rem,2vw,1.8rem);font-weight:400;margin:.7rem 0 .5rem}
   .way p{color:var(--stone);max-width:34ch}
   @media(min-width:760px){.ways{grid-template-columns:repeat(3,1fr);gap:2.5rem}}
 
   .give{margin-top:clamp(3.5rem,7vw,6rem);background:var(--ink);color:var(--parchment);border-radius:18px;padding:clamp(2rem,5vw,3.6rem);position:relative;overflow:hidden}
-  .give::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(80% 120% at 100% 0%,rgba(211,166,61,.12),transparent 55%)}
+  .give::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(80% 120% at 100% 0%,rgba(201,162,90,.12),transparent 55%)}
   .give .gwrap{position:relative;z-index:2}
   .give .eyebrow{color:var(--gold-bright);margin-bottom:1.3rem}
   .give h3{font-size:clamp(1.7rem,3.2vw,2.6rem);font-weight:380;margin-bottom:1rem;max-width:20ch}
   .give .gnote{color:var(--stone-light);max-width:54ch;margin-bottom:2rem}
   .give-cta{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;margin-bottom:2.6rem}
-  .give-cta .micro{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.06em;color:var(--stone-light)}
-  .give-foot{margin-top:1.5rem;font-family:"Fraunces",serif;font-style:italic;font-size:clamp(1.05rem,1.6vw,1.25rem);color:var(--gold-bright);line-height:1.4}
+  .give-cta .micro{font-family:"Inter",sans-serif;font-size:.72rem;letter-spacing:.06em;color:var(--stone-light)}
+  .give-foot{margin-top:1.5rem;font-family:"Newsreader",serif;font-style:italic;font-size:clamp(1.05rem,1.6vw,1.25rem);color:var(--gold-bright);line-height:1.4}
   .give-foot .ast{font-style:normal;opacity:.8;margin-right:.15rem}
 
   /* FOOTER / CONTACT */
@@ -228,13 +228,13 @@
   .foot-top{display:grid;grid-template-columns:1fr;gap:2.5rem;margin-bottom:clamp(3rem,6vw,5rem)}
   .foot-top h2{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:380;max-width:14ch}
   .foot-contact{display:flex;flex-direction:column;gap:1.1rem}
-  .foot-contact a,.foot-contact span{display:flex;align-items:center;gap:.8rem;font-family:"JetBrains Mono",monospace;font-size:.82rem;letter-spacing:.05em;color:var(--parchment);overflow-wrap:anywhere}
+  .foot-contact a,.foot-contact span{display:flex;align-items:center;gap:.8rem;font-family:"Inter",sans-serif;font-size:.82rem;letter-spacing:.05em;color:var(--parchment);overflow-wrap:anywhere}
   .foot-contact a:hover{color:var(--gold-bright)}
   .foot-contact .k{color:var(--stone-light);text-transform:uppercase;font-size:.7rem;letter-spacing:.12em;min-width:8.5rem;flex-shrink:0}
   @media(min-width:820px){.foot-top{grid-template-columns:1.3fr 1fr;align-items:start;gap:4rem}}
   .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding-top:2rem;border-top:1px solid var(--line-dark)}
-  .foot-tag{font-family:"Fraunces",serif;font-style:italic;font-size:1rem;color:var(--stone-light);max-width:42ch}
-  .foot-copy{font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stone-light)}
+  .foot-tag{font-family:"Newsreader",serif;font-style:italic;font-size:1rem;color:var(--stone-light);max-width:42ch}
+  .foot-copy{font-family:"Inter",sans-serif;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stone-light)}
 
   /* ---------- CONTACT + FORM ---------- */
   .contact{background:var(--ink);color:var(--parchment)}
@@ -243,14 +243,14 @@
   .contact-intro h2{margin-bottom:1.2rem}
   .contact-lede{max-width:40ch;margin-bottom:2.2rem;color:var(--stone-light)}
   .contact-methods{display:flex;flex-direction:column;gap:1rem}
-  .contact-methods a,.contact-methods span{display:flex;gap:.8rem;font-family:"JetBrains Mono",monospace;font-size:.82rem;letter-spacing:.04em;color:var(--parchment);overflow-wrap:anywhere}
+  .contact-methods a,.contact-methods span{display:flex;gap:.8rem;font-family:"Inter",sans-serif;font-size:.82rem;letter-spacing:.04em;color:var(--parchment);overflow-wrap:anywhere}
   .contact-methods a:hover{color:var(--gold-bright)}
   .contact-methods .k{color:var(--stone-light);text-transform:uppercase;font-size:.7rem;letter-spacing:.12em;min-width:7.5rem;flex-shrink:0}
   @media(min-width:900px){.contact-grid{grid-template-columns:.92fr 1.08fr;gap:5rem;align-items:start}}
 
   .contact-form{display:flex;flex-direction:column;gap:1.25rem}
   .field{display:flex;flex-direction:column;gap:.5rem}
-  .field label{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stone-light)}
+  .field label{font-family:"Inter",sans-serif;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stone-light)}
   .field label .opt{text-transform:none;letter-spacing:0;opacity:.7}
   .field input,.field select,.field textarea{
     width:100%;background:transparent;border:1px solid var(--line-dark);border-radius:9px;
@@ -265,7 +265,7 @@
   .field select{appearance:none;-webkit-appearance:none;cursor:pointer;padding-right:2.4rem}
   .field select option{color:#111;background:#fff}
   .contact-form .btn{align-self:flex-start;margin-top:.4rem;cursor:pointer}
-  .form-status{font-family:"JetBrains Mono",monospace;font-size:.8rem;letter-spacing:.02em;min-height:1.2em;line-height:1.4}
+  .form-status{font-family:"Inter",sans-serif;font-size:.8rem;letter-spacing:.02em;min-height:1.2em;line-height:1.4}
   .form-status.ok{color:var(--gold-bright)}
   .form-status.err{color:#e79a9a}
 
@@ -294,8 +294,8 @@
   .video-thumb iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
   .video-thumb:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
   .video-meta{display:flex;flex-direction:column;gap:.45rem}
-  .video-meta .tag{font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-bright)}
-  .video-meta h3{font-family:"Fraunces",serif;font-size:1.15rem;font-weight:400;line-height:1.25;color:var(--parchment)}
+  .video-meta .tag{font-family:"Inter",sans-serif;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-bright)}
+  .video-meta h3{font-family:"Newsreader",serif;font-size:1.15rem;font-weight:400;line-height:1.25;color:var(--parchment)}
 
   /* ---------- SMALL SCREENS ---------- */
   @media(max-width:540px){
