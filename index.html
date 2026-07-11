@@ -5,473 +5,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Apologetics Nigeria — Give a reason for the hope</title>
 <meta name="description" content="Apologetics Nigeria partners with churches, pastors, and ministry groups to equip believers to defend the faith and share the gospel — with clarity, confidence, and joy." />
-<meta name="keywords" content="apologetics Nigeria, Christian apologetics, defend the faith, evangelism, answering Islam, church training, gospel, Jesus, Bible reliability" />
-<meta name="author" content="Apologetics Nigeria" />
-<meta name="robots" content="index, follow" />
 <meta name="theme-color" content="#040C0E" />
-<!-- Canonical: replace with your live domain -->
 <link rel="canonical" href="https://apologeticsnigeria.org/" />
-
-<!-- Favicons -->
 <link rel="icon" type="image/png" href="favicon.png" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-
-<!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Apologetics Nigeria" />
 <meta property="og:title" content="Apologetics Nigeria — Give a reason for the hope" />
-<meta property="og:description" content="A non-denominational apologetics ministry equipping the Nigerian church to defend the faith and share the gospel — with clarity, confidence, and joy." />
+<meta property="og:description" content="Apologetics Nigeria partners with churches, pastors, and ministry groups to equip believers to defend the faith and share the gospel — with clarity, confidence, and joy." />
 <meta property="og:url" content="https://apologeticsnigeria.org/" />
 <meta property="og:image" content="https://apologeticsnigeria.org/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Apologetics Nigeria — Give a reason for the hope" />
-
-<!-- Twitter / X card -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Apologetics Nigeria — Give a reason for the hope" />
-<meta name="twitter:description" content="Equipping the Nigerian church to defend the faith and share the gospel — with clarity, confidence, and joy." />
+<meta name="twitter:description" content="Apologetics Nigeria partners with churches, pastors, and ministry groups to equip believers to defend the faith and share the gospel — with clarity, confidence, and joy." />
 <meta name="twitter:image" content="https://apologeticsnigeria.org/og-image.png" />
-
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&display=swap" rel="stylesheet" />
-<style>
-  :root{
-    --ink:#040C0E;
-    --ink-soft:#0C1719;
-    --parchment:#F6F2E9;
-    --parchment-2:#EDE7DA;
-    --gold:#A9803F;
-    --gold-bright:#C9A25A;
-    --stone:#6B6659;
-    --stone-light:#8B958F;
-    --line-dark:rgba(246,242,233,.13);
-    --line-light:rgba(4,12,14,.11);
-    --maxw:1200px;
-    --pad-sec:clamp(4.5rem,10vw,9rem);
-  }
-
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-  body{
-    background:var(--parchment);
-    color:var(--ink);
-    font-family:"Inter",system-ui,sans-serif;
-    font-size:clamp(1rem,.55vw + .9rem,1.075rem);
-    line-height:1.65;
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-  }
-  ::selection{background:var(--gold);color:var(--parchment)}
-  a{color:inherit;text-decoration:none}
-  img{max-width:100%;display:block}
-
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.25rem,5vw,2.75rem)}
-
-  .eyebrow{
-    font-family:"Inter",sans-serif;
-    font-size:.72rem;font-weight:500;letter-spacing:.22em;
-    text-transform:uppercase;color:var(--gold);
-    display:inline-flex;align-items:center;gap:.6rem;
-  }
-  .eyebrow::before{content:"";width:1.6rem;height:1px;background:var(--gold);display:inline-block}
-  section.dark .eyebrow{color:var(--gold-bright)}
-
-  h1,h2,h3{font-family:"Newsreader",Georgia,serif;font-weight:400;line-height:1.04;letter-spacing:-.015em}
-  .display{font-size:clamp(2.7rem,7.5vw,6rem);font-weight:380}
-  .h2{font-size:clamp(2rem,4.6vw,3.5rem);font-weight:400}
-  .lede{font-size:clamp(1.15rem,1.4vw,1.45rem);line-height:1.55;color:var(--stone)}
-  section.dark .lede{color:var(--stone-light)}
-  em.acc{font-style:italic;color:var(--gold)}
-  section.dark em.acc{color:var(--gold-bright)}
-
-  /* ---------- NAV ---------- */
-  header.nav{
-    position:fixed;top:0;left:0;right:0;z-index:100;
-    transition:background .4s ease,border-color .4s ease,backdrop-filter .4s ease;
-    border-bottom:1px solid transparent;
-  }
-  header.nav.scrolled{
-    background:rgba(246,242,233,.9);
-    backdrop-filter:saturate(140%) blur(12px);
-    border-bottom:1px solid var(--line-light);
-  }
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
-  .brand{display:inline-flex;align-items:center;gap:.6rem}
-  .brand-logo{height:34px;width:auto;display:block;transition:filter .4s;filter:invert(1)}
-  header.nav.scrolled .brand-logo{filter:none}
-  .brand-text{font-family:"Newsreader",serif;font-size:1.18rem;font-weight:500;letter-spacing:-.01em;color:var(--parchment);transition:color .4s}
-  .brand-text b{color:var(--gold-bright);font-weight:500}
-  header.nav.scrolled .brand-text{color:var(--ink)}
-  header.nav.scrolled .brand-text b{color:var(--gold)}
-  .nav-links{display:flex;align-items:center;gap:2.1rem}
-  .nav-links a.lk{
-    font-family:"Inter",sans-serif;font-size:.74rem;letter-spacing:.1em;
-    text-transform:uppercase;color:var(--parchment);opacity:.82;transition:opacity .25s,color .4s;
-  }
-  header.nav.scrolled .nav-links a.lk{color:var(--ink)}
-  .nav-links a.lk:hover{opacity:1;color:var(--gold-bright)}
-  header.nav.scrolled .nav-links a.lk:hover{color:var(--gold)}
-  .btn{
-    font-family:"Inter",sans-serif;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;
-    font-weight:500;padding:.7rem 1.3rem;border-radius:3px;border:1px solid currentColor;
-    display:inline-flex;align-items:center;gap:.5rem;transition:all .25s ease;cursor:pointer;white-space:nowrap;
-  }
-  .btn-gold{background:var(--gold);color:#141414;border-color:var(--gold)}
-  .btn-gold:hover{background:var(--gold-bright);border-color:var(--gold-bright);transform:translateY(-2px)}
-  .btn-ghost{background:transparent;color:var(--parchment)}
-  .btn-ghost:hover{background:var(--parchment);color:var(--ink);transform:translateY(-2px)}
-  header.nav.scrolled .btn-ghost{color:var(--ink)}
-  header.nav.scrolled .btn-ghost:hover{background:var(--ink);color:var(--parchment)}
-  .nav-toggle{display:none;background:none;border:none;cursor:pointer;width:30px;height:22px;position:relative}
-  .nav-toggle span{position:absolute;left:0;width:100%;height:2px;background:var(--parchment);transition:all .3s}
-  header.nav.scrolled .nav-toggle span{background:var(--ink)}
-  .nav-toggle span:nth-child(1){top:0}
-  .nav-toggle span:nth-child(2){top:10px}
-  .nav-toggle span:nth-child(3){top:20px}
-
-  /* ---------- HERO ---------- */
-  .hero{
-    background:var(--ink);color:var(--parchment);position:relative;
-    min-height:100svh;display:flex;align-items:center;
-    padding:140px 0 80px;overflow:hidden;
-  }
-  .hero::after{ /* subtle vignette + grain feel via radial */
-    content:"";position:absolute;inset:0;pointer-events:none;
-    background:radial-gradient(120% 80% at 85% 10%,rgba(201,162,90,.10),transparent 55%),
-              radial-gradient(90% 70% at 0% 100%,rgba(201,162,90,.06),transparent 60%);
-  }
-  .hero .wrap{position:relative;z-index:2;width:100%}
-  .hero .eyebrow{margin-bottom:2rem}
-  .hero h1{max-width:16ch;margin-bottom:1.9rem}
-  .hero .lede{max-width:46ch;margin-bottom:2.6rem}
-  .hero-cta{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
-  .hero-foot{
-    position:absolute;left:0;right:0;bottom:1.8rem;z-index:2;
-  }
-  .hero-foot .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
-  .verse-note{font-family:"Inter",sans-serif;font-size:.72rem;letter-spacing:.08em;color:var(--stone-light)}
-  .verse-note b{color:var(--gold-bright);font-weight:500}
-  .scroll-hint{font-family:"Inter",sans-serif;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--stone-light);display:flex;align-items:center;gap:.6rem}
-  .scroll-hint .ln{width:34px;height:1px;background:var(--stone-light);position:relative;overflow:hidden}
-  .scroll-hint .ln::after{content:"";position:absolute;inset:0;background:var(--gold-bright);transform:translateX(-100%);animation:slide 2.4s ease-in-out infinite}
-  @keyframes slide{0%{transform:translateX(-100%)}50%{transform:translateX(0)}100%{transform:translateX(100%)}}
-
-  /* ---------- SECTIONS ---------- */
-  section{padding:var(--pad-sec) 0}
-  section.dark{background:var(--ink);color:var(--parchment)}
-  section.tint{background:var(--parchment-2)}
-  .sec-head{max-width:62ch}
-  .sec-head .eyebrow{margin-bottom:1.5rem}
-  .sec-head h2{margin-bottom:1.4rem}
-
-  /* VISION */
-  .vision-grid{display:grid;grid-template-columns:1fr;gap:2.2rem;margin-top:1rem}
-  .pullquote{
-    font-family:"Newsreader",serif;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1.28;font-weight:380;
-    border-left:3px solid var(--gold);padding-left:1.6rem;color:var(--ink);max-width:30ch;
-  }
-  section.dark .pullquote{color:var(--parchment);border-left-color:var(--gold-bright)}
-  .vision-body{max-width:60ch}
-  .vision-body p{margin-bottom:1.1rem;color:var(--stone)}
-  @media(min-width:880px){
-    .vision-grid{grid-template-columns:1.05fr .95fr;gap:4rem;align-items:start}
-  }
-
-  /* NEED — stats */
-  .need-lede{max-width:30ch;margin-bottom:clamp(3rem,6vw,5rem);font-family:"Newsreader",serif;font-size:clamp(1.7rem,3.4vw,2.7rem);line-height:1.22;font-weight:360}
-  .stat{
-    display:grid;grid-template-columns:1fr;gap:.6rem;
-    padding:clamp(2rem,4vw,3rem) 0;border-top:1px solid var(--line-dark);
-  }
-  .stat:last-of-type{border-bottom:1px solid var(--line-dark)}
-  .stat .num{font-family:"Newsreader",serif;font-weight:340;font-size:clamp(3.6rem,12vw,8.5rem);line-height:.9;color:var(--gold-bright);letter-spacing:-.02em}
-  .stat .txt{max-width:42ch}
-  .stat .txt p{font-size:clamp(1.05rem,1.3vw,1.25rem);color:var(--parchment);margin-bottom:.7rem;line-height:1.4}
-  .stat .src{font-family:"Inter",sans-serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--stone-light)}
-  @media(min-width:760px){
-    .stat{grid-template-columns:minmax(0,4.2fr) minmax(0,5.8fr);gap:2.5rem;align-items:center}
-  }
-  .need-foot{margin-top:clamp(2.5rem,5vw,4rem);font-family:"Newsreader",serif;font-size:clamp(1.3rem,2.2vw,1.85rem);line-height:1.34;font-weight:360;max-width:34ch;color:var(--parchment)}
-  .need-foot em{color:var(--gold-bright);font-style:italic}
-
-  /* HOW WE WORK */
-  .work-list{margin-top:clamp(2rem,4vw,3.5rem);border-top:1px solid var(--line-light)}
-  .work-item{
-    display:grid;grid-template-columns:1fr;gap:.5rem;
-    padding:clamp(1.6rem,3vw,2.3rem) 0;border-bottom:1px solid var(--line-light);
-    transition:padding-left .3s ease;
-  }
-  .work-item:hover{padding-left:.8rem}
-  .work-item .tag{font-family:"Inter",sans-serif;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);padding-top:.35rem}
-  .work-item .desc{max-width:60ch}
-  .work-item .desc h3{font-size:clamp(1.3rem,2vw,1.7rem);margin-bottom:.4rem;font-weight:400}
-  .work-item .desc p{color:var(--stone)}
-  @media(min-width:760px){
-    .work-item{grid-template-columns:minmax(0,3fr) minmax(0,7fr);gap:2.5rem;align-items:baseline}
-  }
-
-  /* CURRICULUM CTA */
-  .ccta-inner{display:flex;flex-direction:column;gap:2rem;align-items:flex-start}
-  .ccta-text{max-width:64ch}
-  .ccta-text .eyebrow{margin-bottom:1.4rem}
-  .ccta-text h2{margin-bottom:1.2rem}
-  .ccta-lede{max-width:62ch}
-  .ccta-action{flex-shrink:0}
-  .btn-dark{background:var(--ink);color:var(--parchment);border-color:var(--ink)}
-  .btn-dark:hover{background:transparent;color:var(--ink);transform:translateY(-2px)}
-  @media(min-width:900px){
-    .ccta-inner{flex-direction:row;justify-content:space-between;align-items:flex-end;gap:3rem}
-  }
-
-  /* SCRIPTURE */
-  .scripture{background:var(--ink);color:var(--parchment);text-align:center}
-  .scripture .wrap{max-width:980px}
-  .scripture blockquote{font-family:"Newsreader",serif;font-weight:340;font-size:clamp(1.6rem,4vw,3rem);line-height:1.3;letter-spacing:-.01em}
-  .scripture blockquote em{font-style:italic;color:var(--gold-bright)}
-  .scripture cite{display:block;margin-top:1.8rem;font-family:"Inter",sans-serif;font-style:normal;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--stone-light)}
-
-  /* PARTNER + GIVE */
-  .ways{display:grid;grid-template-columns:1fr;gap:1.6rem;margin-top:clamp(2rem,4vw,3rem)}
-  .way{padding:1.8rem 0;border-top:2px solid var(--ink)}
-  .way .wnum{font-family:"Inter",sans-serif;font-size:.72rem;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
-  .way h3{font-size:clamp(1.4rem,2vw,1.8rem);font-weight:400;margin:.7rem 0 .5rem}
-  .way p{color:var(--stone);max-width:34ch}
-  @media(min-width:760px){.ways{grid-template-columns:repeat(3,1fr);gap:2.5rem}}
-
-  .give{margin-top:clamp(3.5rem,7vw,6rem);background:var(--ink);color:var(--parchment);border-radius:18px;padding:clamp(2rem,5vw,3.6rem);position:relative;overflow:hidden}
-  .give::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(80% 120% at 100% 0%,rgba(201,162,90,.12),transparent 55%)}
-  .give .gwrap{position:relative;z-index:2}
-  .give .eyebrow{color:var(--gold-bright);margin-bottom:1.3rem}
-  .give h3{font-size:clamp(1.7rem,3.2vw,2.6rem);font-weight:380;margin-bottom:1rem;max-width:20ch}
-  .give .gnote{color:var(--stone-light);max-width:54ch;margin-bottom:2rem}
-  .give-cta{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;margin-bottom:2.6rem}
-  .give-cta .micro{font-family:"Inter",sans-serif;font-size:.72rem;letter-spacing:.06em;color:var(--stone-light)}
-  .give-foot{margin-top:1.5rem;font-family:"Newsreader",serif;font-style:italic;font-size:clamp(1.05rem,1.6vw,1.25rem);color:var(--gold-bright);line-height:1.4}
-  .give-foot .ast{font-style:normal;opacity:.8;margin-right:.15rem}
-
-  /* FOOTER / CONTACT */
-  footer.site{background:var(--ink);color:var(--parchment);padding:clamp(4rem,8vw,7rem) 0 2.5rem;border-top:1px solid var(--line-dark)}
-  .foot-top{display:grid;grid-template-columns:1fr;gap:2.5rem;margin-bottom:clamp(3rem,6vw,5rem)}
-  .foot-top h2{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:380;max-width:14ch}
-  .foot-contact{display:flex;flex-direction:column;gap:1.1rem}
-  .foot-contact a,.foot-contact span{display:flex;align-items:center;gap:.8rem;font-family:"Inter",sans-serif;font-size:.82rem;letter-spacing:.05em;color:var(--parchment);overflow-wrap:anywhere}
-  .foot-contact a:hover{color:var(--gold-bright)}
-  .foot-contact .k{color:var(--stone-light);text-transform:uppercase;font-size:.7rem;letter-spacing:.12em;min-width:8.5rem;flex-shrink:0}
-  @media(min-width:820px){.foot-top{grid-template-columns:1.3fr 1fr;align-items:start;gap:4rem}}
-  .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding-top:2rem;border-top:1px solid var(--line-dark)}
-  .foot-tag{font-family:"Newsreader",serif;font-style:italic;font-size:1rem;color:var(--stone-light);max-width:42ch}
-  .foot-copy{font-family:"Inter",sans-serif;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stone-light)}
-
-  /* ---------- ABOUT / FOUNDER ---------- */
-  .about{background:var(--ink);color:var(--parchment)}
-  .about-inner{display:grid;grid-template-columns:1fr;gap:clamp(2.5rem,5vw,3.5rem);align-items:start}
-  @media(min-width:900px){.about-inner{grid-template-columns:.78fr 1.22fr;gap:clamp(3rem,5vw,5rem)}}
-  .founder{display:flex;flex-direction:column;gap:1.3rem;max-width:360px}
-  .founder-photo{position:relative;aspect-ratio:4/5;border-radius:10px;overflow:hidden;background:linear-gradient(150deg,#0C1719 0%,#050D0F 100%);border:1px solid var(--line-dark)}
-  .founder-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
-  .founder-initials{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:"Newsreader",Georgia,serif;font-size:5rem;font-weight:500;color:rgba(201,162,90,.32);letter-spacing:.06em}
-  .founder-name{font-family:"Newsreader",Georgia,serif;font-weight:440;font-size:1.5rem;color:var(--parchment);margin-bottom:.4rem;line-height:1.1}
-  .founder-role{font-family:"Inter",sans-serif;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:.5rem}
-  .founder-pillars{font-family:"Inter",sans-serif;font-size:.85rem;color:var(--stone-light)}
-  .about-copy .eyebrow{margin-bottom:1.3rem}
-  .about-copy h2{margin-bottom:1.4rem}
-  .about-copy p{color:var(--stone-light);margin-bottom:1.1rem;line-height:1.72;max-width:62ch}
-  .about-copy p:last-child{margin-bottom:0}
-
-  /* ---------- STATEMENT OF FAITH ---------- */
-  .beliefs{background:var(--parchment)}
-  .beliefs-intro{max-width:60ch}
-  .beliefs-grid{display:grid;grid-template-columns:1fr;gap:1.9rem clamp(2.5rem,4vw,3.5rem);margin-top:clamp(2.5rem,5vw,3.5rem)}
-  @media(min-width:700px){.beliefs-grid{grid-template-columns:1fr 1fr}}
-  @media(min-width:1050px){.beliefs-grid{grid-template-columns:repeat(3,1fr)}}
-  .belief{border-top:1px solid var(--line-light);padding-top:1.25rem}
-  .belief h3{font-family:"Newsreader",Georgia,serif;font-weight:450;font-size:1.22rem;color:var(--ink);margin-bottom:.5rem;line-height:1.15;display:flex;align-items:baseline;gap:.6rem}
-  .belief h3 .bnum{font-family:"Inter",sans-serif;font-size:.72rem;font-weight:600;color:var(--gold);letter-spacing:.08em}
-  .belief p{color:var(--stone);line-height:1.6;font-size:.98rem}
-
-  /* ---------- NEWSLETTER ---------- */
-  .newsletter{background:var(--parchment-2)}
-  .news-inner{display:grid;grid-template-columns:1fr;gap:2.4rem;align-items:center}
-  @media(min-width:900px){.news-inner{grid-template-columns:1.05fr .95fr;gap:4rem}}
-  .news-copy .eyebrow{margin-bottom:1.2rem}
-  .news-copy h2{margin-bottom:1rem}
-  .news-lede{max-width:46ch;color:var(--stone)}
-  .news-form{width:100%}
-  .news-row{display:flex;flex-direction:column;gap:.8rem}
-  @media(min-width:520px){.news-row{flex-direction:row}}
-  .news-row input{flex:1;min-width:0;background:#fff;border:1px solid var(--line-light);border-radius:3px;padding:.95rem 1.1rem;font-family:"Inter",sans-serif;font-size:1rem;color:var(--ink);transition:border-color .25s}
-  .news-row input::placeholder{color:var(--stone-light)}
-  .news-row input:focus{outline:none;border-color:var(--gold)}
-  .news-row .btn{white-space:nowrap;cursor:pointer}
-  .newsletter .form-status{margin-top:1rem;font-family:"Inter",sans-serif;font-size:.82rem;min-height:1.2em}
-  .newsletter .form-status.ok{color:var(--gold)}
-  .newsletter .form-status.err{color:#b3402f}
-  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-
-  /* ---------- CONTACT + FORM ---------- */
-  .contact{background:var(--ink);color:var(--parchment)}
-  .contact-grid{display:grid;grid-template-columns:1fr;gap:clamp(2.5rem,5vw,4rem)}
-  .contact-intro .eyebrow{margin-bottom:1.3rem}
-  .contact-intro h2{margin-bottom:1.2rem}
-  .contact-lede{max-width:40ch;margin-bottom:2.2rem;color:var(--stone-light)}
-  .contact-methods{display:flex;flex-direction:column;gap:1rem}
-  .contact-methods a,.contact-methods span{display:flex;gap:.8rem;font-family:"Inter",sans-serif;font-size:.82rem;letter-spacing:.04em;color:var(--parchment);overflow-wrap:anywhere}
-  .contact-methods a:hover{color:var(--gold-bright)}
-  .contact-methods .k{color:var(--stone-light);text-transform:uppercase;font-size:.7rem;letter-spacing:.12em;min-width:7.5rem;flex-shrink:0}
-  @media(min-width:900px){.contact-grid{grid-template-columns:.92fr 1.08fr;gap:5rem;align-items:start}}
-
-  .contact-form{display:flex;flex-direction:column;gap:1.25rem}
-  .field{display:flex;flex-direction:column;gap:.5rem}
-  .field label{font-family:"Inter",sans-serif;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stone-light)}
-  .field label .opt{text-transform:none;letter-spacing:0;opacity:.7}
-  .field input,.field select,.field textarea{
-    width:100%;background:transparent;border:1px solid var(--line-dark);border-radius:9px;
-    padding:.85rem 1rem;color:var(--parchment);font-family:"Inter",sans-serif;font-size:1rem;line-height:1.4;
-    transition:border-color .25s ease,background .25s ease;
-  }
-  .field textarea{resize:vertical;min-height:130px}
-  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold-bright);background:rgba(255,255,255,.035)}
-  .field input:-webkit-autofill{-webkit-text-fill-color:var(--parchment);transition:background-color 9999s}
-  .select-wrap{position:relative}
-  .select-wrap::after{content:"";position:absolute;right:1rem;top:50%;width:.55rem;height:.55rem;border-right:2px solid var(--gold-bright);border-bottom:2px solid var(--gold-bright);transform:translateY(-70%) rotate(45deg);pointer-events:none}
-  .field select{appearance:none;-webkit-appearance:none;cursor:pointer;padding-right:2.4rem}
-  .field select option{color:#111;background:#fff}
-  .contact-form .btn{align-self:flex-start;margin-top:.4rem;cursor:pointer}
-  .form-status{font-family:"Inter",sans-serif;font-size:.8rem;letter-spacing:.02em;min-height:1.2em;line-height:1.4}
-  .form-status.ok{color:var(--gold-bright)}
-  .form-status.err{color:#e79a9a}
-
-  footer.site{background:var(--ink);color:var(--parchment);padding:2.6rem 0;border-top:1px solid var(--line-dark)}
-  footer.site .foot-bottom{border-top:none;padding-top:0}
-  .foot-inner{display:flex;flex-direction:column;gap:1.5rem}
-  .foot-logo{height:42px;width:auto;max-width:75%;align-self:flex-start;object-fit:contain;filter:invert(1);opacity:.9}
-
-  /* ---------- LIBRARY (Peterson Academy-style video grid) ---------- */
-  .library{background:var(--ink);color:var(--parchment);padding-top:clamp(3.5rem,7vw,6rem)}
-  .library-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:clamp(1.8rem,3vw,2.6rem)}
-  .library-title{font-family:"Newsreader",Georgia,serif;font-weight:380;font-size:clamp(1.9rem,4vw,3.3rem);line-height:1.06;letter-spacing:-.015em;color:var(--parchment);max-width:20ch}
-  .library-title em.acc{font-style:italic;color:var(--gold-bright)}
-  .library-link{font-family:"Inter",sans-serif;font-size:.74rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--parchment);border-bottom:1px solid var(--gold);padding-bottom:.35rem;white-space:nowrap;transition:color .25s,border-color .25s}
-  .library-link:hover{color:var(--gold-bright);border-color:var(--gold-bright)}
-  .library-tabs{display:flex;gap:clamp(1.3rem,3vw,2.4rem);border-bottom:1px solid var(--line-dark);margin-bottom:clamp(2rem,4vw,3rem);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-  .library-tabs::-webkit-scrollbar{display:none}
-  .tab{font-family:"Inter",sans-serif;font-size:.88rem;letter-spacing:.01em;color:var(--stone-light);background:none;border:none;cursor:pointer;padding:0 0 .9rem;position:relative;white-space:nowrap;transition:color .25s}
-  .tab::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--gold-bright);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
-  .tab:hover{color:var(--parchment)}
-  .tab.is-active{color:var(--parchment)}
-  .tab.is-active::after{transform:scaleX(1)}
-  .library-grid{display:grid;grid-template-columns:1fr;gap:clamp(1.6rem,2.4vw,2.1rem) clamp(1.1rem,1.8vw,1.6rem)}
-  @media(min-width:520px){.library-grid{grid-template-columns:1fr 1fr}}
-  @media(min-width:900px){.library-grid{grid-template-columns:repeat(4,1fr)}}
-  .course-card{display:flex;flex-direction:column;gap:.85rem}
-  .course-card.is-hidden{display:none}
-  .course-thumb{position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#000 center/cover no-repeat;cursor:pointer;border:1px solid var(--line-dark)}
-  .course-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease,opacity .3s}
-  .course-card:hover .course-thumb img{transform:scale(1.05);opacity:.85}
-  .course-thumb .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s;pointer-events:none}
-  .course-card:hover .course-thumb .play{opacity:1}
-  .course-thumb .play::before{content:"";width:54px;height:54px;border-radius:50%;background:rgba(4,12,14,.5);backdrop-filter:blur(4px);border:1px solid rgba(246,242,233,.4)}
-  .course-thumb .play::after{content:"";position:absolute;width:0;height:0;border-left:16px solid var(--parchment);border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px}
-  .course-thumb.placeholder{background:linear-gradient(135deg,#0C1719 0%,#050D0F 100%)}
-  .course-thumb.placeholder .play{opacity:.45}
-  .course-thumb iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-  .course-thumb:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
-  .course-meta{display:flex;flex-direction:column;gap:.3rem}
-  .course-title{font-family:"Newsreader",Georgia,serif;font-weight:430;font-size:1.08rem;line-height:1.2;color:var(--parchment)}
-  .course-tags{font-family:"Inter",sans-serif;font-size:.78rem;color:var(--stone-light);letter-spacing:.01em}
-
-  /* ---------- WATCH ---------- */
-  .watch{background:var(--ink);color:var(--parchment)}
-  .watch .sec-head{margin-bottom:clamp(2.2rem,4vw,3.4rem)}
-  .watch-lede{max-width:52ch;color:var(--stone-light)}
-  .video-grid{display:grid;grid-template-columns:1fr;gap:clamp(1.5rem,3vw,2.2rem)}
-  @media(min-width:640px){.video-grid{grid-template-columns:1fr 1fr}}
-  @media(min-width:1000px){.video-grid{grid-template-columns:repeat(3,1fr)}}
-  .video-card{display:flex;flex-direction:column;gap:1rem}
-  .video-thumb{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#0A0A0A center/cover no-repeat;cursor:pointer;border:1px solid var(--line-dark)}
-  .video-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
-  .video-card:hover .video-thumb img{transform:scale(1.05)}
-  .video-thumb .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
-  .video-thumb .play::before{content:"";width:66px;height:66px;border-radius:50%;background:rgba(15,15,15,.55);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.32);transition:background .3s,border-color .3s,transform .3s}
-  .video-thumb .play::after{content:"";position:absolute;width:0;height:0;border-left:19px solid var(--gold-bright);border-top:12px solid transparent;border-bottom:12px solid transparent;margin-left:5px;transition:border-color .3s}
-  .video-card:hover .play::before{background:var(--gold);border-color:var(--gold);transform:scale(1.08)}
-  .video-card:hover .play::after{border-left-color:#141414}
-  .video-thumb.placeholder{background:linear-gradient(135deg,#1c1c1c 0%,#0B0B0B 100%)}
-  .video-thumb iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-  .video-thumb:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
-  .video-meta{display:flex;flex-direction:column;gap:.45rem}
-  .video-meta .tag{font-family:"Inter",sans-serif;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-bright)}
-  .video-meta h3{font-family:"Newsreader",serif;font-size:1.15rem;font-weight:400;line-height:1.25;color:var(--parchment)}
-
-  /* ---------- SMALL SCREENS ---------- */
-  @media(max-width:540px){
-    .hero{min-height:auto;padding:120px 0 56px;flex-direction:column;justify-content:center;align-items:stretch}
-    .hero-foot{position:static;margin-top:2.6rem}
-    .hero-foot .wrap{flex-direction:column;flex-wrap:nowrap;align-items:flex-start;gap:1rem}
-    .verse-note{width:100%;overflow-wrap:anywhere}
-    .hero .lede{margin-bottom:2.1rem}
-    .hero-cta{width:100%}
-    .hero-cta .btn{flex:1;justify-content:center}
-    .foot-contact a,.foot-contact span{flex-wrap:wrap;gap:.2rem .7rem}
-    .foot-contact .k{min-width:0}
-    .stat .num{line-height:.92}
-    .give{border-radius:14px}
-  }
-  @media(max-width:380px){
-    .display{font-size:2.45rem}
-    .stat .num{font-size:3.1rem}
-  }
-
-  /* ---------- MOBILE NAV ---------- */
-  @media(max-width:880px){
-    .nav-links{
-      position:fixed;inset:0;background:var(--ink);flex-direction:column;justify-content:center;
-      gap:2rem;transform:translateY(-100%);transition:transform .45s cubic-bezier(.7,0,.2,1);
-    }
-    .nav-links.open{transform:translateY(0)}
-    .nav-links a.lk{font-size:1.1rem;color:var(--parchment)!important}
-    .nav-links .btn{font-size:.9rem}
-    .nav-toggle{display:block;z-index:120}
-    .nav-toggle.open span{background:var(--parchment)}
-    .nav-toggle.open span:nth-child(1){top:10px;transform:rotate(45deg)}
-    .nav-toggle.open span:nth-child(2){opacity:0}
-    .nav-toggle.open span:nth-child(3){top:10px;transform:rotate(-45deg)}
-  }
-
-  /* ---------- REVEAL ANIM ---------- */
-  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.6,.2,1),transform .8s cubic-bezier(.2,.6,.2,1)}
-  .reveal.in{opacity:1;transform:none}
-  .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
-  .hero .reveal{transform:translateY(34px)}
-
-  :focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
-
-  @media(prefers-reduced-motion:reduce){
-    *{animation:none!important;transition:none!important}
-    .reveal{opacity:1;transform:none}
-    html{scroll-behavior:auto}
-  }
-</style>
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<!-- NAV -->
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
-    <a href="#top" class="brand" aria-label="Apologetics Nigeria — home">
-      <img src="logo.png" alt="" class="brand-logo" id="brandLogo" onerror="this.remove();" />
-  
+    <a href="index.html" class="brand" aria-label="Apologetics Nigeria — home">
+      <img src="logo.png" alt="Apologetics Nigeria" class="brand-logo" id="brandLogo" onerror="this.remove();" />
     </a>
     <nav class="nav-links" id="navlinks">
-      <a href="#watch" class="lk">Watch</a>
-      <a href="#about" class="lk">About</a>
-      <a href="#vision" class="lk">Vision</a>
-      <a href="#need" class="lk">The&nbsp;Need</a>
-      <a href="#work" class="lk">How&nbsp;We&nbsp;Work</a>
-      <a href="#partner" class="lk">Partner</a>
-      <a href="#give" class="btn btn-gold">Give</a>
+      <a href="films.html" class="lk" data-page="films">Watch</a>
+      <a href="about.html" class="lk" data-page="about">About</a>
+      <a href="beliefs.html" class="lk" data-page="beliefs">Beliefs</a>
+      <a href="partner.html" class="lk" data-page="partner">Partner</a>
+      <a href="contact.html" class="lk" data-page="contact">Contact</a>
+      <a href="partner.html#give" class="btn btn-gold">Give</a>
     </nav>
     <button class="nav-toggle" id="navtoggle" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -479,6 +47,7 @@
   </div>
 </header>
 
+<main>
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="wrap">
@@ -486,8 +55,8 @@
     <h1 class="display reveal d1">Give a <em class="acc">reason</em> for the hope.</h1>
     <p class="lede reveal d2">We partner with churches, pastors, and ministry groups to equip believers to defend the faith and share the gospel — with clarity, confidence, and joy.</p>
     <div class="hero-cta reveal d3">
-      <a href="#partner" class="btn btn-gold">Partner with us</a>
-      <a href="#give" class="btn btn-ghost">Support the work</a>
+      <a href="partner.html" class="btn btn-gold">Partner with us</a>
+      <a href="partner.html#give" class="btn btn-ghost">Support the work</a>
     </div>
   </div>
   <div class="hero-foot">
@@ -498,90 +67,6 @@
   </div>
 </section>
 
-<!-- LIBRARY (video grid — Peterson Academy style) -->
-<section class="library" id="watch">
-  <div class="wrap">
-    <div class="library-head reveal">
-      <h2 class="library-title">Hours of apologetics, <em class="acc">in full view</em>.</h2>
-      <a class="library-link" href="#">Explore the channel →</a>
-    </div>
-    <div class="library-tabs reveal" role="tablist" aria-label="Filter lectures by topic">
-      <button class="tab is-active" data-cat="all" role="tab" aria-selected="true">All</button>
-      <button class="tab" data-cat="islam" role="tab" aria-selected="false">Islam</button>
-      <button class="tab" data-cat="atheism" role="tab" aria-selected="false">Atheism</button>
-      <button class="tab" data-cat="jesus" role="tab" aria-selected="false">Jesus</button>
-      <button class="tab" data-cat="bible" role="tab" aria-selected="false">The Bible</button>
-      <button class="tab" data-cat="foundations" role="tab" aria-selected="false">Foundations</button>
-    </div>
-    <div class="library-grid">
-      <!-- Card: set data-cat to a topic; set data-id + the two thumbnail IDs to the YouTube video ID; the tag line captions it. Add <h3 class="course-title">Title</h3> before .course-tags for a serif title. -->
-      <article class="course-card reveal" data-cat="islam">
-        <div class="course-thumb" data-id="ePMjFrWp1JY">
-          <img src="https://i.ytimg.com/vi/ePMjFrWp1JY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/ePMjFrWp1JY/hqdefault.jpg'" alt="" loading="lazy" />
-          <span class="play" aria-hidden="true"></span>
-        </div>
-        <div class="course-meta"><p class="course-tags">Islam • Apologetics</p></div>
-      </article>
-      <article class="course-card reveal" data-cat="islam">
-        <div class="course-thumb" data-id="w4HFMAChOQY">
-          <img src="https://i.ytimg.com/vi/w4HFMAChOQY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/w4HFMAChOQY/hqdefault.jpg'" alt="" loading="lazy" />
-          <span class="play" aria-hidden="true"></span>
-        </div>
-        <div class="course-meta"><p class="course-tags">Islam • Apologetics</p></div>
-      </article>
-      <article class="course-card reveal" data-cat="islam">
-        <div class="course-thumb" data-id="6XhMBhPiGL0">
-          <img src="https://i.ytimg.com/vi/6XhMBhPiGL0/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/6XhMBhPiGL0/hqdefault.jpg'" alt="" loading="lazy" />
-          <span class="play" aria-hidden="true"></span>
-        </div>
-        <div class="course-meta"><p class="course-tags">Islam • Apologetics</p></div>
-      </article>
-      <article class="course-card reveal" data-cat="islam">
-        <div class="course-thumb" data-id="_fmgTmWfdFE">
-          <img src="https://i.ytimg.com/vi/_fmgTmWfdFE/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/_fmgTmWfdFE/hqdefault.jpg'" alt="" loading="lazy" />
-          <span class="play" aria-hidden="true"></span>
-        </div>
-        <div class="course-meta"><p class="course-tags">Islam • Apologetics</p></div>
-      </article>
-      <article class="course-card reveal" data-cat="islam">
-        <div class="course-thumb" data-id="2ulInp-C-rg">
-          <img src="https://i.ytimg.com/vi/2ulInp-C-rg/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/2ulInp-C-rg/hqdefault.jpg'" alt="" loading="lazy" />
-          <span class="play" aria-hidden="true"></span>
-        </div>
-        <div class="course-meta"><p class="course-tags">Islam • Apologetics</p></div>
-      </article>
-      <article class="course-card reveal" data-cat="atheism">
-        <div class="course-thumb placeholder"><span class="play" aria-hidden="true"></span></div>
-        <div class="course-meta"><p class="course-tags">Coming soon</p></div>
-      </article>
-      <article class="course-card reveal" data-cat="jesus">
-        <div class="course-thumb placeholder"><span class="play" aria-hidden="true"></span></div>
-        <div class="course-meta"><p class="course-tags">Coming soon</p></div>
-      </article>
-      <article class="course-card reveal" data-cat="bible">
-        <div class="course-thumb placeholder"><span class="play" aria-hidden="true"></span></div>
-        <div class="course-meta"><p class="course-tags">Coming soon</p></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- VISION -->
-<section id="vision">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="eyebrow">The vision</p>
-      <h2 class="h2">We build conviction <em class="acc">inside</em> the local church.</h2>
-    </div>
-    <div class="vision-grid">
-      <div class="vision-body reveal">
-        <p>Apologetics Nigeria exists to build apologetics capacity where believers already serve — so that every partner church becomes a place where hard questions are welcomed, faith is grounded, and the gospel is shared with conviction.</p>
-        <p>We don't pull believers out of their churches. We come alongside the church, equip its people, and leave it stronger from the inside.</p>
-      </div>
-      <p class="pullquote reveal d1">Defending the faith isn't fearful. Done well, it deepens a believer's own joy.</p>
-    </div>
-  </div>
-</section>
 
 <!-- NEED -->
 <section class="dark" id="need">
@@ -619,6 +104,7 @@
   </div>
 </section>
 
+
 <!-- HOW WE WORK -->
 <section id="work">
   <div class="wrap">
@@ -651,111 +137,50 @@
   </div>
 </section>
 
-<!-- ABOUT / FOUNDER -->
-<section class="about" id="about">
-  <div class="wrap about-inner">
-    <div class="founder reveal">
-      <div class="founder-photo">
-        <img src="founder.jpg" alt="Oluwanifemi Adeniran" onerror="this.style.display='none'" />
-        <span class="founder-initials" aria-hidden="true">OA</span>
-      </div>
-      <div class="founder-id">
-        <h3 class="founder-name">Oluwanifemi Adeniran</h3>
-        <p class="founder-role">Founder &amp; Lead Apologist</p>
-        <p class="founder-pillars">Apologetics • Evangelism • Discipleship</p>
-      </div>
-    </div>
-    <div class="about-copy reveal d1">
-      <p class="eyebrow">Who's behind this</p>
-      <h2 class="h2">Meet the founder.</h2>
-      <p>Oluwanifemi Adeniran founded Apologetics Nigeria out of a simple conviction: the church here deserves to be equipped — not merely encouraged, but genuinely prepared to answer the hardest questions of its generation.</p>
-      <p>For several years he served in apologetics ministry with churches across Ireland and the United Kingdom, teaching young believers to think clearly, hold their faith with conviction, and give an honest, gracious defense of the gospel. That work has now come home to Nigeria.</p>
-      <p>He brings together the two disciplines this ministry depends on — serious theological study and the craft of clear, compelling communication. He is currently pursuing graduate study in theology, working toward a doctorate in apologetics, and continues to teach, film, and engage these questions publicly.</p>
-      <p>His conviction is plain: the answer to a generation's doubts is not less Christianity, but a deeper, better-understood faith — carried by a church that knows what it believes, and why.</p>
-    </div>
-  </div>
-</section>
 
-<!-- STATEMENT OF FAITH -->
-<section class="beliefs" id="beliefs">
+<!-- FEATURED FILMS -->
+<section class="library" id="films">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="eyebrow">What we believe</p>
-      <h2 class="h2">Our statement of faith.</h2>
-      <p class="lede beliefs-intro">Apologetics Nigeria is a non-denominational Christian ministry. We hold to the historic Christian faith — summarised in these affirmations, and the ground on which we teach and partner with churches.</p>
+    <div class="library-head reveal">
+      <h2 class="library-title">Watch the case, <em class="acc">in full</em>.</h2>
+      <a class="library-link" href="films.html">Watch all films →</a>
     </div>
-    <div class="beliefs-grid">
-      <div class="belief reveal"><h3><span class="bnum">01</span>The Scriptures</h3><p>The Bible is the inspired and authoritative Word of God — our final rule for faith and life.</p></div>
-      <div class="belief reveal d1"><h3><span class="bnum">02</span>One God</h3><p>There is one God, eternally existing in three persons: the Father, the Son, and the Holy Spirit.</p></div>
-      <div class="belief reveal"><h3><span class="bnum">03</span>Jesus Christ</h3><p>Jesus is fully God and fully man — born of a virgin, sinless in life, crucified for our sins, and raised bodily from the dead.</p></div>
-      <div class="belief reveal d1"><h3><span class="bnum">04</span>Humanity</h3><p>Every person is made in God's image yet fallen in sin, and cannot save themselves by their own effort.</p></div>
-      <div class="belief reveal"><h3><span class="bnum">05</span>Salvation</h3><p>Salvation is a gift of God's grace, received through faith in Jesus Christ alone — not earned by works.</p></div>
-      <div class="belief reveal d1"><h3><span class="bnum">06</span>The Holy Spirit</h3><p>The Holy Spirit indwells, transforms, and empowers every believer to live and to witness for Christ.</p></div>
-      <div class="belief reveal"><h3><span class="bnum">07</span>The Church</h3><p>The church is the body of Christ, called to worship God, grow in truth, and make disciples of all nations.</p></div>
-      <div class="belief reveal d1"><h3><span class="bnum">08</span>The Great Commission</h3><p>Every believer is called to share and defend the gospel — with clarity, courage, and love.</p></div>
-      <div class="belief reveal"><h3><span class="bnum">09</span>The Hope to Come</h3><p>Jesus Christ will return in glory to judge the living and the dead, and to make all things new.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- CURRICULUM CTA -->
-<section class="tint" id="curriculum">
-  <div class="wrap ccta-inner">
-    <div class="ccta-text">
-      <p class="eyebrow">The curriculum</p>
-      <h2 class="h2">A complete 12-week curriculum — <em class="acc">yours when you partner</em>.</h2>
-      <p class="lede ccta-lede">We teach a clear, structured foundations track — from the existence of God to engaging Islam and atheism and starting real conversations — contextualised for the questions Nigerians are actually asking. Reach out and we'll walk you through the full outline.</p>
-    </div>
-    <div class="ccta-action">
-      <a href="#contact" class="btn btn-dark" id="reqCurriculum">Request the curriculum →</a>
-    </div>
-  </div>
-</section>
-
-<!-- SCRIPTURE -->
-<section class="scripture">
-  <div class="wrap">
-    <blockquote class="reveal">Always be prepared to give an answer to everyone who asks you to give the reason for the hope that you have. But do this with <em>gentleness and respect</em>.</blockquote>
-    <cite class="reveal d1">1 Peter 3:15</cite>
-  </div>
-</section>
-
-<!-- PARTNER + GIVE -->
-<section id="partner">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="eyebrow">Stand with us</p>
-      <h2 class="h2">Three ways to partner.</h2>
-    </div>
-    <div class="ways">
-      <div class="way reveal">
-        <span class="wnum">01 / Invite</span>
-        <h3>Open the door</h3>
-        <p>Host training, a workshop, or a conversation for the believers and leaders in your church or ministry.</p>
-      </div>
-      <div class="way reveal d1">
-        <span class="wnum">02 / Pray</span>
-        <h3>Stand in the gap</h3>
-        <p>Pray for grounded believers, a defended faith, and a generation that can give a reason for its hope.</p>
-      </div>
-      <div class="way reveal d2">
-        <span class="wnum">03 / Give</span>
-        <h3>Fuel the work</h3>
-        <p>Support with a one-off gift, a monthly partnership, or by sponsoring a specific training, film, or resource.</p>
-      </div>
-    </div>
-
-    <!-- GIVE -->
-    <div class="give" id="give">
-      <div class="gwrap">
-        <p class="eyebrow">Give &amp; sponsor</p>
-        <h3>Help equip a generation to stand.</h3>
-        <p class="gnote">Recurring monthly partnership is the most valuable kind of support — it gives the work stability — while sponsorships let us take on larger projects. As our registration with the Corporate Affairs Commission (CAC) is completed, a dedicated ministry account will follow.</p>
-        <div class="give-cta">
-          <a href="https://buy.stripe.com/cNieVe85O0jq3eQ2up1wY00" target="_blank" rel="noopener" class="btn btn-gold">Give here →</a>
+    <div class="library-grid">
+      <article class="course-card reveal" data-cat="islam">
+        <div class="course-thumb" data-id="ePMjFrWp1JY">
+          <img src="https://i.ytimg.com/vi/ePMjFrWp1JY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/ePMjFrWp1JY/hqdefault.jpg'" alt="" loading="lazy" />
+          <span class="play" aria-hidden="true"></span>
         </div>
-        <p class="give-foot"><span class="ast">*</span> Every penny goes into the spread of the gospel.</p>
-      </div>
+        <div class="course-meta"><p class="course-tags">Islam • Apologetics</p></div>
+      </article>
+      <article class="course-card reveal" data-cat="islam">
+        <div class="course-thumb" data-id="w4HFMAChOQY">
+          <img src="https://i.ytimg.com/vi/w4HFMAChOQY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/w4HFMAChOQY/hqdefault.jpg'" alt="" loading="lazy" />
+          <span class="play" aria-hidden="true"></span>
+        </div>
+        <div class="course-meta"><p class="course-tags">Islam • Apologetics</p></div>
+      </article>
+      <article class="course-card reveal" data-cat="islam">
+        <div class="course-thumb" data-id="6XhMBhPiGL0">
+          <img src="https://i.ytimg.com/vi/6XhMBhPiGL0/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/6XhMBhPiGL0/hqdefault.jpg'" alt="" loading="lazy" />
+          <span class="play" aria-hidden="true"></span>
+        </div>
+        <div class="course-meta"><p class="course-tags">Islam • Apologetics</p></div>
+      </article>
+      <article class="course-card reveal" data-cat="islam">
+        <div class="course-thumb" data-id="_fmgTmWfdFE">
+          <img src="https://i.ytimg.com/vi/_fmgTmWfdFE/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/_fmgTmWfdFE/hqdefault.jpg'" alt="" loading="lazy" />
+          <span class="play" aria-hidden="true"></span>
+        </div>
+        <div class="course-meta"><p class="course-tags">Islam • Apologetics</p></div>
+      </article>
+      <article class="course-card reveal" data-cat="islam">
+        <div class="course-thumb" data-id="2ulInp-C-rg">
+          <img src="https://i.ytimg.com/vi/2ulInp-C-rg/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/2ulInp-C-rg/hqdefault.jpg'" alt="" loading="lazy" />
+          <span class="play" aria-hidden="true"></span>
+        </div>
+        <div class="course-meta"><p class="course-tags">Islam • Apologetics</p></div>
+      </article>
     </div>
   </div>
 </section>
@@ -781,216 +206,30 @@
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="wrap contact-grid">
-    <div class="contact-intro">
-      <p class="eyebrow reveal">Get in touch</p>
-      <h2 class="h2 reveal">Let's talk about your church.</h2>
-      <p class="lede contact-lede reveal">Whether you'd like to invite us, request the curriculum, explore partnership, or support the work — we'd love to hear from you.</p>
-      <div class="contact-methods reveal d1">
-        <a href="mailto:hello@apologeticsnigeria.org"><span class="k">Email</span> hello@apologeticsnigeria.org</a>
-        <a href="https://www.instagram.com/apologeticsnigeria/"><span class="k">Instagram</span> @apologeticsnigeria</a>
-        <span><span class="k">Based in</span> Lagos, Nigeria</span>
-      </div>
-    </div>
+</main>
 
-    <form class="contact-form reveal d1" id="contactForm" action="https://formspree.io/f/mkolkrqb" method="POST">
-      <input type="hidden" name="_subject" value="New enquiry — Apologetics Nigeria website" />
-      <div class="field">
-        <label for="cf-name">Name</label>
-        <input type="text" id="cf-name" name="name" required autocomplete="name" />
-      </div>
-      <div class="field">
-        <label for="cf-email">Email</label>
-        <input type="email" id="cf-email" name="email" required autocomplete="email" />
-      </div>
-      <div class="field">
-        <label for="cf-org">Church / Organisation <span class="opt">(optional)</span></label>
-        <input type="text" id="cf-org" name="organisation" autocomplete="organization" />
-      </div>
-      <div class="field">
-        <label for="cf-reason">I'm reaching out about</label>
-        <div class="select-wrap">
-          <select id="cf-reason" name="reason">
-            <option>Partnering with us</option>
-            <option>Inviting us to train</option>
-            <option>Requesting the curriculum</option>
-            <option>Supporting &amp; giving</option>
-            <option>Just saying hello</option>
-            <option>Something else</option>
-          </select>
-        </div>
-      </div>
-      <div class="field">
-        <label for="cf-message">Message</label>
-        <textarea id="cf-message" name="message" rows="5" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-gold" id="cf-submit">Send message →</button>
-      <p class="form-status" id="cf-status" role="status" aria-live="polite"></p>
-    </form>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer class="site">
-  <div class="wrap foot-inner">
-    <img src="logo.png" alt="Apologetics Nigeria" class="foot-logo" onerror="this.remove();" />
-    <div class="foot-bottom">
-      <p class="foot-tag">Grounded believers · defended faith · a generation that can give a reason for its hope.</p>
-      <p class="foot-copy">© 2026 Apologetics Nigeria</p>
+  <div class="wrap">
+    <div class="foot-inner">
+      <img src="logo.png" alt="Apologetics Nigeria" class="foot-logo" onerror="this.remove();" />
+      <nav class="foot-nav" aria-label="Footer">
+        <a href="films.html">Watch</a>
+        <a href="about.html">About</a>
+        <a href="beliefs.html">Beliefs</a>
+        <a href="partner.html">Partner</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.instagram.com/apologeticsnigeria/" target="_blank" rel="noopener">Instagram</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+      <div class="foot-bottom">
+        <p class="foot-tag">Grounded believers · defended faith · a generation that can give a reason for its hope.</p>
+        <p class="foot-copy">© 2026 Apologetics Nigeria</p>
+      </div>
     </div>
   </div>
 </footer>
 
-<script>
-  // sticky nav state
-  const nav = document.getElementById('nav');
-  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
-  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
-
-  // mobile menu
-  const toggle = document.getElementById('navtoggle');
-  const links = document.getElementById('navlinks');
-  toggle.addEventListener('click', () => {
-    const open = links.classList.toggle('open');
-    toggle.classList.toggle('open', open);
-    toggle.setAttribute('aria-expanded', open);
-    document.body.style.overflow = open ? 'hidden' : '';
-  });
-  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    links.classList.remove('open'); toggle.classList.remove('open');
-    toggle.setAttribute('aria-expanded','false'); document.body.style.overflow='';
-  }));
-
-  // reveal on scroll
-  const revealEls = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, {threshold:.12, rootMargin:'0px 0px -6% 0px'});
-  revealEls.forEach(el => io.observe(el));
-  // safety net: nothing should ever remain invisible
-  setTimeout(() => revealEls.forEach(el => el.classList.add('in')), 2600);
-
-  // hero load-in
-  window.addEventListener('load', () => {
-    document.querySelectorAll('.hero .reveal').forEach(el => el.classList.add('in'));
-  });
-
-  // count-up for the 39% stat
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const counter = document.querySelector('.num[data-count]');
-  if(counter && !prefersReduced){
-    const target = +counter.dataset.count, suffix = counter.dataset.suffix || '';
-    const cio = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if(e.isIntersecting){
-          let cur = 0; const step = Math.max(1, Math.round(target/40));
-          const tick = () => { cur = Math.min(target, cur+step); counter.textContent = cur+suffix; if(cur<target) requestAnimationFrame(tick); };
-          tick(); cio.unobserve(e.target);
-        }
-      });
-    }, {threshold:.6});
-    cio.observe(counter);
-  }
-
-  // pre-select "Requesting the curriculum" when arriving from the curriculum CTA
-  const reqBtn = document.getElementById('reqCurriculum');
-  const reasonSel = document.getElementById('cf-reason');
-  if(reqBtn && reasonSel){
-    reqBtn.addEventListener('click', () => { reasonSel.value = 'Requesting the curriculum'; });
-  }
-
-  // watch — click a thumbnail to load the inline player (facade pattern, no external navigation)
-  document.querySelectorAll('.course-thumb[data-id]').forEach((thumb) => {
-    const id = thumb.getAttribute('data-id');
-    if(!id) return; // placeholder card, no video wired yet
-    thumb.setAttribute('role','button');
-    thumb.setAttribute('tabindex','0');
-    thumb.setAttribute('aria-label','Play video');
-    const play = () => {
-      if(thumb.querySelector('iframe')) return;
-      const iframe = document.createElement('iframe');
-      iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1&playsinline=1';
-      iframe.title = 'Video player';
-      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-      iframe.setAttribute('allowfullscreen','');
-      thumb.innerHTML = '';
-      thumb.appendChild(iframe);
-    };
-    thumb.addEventListener('click', play);
-    thumb.addEventListener('keydown', (e) => { if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); play(); } });
-  });
-
-  // library — topic tab filter
-  const libTabs = document.querySelectorAll('.library-tabs .tab');
-  const libCards = document.querySelectorAll('.library-grid .course-card');
-  libTabs.forEach((tab) => {
-    tab.addEventListener('click', () => {
-      libTabs.forEach((x) => { x.classList.remove('is-active'); x.setAttribute('aria-selected','false'); });
-      tab.classList.add('is-active'); tab.setAttribute('aria-selected','true');
-      const cat = tab.dataset.cat;
-      libCards.forEach((c) => c.classList.toggle('is-hidden', !(cat === 'all' || c.dataset.cat === cat)));
-    });
-  });
-
-  // newsletter — AJAX subscribe to Formspree
-  (function(){
-    const form = document.getElementById('newsForm');
-    if(!form) return;
-    const statusEl = document.getElementById('news-status');
-    const submitBtn = document.getElementById('news-submit');
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      statusEl.className = 'form-status';
-      statusEl.textContent = 'Subscribing…';
-      const original = submitBtn.textContent;
-      submitBtn.disabled = true; submitBtn.textContent = 'Subscribing…';
-      try{
-        const res = await fetch(form.action, { method:'POST', body:new FormData(form), headers:{'Accept':'application/json'} });
-        if(res.ok){ form.reset(); statusEl.classList.add('ok'); statusEl.textContent = 'You\u2019re in — thank you. Watch your inbox.'; }
-        else { statusEl.classList.add('err'); statusEl.textContent = 'Something went wrong. Please try again.'; }
-      }catch(err){ statusEl.classList.add('err'); statusEl.textContent = 'Network error. Please try again.'; }
-      finally{ submitBtn.disabled = false; submitBtn.textContent = original; }
-    });
-  })();
-
-  // contact form — AJAX submit to Formspree, styled inline status
-  const form = document.getElementById('contactForm');
-  if(form){
-    const statusEl = document.getElementById('cf-status');
-    const submitBtn = document.getElementById('cf-submit');
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      statusEl.className = 'form-status';
-      statusEl.textContent = 'Sending…';
-      const originalLabel = submitBtn.textContent;
-      submitBtn.disabled = true; submitBtn.textContent = 'Sending…';
-      try{
-        const res = await fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
-        });
-        if(res.ok){
-          form.reset();
-          statusEl.classList.add('ok');
-          statusEl.textContent = 'Thank you — your message has been sent. We\u2019ll be in touch soon.';
-        } else {
-          let msg = 'Something went wrong. Please try again, or email us directly.';
-          try { const data = await res.json(); if(data && data.errors) msg = data.errors.map(x => x.message).join(', '); } catch(_){}
-          statusEl.classList.add('err');
-          statusEl.textContent = msg;
-        }
-      } catch(err){
-        statusEl.classList.add('err');
-        statusEl.textContent = 'Network error. Please try again, or email us directly.';
-      } finally {
-        submitBtn.disabled = false; submitBtn.textContent = originalLabel;
-      }
-    });
-  }
-</script>
+<script src="script.js"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
