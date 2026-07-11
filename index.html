@@ -5,244 +5,400 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Apologetics Nigeria — Give a reason for the hope</title>
 <meta name="description" content="Apologetics Nigeria partners with churches, pastors, and ministry groups to equip believers to defend the faith and share the gospel — with clarity, confidence, and joy." />
-<meta name="theme-color" content="#040C0E" />
-<link rel="canonical" href="https://apologeticsnigeria.org/" />
+<meta name="theme-color" content="#0a0a0f" />
+<link rel="canonical" href="https://apologeticsnigeria.com/" />
 <link rel="icon" type="image/png" href="favicon.png" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Apologetics Nigeria" />
 <meta property="og:title" content="Apologetics Nigeria — Give a reason for the hope" />
-<meta property="og:description" content="Apologetics Nigeria partners with churches, pastors, and ministry groups to equip believers to defend the faith and share the gospel — with clarity, confidence, and joy." />
-<meta property="og:url" content="https://apologeticsnigeria.org/" />
-<meta property="og:image" content="https://apologeticsnigeria.org/og-image.png" />
+<meta property="og:description" content="Equipping the Nigerian church to defend the faith and share the gospel." />
+<meta property="og:url" content="https://apologeticsnigeria.com/" />
+<meta property="og:image" content="https://apologeticsnigeria.com/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Apologetics Nigeria — Give a reason for the hope" />
-<meta name="twitter:description" content="Apologetics Nigeria partners with churches, pastors, and ministry groups to equip believers to defend the faith and share the gospel — with clarity, confidence, and joy." />
-<meta name="twitter:image" content="https://apologeticsnigeria.org/og-image.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
+<base target="_blank">
 </head>
 <body>
 
-<header class="nav" id="nav">
-  <div class="wrap nav-inner">
-    <a href="index.html" class="brand" aria-label="Apologetics Nigeria — home">
-      <img src="logo.png" alt="Apologetics Nigeria" class="brand-logo" id="brandLogo" onerror="this.remove();" />
+<!-- LOADER -->
+<div class="loader" id="loader">
+  <div class="loader-text">
+    <span>A</span><span>p</span><span>o</span><span>l</span><span>o</span><span>g</span><span>e</span><span>t</span><span>i</span><span>c</span><span>s</span>
+  </div>
+  <div class="loader-line"></div>
+</div>
+
+<!-- NOISE OVERLAY -->
+<div class="noise-overlay"></div>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-track" id="scrollTrack">
+  <div class="scroll-bar" id="scrollBar"></div>
+</div>
+
+<!-- NAVIGATION -->
+<header class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand" aria-label="Apologetics Nigeria — Home">
+      <span class="brand-mark">AN</span>
+      <span class="brand-word">Apologetics Nigeria</span>
     </a>
-    <nav class="nav-links" id="navlinks">
-      <a href="films.html" class="lk" data-page="films">Watch</a>
-      <a href="about.html" class="lk" data-page="about">About</a>
-      <a href="beliefs.html" class="lk" data-page="beliefs">Beliefs</a>
-      <a href="partner.html" class="lk" data-page="partner">Partner</a>
-      <a href="contact.html" class="lk" data-page="contact">Contact</a>
-      <a href="partner.html#give" class="btn btn-gold">Give</a>
+    <nav class="nav-menu" id="navMenu">
+      <a href="films.html" class="nav-link">Films</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="beliefs.html" class="nav-link">Beliefs</a>
+      <a href="partner.html" class="nav-link">Partner</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="partner.html#give" class="nav-cta">Give</a>
     </nav>
-    <button class="nav-toggle" id="navtoggle" aria-label="Open menu" aria-expanded="false">
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 
 <main>
+
 <!-- HERO -->
-<section class="hero" id="top">
-  <div class="wrap">
-    <p class="eyebrow reveal">Non-denominational apologetics · Nigeria</p>
-    <h1 class="display reveal d1">Give a <em class="acc">reason</em> for the hope.</h1>
-    <p class="lede reveal d2">We partner with churches, pastors, and ministry groups to equip believers to defend the faith and share the gospel — with clarity, confidence, and joy.</p>
-    <div class="hero-cta reveal d3">
-      <a href="partner.html" class="btn btn-gold">Partner with us</a>
-      <a href="partner.html#give" class="btn btn-ghost">Support the work</a>
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-eyebrow" data-reveal>
+      <span class="eyebrow-line"></span>
+      <span>Non-denominational apologetics · Nigeria</span>
+    </div>
+    <h1 class="hero-title" data-reveal>
+      <span class="title-line">Give a</span>
+      <span class="title-line title-accent">reason</span>
+      <span class="title-line">for the hope.</span>
+    </h1>
+    <p class="hero-lede" data-reveal>
+      We partner with churches, pastors, and ministry groups to equip believers to defend the faith and share the gospel — with clarity, confidence, and joy.
+    </p>
+    <div class="hero-actions" data-reveal>
+      <a href="partner.html" class="btn btn-fire">Partner with us</a>
+      <a href="films.html" class="btn btn-ghost-light">Watch the films</a>
     </div>
   </div>
-  <div class="hero-foot">
-    <div class="wrap">
-      <span class="verse-note">1 PETER 3:15 — <b>“…always be prepared to give an answer.”</b></span>
-      <span class="scroll-hint">Scroll <span class="ln"></span></span>
+  <div class="hero-verse" data-reveal>
+    <span class="verse-ref">1 PETER 3:15</span>
+    <span class="verse-text">"…always be prepared to give an answer."</span>
+  </div>
+  <div class="hero-scroll" id="heroScroll">
+    <div class="scroll-mouse">
+      <div class="scroll-wheel"></div>
+    </div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Defend the faith</span>
+    <span class="marquee-dot">◆</span>
+    <span>Share the gospel</span>
+    <span class="marquee-dot">◆</span>
+    <span>Equip the church</span>
+    <span class="marquee-dot">◆</span>
+    <span>1 Peter 3:15</span>
+    <span class="marquee-dot">◆</span>
+    <span>Defend the faith</span>
+    <span class="marquee-dot">◆</span>
+    <span>Share the gospel</span>
+    <span class="marquee-dot">◆</span>
+    <span>Equip the church</span>
+    <span class="marquee-dot">◆</span>
+    <span>1 Peter 3:15</span>
+    <span class="marquee-dot">◆</span>
+  </div>
+</div>
+
+<!-- VISION -->
+<section class="vision" id="vision">
+  <div class="wrap">
+    <div class="vision-grid">
+      <div class="vision-text" data-reveal>
+        <span class="section-tag">The Vision</span>
+        <h2 class="section-headline">We build conviction <em class="text-fire">inside</em> the local church.</h2>
+        <div class="vision-body">
+          <p>Apologetics Nigeria exists to build apologetics capacity where believers already serve — so that every partner church becomes a place where hard questions are welcomed, faith is grounded, and the gospel is shared with conviction.</p>
+          <p>We don't pull believers out of their churches. We come alongside the church, equip its people, and leave it stronger from the inside.</p>
+        </div>
+      </div>
+      <div class="vision-cards" data-reveal>
+        <div class="v-card">
+          <div class="v-card-num">01</div>
+          <h4>The Church First</h4>
+          <p>We serve, not compete. We equip a church's own people and leave the capability inside — never gathering a following of our own.</p>
+        </div>
+        <div class="v-card">
+          <div class="v-card-num">02</div>
+          <h4>Train the Trainers</h4>
+          <p>We equip existing leaders to carry apologetics forward themselves, so a small team can strengthen many congregations.</p>
+        </div>
+        <div class="v-card">
+          <div class="v-card-num">03</div>
+          <h4>Media Engine</h4>
+          <p>Films, podcasts, courses, and social content — reaching a generation that lives online, not only those in the room.</p>
+        </div>
+        <div class="v-card">
+          <div class="v-card-num">04</div>
+          <h4>Grown on Fruit</h4>
+          <p>A few committed partner churches first, real fruit documented, then expansion only on a foundation that has proven solid.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-
-<!-- NEED -->
-<section class="dark" id="need">
+<!-- STATS -->
+<section class="stats" id="stats">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="eyebrow">The need · why now</p>
+    <div class="stats-header" data-reveal>
+      <span class="section-tag">The Need · Why Now</span>
+      <h2 class="section-headline">Nigeria has no shortage of Christianity. It has a shortage of <em class="text-fire">grounding.</em></h2>
     </div>
-    <p class="need-lede reveal">Nigeria has no shortage of Christianity. It has a shortage of <em class="acc">grounding</em>.</p>
-
-    <div class="stat reveal">
-      <div class="num" data-count="39" data-suffix="%">39%</div>
-      <div class="txt">
-        <p>The share of Nigeria's population projected to be Christian by 2050 — down from roughly 43–46% today, as the Muslim share rises toward 58%.</p>
-        <p class="src">Source — Pew Research Center</p>
+    <div class="stats-list">
+      <div class="stat-row" data-reveal>
+        <div class="stat-figure">
+          <span class="stat-num" data-count="39" data-suffix="%">0</span>
+        </div>
+        <div class="stat-info">
+          <p>The share of Nigeria's population projected to be Christian by 2050 — down from roughly 43–46% today, as the Muslim share rises toward 58%.</p>
+          <span class="stat-source">Pew Research Center</span>
+        </div>
+      </div>
+      <div class="stat-row" data-reveal>
+        <div class="stat-figure">
+          <span class="stat-num" data-count="85" data-suffix="%">0</span>
+        </div>
+        <div class="stat-info">
+          <p>Of pastors and church leaders across Africa have little or no formal biblical or theological training. Where training is scarce, false teaching meets little resistance.</p>
+          <span class="stat-source">World Evangelical Alliance · Langham Partnership</span>
+        </div>
+      </div>
+      <div class="stat-row" data-reveal>
+        <div class="stat-figure">
+          <span class="stat-word">Rising</span>
+        </div>
+        <div class="stat-info">
+          <p>Irreligion among young Nigerians — sharpest among men under 30 — driven not by science, but by disillusionment with a faith many were never truly taught.</p>
+          <span class="stat-source">World Values Survey, 2025</span>
+        </div>
       </div>
     </div>
-
-    <div class="stat reveal">
-      <div class="num">80–90%</div>
-      <div class="txt">
-        <p>Of pastors and church leaders across Africa have little or no formal biblical or theological training. Where training is scarce, false teaching meets little resistance.</p>
-        <p class="src">Source — World Evangelical Alliance · Langham Partnership</p>
-      </div>
-    </div>
-
-    <div class="stat reveal">
-      <div class="num" style="font-size:clamp(2.6rem,7vw,5.5rem)">Rising</div>
-      <div class="txt">
-        <p>Irreligion among young Nigerians — sharpest among men under 30 — driven not by science, but by disillusionment with a faith many were never truly taught.</p>
-        <p class="src">Source — World Values Survey, 2025</p>
-      </div>
-    </div>
-
-    <p class="need-foot reveal">A faith inherited but not understood does not survive the questions of a <em>new generation</em>.</p>
-  </div>
-</section>
-
-
-<!-- HOW WE WORK -->
-<section id="work">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="eyebrow">How we work</p>
-      <h2 class="h2">Small, faithful, and built to last.</h2>
-    </div>
-    <div class="work-list">
-      <div class="work-item reveal">
-        <span class="tag">The church first</span>
-        <div class="desc"><h3>We serve, not compete</h3><p>We equip a church's own people and leave the capability inside the church — never gathering a following of our own.</p></div>
-      </div>
-      <div class="work-item reveal">
-        <span class="tag">Train the trainers</span>
-        <div class="desc"><h3>Multiply through leaders</h3><p>Wherever possible we equip existing leaders to carry apologetics forward themselves, so a small team can strengthen many congregations.</p></div>
-      </div>
-      <div class="work-item reveal">
-        <span class="tag">Curriculum</span>
-        <div class="desc"><h3>A clear foundations track</h3><p>Twelve weeks moving from the existence of God, through the person and work of Jesus, to engaging Islam and atheism and starting real conversations.</p></div>
-      </div>
-      <div class="work-item reveal">
-        <span class="tag">Media engine</span>
-        <div class="desc"><h3>Reach a generation online</h3><p>Films, a podcast, courses, and social content — so the teaching reaches those who live online, not only those in the room.</p></div>
-      </div>
-      <div class="work-item reveal">
-        <span class="tag">Little by little</span>
-        <div class="desc"><h3>Grown on proven fruit</h3><p>A few committed partner churches first, real fruit documented, then expansion only on a foundation that has proven solid.</p></div>
-      </div>
+    <div class="stats-foot" data-reveal>
+      <p>A faith inherited but not understood does not survive the questions of a <em>new generation.</em></p>
     </div>
   </div>
 </section>
 
-
-<!-- FEATURED FILMS -->
-<section class="library" id="films">
+<!-- FILMS PREVIEW -->
+<section class="films-preview" id="films">
   <div class="wrap">
-    <div class="library-head reveal">
-      <h2 class="library-title">Watch the case, <em class="acc">in full</em>.</h2>
-      <a class="library-link" href="films.html">Watch all films →</a>
+    <div class="films-header" data-reveal>
+      <div>
+        <span class="section-tag">The Films</span>
+        <h2 class="section-headline">Clear answers to hard questions.</h2>
+      </div>
+      <a href="films.html" class="link-arrow">View all films</a>
     </div>
-    <div class="library-grid">
-      <article class="course-card reveal" data-cat="islam">
-        <div class="course-thumb" data-id="ePMjFrWp1JY">
-          <img src="https://i.ytimg.com/vi/ePMjFrWp1JY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/ePMjFrWp1JY/hqdefault.jpg'" alt="" loading="lazy" />
-          <span class="play" aria-hidden="true"></span>
+    <div class="films-grid">
+      <div class="film-tile" data-reveal>
+        <div class="film-tile-media">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=450&fit=crop" alt="Angel or Demon" loading="lazy" />
+          <div class="film-play">
+            <div class="play-ring"></div>
+            <div class="play-triangle"></div>
+          </div>
         </div>
-        <div class="course-meta"><p class="course-tags">Islam • Apologetics</p></div>
-      </article>
-      <article class="course-card reveal" data-cat="islam">
-        <div class="course-thumb" data-id="w4HFMAChOQY">
-          <img src="https://i.ytimg.com/vi/w4HFMAChOQY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/w4HFMAChOQY/hqdefault.jpg'" alt="" loading="lazy" />
-          <span class="play" aria-hidden="true"></span>
+        <div class="film-tile-meta">
+          <span class="film-tag">Islam · Apologetics</span>
+          <h3>Angel or Demon</h3>
         </div>
-        <div class="course-meta"><p class="course-tags">Islam • Apologetics</p></div>
-      </article>
-      <article class="course-card reveal" data-cat="islam">
-        <div class="course-thumb" data-id="6XhMBhPiGL0">
-          <img src="https://i.ytimg.com/vi/6XhMBhPiGL0/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/6XhMBhPiGL0/hqdefault.jpg'" alt="" loading="lazy" />
-          <span class="play" aria-hidden="true"></span>
+      </div>
+      <div class="film-tile" data-reveal>
+        <div class="film-tile-media">
+          <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&h=450&fit=crop" alt="Honey Loving Liar" loading="lazy" />
+          <div class="film-play">
+            <div class="play-ring"></div>
+            <div class="play-triangle"></div>
+          </div>
         </div>
-        <div class="course-meta"><p class="course-tags">Islam • Apologetics</p></div>
-      </article>
-      <article class="course-card reveal" data-cat="islam">
-        <div class="course-thumb" data-id="_fmgTmWfdFE">
-          <img src="https://i.ytimg.com/vi/_fmgTmWfdFE/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/_fmgTmWfdFE/hqdefault.jpg'" alt="" loading="lazy" />
-          <span class="play" aria-hidden="true"></span>
+        <div class="film-tile-meta">
+          <span class="film-tag">The Islamic Dilemma</span>
+          <h3>Honey Loving Liar</h3>
         </div>
-        <div class="course-meta"><p class="course-tags">Islam • Apologetics</p></div>
-      </article>
-      <article class="course-card reveal" data-cat="islam">
-        <div class="course-thumb" data-id="2ulInp-C-rg">
-          <img src="https://i.ytimg.com/vi/2ulInp-C-rg/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/2ulInp-C-rg/hqdefault.jpg'" alt="" loading="lazy" />
-          <span class="play" aria-hidden="true"></span>
+      </div>
+      <div class="film-tile" data-reveal>
+        <div class="film-tile-media">
+          <img src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?w=800&h=450&fit=crop" alt="Was He Lying?" loading="lazy" />
+          <div class="film-play">
+            <div class="play-ring"></div>
+            <div class="play-triangle"></div>
+          </div>
         </div>
-        <div class="course-meta"><p class="course-tags">Islam • Apologetics</p></div>
-      </article>
+        <div class="film-tile-meta">
+          <span class="film-tag">Islam · Apologetics</span>
+          <h3>Was He Lying?</h3>
+        </div>
+      </div>
+      <div class="film-tile" data-reveal>
+        <div class="film-tile-media">
+          <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&h=450&fit=crop" alt="Really No Compulsion?" loading="lazy" />
+          <div class="film-play">
+            <div class="play-ring"></div>
+            <div class="play-triangle"></div>
+          </div>
+        </div>
+        <div class="film-tile-meta">
+          <span class="film-tag">Peace to Sword</span>
+          <h3>Really No Compulsion?</h3>
+        </div>
+      </div>
+      <div class="film-tile" data-reveal>
+        <div class="film-tile-media">
+          <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&h=450&fit=crop" alt="His Youngest Wife" loading="lazy" />
+          <div class="film-play">
+            <div class="play-ring"></div>
+            <div class="play-triangle"></div>
+          </div>
+        </div>
+        <div class="film-tile-meta">
+          <span class="film-tag">Islam · Apologetics</span>
+          <h3>His Youngest Wife</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote-block" id="quote">
+  <div class="wrap">
+    <blockquote data-reveal>
+      <span class="quote-mark">"</span>
+      <p>Always be prepared to give an answer to everyone who asks you to give the reason for the hope that you have. But do this with <em>gentleness and respect.</em></p>
+      <cite>— 1 Peter 3:15</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- PARTNER PREVIEW -->
+<section class="partner-preview" id="partner">
+  <div class="wrap">
+    <div class="partner-header" data-reveal>
+      <span class="section-tag">Stand With Us</span>
+      <h2 class="section-headline">Three ways to <em class="text-fire">partner.</em></h2>
+    </div>
+    <div class="partner-cards">
+      <div class="p-card" data-reveal>
+        <div class="p-card-top">
+          <span class="p-num">01</span>
+          <h3>Invite</h3>
+        </div>
+        <p>Host training, a workshop, or a conversation for the believers and leaders in your church or ministry.</p>
+        <a href="contact.html" class="link-arrow">Open the door</a>
+      </div>
+      <div class="p-card" data-reveal>
+        <div class="p-card-top">
+          <span class="p-num">02</span>
+          <h3>Pray</h3>
+        </div>
+        <p>Stand in the gap. Pray for grounded believers, a defended faith, and a generation that can give a reason for its hope.</p>
+        <a href="contact.html" class="link-arrow">Join the prayer list</a>
+      </div>
+      <div class="p-card" data-reveal>
+        <div class="p-card-top">
+          <span class="p-num">03</span>
+          <h3>Give</h3>
+        </div>
+        <p>Support with a one-off gift, a monthly partnership, or by sponsoring a specific training, film, or resource.</p>
+        <a href="partner.html#give" class="link-arrow">Fuel the work</a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- NEWSLETTER -->
 <section class="newsletter" id="newsletter">
-  <div class="wrap news-inner">
-    <div class="news-copy reveal">
-      <p class="eyebrow">Stay equipped</p>
-      <h2 class="h2">Answers, <em class="acc">in your inbox</em>.</h2>
-      <p class="lede news-lede">Occasional emails with new videos, clear answers to the questions believers are actually asked, and resources to help you defend your faith. No spam — unsubscribe anytime.</p>
-    </div>
-    <form class="news-form reveal d1" id="newsForm" action="https://formspree.io/f/mkolkrqb" method="POST">
-      <input type="hidden" name="_subject" value="New newsletter signup — Apologetics Nigeria" />
-      <input type="hidden" name="form-type" value="newsletter" />
-      <label class="sr-only" for="news-email">Email address</label>
-      <div class="news-row">
-        <input type="email" id="news-email" name="email" placeholder="your@email.com" required autocomplete="email" />
-        <button type="submit" class="btn btn-gold" id="news-submit">Subscribe →</button>
+  <div class="wrap">
+    <div class="news-grid" data-reveal>
+      <div class="news-text">
+        <span class="section-tag">Stay Equipped</span>
+        <h2 class="section-headline">Answers, <em class="text-fire">in your inbox.</em></h2>
+        <p class="news-body">Occasional emails with new videos, clear answers to the questions believers are actually asked, and resources to help you defend your faith. No spam — unsubscribe anytime.</p>
       </div>
-      <p class="form-status" id="news-status" role="status" aria-live="polite"></p>
-    </form>
+      <form class="news-form" id="newsForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="news-input-wrap">
+          <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address" />
+          <button type="submit" class="btn btn-fire">Subscribe</button>
+        </div>
+        <p class="news-status" id="newsStatus"></p>
+        <p class="news-privacy">By subscribing, you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
+      </form>
+    </div>
   </div>
 </section>
 
 </main>
 
-<footer class="site">
+<!-- FOOTER -->
+<footer class="site-footer">
   <div class="wrap">
-    <div class="foot-inner">
-      <img src="logo.png" alt="Apologetics Nigeria" class="foot-logo" onerror="this.remove();" />
-      <nav class="foot-nav" aria-label="Footer">
-        <a href="films.html">Watch</a>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-brand">
+          <span class="brand-mark">AN</span>
+          <span class="brand-word">Apologetics Nigeria</span>
+        </a>
+        <p>Equipping the Nigerian church to defend the faith and share the gospel — with clarity, confidence, and joy.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <a href="films.html">Films</a>
         <a href="about.html">About</a>
         <a href="beliefs.html">Beliefs</a>
         <a href="partner.html">Partner</a>
         <a href="contact.html">Contact</a>
-        <a href="https://www.instagram.com/apologeticsnigeria/" target="_blank" rel="noopener">Instagram</a>
-        <a href="privacy.html">Privacy</a>
-      </nav>
-      <div class="foot-bottom">
-        <p class="foot-tag">Grounded believers · defended faith · a generation that can give a reason for its hope.</p>
-        <p class="foot-copy">© 2026 Apologetics Nigeria</p>
+      </div>
+      <div class="footer-col">
+        <h5>Connect</h5>
+        <a href="mailto:hello@apologeticsnigeria.com">hello@apologeticsnigeria.com</a>
+        <a href="#">WhatsApp</a>
+        <a href="#">YouTube</a>
+        <a href="#">Instagram</a>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Financial Transparency</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Apologetics Nigeria. Built with conviction.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="YouTube">YT</a>
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="X">X</a>
+        <a href="#" aria-label="WhatsApp">WA</a>
       </div>
     </div>
   </div>
 </footer>
 
 <script src="script.js"></script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Apologetics Nigeria",
-  "alternateName": "Apologetics NG",
-  "description": "A non-denominational Christian apologetics ministry equipping the Nigerian church to defend the faith and share the gospel with clarity, confidence, and joy.",
-  "url": "https://apologeticsnigeria.org/",
-  "logo": "https://apologeticsnigeria.org/apple-touch-icon.png",
-  "image": "https://apologeticsnigeria.org/og-image.png",
-  "sameAs": ["https://www.instagram.com/apologeticsnigeria/"],
-  "areaServed": { "@type": "Country", "name": "Nigeria" }
-}
-</script>
 </body>
 </html>
