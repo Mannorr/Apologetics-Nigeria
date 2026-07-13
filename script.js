@@ -153,3 +153,64 @@
       if(a.getAttribute('data-page') === page){ a.classList.add('is-current'); a.setAttribute('aria-current','page'); }
     });
   })();
+
+
+  // ═══════════ RESOURCE DECK VIEWER (on-page presentations) ═══════════
+  (function(){
+    var viewer=document.getElementById('deckViewer');
+    if(!viewer) return;
+    var stage=document.getElementById('dvStage'), track=document.getElementById('dvTrack');
+    var bar=document.getElementById('dvBar'), counter=document.getElementById('dvCounter'), series=document.getElementById('dvSeries');
+    var prev=document.getElementById('dvPrev'), next=document.getElementById('dvNext'), closeBtn=document.getElementById('dvClose');
+    var pages=[], cur=0;
+    function render(){
+      track.style.transform='translateX(-'+(cur*100)+'%)';
+      counter.textContent=(cur+1)+' / '+pages.length;
+      bar.style.width=((cur+1)/pages.length*100)+'%';
+      prev.classList.toggle('is-hidden', cur===0);
+      next.classList.toggle('is-hidden', cur===pages.length-1);
+      stage.scrollTop=0;
+      var visible=track.children[cur]; if(visible) visible.scrollTop=0;
+    }
+    function openDeck(id){
+      var deck=document.querySelector('#deckData .deck[data-deck="'+id+'"]');
+      if(!deck) return;
+      track.innerHTML='';
+      pages=Array.prototype.slice.call(deck.querySelectorAll('.deckpage'));
+      pages.forEach(function(p){ track.appendChild(p.cloneNode(true)); });
+      series.textContent=deck.getAttribute('data-series')||'Apologetics Nigeria';
+      cur=0; render();
+      viewer.classList.add('is-open'); viewer.setAttribute('aria-hidden','false');
+      document.body.style.overflow='hidden';
+      closeBtn.focus();
+    }
+    function closeDeck(){
+      viewer.classList.remove('is-open'); viewer.setAttribute('aria-hidden','true');
+      document.body.style.overflow='';
+      setTimeout(function(){ track.innerHTML=''; pages=[]; cur=0; }, 320);
+    }
+    function go(d){ cur=Math.max(0, Math.min(pages.length-1, cur+d)); render(); }
+    document.querySelectorAll('.deck-thumb[data-deck]').forEach(function(card){
+      var id=card.getAttribute('data-deck');
+      card.addEventListener('click', function(){ openDeck(id); });
+      card.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); openDeck(id); } });
+    });
+    next.addEventListener('click', function(){ go(1); });
+    prev.addEventListener('click', function(){ go(-1); });
+    closeBtn.addEventListener('click', closeDeck);
+    track.addEventListener('click', function(e){ if(e.target.closest('[data-close-deck]')) closeDeck(); });
+    document.addEventListener('keydown', function(e){
+      if(!viewer.classList.contains('is-open')) return;
+      if(e.key==='Escape') closeDeck();
+      else if(e.key==='ArrowRight') go(1);
+      else if(e.key==='ArrowLeft') go(-1);
+    });
+    var x0=null;
+    stage.addEventListener('touchstart', function(e){ x0=e.touches[0].clientX; }, {passive:true});
+    stage.addEventListener('touchend', function(e){
+      if(x0===null) return;
+      var dx=e.changedTouches[0].clientX - x0;
+      if(Math.abs(dx)>50) go(dx<0?1:-1);
+      x0=null;
+    }, {passive:true});
+  })();
