@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resources — Films & Presentations | Apologetics Nigeria</title>
   <meta name="description" content="Films and in-depth on-page presentations from Apologetics Nigeria — each answering one hard question about Islam, atheism, and the Christian faith." />
-  <meta name="theme-color" content="#030303" />
+  <meta name="theme-color" content="#040C0E" />
   <link rel="canonical" href="https://apologeticsnigeria.org/resources.html" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -25,173 +25,578 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&display=swap" rel="stylesheet" />
   
-  <script src="https://cdn.tailwindcss.com"></script>
-  
   <style>
     :root {
-      --dark-bg: #030303;          /* Deep Peterson Academy dark backdrop */
-      --card-bg: #0C1113;          /* Refined slate charcoal */
-      --gold: #D4AF37;             /* Rich warm gold */
-      --gold-hover: #F3CD4F;       /* Highlight gold state */
-      --light-text: #F8F6F2;       /* Creamy off-white paper tone */
-      --dim-text: #8E9C9E;         /* Sophisticated muted slate */
-      --border-color: rgba(212, 175, 55, 0.12);
+      --ink: #040C0E;
+      --ink-soft: #0C1719;
+      --parchment: #F6F2E9;
+      --parchment-2: #EDE7DA;
+      --gold: #A9803F;
+      --gold-bright: #C9A25A;
+      --stone: #6B6659;
+      --stone-light: #8B958F;
+      --line-dark: rgba(246,242,233,.13);
+      --line-light: rgba(4,12,14,.11);
+      --maxw: 1200px;
+      --pad-sec: clamp(4.5rem, 10vw, 9rem);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
     }
 
     body {
-      background-color: var(--dark-bg);
-      color: var(--light-text);
-      font-family: 'Inter', sans-serif;
+      background: var(--parchment);
+      color: var(--ink);
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: clamp(1rem, .55vw + .9rem, 1.075rem);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
-      letter-spacing: -0.01em;
     }
 
-    /* Elegant Custom Scrollbars */
-    ::-webkit-scrollbar {
-      width: 6px;
-    }
-    ::-webkit-scrollbar-track {
-      background: var(--dark-bg);
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #172224;
-      border-radius: 3px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
+    ::selection {
       background: var(--gold);
+      color: var(--parchment);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 clamp(1.25rem, 5vw, 2.75rem);
+    }
+
+    .eyebrow {
+      font-family: "Inter", sans-serif;
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 1.6rem;
+      height: 1px;
+      background: var(--gold);
+      display: inline-block;
+    }
+
+    h1, h2, h3 {
+      font-family: "Newsreader", Georgia, serif;
+      font-weight: 400;
+      line-height: 1.04;
+      letter-spacing: -.015em;
+    }
+
+    em.acc {
+      font-style: italic;
+      color: var(--gold);
+    }
+    section.dark em.acc {
+      color: var(--gold-bright);
+    }
+
+    /* ---------- NAV ---------- */
+    header.nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      transition: background .4s ease, border-color .4s ease, backdrop-filter .4s ease;
+      border-bottom: 1px solid transparent;
+    }
+    
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+    }
+
+    .brand-logo {
+      height: 34px;
+      width: auto;
+      display: block;
+      transition: filter .4s;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.1rem;
+    }
+
+    .nav-links a.lk {
+      font-family: "Inter", sans-serif;
+      font-size: .74rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink);
+      opacity: .82;
+      transition: opacity .25s, color .4s;
+    }
+
+    .nav-links a.lk:hover {
+      opacity: 1;
+      color: var(--gold);
+    }
+
+    .btn {
+      font-family: "Inter", sans-serif;
+      font-size: .76rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 500;
+      padding: .7rem 1.3rem;
+      border-radius: 3px;
+      border: 1px solid currentColor;
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      transition: all .25s ease;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #141414;
+      border-color: var(--gold);
+    }
+
+    .btn-gold:hover {
+      background: var(--gold-bright);
+      border-color: var(--gold-bright);
+      transform: translateY(-2px);
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: 30px;
+      height: 22px;
+      position: relative;
+    }
+
+    .nav-toggle span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--ink);
+      transition: all .3s;
+    }
+
+    .nav-toggle span:nth-child(1) { top: 0; }
+    .nav-toggle span:nth-child(2) { top: 10px; }
+    .nav-toggle span:nth-child(3) { top: 20px; }
+
+    /* ---------- INTERIOR PAGE NAV SPECIFICS ---------- */
+    body.interior header.nav {
+      background: rgba(246, 242, 233, .92);
+      backdrop-filter: saturate(140%) blur(12px);
+      border-bottom: 1px solid var(--line-light);
+    }
+
+    body.interior main > section:first-of-type {
+      padding-top: calc(72px + clamp(2rem, 5vw, 4rem));
+    }
+
+    .nav-links a.lk.is-current {
+      color: var(--gold);
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer.site {
+      background: var(--ink);
+      color: var(--parchment);
+      padding: clamp(4rem, 8vw, 7rem) 0 2.5rem;
+      border-top: 1px solid var(--line-dark);
+    }
+
+    .foot-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .foot-logo {
+      height: 42px;
+      width: auto;
+      max-width: 75%;
+      align-self: flex-start;
+      object-fit: contain;
+      filter: invert(1);
+      opacity: .9;
+    }
+
+    .foot-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .9rem 1.8rem;
+      margin: .2rem 0;
+    }
+
+    .foot-nav a {
+      font-family: "Inter", sans-serif;
+      font-size: .78rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--stone-light);
+      transition: color .25s;
+    }
+
+    .foot-nav a:hover {
+      color: var(--gold-bright);
+    }
+
+    .foot-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding-top: 2rem;
+      border-top: 1px solid var(--line-dark);
+    }
+
+    .foot-tag {
+      font-family: "Newsreader", serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--stone-light);
+      max-width: 42ch;
+    }
+
+    .foot-copy {
+      font-family: "Inter", sans-serif;
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--stone-light);
+    }
+
+    /* ---------- LIBRARY (Peterson Academy-style video grid) ---------- */
+    .library {
+      background: var(--ink);
+      color: var(--parchment);
+    }
+
+    .library-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: clamp(1.8rem, 3vw, 2.6rem);
+    }
+
+    .library-title {
+      font-family: "Newsreader", Georgia, serif;
+      font-weight: 380;
+      font-size: clamp(1.9rem, 4vw, 3.3rem);
+      line-height: 1.06;
+      letter-spacing: -.015em;
+      color: var(--parchment);
+      max-width: 20ch;
+    }
+
+    .library-title em.acc {
+      font-style: italic;
+      color: var(--gold-bright);
+    }
+
+    .library-link {
+      font-family: "Inter", sans-serif;
+      font-size: .74rem;
+      font-weight: 500;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--parchment);
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: .35rem;
+      white-space: nowrap;
+      transition: color .25s, border-color .25s;
+    }
+
+    .library-link:hover {
+      color: var(--gold-bright);
+      border-color: var(--gold-bright);
+    }
+
+    .library-tabs {
+      display: flex;
+      gap: clamp(1.3rem, 3vw, 2.4rem);
+      border-bottom: 1px solid var(--line-dark);
+      margin-bottom: clamp(2rem, 4vw, 3rem);
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .library-tabs::-webkit-scrollbar {
+      display: none;
     }
 
     .tab {
-      padding: 0.6rem 1.35rem;
-      border-radius: 6px; /* Elegant geometric Peterson style */
-      font-weight: 500;
-      font-size: 0.85rem;
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-      border: 1px solid var(--border-color);
-      background: rgba(12, 17, 19, 0.5);
-      color: var(--dim-text);
-      letter-spacing: 0.02em;
+      font-family: "Inter", sans-serif;
+      font-size: .88rem;
+      letter-spacing: .01em;
+      color: var(--stone-light);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0 0 .9rem;
+      position: relative;
+      white-space: nowrap;
+      transition: color .25s;
     }
+
+    .tab::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 2px;
+      background: var(--gold-bright);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .3s ease;
+    }
+
     .tab:hover {
-      color: var(--light-text);
-      border-color: rgba(212, 175, 55, 0.4);
-      background: rgba(12, 17, 19, 0.8);
+      color: var(--parchment);
     }
+
     .tab.is-active {
-      background: var(--gold);
-      color: #030303;
-      border-color: var(--gold);
-      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.15);
+      color: var(--parchment);
+    }
+
+    .tab.is-active::after {
+      transform: scaleX(1);
+    }
+
+    .library-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: clamp(1.6rem, 2.4vw, 2.1rem) clamp(1.1rem, 1.8vw, 1.6rem);
+    }
+
+    @media (min-width: 520px) {
+      .library-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .library-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
     }
 
     .course-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 8px; /* Classic structural corners */
-      overflow: hidden;
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      gap: .85rem;
     }
-    .course-card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(212, 175, 55, 0.35);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 175, 55, 0.05);
+
+    .course-card.is-hidden {
+      display: none;
     }
 
     .course-thumb {
       position: relative;
       aspect-ratio: 16/9;
-      background: #000;
+      border-radius: 8px;
       overflow: hidden;
+      background: #000 center/cover no-repeat;
       cursor: pointer;
+      border: 1px solid var(--line-dark);
     }
+
     .course-thumb img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .course-thumb:hover img {
-      transform: scale(1.03);
+      display: block;
+      transition: transform .6s ease, opacity .3s;
     }
 
-    /* Play Icon on Thumbnails */
-    .play {
+    .course-card:hover .course-thumb img {
+      transform: scale(1.05);
+      opacity: .85;
+    }
+
+    .course-thumb .play {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 48px;
-      height: 48px;
-      background: var(--gold);
-      border-radius: 50%;
+      inset: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
-      transition: all 0.25s ease;
-    }
-    .play::after {
-      content: '';
-      display: block;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 7px 0 7px 12px;
-      border-color: transparent transparent transparent #030303;
-      margin-left: 3px;
-    }
-    .course-thumb:hover .play {
-      transform: translate(-50%, -50%) scale(1.1);
-      background: var(--light-text);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.7);
+      opacity: 0;
+      transition: opacity .3s;
+      pointer-events: none;
     }
 
+    .course-card:hover .course-thumb .play {
+      opacity: 1;
+    }
+
+    .course-thumb .play::before {
+      content: "";
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: rgba(4, 12, 14, .5);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(246, 242, 233, .4);
+    }
+
+    .course-thumb .play::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 16px solid var(--parchment);
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      margin-left: 4px;
+    }
+
+    .course-thumb.placeholder {
+      background: linear-gradient(135deg, #0C1719 0%, #050D0F 100%);
+    }
+
+    .course-thumb.placeholder .play {
+      opacity: .45;
+    }
+
+    .course-thumb iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .course-thumb:focus-visible {
+      outline: 2px solid var(--gold-bright);
+      outline-offset: 3px;
+    }
+
+    .course-meta {
+      display: flex;
+      flex-direction: column;
+      gap: .3rem;
+    }
+
+    .course-title {
+      font-family: "Newsreader", Georgia, serif;
+      font-weight: 430;
+      font-size: 1.08rem;
+      line-height: 1.2;
+      color: var(--parchment);
+    }
+
+    .course-tags {
+      font-family: "Inter", sans-serif;
+      font-size: .78rem;
+      color: var(--stone-light);
+      letter-spacing: .01em;
+    }
+
+    /* ═══════════════════════════════ RESOURCE DECKS ═══════════════════════════════ */
     .deck-thumb {
-      background: linear-gradient(145deg, #0d1618 0%, #06090a 100%);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 1.75rem;
-    }
-    .deck-flag {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.68rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--gold);
-    }
-    .deck-cover-title {
-      font-family: 'Newsreader', serif;
-      font-size: 1.45rem;
-      font-weight: 500;
-      line-height: 1.3;
-      color: var(--light-text);
-      margin-top: 1.25rem;
-    }
-    .deck-cta {
-      font-size: 0.8rem;
-      color: var(--dim-text);
-      font-weight: 500;
-      transition: all 0.25s;
-    }
-    .deck-thumb:hover .deck-cta {
-      color: var(--gold);
+      padding: 1.5rem 1.5rem 1.4rem;
+      background: linear-gradient(155deg, #0E1A1C 0%, #050D0F 100%) !important;
+      cursor: pointer;
     }
 
+    .deck-thumb .play {
+      display: none;
+    }
+
+    .deck-flag {
+      font-family: "JetBrains Mono", monospace;
+      font-size: .66rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--gold-bright);
+    }
+
+    .deck-cover-title {
+      font-family: "Newsreader", Georgia, serif;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.14;
+      color: var(--parchment);
+      margin-top: auto;
+    }
+
+    .deck-cta {
+      font-family: "Inter", sans-serif;
+      font-size: .78rem;
+      letter-spacing: .01em;
+      color: var(--stone-light);
+      margin-top: .7rem;
+      transition: color .25s;
+    }
+
+    .course-card:hover .deck-cta {
+      color: var(--gold-bright);
+    }
+
+    .course-card:hover .deck-thumb {
+      border-color: rgba(201, 162, 90, .5);
+    }
+
+    /* Full-screen on-page presentation viewer */
     .deck-viewer {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #050505;
-      z-index: 1000;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      inset: 0;
+      z-index: 3000;
+      background: var(--ink);
       display: flex;
       flex-direction: column;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s ease;
     }
+
     .deck-viewer.is-open {
       opacity: 1;
       pointer-events: auto;
@@ -199,452 +604,586 @@
 
     .dv-bar {
       height: 3px;
-      background: #12181a;
-      width: 100%;
+      background: rgba(246, 242, 233, .1);
+      flex-shrink: 0;
     }
+
     .dv-bar-fill {
+      display: block;
       height: 100%;
-      background: var(--gold);
-      width: 0%;
-      transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      width: 0;
+      background: var(--gold-bright);
+      transition: width .4s ease;
     }
 
     .dv-top {
-      padding: 1.5rem 2rem;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid rgba(212, 175, 55, 0.08);
-      background: #080808;
-    }
-    .dv-series {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.72rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gold);
-      font-weight: 500;
-    }
-    .dv-counter {
-      color: var(--dim-text);
-      font-size: 0.85rem;
-      font-family: 'JetBrains Mono', monospace;
-    }
-    .dv-close {
-      color: var(--light-text);
-      font-size: 1.5rem;
-      line-height: 1;
-      transition: color 0.2s;
-      cursor: pointer;
-    }
-    .dv-close:hover {
-      color: var(--gold);
+      align-items: center;
+      padding: 1.05rem clamp(1.2rem, 4vw, 2.6rem);
+      flex-shrink: 0;
     }
 
-    /* Slides Carriage Frame */
-    .dv-stage {
-      flex: 1;
+    .dv-series {
+      font-family: "Inter", sans-serif;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--gold-bright);
+    }
+
+    .dv-top-right {
       display: flex;
       align-items: center;
-      justify-content: center;
+      gap: 1.4rem;
+    }
+
+    .dv-counter {
+      font-family: "JetBrains Mono", monospace;
+      font-size: .8rem;
+      color: var(--stone-light);
+      letter-spacing: 1px;
+    }
+
+    .dv-close {
+      background: none;
+      border: none;
+      color: var(--parchment);
+      font-size: 2rem;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0 .2rem;
+      transition: color .2s;
+    }
+
+    .dv-close:hover {
+      color: var(--gold-bright);
+    }
+
+    .dv-stage {
+      flex: 1;
       overflow: hidden;
       position: relative;
     }
+
     .dv-track {
       display: flex;
       height: 100%;
-      width: 100%;
-      transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform .45s cubic-bezier(.4, 0, .2, 1);
     }
 
     .deckpage {
-      flex: 0 0 100%;
-      width: 100%;
+      min-width: 100%;
       height: 100%;
+      overflow-y: auto;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 2.5rem;
-      box-sizing: border-box;
-    }
-    .dp-inner {
-      max-width: 700px;
-      width: 100%;
-      margin: 0 auto;
-    }
-    .dp-eyebrow {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.8rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1.5rem;
-    }
-    .dp-title {
-      font-family: 'Newsreader', serif;
-      font-size: 3.3rem;
-      font-weight: 300;
-      line-height: 1.15;
-      color: var(--light-text);
-      margin-bottom: 2rem;
-    }
-    .dp-title em {
-      font-style: italic;
-      color: var(--gold);
-    }
-    .dp-body {
-      font-size: 1.15rem;
-      line-height: 1.65;
-      color: #E5E2DD;
-      margin-bottom: 1.5rem;
-    }
-    .dp-quote {
-      font-family: 'Newsreader', serif;
-      font-size: 1.9rem;
-      font-style: italic;
-      line-height: 1.45;
-      color: var(--gold);
-      border-left: 2px solid var(--gold);
-      padding-left: 1.75rem;
-      margin: 2rem 0;
-    }
-    .dp-verse {
-      font-family: 'Newsreader', serif;
-      font-size: 1.75rem;
-      font-style: italic;
-      line-height: 1.45;
-      color: var(--light-text);
-      text-align: center;
-    }
-    .dp-cites {
-      margin-top: 1.25rem;
-      display: flex;
-      gap: 0.5rem;
-    }
-    .dp-cite {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.72rem;
-      background: rgba(212, 175, 55, 0.08);
-      color: var(--gold);
-      padding: 0.3rem 0.75rem;
-      border-radius: 4px;
-      border: 1px solid rgba(212, 175, 55, 0.15);
-    }
-    .dp-cite-ref {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
-      color: var(--dim-text);
-      text-align: center;
-      margin-top: 1rem;
+      padding: clamp(2rem, 5vw, 4rem) clamp(1.4rem, 5vw, 3rem);
     }
 
-    /* Swipe & Cover Details */
-    .dp-hint {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.8rem;
-      color: var(--gold);
-      animation: bounceH 2s infinite;
-      margin-top: 2rem;
+    .dp-inner {
+      max-width: 720px;
+      width: 100%;
     }
-    @keyframes bounceH {
-      0%, 100% { transform: translateX(0); }
-      50% { transform: translateX(6px); }
+
+    .dp-eyebrow, .dp-label {
+      font-family: "Inter", sans-serif;
+      font-size: .74rem;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--gold-bright);
+      margin-bottom: 1.4rem;
+    }
+
+    .dp-title {
+      font-family: "Newsreader", Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      line-height: 1.05;
+      letter-spacing: -.02em;
+      color: var(--parchment);
+    }
+
+    .dp-title em {
+      font-style: italic;
+      color: var(--gold-bright);
+    }
+
+    .dp-lead {
+      font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+      color: var(--stone-light);
+      margin-top: 1.6rem;
+      line-height: 1.5;
+    }
+
+    .dp-hint {
+      font-family: "Inter", sans-serif;
+      font-size: .8rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--gold-bright);
+      margin-top: 3rem;
+    }
+
+    .dp-body {
+      font-size: clamp(1.14rem, 1.7vw, 1.4rem);
+      line-height: 1.62;
+      color: var(--parchment);
+      font-weight: 300;
+    }
+
+    .dp-body + .dp-body {
+      margin-top: 1.05rem;
+    }
+
+    .dp-body b {
+      font-weight: 500;
+    }
+
+    .dp-quote {
+      font-family: "Newsreader", Georgia, serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+      line-height: 1.35;
+      color: var(--parchment);
+      border-left: 2px solid var(--gold);
+      padding-left: 1.4rem;
+      margin: 1.2rem 0;
+    }
+
+    .dp-cites {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .7rem;
+      margin-top: 1.9rem;
+    }
+
+    .dp-cite {
+      font-family: "JetBrains Mono", monospace;
+      font-size: .82rem;
+      color: var(--gold-bright);
+      border: 1px solid rgba(201, 162, 90, .42);
+      border-radius: 6px;
+      padding: .42rem .82rem;
+    }
+
+    .dp-verse {
+      font-family: "Newsreader", Georgia, serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+      line-height: 1.3;
+      color: var(--parchment);
+    }
+
+    .dp-cite-ref {
+      font-family: "JetBrains Mono", monospace;
+      font-size: .85rem;
+      color: var(--gold-bright);
+      letter-spacing: 1px;
+      margin-top: 1.5rem;
     }
 
     .dv-arrow {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: rgba(12, 17, 19, 0.9);
-      border: 1px solid var(--border-color);
-      color: var(--light-text);
-      width: 48px;
-      height: 48px;
-      border-radius: 4px; /* Structured square style like Peterson Academy */
+      background: rgba(246, 242, 233, .06);
+      border: 1px solid rgba(246, 242, 233, .14);
+      color: var(--parchment);
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      font-size: 1.6rem;
+      line-height: 1;
+      cursor: pointer;
+      z-index: 5;
+      transition: background .2s, opacity .2s;
       display: flex;
       align-items: center;
       justify-content: center;
-      cursor: pointer;
-      font-size: 1.5rem;
-      transition: all 0.25s;
-      z-index: 110;
     }
+
     .dv-arrow:hover {
-      background: var(--gold);
-      color: #030303;
-      border-color: var(--gold);
+      background: rgba(201, 162, 90, .25);
     }
-    .dv-prev { left: 2rem; }
-    .dv-next { right: 2rem; }
+
+    .dv-prev {
+      left: clamp(.6rem, 2vw, 1.8rem);
+    }
+
+    .dv-next {
+      right: clamp(.6rem, 2vw, 1.8rem);
+    }
+
     .dv-arrow.is-hidden {
       opacity: 0;
       pointer-events: none;
     }
 
-    /* Mobile Adaptations */
-    @media (max-width: 768px) {
-      .dp-title {
-        font-size: 2.1rem;
+    /* ---------- RESPONSIVE STYLING ---------- */
+    @media (max-width: 880px) {
+      .nav-links {
+        position: fixed;
+        inset: 0;
+        background: var(--ink);
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        transform: translateY(-100%);
+        transition: transform .45s cubic-bezier(.7, 0, .2, 1);
       }
-      .dp-quote {
-        font-size: 1.35rem;
+
+      .nav-links.open {
+        transform: translateY(0);
       }
+
+      .nav-links a.lk {
+        font-size: 1.1rem;
+        color: var(--parchment) !important;
+      }
+
+      .nav-links .btn {
+        font-size: .9rem;
+      }
+
+      .nav-toggle {
+        display: block;
+        z-index: 120;
+      }
+
+      .nav-toggle.open span {
+        background: var(--parchment);
+      }
+
+      .nav-toggle.open span:nth-child(1) {
+        top: 10px;
+        transform: rotate(45deg);
+      }
+
+      .nav-toggle.open span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .nav-toggle.open span:nth-child(3) {
+        top: 10px;
+        transform: rotate(-45deg);
+      }
+
+      body.interior .nav-toggle span {
+        background: var(--ink);
+      }
+
+      body.interior .nav-toggle.open span {
+        background: var(--parchment);
+      }
+    }
+
+    @media (max-width: 640px) {
       .dv-arrow {
-        display: none; /* Handled by gestures */
+        top: auto;
+        bottom: 1.1rem;
+        transform: none;
+        width: 46px;
+        height: 46px;
       }
-      .dp-inner {
-        padding: 0.5rem;
+
+      .dv-prev {
+        left: auto;
+        right: calc(1.1rem + 56px);
       }
+
+      .dv-next {
+        right: 1.1rem;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .foot-contact a, .foot-contact span {
+        flex-wrap: wrap;
+        gap: .2rem .7rem;
+      }
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
   </style>
 </head>
-<body class="interior bg-[#030303]">
+<body class="interior">
 
-  <header class="w-full border-b border-[#D4AF37]/10 bg-[#030303]/90 backdrop-blur sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="index.html" class="flex items-center" aria-label="Apologetics Nigeria — home">
-        <img src="logo.png" alt="Apologetics Nigeria" class="h-8 md:h-9 w-auto object-contain" onerror="this.onerror=null; this.outerHTML='<span class=\'text-xl font-bold tracking-tight text-white flex items-center gap-2\'><span class=\'text-[#D4AF37]\'>✦</span> Apologetics Nigeria</span>';">
+  <header class="nav" id="nav">
+    <div class="wrap nav-inner">
+      <a href="index.html" class="brand" aria-label="Apologetics Nigeria — home">
+        <img src="logo.png" alt="Apologetics Nigeria" class="brand-logo" id="brandLogo" onerror="this.remove();" />
       </a>
-      <nav class="hidden md:flex items-center gap-8">
-        <a href="resources.html" class="text-white hover:text-[#D4AF37] font-medium transition duration-300">Resources</a>
-        <a href="about.html" class="text-[#a1b0b3] hover:text-white transition duration-300">About</a>
-        <a href="beliefs.html" class="text-[#a1b0b3] hover:text-white transition duration-300">Beliefs</a>
-        <a href="partner.html" class="text-[#a1b0b3] hover:text-white transition duration-300">Partner</a>
-        <a href="contact.html" class="text-[#a1b0b3] hover:text-white transition duration-300">Contact</a>
-        <a href="partner.html#give" class="bg-[#D4AF37] hover:bg-[#bda030] text-black font-semibold px-5 py-2 rounded-full transition duration-300 shadow-md">Give</a>
+      <nav class="nav-links" id="navlinks">
+        <a href="resources.html" class="lk is-current" data-page="resources">Resources</a>
+        <a href="about.html" class="lk" data-page="about">About</a>
+        <a href="beliefs.html" class="lk" data-page="beliefs">Beliefs</a>
+        <a href="partner.html" class="lk" data-page="partner">Partner</a>
+        <a href="contact.html" class="lk" data-page="contact">Contact</a>
+        <a href="partner.html#give" class="btn btn-gold">Give</a>
       </nav>
-      <button class="md:hidden text-white text-2xl focus:outline-none" id="navtoggle" aria-label="Open Menu">
-        ☰
+      <button class="nav-toggle" id="navtoggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- Mobile Menu Drawer Overlay -->
-  <div id="mobileMenu" class="fixed inset-0 bg-[#030303] z-[100] flex flex-col justify-between p-8 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
-    <div class="flex items-center justify-between">
-      <a href="index.html" class="flex items-center">
-        <img src="logo.png" alt="Apologetics Nigeria" class="h-8 w-auto object-contain" onerror="this.onerror=null; this.outerHTML='<span class=\'text-xl font-bold tracking-tight text-white flex items-center gap-2\'><span class=\'text-[#D4AF37]\'>✦</span> Apologetics Nigeria</span>';">
-      </a>
-      <button id="mobileMenuClose" class="text-white text-3xl focus:outline-none hover:text-[#D4AF37] transition" aria-label="Close Menu">
-        &times;
-      </button>
-    </div>
-    <nav class="flex flex-col gap-6 text-xl font-serif mt-12">
-      <a href="resources.html" class="text-white hover:text-[#D4AF37] transition border-b border-white/5 pb-2">Resources</a>
-      <a href="about.html" class="text-[#a1b0b3] hover:text-[#D4AF37] transition border-b border-white/5 pb-2">About</a>
-      <a href="beliefs.html" class="text-[#a1b0b3] hover:text-[#D4AF37] transition border-b border-white/5 pb-2">Beliefs</a>
-      <a href="partner.html" class="text-[#a1b0b3] hover:text-[#D4AF37] transition border-b border-white/5 pb-2">Partner</a>
-      <a href="contact.html" class="text-[#a1b0b3] hover:text-[#D4AF37] transition border-b border-white/5 pb-2">Contact</a>
-    </nav>
-    <div class="mt-auto flex flex-col gap-4">
-      <a href="partner.html#give" class="bg-[#D4AF37] hover:bg-[#bda030] text-black font-semibold py-3 rounded-full text-center transition duration-300 shadow-md">Give</a>
-      <p class="text-xs text-[#a1b0b3]/40 text-center">Grounded believers · defended faith.</p>
-    </div>
-  </div>
-
   <main class="min-h-screen">
     <h1 class="sr-only">Resources — Films & Presentations</h1>
 
-    <section class="max-w-7xl mx-auto px-6 py-16" id="watch">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-        <div>
-          <span class="text-[#D4AF37] text-sm uppercase tracking-widest font-mono font-semibold">Media Catalog</span>
-          <h2 class="text-4xl md:text-5xl font-light font-serif mt-2">Every question, <em class="text-[#D4AF37] italic">answered</em>.</h2>
+    <section class="library" id="watch">
+      <div class="wrap">
+        <div class="library-head">
+          <div>
+            <span class="eyebrow">Media Catalog</span>
+            <h2 class="library-title" style="margin-top: 1rem">Every question, <em class="acc">answered</em>.</h2>
+          </div>
+          <a class="library-link" href="partner.html">
+            Partner with our mission →
+          </a>
         </div>
-        <a class="text-[#D4AF37] hover:text-[#F3CD4F] font-medium flex items-center gap-2 transition duration-300" href="partner.html">
-          Partner with our mission →
-        </a>
-      </div>
 
-      <!-- Categories Navigation Tabbed Controls -->
-      <div class="flex flex-wrap gap-2 mb-12" role="tablist" aria-label="Filter resources by topic">
-        <button class="tab is-active" data-cat="all" role="tab" aria-selected="true">All</button>
-        <button class="tab" data-cat="islam" role="tab" aria-selected="false">Islam</button>
-        <button class="tab" data-cat="atheism" role="tab" aria-selected="false">Atheism</button>
-        <button class="tab" data-cat="jesus" role="tab" aria-selected="false">Jesus</button>
-        <button class="tab" data-cat="bible" role="tab" aria-selected="false">The Bible</button>
-        <button class="tab" data-cat="foundations" role="tab" aria-selected="false">Foundations</button>
-      </div>
+        <!-- Categories Navigation Tabbed Controls -->
+        <div class="library-tabs" role="tablist" aria-label="Filter resources by topic">
+          <button class="tab is-active" data-cat="all" role="tab" aria-selected="true">All</button>
+          <button class="tab" data-cat="islam" role="tab" aria-selected="false">Islam</button>
+          <button class="tab" data-cat="atheism" role="tab" aria-selected="false">Atheism</button>
+          <button class="tab" data-cat="jesus" role="tab" aria-selected="false">Jesus</button>
+          <button class="tab" data-cat="bible" role="tab" aria-selected="false">The Bible</button>
+          <button class="tab" data-cat="foundations" role="tab" aria-selected="false">Foundations</button>
+        </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="libraryGrid">
-        <!-- Video resources -->
-        <article class="course-card" data-cat="islam">
-          <div class="course-thumb" data-id="ePMjFrWp1JY">
-            <img src="https://i.ytimg.com/vi/ePMjFrWp1JY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/ePMjFrWp1JY/hqdefault.jpg'" alt="Is Islam Peace?" loading="lazy" />
-            <span class="play" aria-hidden="true"></span>
-          </div>
-          <div class="p-6">
-            <p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase mb-1">Islam • Video Lecture</p>
-            <h3 class="text-lg font-serif font-medium mt-1 text-white hover:text-[#D4AF37] transition duration-200">Is Islam Peace?</h3>
-          </div>
-        </article>
-        <article class="course-card" data-cat="islam">
-          <div class="course-thumb" data-id="w4HFMAChOQY">
-            <img src="https://i.ytimg.com/vi/w4HFMAChOQY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/w4HFMAChOQY/hqdefault.jpg'" alt="Inside Islam" loading="lazy" />
-            <span class="play" aria-hidden="true"></span>
-          </div>
-          <div class="p-6">
-            <p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase mb-1">Islam • Video Lecture</p>
-            <h3 class="text-lg font-serif font-medium mt-1 text-white hover:text-[#D4AF37] transition duration-200">Inside Islam</h3>
-          </div>
-        </article>
-        <article class="course-card" data-cat="islam">
-          <div class="course-thumb" data-id="6XhMBhPiGL0">
-            <img src="https://i.ytimg.com/vi/6XhMBhPiGL0/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/6XhMBhPiGL0/hqdefault.jpg'" alt="Analyzing the Qur'an" loading="lazy" />
-            <span class="play" aria-hidden="true"></span>
-          </div>
-          <div class="p-6">
-            <p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase mb-1">Islam • Video Lecture</p>
-            <h3 class="text-lg font-serif font-medium mt-1 text-white hover:text-[#D4AF37] transition duration-200">Analyzing the Qur'an</h3>
-          </div>
-        </article>
-        <article class="course-card" data-cat="islam">
-          <div class="course-thumb" data-id="_fmgTmWfdFE">
-            <img src="https://i.ytimg.com/vi/_fmgTmWfdFE/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/_fmgTmWfdFE/hqdefault.jpg'" alt="Understanding Hadith" loading="lazy" />
-            <span class="play" aria-hidden="true"></span>
-          </div>
-          <div class="p-6">
-            <p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase mb-1">Islam • Video Lecture</p>
-            <h3 class="text-lg font-serif font-medium mt-1 text-white hover:text-[#D4AF37] transition duration-200">Understanding Hadith</h3>
-          </div>
-        </article>
-        <article class="course-card" data-cat="islam">
-          <div class="course-thumb" data-id="2ulInp-C-rg">
-            <img src="https://i.ytimg.com/vi/2ulInp-C-rg/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/2ulInp-C-rg/hqdefault.jpg'" alt="History of the Quran" loading="lazy" />
-            <span class="play" aria-hidden="true"></span>
-          </div>
-          <div class="p-6">
-            <p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase mb-1">Islam • Video Lecture</p>
-            <h3 class="text-lg font-serif font-medium mt-1 text-white hover:text-[#D4AF37] transition duration-200">History of the Quran</h3>
-          </div>
-        </article>
+        <div class="library-grid" id="libraryGrid">
+          <!-- Video resources -->
+          <article class="course-card" data-cat="islam">
+            <div class="course-thumb" data-id="ePMjFrWp1JY">
+              <img src="https://i.ytimg.com/vi/ePMjFrWp1JY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/ePMjFrWp1JY/hqdefault.jpg'" alt="Is Islam Peace?" loading="lazy" />
+              <span class="play" aria-hidden="true"></span>
+            </div>
+            <div class="course-meta">
+              <p class="course-tags">Islam • Video Lecture</p>
+              <h3 class="course-title">Is Islam Peace?</h3>
+            </div>
+          </article>
+          
+          <article class="course-card" data-cat="islam">
+            <div class="course-thumb" data-id="w4HFMAChOQY">
+              <img src="https://i.ytimg.com/vi/w4HFMAChOQY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/w4HFMAChOQY/hqdefault.jpg'" alt="Inside Islam" loading="lazy" />
+              <span class="play" aria-hidden="true"></span>
+            </div>
+            <div class="course-meta">
+              <p class="course-tags">Islam • Video Lecture</p>
+              <h3 class="course-title">Inside Islam</h3>
+            </div>
+          </article>
+          
+          <article class="course-card" data-cat="islam">
+            <div class="course-thumb" data-id="6XhMBhPiGL0">
+              <img src="https://i.ytimg.com/vi/6XhMBhPiGL0/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/6XhMBhPiGL0/hqdefault.jpg'" alt="Analyzing the Qur'an" loading="lazy" />
+              <span class="play" aria-hidden="true"></span>
+            </div>
+            <div class="course-meta">
+              <p class="course-tags">Islam • Video Lecture</p>
+              <h3 class="course-title">Analyzing the Qur'an</h3>
+            </div>
+          </article>
+          
+          <article class="course-card" data-cat="islam">
+            <div class="course-thumb" data-id="_fmgTmWfdFE">
+              <img src="https://i.ytimg.com/vi/_fmgTmWfdFE/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/_fmgTmWfdFE/hqdefault.jpg'" alt="Understanding Hadith" loading="lazy" />
+              <span class="play" aria-hidden="true"></span>
+            </div>
+            <div class="course-meta">
+              <p class="course-tags">Islam • Video Lecture</p>
+              <h3 class="course-title">Understanding Hadith</h3>
+            </div>
+          </article>
+          
+          <article class="course-card" data-cat="islam">
+            <div class="course-thumb" data-id="2ulInp-C-rg">
+              <img src="https://i.ytimg.com/vi/2ulInp-C-rg/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/2ulInp-C-rg/hqdefault.jpg'" alt="History of the Quran" loading="lazy" />
+              <span class="play" aria-hidden="true"></span>
+            </div>
+            <div class="course-meta">
+              <p class="course-tags">Islam • Video Lecture</p>
+              <h3 class="course-title">History of the Quran</h3>
+            </div>
+          </article>
 
-        <article class="course-card" data-cat="bible">
-          <div class="course-thumb deck-thumb" data-deck="deck-01" role="button" tabindex="0" aria-label="Open presentation: Has the Bible been changed?">
-            <span class="deck-flag">Presentation · 13 pages</span>
-            <span class="deck-cover-title">Has the Bible been changed?</span>
-            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
-          </div>
-          <div class="p-6">
-            <p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Islam • The Bible</p>
-          </div>
-        </article>
-        <article class="course-card" data-cat="jesus">
-          <div class="course-thumb deck-thumb" data-deck="deck-02" role="button" tabindex="0" aria-label="Open presentation: Was Jesus real, or a myth?">
-            <span class="deck-flag">Presentation · 20 pages</span>
-            <span class="deck-cover-title">Was Jesus real, or a myth?</span>
-            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
-          </div>
-          <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Jesus • History</p></div>
-        </article>
-        <article class="course-card" data-cat="jesus">
-          <div class="course-thumb deck-thumb" data-deck="deck-03" role="button" tabindex="0" aria-label="Open presentation: Did Jesus really die?">
-            <span class="deck-flag">Presentation · 20 pages</span>
-            <span class="deck-cover-title">Did Jesus really die?</span>
-            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
-          </div>
-          <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Jesus • History</p></div>
-        </article>
-        <article class="course-card" data-cat="jesus">
-          <div class="course-thumb deck-thumb" data-deck="deck-04" role="button" tabindex="0" aria-label="Open presentation: Was Jesus raised from the dead?">
-            <span class="deck-flag">Presentation · 23 pages</span>
-            <span class="deck-cover-title">Was Jesus raised from the dead?</span>
-            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
-          </div>
-          <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Jesus • History</p></div>
-        </article>
-        <article class="course-card" data-cat="jesus">
-          <div class="course-thumb deck-thumb" data-deck="deck-05" role="button" tabindex="0" aria-label="Open presentation: Was Jesus foretold?">
-            <span class="deck-flag">Presentation · 22 pages</span>
-            <span class="deck-cover-title">Was Jesus foretold?</span>
-            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
-          </div>
-          <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Jesus • Prophecy</p></div>
-        </article>
-        <article class="course-card" data-cat="bible">
-          <div class="course-thumb deck-thumb" data-deck="deck-06" role="button" tabindex="0" aria-label="Open presentation: Who wrote the Gospels?">
-            <span class="deck-flag">Presentation · 16 pages</span>
-            <span class="deck-cover-title">Who wrote the Gospels?</span>
-            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
-          </div>
-          <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">The Bible • The Gospels</p></div>
-        </article>
-        <article class="course-card" data-cat="bible">
-          <div class="course-thumb deck-thumb" data-deck="deck-07" role="button" tabindex="0" aria-label="Open presentation: Do the Gospels contradict each other?">
-            <span class="deck-flag">Presentation · 15 pages</span>
-            <span class="deck-cover-title">Do the Gospels contradict each other?</span>
-            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
-          </div>
-          <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">The Bible • The Gospels</p></div>
-        </article>
-        <article class="course-card" data-cat="bible">
-          <div class="course-thumb deck-thumb" data-deck="deck-08" role="button" tabindex="0" aria-label="Open presentation: Are the Gospels eyewitness accounts?">
-            <span class="deck-flag">Presentation · 20 pages</span>
-            <span class="deck-cover-title">Are the Gospels eyewitness accounts?</span>
-            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
-          </div>
-          <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">The Bible • The Gospels</p></div>
-        </article>
+          <!-- Presentation Decks -->
+          <article class="course-card" data-cat="bible">
+            <div class="course-thumb deck-thumb" data-deck="deck-01" role="button" tabindex="0" aria-label="Open presentation: Has the Bible been changed?">
+              <span class="deck-flag">Presentation · 13 pages</span>
+              <span class="deck-cover-title">Has the Bible been changed?</span>
+              <span class="deck-cta">Read the deck →</span>
+            </div>
+            <div class="course-meta">
+              <p class="course-tags">Islam • The Bible</p>
+            </div>
+          </article>
+          
+          <article class="course-card" data-cat="jesus">
+            <div class="course-thumb deck-thumb" data-deck="deck-02" role="button" tabindex="0" aria-label="Open presentation: Was Jesus real, or a myth?">
+              <span class="deck-flag">Presentation · 20 pages</span>
+              <span class="deck-cover-title">Was Jesus real, or a myth?</span>
+              <span class="deck-cta">Read the deck →</span>
+            </div>
+            <div class="course-meta">
+              <p class="course-tags">Jesus • History</p>
+            </div>
+          </article>
+          
+          <article class="course-card" data-cat="jesus">
+            <div class="course-thumb deck-thumb" data-deck="deck-03" role="button" tabindex="0" aria-label="Open presentation: Did Jesus really die?">
+              <span class="deck-flag">Presentation · 20 pages</span>
+              <span class="deck-cover-title">Did Jesus really die?</span>
+              <span class="deck-cta">Read the deck →</span>
+            </div>
+            <div class="course-meta">
+              <p class="course-tags">Jesus • History</p>
+            </div>
+          </article>
+          
+          <article class="course-card" data-cat="jesus">
+            <div class="course-thumb deck-thumb" data-deck="deck-04" role="button" tabindex="0" aria-label="Open presentation: Was Jesus raised from the dead?">
+              <span class="deck-flag">Presentation · 23 pages</span>
+              <span class="deck-cover-title">Was Jesus raised from the dead?</span>
+              <span class="deck-cta">Read the deck →</span>
+            </div>
+            <div class="course-meta">
+              <p class="course-tags">Jesus • History</p>
+            </div>
+          </article>
+          
+          <article class="course-card" data-cat="jesus">
+            <div class="course-thumb deck-thumb" data-deck="deck-05" role="button" tabindex="0" aria-label="Open presentation: Was Jesus foretold?">
+              <span class="deck-flag">Presentation · 22 pages</span>
+              <span class="deck-cover-title">Was Jesus foretold?</span>
+              <span class="deck-cta">Read the deck →</span>
+            </div>
+            <div class="course-meta">
+              <p class="course-tags">Jesus • Prophecy</p>
+            </div>
+          </article>
+          
+          <article class="course-card" data-cat="bible">
+            <div class="course-thumb deck-thumb" data-deck="deck-06" role="button" tabindex="0" aria-label="Open presentation: Who wrote the Gospels?">
+              <span class="deck-flag">Presentation · 16 pages</span>
+              <span class="deck-cover-title">Who wrote the Gospels?</span>
+              <span class="deck-cta">Read the deck →</span>
+            </div>
+            <div class="course-meta">
+              <p class="course-tags">The Bible • The Gospels</p>
+            </div>
+          </article>
+          
+          <article class="course-card" data-cat="bible">
+            <div class="course-thumb deck-thumb" data-deck="deck-07" role="button" tabindex="0" aria-label="Open presentation: Do the Gospels contradict each other?">
+              <span class="deck-flag">Presentation · 15 pages</span>
+              <span class="deck-cover-title">Do the Gospels contradict each other?</span>
+              <span class="deck-cta">Read the deck →</span>
+            </div>
+            <div class="course-meta">
+              <p class="course-tags">The Bible • The Gospels</p>
+            </div>
+          </article>
+          
+          <article class="course-card" data-cat="bible">
+            <div class="course-thumb deck-thumb" data-deck="deck-08" role="button" tabindex="0" aria-label="Open presentation: Are the Gospels eyewitness accounts?">
+              <span class="deck-flag">Presentation · 20 pages</span>
+              <span class="deck-cover-title">Are the Gospels eyewitness accounts?</span>
+              <span class="deck-cta">Read the deck →</span>
+            </div>
+            <div class="course-meta">
+              <p class="course-tags">The Bible • The Gospels</p>
+            </div>
+          </article>
 
-        <!-- Deck 09 Presentation Card -->
-        <article class="course-card" data-cat="foundations">
-          <div class="course-thumb deck-thumb" data-deck="deck-09" role="button" tabindex="0" aria-label="Open presentation: Is Jesus of Nazareth God?">
-            <span class="deck-flag">Presentation · 20 pages</span>
-            <span class="deck-cover-title">Is Jesus of Nazareth God?</span>
-            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
-          </div>
-          <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Foundations • Deity of Christ</p></div>
-        </article>
+          <!-- Foundations / Deity of Christ -->
+          <article class="course-card" data-cat="foundations">
+            <div class="course-thumb deck-thumb" data-deck="deck-09" role="button" tabindex="0" aria-label="Open presentation: Is Jesus of Nazareth God?">
+              <span class="deck-flag">Presentation · 20 pages</span>
+              <span class="deck-cover-title">Is Jesus of Nazareth God?</span>
+              <span class="deck-cta">Read the deck →</span>
+            </div>
+            <div class="course-meta">
+              <p class="course-tags">Foundations • Deity of Christ</p>
+            </div>
+          </article>
 
-        <!-- Deck 10 Presentation Card -->
-        <article class="course-card" data-cat="foundations">
-          <div class="course-thumb deck-thumb" data-deck="deck-10" role="button" tabindex="0" aria-label="Open presentation: The Cross and the Crown: The God-Man Part 1">
-            <span class="deck-flag">Presentation · 20 pages</span>
-            <span class="deck-cover-title">The Cross and the Crown: The God-Man Part 1</span>
-            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
-          </div>
-          <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Foundations • Christology</p></div>
-        </article>
+          <!-- Foundations / Christology -->
+          <article class="course-card" data-cat="foundations">
+            <div class="course-thumb deck-thumb" data-deck="deck-10" role="button" tabindex="0" aria-label="Open presentation: The Cross and the Crown: The God-Man Part 1">
+              <span class="deck-flag">Presentation · 20 pages</span>
+              <span class="deck-cover-title">The Cross and the Crown: The God-Man Part 1</span>
+              <span class="deck-cta">Read the deck →</span>
+            </div>
+            <div class="course-meta">
+              <p class="course-tags">Foundations • Christology</p>
+            </div>
+          </article>
 
-        <!-- Deck 11 Presentation Card -->
-        <article class="course-card" data-cat="foundations">
-          <div class="course-thumb deck-thumb" data-deck="deck-11" role="button" tabindex="0" aria-label="Open presentation: The Cross and the Crown: The God-Man Part 2">
-            <span class="deck-flag">Presentation · 20 pages</span>
-            <span class="deck-cover-title">The Cross and the Crown: The God-Man Part 2</span>
-            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
-          </div>
-          <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Foundations • Christology</p></div>
-        </article>
+          <article class="course-card" data-cat="foundations">
+            <div class="course-thumb deck-thumb" data-deck="deck-11" role="button" tabindex="0" aria-label="Open presentation: The Cross and the Crown: The God-Man Part 2">
+              <span class="deck-flag">Presentation · 20 pages</span>
+              <span class="deck-cover-title">The Cross and the Crown: The God-Man Part 2</span>
+              <span class="deck-cta">Read the deck →</span>
+            </div>
+            <div class="course-meta">
+              <p class="course-tags">Foundations • Christology</p>
+            </div>
+          </article>
 
-        <!-- Deck 12 Presentation Card (New: Apologetics Part 1) -->
-        <article class="course-card" data-cat="foundations">
-          <div class="course-thumb deck-thumb" data-deck="deck-12" role="button" tabindex="0" aria-label="Open presentation: How to Defend Your Faith Part 1">
-            <span class="deck-flag">Presentation · 22 pages</span>
-            <span class="deck-cover-title">How to Defend Your Faith Part 1</span>
-            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
-          </div>
-          <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Foundations • Apologetics</p></div>
-        </article>
+          <!-- Foundations / Apologetics -->
+          <article class="course-card" data-cat="foundations">
+            <div class="course-thumb deck-thumb" data-deck="deck-12" role="button" tabindex="0" aria-label="Open presentation: How to Defend Your Faith Part 1">
+              <span class="deck-flag">Presentation · 22 pages</span>
+              <span class="deck-cover-title">How to Defend Your Faith Part 1</span>
+              <span class="deck-cta">Read the deck →</span>
+            </div>
+            <div class="course-meta">
+              <p class="course-tags">Foundations • Apologetics</p>
+            </div>
+          </article>
 
-        <!-- Deck 13 Presentation Card (Catechism: How is a man saved? Part 1) -->
-        <article class="course-card" data-cat="foundations">
-          <div class="course-thumb deck-thumb" data-deck="deck-13" role="button" tabindex="0" aria-label="Open presentation: Catechism: How is a man saved?">
-            <span class="deck-flag">Presentation · 30 pages</span>
-            <span class="deck-cover-title">Catechism: How is a man saved?</span>
-            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
-          </div>
-          <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Foundations • Doctrine</p></div>
-        </article>
+          <!-- Foundations / Doctrine -->
+          <article class="course-card" data-cat="foundations">
+            <div class="course-thumb deck-thumb" data-deck="deck-13" role="button" tabindex="0" aria-label="Open presentation: Catechism: How is a man saved?">
+              <span class="deck-flag">Presentation · 30 pages</span>
+              <span class="deck-cover-title">Catechism: How is a man saved?</span>
+              <span class="deck-cta">Read the deck →</span>
+            </div>
+            <div class="course-meta">
+              <p class="course-tags">Foundations • Doctrine</p>
+            </div>
+          </article>
 
-        <!-- Deck 14 Presentation Card (Catechism: How is a man saved? Part 2) -->
-        <article class="course-card" data-cat="foundations">
-          <div class="course-thumb deck-thumb" data-deck="deck-14" role="button" tabindex="0" aria-label="Open presentation: Catechism: How is a man saved? Part 2">
-            <span class="deck-flag">Presentation · 22 pages</span>
-            <span class="deck-cover-title">Catechism: How is a man saved? Part 2</span>
-            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
-          </div>
-          <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Foundations • Doctrine</p></div>
-        </article>
+          <article class="course-card" data-cat="foundations">
+            <div class="course-thumb deck-thumb" data-deck="deck-14" role="button" tabindex="0" aria-label="Open presentation: Catechism: How is a man saved? Part 2">
+              <span class="deck-flag">Presentation · 22 pages</span>
+              <span class="deck-cover-title">Catechism: How is a man saved? Part 2</span>
+              <span class="deck-cta">Read the deck →</span>
+            </div>
+            <div class="course-meta">
+              <p class="course-tags">Foundations • Doctrine</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -729,7 +1268,7 @@
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">Fact four. James, the brother of Jesus.</p><p class="dp-body">During Jesus’ life, his own brothers did not believe in him. Then, after the cross, James becomes a leader of the church in Jerusalem, and dies a martyr for it.</p><p class="dp-body">The earliest creed says simply, “he appeared to James.” Something turned a skeptical brother into a man who would die for him.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">Fact five. The tomb was empty.</p><p class="dp-body">This is the most debated of the five, yet still granted by around three quarters of scholars.</p><p class="dp-body">And the detail that seals it. Everyone knew where the tomb was. To end the movement overnight, the authorities only had to produce the body. They never did.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">Look at how his enemies answered.</p><p class="dp-body">The earliest counter-story, recorded in Matthew, was not “the tomb is full.” It was “his disciples came and stole the body.”</p><p class="dp-body">Even the opposition conceded the tomb was empty. They only argued about how.</p></div></article>
-        <article class="deckpage"><div class="dp-inner"><p class="dp-body">In that world, a woman’s testimony was not accepted in court. If you were inventing a resurrection story, you would never make women your first witnesses. You would put Peter and John there, to make it stand up.</p><p class="dp-body">Instead, all four Gospels say women found the tomb, and Mary Magdalene saw him first. The only reason to write it that way is that it is what happened.</p></div></article>
+        <article class="deckpage"><div class="dp-inner"><p class="dp-body">In that world, a woman’s testimony was not accepted in court. If you were inventing a resurrection story, you would never make women your first witnesses. You would never put Peter and John there, to make it stand up.</p><p class="dp-body">Instead, all four Gospels say women found the tomb, and Mary Magdalene saw him first. The only reason to write it that way is that it is what happened.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">And none of this grew slowly over centuries.</p><p class="dp-body">Paul hands on a creed he says he “received” and “passed on.”</p><p class="dp-quote">“that Christ died for our sins, that he was buried, that he was raised on the third day, and that he appeared to... living witnesses.”</p><p class="dp-body">Scholars date it to within a few years of the cross. Some, within months. It names living witnesses, and all but says: go and ask them.</p><div class="dp-cites"><span class="dp-cite">1 Corinthians 15:3-5</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">So here are the five, agreed by friend and skeptic alike.</p><p class="dp-body">He died. His disciples were certain they saw him. Paul was certain. James was certain. The tomb was empty.</p><p class="dp-body">Now the honest test. Can any ordinary explanation carry all five? Watch them fall, one by one.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">Maybe they hallucinated.</p><p class="dp-body">But hallucinations are private. They do not happen to groups. The creed lists Peter, then the Twelve, then five hundred at once, then James, then all the apostles.</p><p class="dp-body">Group hallucinations are unknown to psychology. And a hallucination cannot empty a tomb.</p></div></article>
@@ -838,22 +1377,22 @@
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">There is a question that sits at the center of all human history, a question that has never been neutrally received and has never allowed any man to remain indifferent.</p><p class="dp-body">The question is not simply whether God exists. The question is far more specific and far more confrontational: Is Jesus of Nazareth God?</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">No one who ever encountered Jesus walked away unchanged by the question of who He was. Even in His own time, the crowds debated it, the religious leaders were threatened by it, and the disciples were transformed by it.</p><p class="dp-body">That same question comes to every generation with the same force it carried in the first century.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">And there is a logical framework that strips away all comfortable middle ground. It was popularized by C.S. Lewis but the argument is rooted in scripture itself.</p><p class="dp-body">Jesus made claims that no ordinary man has any right to make. He claimed to forgive sins, He claimed pre-existence, He claimed equality with God, He accepted worship that only belongs to God.</p></div></article>
-        <article class="deckpage"><div class="dp-inner"><p class="dp-body">Given these claims, you are only left with three options:</p><p class="dp-body"><strong>He is a Lunatic</strong> — His claims were the delusions of a madman.</p><p class="dp-body"><strong>He is a Liar</strong> — He knew He was not God but deceived the world anyway.</p><p class="dp-body"><strong>He is Lord</strong> — His claims are true and He is exactly who He said He is.</p></div></article>
+        <article class="deckpage"><div class="dp-inner"><p class="dp-body">Given these claims, you are only left with three options:</p><p class="dp-body"><b>He is a Lunatic</b> — His claims were the delusions of a madman.</p><p class="dp-body"><b>He is a Liar</b> — He knew He was not God but deceived the world anyway.</p><p class="dp-body"><b>He is Lord</b> — His claims are true and He is exactly who He said He is.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">There is no safe fourth option. You cannot call Him a good teacher and reject His deity because a good teacher does not claim to be God unless it is true.</p><p class="dp-body">The moment you accept the content of His teachings but reject His identity, you have created a contradiction. So the only honest thing to do is to examine the evidence. And the evidence, when followed honestly and completely, leads to one conclusion: Jesus is God.</p></div></article>
-        <article class="deckpage"><div class="dp-inner"><p class="dp-body"><strong>1. JESUS CLAIMED TO BE GOD — DIRECTLY</strong></p><p class="dp-body">The most foundational proof is not theological inference, it is His own words. Jesus did not hint at divinity. He declared it, plainly and repeatedly, in ways that His listeners understood perfectly.</p><p class="dp-quote">“I and my Father are one.”</p><div class="dp-cites"><span class="dp-cite">John 10:30</span></div></div></article>
+        <article class="deckpage"><div class="dp-inner"><p class="dp-body"><b>1. JESUS CLAIMED TO BE GOD — DIRECTLY</b></p><p class="dp-body">The most foundational proof is not theological inference, it is His own words. Jesus did not hint at divinity. He declared it, plainly and repeatedly, in ways that His listeners understood perfectly.</p><p class="dp-quote">“I and my Father are one.”</p><div class="dp-cites"><span class="dp-cite">John 10:30</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">The Jews who heard this did not say, “Oh, He means they are in agreement.” They immediately picked up stones to kill Him.</p><p class="dp-quote">“For a good work we stone thee not; but for blasphemy; and because that thou, being a man, makest thyself God.”</p><p class="dp-body">They understood exactly what He was saying. Jesus did not correct them. He doubled down and made the claim again. He meant precisely what they heard.</p><div class="dp-cites"><span class="dp-cite">John 10:33</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-quote">“Before Abraham was, I am.”</p><p class="dp-body">The phrase “I AM” is not grammatically accidental. It is the divine name that God gave Moses at the burning bush in Exodus 3:14 (“I AM THAT I AM”). When Jesus said this, He was appropriating the divine name to Himself. The Jews tried to stone Him, understanding it as a claim to be Yahweh Himself.</p><div class="dp-cites"><span class="dp-cite">John 8:58</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-quote">“He that hath seen me hath seen the Father; and how sayest thou then, Shew us the Father?”</p><p class="dp-body">Philip asked to see the Father. Jesus did not say, “I will show Him to you.” He said, “You have already seen Him when you looked at Me.” This is not the language of a prophet. No prophet in all of scripture ever said, “To see me is to see God.” Only God can say that.</p><div class="dp-cites"><span class="dp-cite">John 14:9</span></div></div></article>
-        <article class="deckpage"><div class="dp-inner"><p class="dp-body"><strong>2. JESUS CLAIMED THE AUTHORITY THAT BELONGS ONLY TO GOD</strong></p><p class="dp-body">Beyond what He said about His nature, pay attention to what Jesus claimed the authority to do. These are things that no created being, no prophet, no angel, has any right to claim. First, He claimed the authority to forgive sins:</p><p class="dp-quote">“Son, thy sins be forgiven thee... Why doth this man thus speak blasphemies? who can forgive sins but God only?”</p><div class="dp-cites"><span class="dp-cite">Mark 2:5-7</span></div></div></article>
+        <article class="deckpage"><div class="dp-inner"><p class="dp-body"><b>2. JESUS CLAIMED THE AUTHORITY THAT BELONGS ONLY TO GOD</b></p><p class="dp-body">Beyond what He said about His nature, pay attention to what Jesus claimed the authority to do. These are things that no created being, no prophet, no angel, has any right to claim. First, He claimed the authority to forgive sins:</p><p class="dp-quote">“Son, thy sins be forgiven thee... Why doth this man thus speak blasphemies? who can forgive sins but God only?”</p><div class="dp-cites"><span class="dp-cite">Mark 2:5-7</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">Only God can forgive sins because sin is ultimately an offense against God. Scribes knew this. Scribes refused to accept the conclusion that followed: if only God can forgive sins and this man is forgiving sins, then this man is God.</p><p class="dp-body">Jesus did not rebuke their theology, but their unbelief. He then proved His point by healing the paralytic physically, showing His authority over both body and soul.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-quote">“Ye have heard that it was said by them of old time, Thou shalt not kill... But I say unto you, That whosoever is angry with his brother without a cause shall be in danger of the judgment.”</p><p class="dp-body">Six times in the Sermon on the Mount, Jesus used this formula. The law was given by God. No prophet ever said, 'You have heard what God said, but I am telling you something that supersedes it.' The prophets said, 'Thus saith the Lord.' Jesus spoke as the source of the law. Only the Lawgiver can update the law.</p><div class="dp-cites"><span class="dp-cite">Matthew 5:21-22</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-quote">“When the Son of man shall come in his glory... then shall he sit upon the throne of his glory: And before him shall be gathered all nations...”</p><p class="dp-body">He placed Himself on the judgment seat of all humanity. In Joel 3:12, God said: “for there will I sit to judge all the heathen round about.” What God said He would do in Joel, Jesus said He would do in Matthew. Jesus did not claim to assist at the judgment. He claimed to be the Judge.</p><div class="dp-cites"><span class="dp-cite">Matthew 25:31-32</span></div></div></article>
-        <article class="deckpage"><div class="dp-inner"><p class="dp-body"><strong>3. JESUS RECEIVED WORSHIP — AND NEVER REFUSED IT</strong></p><p class="dp-body">Throughout all of scripture, whenever a man, a prophet, or even an angel received worship, they immediately refused it (e.g., Barnabas and Paul in Acts 14, or the angel in Revelation 22). Receiving worship that belongs only to God is blasphemy.</p><p class="dp-body">And yet, when people worshipped Jesus, He accepted it every single time, such as when the disciples held Him by the feet and worshipped Him in Matthew 28:9.</p></div></article>
+        <article class="deckpage"><div class="dp-inner"><p class="dp-body"><b>3. JESUS RECEIVED WORSHIP — AND NEVER REFUSED IT</b></p><p class="dp-body">Throughout all of scripture, whenever a man, a prophet, or even an angel received worship, they immediately refused it (e.g., Barnabas and Paul in Acts 14, or the angel in Revelation 22). Receiving worship that belongs only to God is blasphemy.</p><p class="dp-body">And yet, when people worshipped Jesus, He accepted it every single time, such as when the disciples held Him by the feet and worshipped Him in Matthew 28:9.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-quote">“My Lord and my God.”</p><p class="dp-body">Thomas called Him God directly to His face. Jesus did not correct him. He did not say, “Thomas, do not call me God.” Instead He affirmed it: “Blessed are they that have not seen, and yet have believed.” He accepted the declaration and called it faith. If He were not God, that would be the single greatest act of deception.</p><div class="dp-cites"><span class="dp-cite">John 20:28</span></div></div></article>
-        <article class="deckpage"><div class="dp-inner"><p class="dp-body"><strong>4. THE WORKS OF JESUS ARE THE WORKS OF GOD</strong></p><p class="dp-body">His miracles were not the miracles of a prophet operating under delegated power. They were the works of the Creator exercising inherent authority. The prophets prayed and fire came down or dead were raised. But Jesus did not pray and wait for an answer. He commanded directly:</p><p class="dp-quote">“Peace, be still. And the wind ceased, and there was a great calm.”</p><p class="dp-body">He spoke to nature and nature obeyed. He did not ask God to calm the storm; He commanded the storm Himself. Only the Creator of the wind has authority to command it.</p><div class="dp-cites"><span class="dp-cite">Mark 4:39</span></div></div></article>
+        <article class="deckpage"><div class="dp-inner"><p class="dp-body"><b>4. THE WORKS OF JESUS ARE THE WORKS OF GOD</b></p><p class="dp-body">His miracles were not the miracles of a prophet operating under delegated power. They were the works of the Creator exercising inherent authority. The prophets prayed and fire came down or dead were raised. But Jesus did not pray and wait for an answer. He commanded directly:</p><p class="dp-quote">“Peace, be still. And the wind ceased, and there was a great calm.”</p><p class="dp-body">He spoke to nature and nature obeyed. He did not ask God to calm the storm; He commanded the storm Himself. Only the Creator of the wind has authority to command it.</p><div class="dp-cites"><span class="dp-cite">Mark 4:39</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-quote">“Lazarus, come forth. And he that was dead came forth, bound hand and foot with graveclothes.”</p><p class="dp-body">Jesus raised the dead by command. He did not petition heaven; He spoke directly into death. The voice that called Lazarus out of the tomb is the same voice that spoke at creation. John 1 tells us that without Him, nothing was made. He also fed thousands, turned water to wine, and sustains all creation (Colossians 1:17).</p><div class="dp-cites"><span class="dp-cite">John 11:43-44</span></div></div></article>
-        <article class="deckpage"><div class="dp-inner"><p class="dp-body"><strong>5. THE APOSTLES AND THE NEW TESTAMENT DECLARE HIM GOD</strong></p><p class="dp-body">The apostolic preaching is unanimous: John 1:1 says “the Word was God,” and John 1:14 says the Word became flesh. Paul writes in Colossians 2:9: “For in him dwelleth all the fulness of the Godhead bodily.” The complete nature of God dwelt in Him. Hebrews 1:3 adds He is the express image of His person, and Philippians 2:6 speaks of His equality with God.</p></div></article>
-        <article class="deckpage dp-close"><div class="dp-inner"><p class="dp-body"><strong>6. THE OLD TESTAMENT PROPHECY & THE RESURRECTION: THE VERDICT</strong></p><p class="dp-body">Isaiah 9:6 calls Him the "Mighty God, Everlasting Father." Micah 5:2 says His goings forth are from everlasting. And the Resurrection serves as the final proof (Romans 1:4). C.S. Lewis’ trilemma remains: He is not a lunatic, He is not a liar. He is Lord.</p><p class="dp-verse" style="margin-top:1.5rem">“That at the name of Jesus every knee should bow, of things in heaven, and things in earth, and things under the earth; And that every tongue should confess that Jesus Christ is Lord...”</p><p class="dp-cite-ref">Philippians 2:10-11</p></div></article>
+        <article class="deckpage"><div class="dp-inner"><p class="dp-body"><b>5. THE APOSTLES AND THE NEW TESTAMENT DECLARE HIM GOD</b></p><p class="dp-body">The apostolic preaching is unanimous: John 1:1 says “the Word was God,” and John 1:14 says the Word became flesh. Paul writes in Colossians 2:9: “For in him dwelleth all the fulness of the Godhead bodily.” The complete nature of God dwelt in Him. Hebrews 1:3 adds He is the express image of His person, and Philippians 2:6 speaks of His equality with God.</p></div></article>
+        <article class="deckpage dp-close"><div class="dp-inner"><p class="dp-body"><b>6. THE OLD TESTAMENT PROPHECY & THE RESURRECTION: THE VERDICT</b></p><p class="dp-body">Isaiah 9:6 calls Him the "Mighty God, Everlasting Father." Micah 5:2 says His goings forth are from everlasting. And the Resurrection serves as the final proof (Romans 1:4). C.S. Lewis’ trilemma remains: He is not a lunatic, He is not a liar. He is Lord.</p><p class="dp-verse" style="margin-top:1.5rem">“That at the name of Jesus every knee should bow, of things in heaven, and things in earth, and things under the earth; And that every tongue should confess that Jesus Christ is Lord...”</p><p class="dp-cite-ref">Philippians 2:10-11</p></div></article>
       </section>
 
       <!-- DECK 10 -->
@@ -868,11 +1407,11 @@
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">If Jesus did not die, He couldn’t have paid and he couldn’t have also resurrected.</p><p class="dp-body">So it means that anybody who claims that Jesus did not resurrect as well is claiming that you don’t have eternal life.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">If Jesus did not take the keys by defeating death and resurrecting, there’s no hope for us to have eternal life, that’s why the nature of Jesus and what you know about Jesus must be very right.</p><p class="dp-body">The divinity and the humanity of Jesus must be rightly reconciled for him to be Lord and for Him to be Savior, the cross and the crown have to be reconciled.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">Till today people still have the wrong idea of who Jesus is and so Christology aims to answer the question “who is Jesus?”. A good way to know who Jesus is, is to know who He is not.</p><p class="dp-body">Some controversies came up about the nature of Jesus in the early Church, and these heresies (wrong teachings) are crucial to address.</p></div></article>
-        <article class="deckpage"><div class="dp-inner"><p class="dp-body"><strong>Ebionism:</strong> Ebionists believe that Jesus was a natural man born of natural conception by Mary and Joseph. They do not believe that there was any supernatural conception.</p><p class="dp-body">They believe He is the Messiah but they also believe that He is not divine, He is not supernatural, He is ordinary. They believe we are saved by works (Legalism).</p></div></article>
-        <article class="deckpage"><div class="dp-inner"><p class="dp-body"><strong>Docetism:</strong> Docetists believe that He only appeared to be human but was not truly human, that he was a phantom, a spirit who only manipulated people’s perceptions to believe he was human.</p><p class="dp-body">They also believe that because he is divine, he couldn’t suffer pain, meaning that he couldn’t have really died the way people say He did.</p></div></article>
-        <article class="deckpage"><div class="dp-inner"><p class="dp-body"><strong>Gnosticism:</strong> Gnostics are a form of docetists because they also don’t believe that Jesus had a natural body but only appeared to be humanized. They have weird Greek mythology mixed into their beliefs.</p></div></article>
-        <article class="deckpage"><div class="dp-inner"><p class="dp-body"><strong>Arianism:</strong> originated from Arius who was a presbyter. They believe that Jesus was created and is not God but God’s first creation.</p></div></article>
-        <article class="deckpage"><div class="dp-inner"><p class="dp-body"><strong>BIBLICAL PROOF THAT GOD BECAME FLESH IN THE PERSON OF JESUS</strong></p><p class="dp-quote">“In the beginning was the Word, and the Word was with God, and the Word was God.”</p><p class="dp-body">John begins his gospel establishing the absolute deity of Jesus, preventing any distortion of His divine essence.</p><div class="dp-cites"><span class="dp-cite">John 1:1</span></div></div></article>
+        <article class="deckpage"><div class="dp-inner"><p class="dp-body"><b>Ebionism:</b> Ebionists believe that Jesus was a natural man born of natural conception by Mary and Joseph. They do not believe that there was any supernatural conception.</p><p class="dp-body">They believe He is the Messiah but they also believe that He is not divine, He is not supernatural, He is ordinary. They believe we are saved by works (Legalism).</p></div></article>
+        <article class="deckpage"><div class="dp-inner"><p class="dp-body"><b>Docetism:</b> Docetists believe that He only appeared to be human but was not truly human, that he was a phantom, a spirit who only manipulated people’s perceptions to believe he was human.</p><p class="dp-body">They also believe that because he is divine, he couldn’t suffer pain, meaning that he couldn’t have really died the way people say He did.</p></div></article>
+        <article class="deckpage"><div class="dp-inner"><p class="dp-body"><b>Gnosticism:</b> Gnostics are a form of docetists because they also don’t believe that Jesus had a natural body but only appeared to be humanized. They have weird Greek mythology mixed into their beliefs.</p></div></article>
+        <article class="deckpage"><div class="dp-inner"><p class="dp-body"><b>Arianism:</b> originated from Arius who was a presbyter. They believe that Jesus was created and is not God but God’s first creation.</p></div></article>
+        <article class="deckpage"><div class="dp-inner"><p class="dp-body"><b>BIBLICAL PROOF THAT GOD BECAME FLESH IN THE PERSON OF JESUS</b></p><p class="dp-quote">“In the beginning was the Word, and the Word was with God, and the Word was God.”</p><p class="dp-body">John begins his gospel establishing the absolute deity of Jesus, preventing any distortion of His divine essence.</p><div class="dp-cites"><span class="dp-cite">John 1:1</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-quote">“My Father is greater than I.”</p><p class="dp-body">Many misunderstand this to say He is not equal to God. But Jesus was declaring His humbled state in the incarnation, honoring the protocol of His earthly station.</p><div class="dp-cites"><span class="dp-cite">John 14:28</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-quote">“And Jesus increased in wisdom and stature, and in favour with God and man.”</p><p class="dp-body">Skeptics ask: If He is God, why is He increasing in wisdom? This is because He humbled Himself to grow through the natural phases of a true human life.</p><div class="dp-cites"><span class="dp-cite">Luke 2:52</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-quote">“But of that day and hour knoweth no man, no, not the angels of heaven, but my Father only.”</p><p class="dp-body">He chose to restrict the exercise of His divine attributes while inside human form. He worked in perfect compliance with His humanity.</p><div class="dp-cites"><span class="dp-cite">Matthew 24:36</span></div></div></article>
@@ -888,7 +1427,7 @@
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">Different people have ideas about who Jesus is, but the question and the core of this is, who is Jesus to you?</p><p class="dp-body">Why Christology is important is that the nature of Jesus is foundational to His ability to be Lord and Savior. If you miss a part of His nature, he can’t fulfill that responsibility or that role of Lord and Savior.</p><p class="dp-body">If He is not fully human he can’t be your Savior; if He is not God, He can’t be Lord. Getting that relationship right is critical. The cross and the crown would not be complete if the natures of Christ’s humanity and His divinity are not rightly reconciled.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">In the previous teachings we learned about Ebionism, Ebionists and their beliefs. They only saw Christianity as glorified Judaism.</p><p class="dp-body">We also learned about Docetism, Gnosticism, Arianism and the Jehovah witnesses we can trace it to. We’re going to learn today that Jesus is as much human as he is God.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">To oppose Arianism—which originated from Arius, a presbyter who believed that Jesus was created and was not God but rather God's first creation—a man named Apollinaris developed his own belief system called Apollinarianism.</p><p class="dp-body">He argued that Jesus could not be fully God and fully human at the same time, because those two natures could not coexist.</p><p class="dp-body">Instead, he proposed that the divine Logos of God took the place of Jesus’ human mind, making him fully divine and giving him divine attributes so Jesus was not man, he was God. Is that true?</p></div></article>
-        <article class="deckpage"><div class="dp-inner"><p class="dp-body"><strong>PROBLEMS WITH THINKING THAT JESUS IS JUST DIVINE AND NOT HUMAN AT ALL</strong></p><p class="dp-body">A claim against the full humanity of Jesus is a claim against your salvation: Jesus has to be fully human to be able to be the substitute for your sin, and to understand this concept, we must understand substitutionary atonement.</p><p class="dp-quote">“For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord.”</p><div class="dp-cites"><span class="dp-cite">Romans 6:23</span></div></div></article>
+        <article class="deckpage"><div class="dp-inner"><p class="dp-body"><b>PROBLEMS WITH THINKING THAT JESUS IS JUST DIVINE AND NOT HUMAN AT ALL</b></p><p class="dp-body">A claim against the full humanity of Jesus is a claim against your salvation: Jesus has to be fully human to be able to be the substitute for your sin, and to understand this concept, we must understand substitutionary atonement.</p><p class="dp-quote">“For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord.”</p><div class="dp-cites"><span class="dp-cite">Romans 6:23</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">If sin is the way you work, then death must be the cheque, the punishment of sin is death. But the Bible also says:</p><p class="dp-quote">“For all have sinned, and come short of the glory of God;”</p><p class="dp-body">So if the wages of sin is death, and all have sinned, then all of mankind is heading to death. This means that if you owe a debt, you have to pay that debt. Now the problem here is, if anyone is going to help us, then that person must be in and of himself without sin.</p><div class="dp-cites"><span class="dp-cite">Romans 3:23</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">Two challenges here: all of mankind has sinned, and the wages of sin is death. No man can die for the sin of another because every man has his own sin. How do we reconcile that problem?</p><p class="dp-body">Now God wants to pay a debt he didn’t owe because he wants to step in as our savior:</p><p class="dp-quote">“And almost all things are by the law purged with blood; and without shedding of blood is no remission.”</p><p class="dp-body">Meaning that if you sinned, blood is the payment. That is the way for remission to come. So what did God do? He sent a substitute.</p><div class="dp-cites"><span class="dp-cite">Hebrews 9:22</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">If God wants to save us, he has to come, pay, and the way to pay is to die. Can you kill God? Hence the incarnation.</p><p class="dp-body">So God decided to step into this world as a man, so that he can pay:</p><p class="dp-quote">“For he hath made him to be sin for us, who knew no sin; that we might be made the righteousness of God in him.”</p><p class="dp-body">So there has to be one who did not know sin, and He has to become sin for us. First off, God had to come, and he had to be sinless. Only Him meets that criteria.</p><div class="dp-cites"><span class="dp-cite">2 Corinthians 5:21</span></div></div></article>
@@ -898,13 +1437,13 @@
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">Using types and shadows as an example, we knew that Jesus is the Passover lamb, but God made them sacrifice bulls and goats as a type of Christ or as a shadow of Christ. These are traditions that God uses to point at the real work that He is doing.</p><p class="dp-body">Now the writer of Romans is telling us that Adam was the shadow of something else, meaning that Adam, and his life, and the fact that through him, a lot of people entered into debt is telling a story of something else.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-quote">“But not as the offence, so also is the free gift. For if through the offence of one many be dead, much more the grace of God, and the gift by grace, which is by one man, Jesus Christ, hath abounded unto many.”</p><p class="dp-body">We know that Jesus is sinless so he can take the sin of somebody, but now, how is he going to take the sin of the world?</p><p class="dp-body">One man’s offense caused deaths to enter into this world; it is only fitting that by one man’s action, justification and righteousness will come to all men. Adam started a race but he died; Jesus is starting a race with greater glory.</p><div class="dp-cites"><span class="dp-cite">Romans 5:15</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-quote">“For if by one man's offence death reigned by one; much more they which receive abundance of grace and of the gift of righteousness shall reign in life by one, Jesus Christ.”</p><p class="dp-body">Through one man, sin came, and by one man, it is fitting that justification and righteousness will come—that’s the solution. When he died, the justice of God was met and the wages of your sin was paid.</p><p class="dp-body">It was man who sinned; he had to be the man who died. If Jesus is not fully man, you are not saved. A man sinned, so a man had to die. This is why a claim against the full humanity of Christ is a claim against your salvation.</p><div class="dp-cites"><span class="dp-cite">Romans 5:16-17</span></div></div></article>
-        <article class="deckpage"><div class="dp-inner"><p class="dp-body"><strong>A claim against the full humanity of Jesus is a claim against his position as both son of God and son of man:</strong></p><p class="dp-quote">“For unto us a child is born, unto us a son is given: and the government shall be upon his shoulder: and his name shall be called Wonderful, Counsellor, The mighty God, The everlasting Father, The Prince of Peace.”</p><p class="dp-body">He was called Mighty God, Everlasting father, this is a prophecy about a child that is to come, but that son that would be born, would be God.</p><div class="dp-cites"><span class="dp-cite">Isaiah 9:6</span></div></div></article>
+        <article class="deckpage"><div class="dp-inner"><p class="dp-body"><b>A claim against the full humanity of Jesus is a claim against his position as both son of God and son of man:</b></p><p class="dp-quote">“For unto us a child is born, unto us a son is given: and the government shall be upon his shoulder: and his name shall be called Wonderful, Counsellor, The mighty God, The everlasting Father, The Prince of Peace.”</p><p class="dp-body">He was called Mighty God, Everlasting father, this is a prophecy about a child that is to come, but that son that would be born, would be God.</p><div class="dp-cites"><span class="dp-cite">Isaiah 9:6</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">The Angel said unto Mary that the paternity of that child will not be from any man, He’ll be from God. Hence, He’ll be called the Son of God because He has no earthly father.</p><p class="dp-body">We’re not saying He is the son of God in terms of a biological conception; we’re saying He is the son of God because His paternity is of God. The title “Son of God” is a reference to the fact that He was born; this goes against Arianism. He was not created, He was begotten.</p><div class="dp-cites"><span class="dp-cite">Luke 1:35</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-quote">“And there was given him dominion, and glory, and a kingdom, that all people, nations, and languages, should serve him: his dominion is an everlasting dominion, which shall not pass away, and his kingdom that which shall not be destroyed.”</p><p class="dp-body">When people heard the phrase “Son of man,” they knew it was talking about that divine one in the likeness of man who is going to have dominion over the world. When Jesus quoted this, He was disclosing His identity: He is not just human, he is also divine.</p><div class="dp-cites"><span class="dp-cite">Daniel 7:13-14</span></div></div></article>
-        <article class="deckpage dp-close"><div class="dp-inner"><p class="dp-body">Was Jesus omniscient on earth? Every divine attribute was there, but he chose to limit himself. He humbled himself to grow in knowledge (Luke 2:52/Luke 5:52) and experienced human limitations—hunger, thirst, tiredness, and temptation (Hebrews 2:18).</p><p class="dp-body">The ultimate proof was that he died. The merging of these two natures—fully God, fully man—is what theologians call the <strong>hypostatic union</strong>.</p><p class="dp-verse" style="margin-top:1.5rem">“And being found in fashion as a man, he humbled himself, and became obedient unto death, even the death of the cross.”</p><p class="dp-cite-ref">Philippians 2:8</p></div></article>
+        <article class="deckpage dp-close"><div class="dp-inner"><p class="dp-body">Was Jesus omniscient on earth? Every divine attribute was there, but he chose to limit himself. He humbled himself to grow in knowledge (Luke 2:52) and experienced human limitations—hunger, thirst, tiredness, and temptation (Hebrews 2:18).</p><p class="dp-body">The ultimate proof was that he died. The merging of these two natures—fully God, fully man—is what theologians call the <b>hypostatic union</b>.</p><p class="dp-verse" style="margin-top:1.5rem">“And being found in fashion as a man, he humbled himself, and became obedient unto death, even the death of the cross.”</p><p class="dp-cite-ref">Philippians 2:8</p></div></article>
       </section>
 
-      <!-- DECK 12: INTRODUCTION TO APOLOGETICS -->
+      <!-- DECK 12 -->
       <section class="deck" data-deck="deck-12" data-series="Foundations · Apologetics">
         <article class="deckpage dp-cover">
           <div class="dp-inner">
@@ -925,15 +1464,15 @@
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body">In any true apostolic ministry, there are **two cardinal parts** that you must understand and participate in:</p>
-            <p class="dp-body"><strong>1. Taking Your Chains:</strong> Understanding what it means to be a bondservant, bound completely to the cause of Jesus.</p>
-            <p class="dp-body"><strong>2. The Defense & Confirmation:</strong> Providing answers and establishing the message of Christ wherever you go.</p>
+            <p class="dp-body">In any true apostolic ministry, there are <b>two cardinal parts</b> that you must understand and participate in:</p>
+            <p class="dp-body"><b>1. Taking Your Chains:</b> Understanding what it means to be a bondservant, bound completely to the cause of Jesus.</p>
+            <p class="dp-body"><b>2. The Defense & Confirmation:</b> Providing answers and establishing the message of Christ wherever you go.</p>
           </div>
         </article>
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body"><strong>PART I: TAKING YOUR CHAINS</strong></p>
+            <p class="dp-body"><b>PART I: TAKING YOUR CHAINS</b></p>
             <p class="dp-body">If the Gospel will prevail in our day, we must be ready to take up our chains. This doesn't mean literal physical iron chains, but a spiritual state of total commitment.</p>
             <p class="dp-body">It comes in the form of service, sacrifice, and yes—persecution. Some believe persecution is a sign of unproductivity or unanswered prayers. Scripture teaches otherwise.</p>
           </div>
@@ -956,7 +1495,7 @@
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body">What does it mean to be a bondservant? In the Greek, it is the word <strong>doulos</strong>, which means a slave.</p>
+            <p class="dp-body">What does it mean to be a bondservant? In the Greek, it is the word <b>doulos</b>, which means a slave.</p>
             <p class="dp-body">A slave does not belong to himself. He has no personal agenda, no private reputation, and no will outside the will of the master.</p>
           </div>
         </article>
@@ -971,7 +1510,6 @@
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body">Even Jesus submitted to this posture in His redemptive incarnation:</p>
             <p class="dp-quote">“But made himself of no reputation, and took upon him the form of a servant, and was made in the likeness of men...”</p>
             <p class="dp-body">For the sake of saving souls, the King of Glory took the form of a slave.</p>
             <div class="dp-cites"><span class="dp-cite">Philippians 2:7</span></div>
@@ -980,7 +1518,6 @@
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body">The Apostles proudly embraced this identity. Before declaring their titles, they always declared their slavery:</p>
             <p class="dp-quote">“Paul, a servant [slave] of Jesus Christ, called to be an apostle...”</p>
             <p class="dp-quote">“For if I yet pleased men, I should not be the servant of Christ.”</p>
             <div class="dp-cites"><span class="dp-cite">Romans 1:1 • Galatians 1:10</span></div>
@@ -990,7 +1527,7 @@
         <article class="deckpage">
           <div class="dp-inner">
             <p class="dp-body">This terminology runs throughout the entire New Testament:</p>
-            <p class="dp-body" style="font-family:'JetBrains Mono', monospace; font-size:0.85rem; color:var(--gold);">
+            <p class="dp-body" style="font-family:'JetBrains Mono', monospace; font-size:0.85rem; color:var(--gold-bright);">
               • Simon Peter: "A servant and an apostle..." (2 Pet 1:1)<br>
               • James: "A servant of God and of the Lord..." (Jas 1:1)<br>
               • Jude: "The servant of Jesus Christ..." (Jude 1:1)<br>
@@ -1002,7 +1539,6 @@
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body">Even their disciples were called slaves. Paul highlights Epaphras:</p>
             <p class="dp-quote">“Epaphras, who is one of you, a servant of Christ, saluteth you, always labouring fervently for you in prayers...”</p>
             <p class="dp-body">Slavery to Christ is not relegated to Apostles; it is the universal call of every believer.</p>
             <div class="dp-cites"><span class="dp-cite">Colossians 4:12</span></div>
@@ -1012,9 +1548,9 @@
         <article class="deckpage">
           <div class="dp-inner">
             <p class="dp-body">Because a slave’s sole focus is the Master's will, this reality demands specific, corresponding actions in your life:</p>
-            <p class="dp-body"><strong>1. Extreme Generosity:</strong> Increasing your financial partnership to move God’s work forward.</p>
-            <p class="dp-body"><strong>2. Dedicated Service:</strong> Throwing yourself into your local assembly to build structures for the harvest.</p>
-            <p class="dp-body"><strong>3. Spiritual Growth:</strong> Growing up so you can carry the burden of evangelism and counseling.</p>
+            <p class="dp-body"><b>1. Extreme Generosity:</b> Increasing your financial partnership to move God’s work forward.</p>
+            <p class="dp-body"><b>2. Dedicated Service:</b> Throwing yourself into your local assembly to build structures for the harvest.</p>
+            <p class="dp-body"><b>3. Spiritual Growth:</b> Growing up so you can carry the burden of evangelism and counseling.</p>
           </div>
         </article>
 
@@ -1028,7 +1564,7 @@
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body"><strong>PART II: THE DEFENSE OF THE GOSPEL</strong></p>
+            <p class="dp-body"><b>PART II: THE DEFENSE OF THE GOSPEL</b></p>
             <p class="dp-body">The second cardinal part of apostolic ministry is intellectual and vocal defense. Not every trial uses metal chains; many use words, arguments, and skepticism.</p>
             <p class="dp-body">You must be ready to give a reason. The Bible is deeply spiritual, yet it is also remarkably logical.</p>
           </div>
@@ -1065,7 +1601,7 @@
           <div class="dp-inner">
             <p class="dp-body">Some believe arguing or disputing for the faith is unchristian. Yet this was the exact custom of the Apostles:</p>
             <p class="dp-quote">“And Paul, as his manner was, went in unto them, and three sabbath days reasoned with them out of the scriptures...”</p>
-            <p class="dp-body">The Greek word for "reason" is <strong>dialegomai</strong>—meaning to dispute, debate, and argue thoroughly.</p>
+            <p class="dp-body">The Greek word for "reason" is <b>dialegomai</b>—meaning to dispute, debate, and argue thoroughly.</p>
             <div class="dp-cites"><span class="dp-cite">Acts 17:2</span></div>
           </div>
         </article>
@@ -1073,7 +1609,7 @@
         <article class="deckpage">
           <div class="dp-inner">
             <p class="dp-quote">“And he went into the synagogue, and spake boldly for the space of three months, disputing and persuading...”</p>
-            <p class="dp-body">Paul didn't just proclaim; he disputed and persuaded. In Philippians 1:7, he speaks of his mission as the <strong>apologia</strong>—which is the Greek legal term for delivering a formal, structured defense in a court of law.</p>
+            <p class="dp-body">Paul didn't just proclaim; he disputed and persuaded. In Philippians 1:7, he speaks of his mission as the <b>apologia</b>—which is the Greek legal term for delivering a formal, structured defense in a court of law.</p>
             <div class="dp-cites"><span class="dp-cite">Acts 19:8 • Philippians 1:7</span></div>
           </div>
         </article>
@@ -1081,7 +1617,7 @@
         <article class="deckpage">
           <div class="dp-inner">
             <p class="dp-quote">“...contend earnestly for the faith which was once delivered unto the saints.”</p>
-            <p class="dp-body">The word "contend" is the Greek <strong>epagonizomai</strong>. It refers to an athlete striving inside an arena. This is an athletic, strenuous defense against both the outright skeptic and the misinformed believer inside the gates.</p>
+            <p class="dp-body">The word "contend" is the Greek <b>epagonizomai</b>. It refers to an athlete striving inside an arena. This is an athletic, strenuous defense against both the outright skeptic and the misinformed believer inside the gates.</p>
             <div class="dp-cites"><span class="dp-cite">Jude 1:3</span></div>
           </div>
         </article>
@@ -1137,8 +1673,8 @@
         <article class="deckpage">
           <div class="dp-inner">
             <p class="dp-body">This act launched the Protestant movement. Today, we have the Catholic church and the Protestant church. They are called Protestants because they <em>protested</em>.</p>
-            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">And although Martin Luther did not coin them alone, his voice helped shape the <strong>Five Solas</strong> of salvation:</p>
-            <p class="dp-body" style="font-family:'JetBrains Mono', monospace; font-size:0.9rem; margin-top:1rem; color:var(--gold);">
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">And although Martin Luther did not coin them alone, his voice helped shape the <b>Five Solas</b> of salvation:</p>
+            <p class="dp-body" style="font-family:'JetBrains Mono', monospace; font-size:0.9rem; margin-top:1rem; color:var(--gold-bright);">
               • Sola Scriptura<br>• Sola Christus<br>• Sola Gratia<br>• Sola Fide<br>• Soli Deo Gloria
             </p>
           </div>
@@ -1146,7 +1682,7 @@
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]"><strong>1. SOLA SCRIPTURA: From Scripture Alone</strong></p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]"><b>1. SOLA SCRIPTURA: From Scripture Alone</b></p>
             <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">Salvation must be taught from the scriptures alone. No human conjecture, no modern revelations, and no personal visions are valid where the doctrine of salvation is concerned.</p>
             <p class="dp-body">The Bible does not say to believe and do extra works. Jesus said simply: whosoever believes should not perish but have everlasting life.</p>
           </div>
@@ -1180,7 +1716,7 @@
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]"><strong>2. SOLA CHRISTUS: For Christ Alone</strong></p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]"><b>2. SOLA CHRISTUS: For Christ Alone</b></p>
             <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">Your soteriology—your doctrine of salvation—must be Christ-centered. The difference between the hyper-grace gospel and the actual grace gospel is that hyper-grace is <em>you-focused</em>, while true grace is <em>Christ-focused</em>.</p>
           </div>
         </article>
@@ -1255,7 +1791,7 @@
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">When Jesus quoted Psalm 82 in John 10, He proved that if human judges appointed by God were called "gods," then He—sanctified and sent by the Father—held supreme authority.</p><p class="dp-body">Furthermore, our status as "joint heirs" with Christ refers to the inheritance of eternal life—not sharing in His divine worship.</p></div></article>
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body"><strong>3. SOLA GRATIA: Through Grace Alone</strong></p>
+            <p class="dp-body"><b>3. SOLA GRATIA: Through Grace Alone</b></p>
             <p class="dp-body">You cannot boast. Even if you walk in perfect consecration, you have no grounds for pride.</p>
             <p class="dp-body">It is not you doing the work, but Christ in you doing the work. Salvation from scripture alone, through Christ alone, by grace alone.</p>
           </div>
@@ -1270,7 +1806,7 @@
         </article>
       </section>
 
-      <!-- DECK 14: CATECHISM HOW IS A MAN SAVED PART 2 -->
+      <!-- DECK 14 -->
       <section class="deck" data-deck="deck-14" data-series="Foundations · Doctrine">
         <article class="deckpage dp-cover">
           <div class="dp-inner">
@@ -1283,7 +1819,7 @@
         <article class="deckpage">
           <div class="dp-inner">
             <p class="dp-body">You might want to ask: Is it necessary to know all these system details to make heaven?</p>
-            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]"><strong>The answer is no.</strong> All you need to do is believe the message and let that faith work out corresponding deeds. You are going to heaven.</p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]"><b>The answer is no.</b> All you need to do is believe the message and let that faith work out corresponding deeds. You are going to heaven.</p>
             <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">But without this doctrine, you cannot accurately express your faith, making you vulnerable to the preying doubts of the enemy.</p>
           </div>
         </article>
@@ -1297,7 +1833,7 @@
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]"><strong>3. SOLA GRATIA: Through Grace Alone</strong></p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]"><b>3. SOLA GRATIA: Through Grace Alone</b></p>
             <p class="dp-quote">“For by grace are ye saved through faith; and that not of yourselves: it is the gift of God: not of works, lest any man should boast. For we are his workmanship...”</p>
             <p class="dp-body">What saves a man is grace alone. It is a complete gift of divine favor.</p>
             <div class="dp-cites"><span class="dp-cite">Ephesians 2:8-10</span></div>
@@ -1306,7 +1842,7 @@
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body">We live in a generation where "grace" has been bastardized and taken to dangerous extremes. What many preach today is a <strong>hyper-grace message</strong>.</p>
+            <p class="dp-body">We live in a generation where "grace" has been bastardized and taken to dangerous extremes. What many preach today is a <b>hyper-grace message</b>.</p>
             <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">We fully believe that God's grace is exceedingly, abundantly above. However, the extreme presentation of hyper-grace separates the gift from its moral and behavioral reality.</p>
           </div>
         </article>
@@ -1355,7 +1891,7 @@
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body">However, any theology that places all the responsibility on God while eliminating human cooperation is irresponsible.</p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">However, any theology that places all the responsibility on God while eliminating human cooperation is irresponsible.</p>
             <p class="dp-quote">“...work out your own salvation with fear and trembling. For it is God which worketh in you both to will and to do of his good pleasure.”</p>
             <p class="dp-body">You do not work *for* your salvation; you work *out* the salvation that has been gifted to you, allowing the internal reality to show externally.</p>
             <div class="dp-cites"><span class="dp-cite">Philippians 2:12-13</span></div>
@@ -1364,7 +1900,7 @@
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body"><strong>4. SOLA FIDE: Through Faith Alone</strong></p>
+            <p class="dp-body"><b>4. SOLA FIDE: Through Faith Alone</b></p>
             <p class="dp-quote">“But he that shall endure unto the end, the same shall be saved.”</p>
             <p class="dp-body">Jesus warned that as lawlessness abounds in a highly compromised society, the love of many will grow cold. People will walk away due to persecution, intellectual skepticism, and worldly enticement. Enduring faith is saving faith.</p>
             <div class="dp-cites"><span class="dp-cite">Matthew 24:12-13</span></div>
@@ -1373,7 +1909,6 @@
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body">Apostasy is a real warning. To say you can outright deny Christ and remain secure is scripturally false. The mechanism of reception is confession and belief:</p>
             <p class="dp-quote">“...that if thou shalt confess with thy mouth the Lord Jesus, and shalt believe in thine heart that God hath raised him from the dead, thou shalt be saved.”</p>
             <div class="dp-cites"><span class="dp-cite">Romans 10:9</span></div>
           </div>
@@ -1389,7 +1924,6 @@
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body">But saving faith is not mere wishful thinking. You cannot muster it up on your own. Saving faith is a gift because it originates directly from the Gospel.</p>
             <p class="dp-quote">“So then faith cometh by hearing, and hearing by the word of God.”</p>
             <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">Christ died for you, sent a messenger to declare it, and put the actual ability to believe inside the message you heard.</p>
             <div class="dp-cites"><span class="dp-cite">Romans 10:17</span></div>
@@ -1398,7 +1932,7 @@
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body">Every Word (<strong>Logos</strong>) that proceeds from God contains inside of it the capital to produce what it demands.</p>
+            <p class="dp-body">Every Word (<b>Logos</b>) that proceeds from God contains inside of it the capital to produce what it demands.</p>
             <p class="dp-body">When the angel told Mary that nothing is impossible, the Greek reads: *no logos is impossible*. When Jesus told Peter on the water, "Come," that single command contained the capability to walk on waves. The Gospel contains the capability to save and believe.</p>
           </div>
         </article>
@@ -1413,7 +1947,6 @@
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body">Faith is a heart response, requiring voluntary agreement:</p>
             <p class="dp-quote">“For unto us was the gospel preached... but the word preached did not profit them, not being mixed with faith in them that heard it.”</p>
             <p class="dp-body">The same message with the potential to save did not profit them because they refused to mix it with active heart response.</p>
             <div class="dp-cites"><span class="dp-cite">Hebrews 4:2</span></div>
@@ -1429,7 +1962,7 @@
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body"><strong>5. SOLI DEO GLORIA: For the Glory of God Alone</strong></p>
+            <p class="dp-body"><b>5. SOLI DEO GLORIA: For the Glory of God Alone</b></p>
             <p class="dp-body">This answers the ultimate *why* of your salvation. Why are you saved? For the pleasure and glory of God alone. We do not belong to ourselves.</p>
             <p class="dp-body">When your theology of grace focuses entirely on the saved rather than the Savior, you have missed the point. Sin is an offense to God; it has an emotional and relational cost that hampers your fellowship with Him.</p>
           </div>
@@ -1451,11 +1984,6 @@
           </div>
         </article>
       </section>
-
-      <!-- DECK 15 -->
-      <section class="deck" data-deck="deck-15" data-series="The Bible">
-        <article class="deckpage dp-cover"><div class="dp-inner"><p class="dp-eyebrow">The Bible</p><h2 class="dp-title">Deck 15. Replace me.</h2><p class="dp-lead">This is a placeholder deck. Add your pages here, then add its card to the grid.</p></div></article>
-      </section>
     </div>
 
     <!-- ═══════════════════════════════ PRESENTATION VIEWER (shared UI) ═══════════════════════════════ -->
@@ -1463,64 +1991,37 @@
       <div class="dv-bar"><span class="dv-bar-fill" id="dvBar"></span></div>
       <div class="dv-top">
         <span class="dv-series" id="dvSeries">Apologetics Nigeria</span>
-        <div class="dv-top-right flex items-center gap-4">
+        <div class="dv-top-right">
           <span class="dv-counter" id="dvCounter">1 / 1</span>
           <button class="dv-close" id="dvClose" aria-label="Close presentation">&times;</button>
         </div>
       </div>
-      <div class="dv-stage" id="dvStage"><div class="dv-track" id="dvTrack"></div></div>
+      <div class="dv-stage" id="dvStage">
+        <div class="dv-track" id="dvTrack"></div>
+      </div>
       <button class="dv-arrow dv-prev is-hidden" id="dvPrev" aria-label="Previous page">&#8249;</button>
       <button class="dv-arrow dv-next" id="dvNext" aria-label="Next page">&#8250;</button>
     </div>
   </main>
 
-  <!-- Elegant Multi-Column Footer -->
-  <footer class="site border-t border-[#D4AF37]/10 bg-[#020607] pt-16 pb-12 mt-20 text-sm">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-      <!-- Brand Column -->
-      <div class="md:col-span-1 flex flex-col gap-4">
-        <img src="logo.png" alt="Apologetics Nigeria" class="h-8 w-auto self-start object-contain" onerror="this.onerror=null; this.outerHTML='<span class=\'text-[#D4AF37] font-bold text-lg\'>✦ Apologetics Nigeria</span>';">
-        <p class="text-[#a1b0b3] text-xs leading-relaxed max-w-xs mt-2">
-          Equipping the African church with rigorous, historically-grounded defenses of the Christian faith.
-        </p>
-      </div>
-      <!-- Links Column 1: Catalog Filters -->
-      <div>
-        <h4 class="font-mono text-xs text-[#D4AF37] uppercase tracking-wider mb-4">Catalog</h4>
-        <ul class="flex flex-col gap-2.5 text-[#a1b0b3]">
-          <li><a href="resources.html?cat=islam" class="hover:text-white transition">Islam Defense</a></li>
-          <li><a href="resources.html?cat=jesus" class="hover:text-white transition">Historical Jesus</a></li>
-          <li><a href="resources.html?cat=bible" class="hover:text-white transition">Biblical Reliability</a></li>
-          <li><a href="resources.html?cat=foundations" class="hover:text-white transition">Foundations & Doctrine</a></li>
-        </ul>
-      </div>
-      <!-- Links Column 2: Navigation -->
-      <div>
-        <h4 class="font-mono text-xs text-[#D4AF37] uppercase tracking-wider mb-4">Navigation</h4>
-        <ul class="flex flex-col gap-2.5 text-[#a1b0b3]">
-          <li><a href="about.html" class="hover:text-white transition">Our Mission</a></li>
-          <li><a href="beliefs.html" class="hover:text-white transition">What We Believe</a></li>
-          <li><a href="partner.html" class="hover:text-white transition">Partner with Us</a></li>
-          <li><a href="contact.html" class="hover:text-white transition">Get in Touch</a></li>
-        </ul>
-      </div>
-      <!-- Links Column 3: Impact/CTA -->
-      <div>
-        <h4 class="font-mono text-xs text-[#D4AF37] uppercase tracking-wider mb-4">Support</h4>
-        <p class="text-xs text-[#a1b0b3] mb-4 leading-relaxed">
-          We are entirely donor-funded. Your generosity helps us translate scholarly research into accessible media.
-        </p>
-        <a href="partner.html#give" class="inline-block bg-[#D4AF37]/10 border border-[#D4AF37]/30 hover:border-[#D4AF37] text-[#D4AF37] hover:text-white text-xs font-semibold px-4 py-2 rounded-md transition duration-300">
-          Support our work
-        </a>
-      </div>
-    </div>
-    <!-- Bottom Row -->
-    <div class="max-w-7xl mx-auto px-6 pt-8 border-t border-[#D4AF37]/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[#a1b0b3]/50">
-      <p>© 2026 Apologetics Nigeria. Grounded believers · defended faith.</p>
-      <div class="flex gap-6">
-        <a href="#" class="hover:text-white transition">Privacy Policy</a>
-        <a href="#" class="hover:text-white transition">Terms of Service</a>
+  <!-- Elegant Footer -->
+  <footer class="site">
+    <div class="wrap">
+      <div class="foot-inner">
+        <img src="logo.png" alt="Apologetics Nigeria" class="foot-logo" onerror="this.remove();" />
+        <nav class="foot-nav" aria-label="Footer">
+          <a href="resources.html">Resources</a>
+          <a href="about.html">About</a>
+          <a href="beliefs.html">Beliefs</a>
+          <a href="partner.html">Partner</a>
+          <a href="contact.html">Contact</a>
+          <a href="https://www.instagram.com/apologeticsnigeria/" target="_blank" rel="noopener">Instagram</a>
+          <a href="privacy.html">Privacy</a>
+        </nav>
+        <div class="foot-bottom">
+          <p class="foot-tag">Grounded believers · defended faith · a generation that can give a reason for its hope.</p>
+          <p class="foot-copy">© 2026 Apologetics Nigeria</p>
+        </div>
       </div>
     </div>
   </footer>
@@ -1529,7 +2030,20 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       
-      // 1. Library Filter Tabs Logic
+      // 1. Mobile Menu Navigation Logic (Integrated directly, Tailwind-free)
+      const navToggle = document.getElementById("navtoggle");
+      const navLinks = document.getElementById("navlinks");
+
+      if (navToggle && navLinks) {
+        navToggle.addEventListener("click", () => {
+          navToggle.classList.toggle("open");
+          navLinks.classList.toggle("open");
+          const isOpen = navToggle.classList.contains("open");
+          navToggle.setAttribute("aria-expanded", isOpen);
+        });
+      }
+
+      // 2. Library Filter Tabs Logic
       const tabs = document.querySelectorAll(".tab");
       const cards = document.querySelectorAll(".course-card");
 
@@ -1546,9 +2060,9 @@
 
         cards.forEach(card => {
           if (cat === "all" || card.getAttribute("data-cat") === cat) {
-            card.style.display = "block";
+            card.classList.remove("is-hidden");
           } else {
-            card.style.display = "none";
+            card.classList.add("is-hidden");
           }
         });
       }
@@ -1565,21 +2079,6 @@
       const catParam = urlParams.get('cat');
       if (catParam) {
         filterCategory(catParam);
-      }
-
-      // 2. Mobile Menu Navigation Logic
-      const navToggle = document.getElementById("navtoggle");
-      const mobileMenu = document.getElementById("mobileMenu");
-      const mobileMenuClose = document.getElementById("mobileMenuClose");
-
-      if (navToggle && mobileMenu && mobileMenuClose) {
-        navToggle.addEventListener("click", () => {
-          mobileMenu.classList.remove("translate-x-full");
-        });
-
-        mobileMenuClose.addEventListener("click", () => {
-          mobileMenu.classList.add("translate-x-full");
-        });
       }
 
       // 3. Slide Deck Viewer Logic
@@ -1662,7 +2161,7 @@
       // Hook click listeners to presentations cards
       document.querySelectorAll(".deck-thumb").forEach(thumb => {
         thumb.addEventListener("click", () => {
-          const deckId = thumb.getAttribute("data-deck');
+          const deckId = thumb.getAttribute("data-deck");
           openDeck(deckId);
         });
         thumb.addEventListener("keydown", (e) => {
@@ -1673,18 +2172,16 @@
         });
       });
 
-      // Handle video overlays if needed directly on thumbnail
+      // Handle video overlays safely inside container limits
       document.querySelectorAll(".course-thumb:not(.deck-thumb)").forEach(thumb => {
         thumb.addEventListener("click", () => {
           const id = thumb.getAttribute("data-id");
           if (id) {
-            // Replace thumb with iframe safely
             const iframe = document.createElement("iframe");
             iframe.setAttribute("src", `https://www.youtube.com/embed/${id}?autoplay=1`);
             iframe.setAttribute("frameborder", "0");
             iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
             iframe.setAttribute("allowfullscreen", "true");
-            iframe.className = "w-full h-full absolute inset-0";
             thumb.innerHTML = "";
             thumb.appendChild(iframe);
           }
