@@ -415,6 +415,91 @@
     html{scroll-behavior:auto}
   }
 
+/* --- Optimized Navigation --- */
+header.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: background .4s ease, backdrop-filter .4s ease;
+    border-bottom: 1px solid transparent;
+}
+
+header.nav.scrolled {
+    background: rgba(246, 242, 233, .92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line-light);
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.1rem;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 44px; /* Touch-optimized */
+    height: 44px;
+    position: relative;
+    z-index: 1200;
+}
+
+.nav-toggle span {
+    position: absolute;
+    left: 7px;
+    width: 30px;
+    height: 2px;
+    background: var(--parchment);
+    transition: all .3s ease;
+}
+
+header.nav.scrolled .nav-toggle span { background: var(--ink); }
+
+.nav-toggle span:nth-child(1) { top: 13px; }
+.nav-toggle span:nth-child(2) { top: 21px; }
+.nav-toggle span:nth-child(3) { top: 29px; }
+
+/* Hamburger Open Animation */
+.nav-toggle.open span:nth-child(1) { top: 21px; transform: rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { top: 21px; transform: rotate(-45deg); }
+
+/* --- Mobile Breakpoint (960px to capture all tablets) --- */
+@media(max-width: 960px) {
+    .nav-toggle { display: block; }
+
+    .nav-links {
+        position: fixed;
+        inset: 0;
+        background: var(--ink);
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        transform: translateY(-100%);
+        transition: transform .45s cubic-bezier(.7, 0, .2, 1);
+        z-index: 1100;
+    }
+
+    .nav-links.open { transform: translateY(0); }
+    
+    .nav-links a.lk {
+        font-size: 1.25rem;
+        color: var(--parchment) !important;
+    }
+}
+
   /* ================= MULTI-PAGE ADDITIONS ================= */
   /* interior pages: nav is solid from the top (no dark hero behind it) */
   body.interior header.nav,
