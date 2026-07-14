@@ -403,9 +403,7 @@
   <header class="w-full border-b border-[#D4AF37]/10 bg-[#030303]/90 backdrop-blur sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="index.html" class="flex items-center" aria-label="Apologetics Nigeria — home">
-        <span class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-          <span class="text-[#D4AF37]">✦</span> Apologetics Nigeria
-        </span>
+        <img src="logo.png" alt="Apologetics Nigeria" class="h-8 md:h-9 w-auto object-contain" onerror="this.onerror=null; this.outerHTML='<span class=\'text-xl font-bold tracking-tight text-white flex items-center gap-2\'><span class=\'text-[#D4AF37]\'>✦</span> Apologetics Nigeria</span>';">
       </a>
       <nav class="hidden md:flex items-center gap-8">
         <a href="resources.html" class="text-white hover:text-[#D4AF37] font-medium transition duration-300">Resources</a>
@@ -415,11 +413,34 @@
         <a href="contact.html" class="text-[#a1b0b3] hover:text-white transition duration-300">Contact</a>
         <a href="partner.html#give" class="bg-[#D4AF37] hover:bg-[#bda030] text-black font-semibold px-5 py-2 rounded-full transition duration-300 shadow-md">Give</a>
       </nav>
-      <button class="md:hidden text-white text-2xl" id="navtoggle" aria-label="Open Menu">
+      <button class="md:hidden text-white text-2xl focus:outline-none" id="navtoggle" aria-label="Open Menu">
         ☰
       </button>
     </div>
   </header>
+
+  <!-- Mobile Menu Drawer Overlay -->
+  <div id="mobileMenu" class="fixed inset-0 bg-[#030303] z-[100] flex flex-col justify-between p-8 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+    <div class="flex items-center justify-between">
+      <a href="index.html" class="flex items-center">
+        <img src="logo.png" alt="Apologetics Nigeria" class="h-8 w-auto object-contain" onerror="this.onerror=null; this.outerHTML='<span class=\'text-xl font-bold tracking-tight text-white flex items-center gap-2\'><span class=\'text-[#D4AF37]\'>✦</span> Apologetics Nigeria</span>';">
+      </a>
+      <button id="mobileMenuClose" class="text-white text-3xl focus:outline-none hover:text-[#D4AF37] transition" aria-label="Close Menu">
+        &times;
+      </button>
+    </div>
+    <nav class="flex flex-col gap-6 text-xl font-serif mt-12">
+      <a href="resources.html" class="text-white hover:text-[#D4AF37] transition border-b border-white/5 pb-2">Resources</a>
+      <a href="about.html" class="text-[#a1b0b3] hover:text-[#D4AF37] transition border-b border-white/5 pb-2">About</a>
+      <a href="beliefs.html" class="text-[#a1b0b3] hover:text-[#D4AF37] transition border-b border-white/5 pb-2">Beliefs</a>
+      <a href="partner.html" class="text-[#a1b0b3] hover:text-[#D4AF37] transition border-b border-white/5 pb-2">Partner</a>
+      <a href="contact.html" class="text-[#a1b0b3] hover:text-[#D4AF37] transition border-b border-white/5 pb-2">Contact</a>
+    </nav>
+    <div class="mt-auto flex flex-col gap-4">
+      <a href="partner.html#give" class="bg-[#D4AF37] hover:bg-[#bda030] text-black font-semibold py-3 rounded-full text-center transition duration-300 shadow-md">Give</a>
+      <p class="text-xs text-[#a1b0b3]/40 text-center">Grounded believers · defended faith.</p>
+    </div>
+  </div>
 
   <main class="min-h-screen">
     <h1 class="sr-only">Resources — Films & Presentations</h1>
@@ -717,7 +738,7 @@
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">Maybe it was a legend that grew with time.</p><p class="dp-body">But the creed is within a few years of the events. There was no time for legend to form.</p><p class="dp-body">The resurrection was the message from the very first day, not a later addition.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">So line them up.</p><p class="dp-body">He died. His disciples were sure they saw him. An enemy, Paul, was sure. A skeptic, James, was sure. The tomb was empty.</p><p class="dp-body">Every natural theory explains one or two of these, and breaks on the rest. Only one explanation accounts for all five at once. He rose.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">This is not wishful thinking. It is where the evidence leads even careful historians.</p><p class="dp-quote">“The historian, of whatever persuasion, has no option but to affirm both the empty tomb and the meetings with Jesus as historical events.”</p><p class="dp-body">N.T. Wright spent a thousand pages weighing it. His conclusion: the best explanation is that Jesus was bodily alive again.</p><div class="dp-cites"><span class="dp-cite">N.T. Wright</span></div></div></article>
-        <article class="deckpage"><div class="dp-inner"><p class="dp-body">You can still say no.</p><p class="dp-body">But not on the evidence. You would be saying no because your worldview rules out miracles before you begin. That is a philosophical choice, not a historical one.</p><p class="dp-body">The history is serious, and it points one way.</p></div></article>
+        <article class="deckpage"><div class="dp-inner"><p class="dp-body">You can still say no.</p><p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">But not on the evidence. You would be saying no because your worldview rules out miracles before you begin. That is a philosophical choice, not a historical one.</p><p class="dp-body">The history is serious, and it points one way.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">And if it happened, everything changes.</p><p class="dp-body">A man who beat the grave is not one teacher among many. Everything he said about himself is true.</p><p class="dp-body">This is not a story to admire from a distance. It is a fact to reckon with.</p></div></article>
         <article class="deckpage dp-close"><div class="dp-inner"><p class="dp-body">The tomb was empty. The witnesses were sure. The grave lost.</p><p class="dp-verse" style="margin-top:1.8rem">“He is not here. He has risen, just as he said.”</p><p class="dp-cite-ref">Luke 24:6</p></div></article>
       </section>
@@ -1116,7 +1137,7 @@
         <article class="deckpage">
           <div class="dp-inner">
             <p class="dp-body">This act launched the Protestant movement. Today, we have the Catholic church and the Protestant church. They are called Protestants because they <em>protested</em>.</p>
-            <p class="dp-body">And although Martin Luther did not coin them alone, his voice helped shape the <strong>Five Solas</strong> of salvation:</p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">And although Martin Luther did not coin them alone, his voice helped shape the <strong>Five Solas</strong> of salvation:</p>
             <p class="dp-body" style="font-family:'JetBrains Mono', monospace; font-size:0.9rem; margin-top:1rem; color:var(--gold);">
               • Sola Scriptura<br>• Sola Christus<br>• Sola Gratia<br>• Sola Fide<br>• Soli Deo Gloria
             </p>
@@ -1125,13 +1146,13 @@
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body"><strong>1. SOLA SCRIPTURA: From Scripture Alone</strong></p>
-            <p class="dp-body">Salvation must be taught from the scriptures alone. No human conjecture, no modern revelations, and no personal visions are valid where the doctrine of salvation is concerned.</p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]"><strong>1. SOLA SCRIPTURA: From Scripture Alone</strong></p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">Salvation must be taught from the scriptures alone. No human conjecture, no modern revelations, and no personal visions are valid where the doctrine of salvation is concerned.</p>
             <p class="dp-body">The Bible does not say to believe and do extra works. Jesus said simply: whosoever believes should not perish but have everlasting life.</p>
           </div>
         </article>
 
-        <article class="deckpage"><div class="dp-inner"><p class="dp-body">If you had no other teaching and all you had to go by was scripture alone—and you landed on John 3:16—your answer to “what is the criteria to be saved?” would be exact.</p><p class="dp-body">It is faith in Christ alone, because it is by scriptures alone.</p></div></article>
+        <article class="deckpage"><div class="dp-inner"><p class="dp-body">If you had no other teaching and all you had to go by was scripture alone—and you landed on John 3:16—your answer to “what is the criteria to be saved?” would be exact.</p><p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">It is faith in Christ alone, because it is by scriptures alone.</p></div></article>
         <article class="deckpage">
           <div class="dp-inner">
             <p class="dp-quote">“Moreover, brethren, I declare unto you the gospel which I preached unto you... how that Christ died for our sins according to the scriptures; and that he was buried, and that he rose again the third day according to the scriptures.”</p>
@@ -1153,14 +1174,14 @@
           <div class="dp-inner">
             <p class="dp-quote">“Search the scriptures; for in them ye think ye have eternal life: and they are they which testify of me.”</p>
             <div class="dp-cites"><span class="dp-cite">John 5:39</span></div>
-            <p class="dp-body">If I want to find Jesus, I find Him in scriptures—not in unchecked visions. If you do not know the Jesus of the scriptures, the devil will deceive you with false revelations. My conviction on salvation comes from Scripture alone.</p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">If I want to find Jesus, I find Him in scriptures—not in unchecked visions. If you do not know the Jesus of the scriptures, the devil will deceive you with false revelations. My conviction on salvation comes from Scripture alone.</p>
           </div>
         </article>
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body"><strong>2. SOLA CHRISTUS: For Christ Alone</strong></p>
-            <p class="dp-body">Your soteriology—your doctrine of salvation—must be Christ-centered. The difference between the hyper-grace gospel and the actual grace gospel is that hyper-grace is <em>you-focused</em>, while true grace is <em>Christ-focused</em>.</p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]"><strong>2. SOLA CHRISTUS: For Christ Alone</strong></p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">Your soteriology—your doctrine of salvation—must be Christ-centered. The difference between the hyper-grace gospel and the actual grace gospel is that hyper-grace is <em>you-focused</em>, while true grace is <em>Christ-focused</em>.</p>
           </div>
         </article>
 
@@ -1182,7 +1203,7 @@
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body">The Old Testament prophets searched diligently for the grace that was to come.</p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">The Old Testament prophets searched diligently for the grace that was to come.</p>
             <p class="dp-quote">“...searching what, or what manner of time the Spirit of Christ which was in them did signify, when it testified beforehand the sufferings of Christ, and the glory that should follow.”</p>
             <div class="dp-cites"><span class="dp-cite">1 Peter 1:10-12</span></div>
           </div>
@@ -1190,7 +1211,7 @@
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body">When the Bible says “the Spirit of Christ,” it references how the source of inspiration for the prophets was Christ Himself.</p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">When the Bible says “the Spirit of Christ,” it references how the source of inspiration for the prophets was Christ Himself.</p>
             <p class="dp-quote">“...worship God: for the testimony of Jesus is the spirit of prophecy.”</p>
             <div class="dp-cites"><span class="dp-cite">Revelation 19:10</span></div>
           </div>
@@ -1198,8 +1219,8 @@
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body">Why must our theology of salvation be Christ-centered?</p>
-            <p class="dp-body">Because salvation is exclusive to His name. No one comes to the Father except through Jesus.</p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">Why must our theology of salvation be Christ-centered?</p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">Because salvation is exclusive to His name. No one comes to the Father except through Jesus.</p>
             <p class="dp-quote">“Neither is there salvation in any other: for there is none other name under heaven given among men, whereby we must be saved.”</p>
             <div class="dp-cites"><span class="dp-cite">Acts 4:12</span></div>
           </div>
@@ -1262,21 +1283,21 @@
         <article class="deckpage">
           <div class="dp-inner">
             <p class="dp-body">You might want to ask: Is it necessary to know all these system details to make heaven?</p>
-            <p class="dp-body"><strong>The answer is no.</strong> All you need to do is believe the message and let that faith work out corresponding deeds. You are going to heaven.</p>
-            <p class="dp-body">But without this doctrine, you cannot accurately express your faith, making you vulnerable to the preying doubts of the enemy.</p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]"><strong>The answer is no.</strong> All you need to do is believe the message and let that faith work out corresponding deeds. You are going to heaven.</p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">But without this doctrine, you cannot accurately express your faith, making you vulnerable to the preying doubts of the enemy.</p>
           </div>
         </article>
 
         <article class="deckpage">
           <div class="dp-inner">
             <p class="dp-body">We cannot operate on blind feelings. There is a precise, historical system that governs what we do.</p>
-            <p class="dp-body">We entered into this divine system; we did not invent it. We should not attempt to disrupt or change a scriptural structure that has stood fast for centuries.</p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">We entered into this divine system; we did not invent it. We should not attempt to disrupt or change a scriptural structure that has stood fast for centuries.</p>
           </div>
         </article>
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body"><strong>3. SOLA GRATIA: Through Grace Alone</strong></p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]"><strong>3. SOLA GRATIA: Through Grace Alone</strong></p>
             <p class="dp-quote">“For by grace are ye saved through faith; and that not of yourselves: it is the gift of God: not of works, lest any man should boast. For we are his workmanship...”</p>
             <p class="dp-body">What saves a man is grace alone. It is a complete gift of divine favor.</p>
             <div class="dp-cites"><span class="dp-cite">Ephesians 2:8-10</span></div>
@@ -1286,20 +1307,20 @@
         <article class="deckpage">
           <div class="dp-inner">
             <p class="dp-body">We live in a generation where "grace" has been bastardized and taken to dangerous extremes. What many preach today is a <strong>hyper-grace message</strong>.</p>
-            <p class="dp-body">We fully believe that God's grace is exceedingly, abundantly above. However, the extreme presentation of hyper-grace separates the gift from its moral and behavioral reality.</p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">We fully believe that God's grace is exceedingly, abundantly above. However, the extreme presentation of hyper-grace separates the gift from its moral and behavioral reality.</p>
           </div>
         </article>
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body">We hold firmly to eternal salvation and security. When a man is saved and partners with the Holy Spirit, that seal cannot be broken.</p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">We hold firmly to eternal salvation and security. When a man is saved and partners with the Holy Spirit, that seal cannot be broken.</p>
             <p class="dp-body">The weight of salvation is entirely on Jesus. But this doesn’t mean we have zero responsibility. Rather, our response is enabled by the grace Jesus communicates to us. God initiated the equation, and we cooperate.</p>
           </div>
         </article>
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body">If someone claims to be saved yet continues unrepentantly and habitually in sin, they are living a lie. True conversion is missing.</p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">If someone claims to be saved yet continues unrepentantly and habitually in sin, they are living a lie. True conversion is missing.</p>
             <p class="dp-body">To establish that we cannot purchase salvation by works, hyper-grace goes to the extreme of claiming nothing we do can ever negate it, ignoring the reality of false conversions.</p>
             <p class="dp-body">When you are saved, the Holy Ghost actively holds you, convicts you, and keeps you from falling.</p>
           </div>
@@ -1318,7 +1339,7 @@
           <div class="dp-inner">
             <p class="dp-body">Because it is a divine operation, keeping commandments cannot save you:</p>
             <p class="dp-quote">“Therefore by the deeds of the law there shall no flesh be justified in his sight: for by the law is the knowledge of sin.”</p>
-            <p class="dp-body">Even if you kept every law perfectly, you would not be saved by your deeds. Salvation is not a reward for behavior; it is a gift of mercy.</p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">Even if you kept every law perfectly, you would not be saved by your deeds. Salvation is not a reward for behavior; it is a gift of mercy.</p>
             <div class="dp-cites"><span class="dp-cite">Romans 3:20</span></div>
           </div>
         </article>
@@ -1370,7 +1391,7 @@
           <div class="dp-inner">
             <p class="dp-body">But saving faith is not mere wishful thinking. You cannot muster it up on your own. Saving faith is a gift because it originates directly from the Gospel.</p>
             <p class="dp-quote">“So then faith cometh by hearing, and hearing by the word of God.”</p>
-            <p class="dp-body">Christ died for you, sent a messenger to declare it, and put the actual ability to believe inside the message you heard.</p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">Christ died for you, sent a messenger to declare it, and put the actual ability to believe inside the message you heard.</p>
             <div class="dp-cites"><span class="dp-cite">Romans 10:17</span></div>
           </div>
         </article>
@@ -1402,7 +1423,7 @@
         <article class="deckpage">
           <div class="dp-inner">
             <p class="dp-body">Believing in the heart means to think to be true, to be fully persuaded of. Evidence is given, and you make the decision to be persuaded.</p>
-            <p class="dp-body">And when scripture says "with the mouth confession is made unto salvation," it means speaking *in favor of* the salvation already received in your heart. Your lifestyle and your mouth align with the finished work.</p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">And when scripture says "with the mouth confession is made unto salvation," it means speaking *in favor of* the salvation already received in your heart. Your lifestyle and your mouth align with the finished work.</p>
           </div>
         </article>
 
@@ -1453,48 +1474,115 @@
     </div>
   </main>
 
-  <footer class="site border-t border-[#D4AF37]/10 bg-[#020607] py-12 mt-20 text-sm">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
-      <span class="text-[#D4AF37] font-bold">✦ Apologetics Nigeria</span>
-      <nav class="flex flex-wrap justify-center gap-8 text-[#a1b0b3]">
-        <a href="resources.html" class="hover:text-white transition">Resources</a>
-        <a href="about.html" class="hover:text-white transition">About</a>
-        <a href="beliefs.html" class="hover:text-white transition">Beliefs</a>
-        <a href="partner.html" class="hover:text-white transition">Partner</a>
-        <a href="contact.html" class="hover:text-white transition">Contact</a>
-      </nav>
-      <p class="text-[#a1b0b3]/50 text-xs">© 2026 Apologetics Nigeria. Grounded believers · defended faith.</p>
+  <!-- Elegant Multi-Column Footer -->
+  <footer class="site border-t border-[#D4AF37]/10 bg-[#020607] pt-16 pb-12 mt-20 text-sm">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+      <!-- Brand Column -->
+      <div class="md:col-span-1 flex flex-col gap-4">
+        <img src="logo.png" alt="Apologetics Nigeria" class="h-8 w-auto self-start object-contain" onerror="this.onerror=null; this.outerHTML='<span class=\'text-[#D4AF37] font-bold text-lg\'>✦ Apologetics Nigeria</span>';">
+        <p class="text-[#a1b0b3] text-xs leading-relaxed max-w-xs mt-2">
+          Equipping the African church with rigorous, historically-grounded defenses of the Christian faith.
+        </p>
+      </div>
+      <!-- Links Column 1: Catalog Filters -->
+      <div>
+        <h4 class="font-mono text-xs text-[#D4AF37] uppercase tracking-wider mb-4">Catalog</h4>
+        <ul class="flex flex-col gap-2.5 text-[#a1b0b3]">
+          <li><a href="resources.html?cat=islam" class="hover:text-white transition">Islam Defense</a></li>
+          <li><a href="resources.html?cat=jesus" class="hover:text-white transition">Historical Jesus</a></li>
+          <li><a href="resources.html?cat=bible" class="hover:text-white transition">Biblical Reliability</a></li>
+          <li><a href="resources.html?cat=foundations" class="hover:text-white transition">Foundations & Doctrine</a></li>
+        </ul>
+      </div>
+      <!-- Links Column 2: Navigation -->
+      <div>
+        <h4 class="font-mono text-xs text-[#D4AF37] uppercase tracking-wider mb-4">Navigation</h4>
+        <ul class="flex flex-col gap-2.5 text-[#a1b0b3]">
+          <li><a href="about.html" class="hover:text-white transition">Our Mission</a></li>
+          <li><a href="beliefs.html" class="hover:text-white transition">What We Believe</a></li>
+          <li><a href="partner.html" class="hover:text-white transition">Partner with Us</a></li>
+          <li><a href="contact.html" class="hover:text-white transition">Get in Touch</a></li>
+        </ul>
+      </div>
+      <!-- Links Column 3: Impact/CTA -->
+      <div>
+        <h4 class="font-mono text-xs text-[#D4AF37] uppercase tracking-wider mb-4">Support</h4>
+        <p class="text-xs text-[#a1b0b3] mb-4 leading-relaxed">
+          We are entirely donor-funded. Your generosity helps us translate scholarly research into accessible media.
+        </p>
+        <a href="partner.html#give" class="inline-block bg-[#D4AF37]/10 border border-[#D4AF37]/30 hover:border-[#D4AF37] text-[#D4AF37] hover:text-white text-xs font-semibold px-4 py-2 rounded-md transition duration-300">
+          Support our work
+        </a>
+      </div>
+    </div>
+    <!-- Bottom Row -->
+    <div class="max-w-7xl mx-auto px-6 pt-8 border-t border-[#D4AF37]/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[#a1b0b3]/50">
+      <p>© 2026 Apologetics Nigeria. Grounded believers · defended faith.</p>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-white transition">Privacy Policy</a>
+        <a href="#" class="hover:text-white transition">Terms of Service</a>
+      </div>
     </div>
   </footer>
 
   <!-- ═══════════════════════════════ CORE SCRIPTS ═══════════════════════════════ -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+      
       // 1. Library Filter Tabs Logic
       const tabs = document.querySelectorAll(".tab");
       const cards = document.querySelectorAll(".course-card");
 
-      tabs.forEach(tab => {
-        tab.addEventListener("click", () => {
-          tabs.forEach(t => {
+      function filterCategory(cat) {
+        tabs.forEach(t => {
+          if (t.getAttribute("data-cat") === cat) {
+            t.classList.add("is-active");
+            t.setAttribute("aria-selected", "true");
+          } else {
             t.classList.remove("is-active");
             t.setAttribute("aria-selected", "false");
-          });
-          tab.classList.add("is-active");
-          tab.setAttribute("aria-selected", "true");
+          }
+        });
 
+        cards.forEach(card => {
+          if (cat === "all" || card.getAttribute("data-cat") === cat) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      }
+
+      tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
           const cat = tab.getAttribute("data-cat");
-          cards.forEach(card => {
-            if (cat === "all" || card.getAttribute("data-cat") === cat) {
-              card.style.display = "block";
-            } else {
-              card.style.display = "none";
-            }
-          });
+          filterCategory(cat);
         });
       });
 
-      // 2. Slide Deck Viewer Logic
+      // Handle Query URL Parameters for filters (e.g. resources.html?cat=jesus)
+      const urlParams = new URLSearchParams(window.location.search);
+      const catParam = urlParams.get('cat');
+      if (catParam) {
+        filterCategory(catParam);
+      }
+
+      // 2. Mobile Menu Navigation Logic
+      const navToggle = document.getElementById("navtoggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const mobileMenuClose = document.getElementById("mobileMenuClose");
+
+      if (navToggle && mobileMenu && mobileMenuClose) {
+        navToggle.addEventListener("click", () => {
+          mobileMenu.classList.remove("translate-x-full");
+        });
+
+        mobileMenuClose.addEventListener("click", () => {
+          mobileMenu.classList.add("translate-x-full");
+        });
+      }
+
+      // 3. Slide Deck Viewer Logic
       const viewer = document.getElementById("deckViewer");
       const track = document.getElementById("dvTrack");
       const bar = document.getElementById("dvBar");
@@ -1574,13 +1662,31 @@
       // Hook click listeners to presentations cards
       document.querySelectorAll(".deck-thumb").forEach(thumb => {
         thumb.addEventListener("click", () => {
-          const deckId = thumb.getAttribute("data-deck");
+          const deckId = thumb.getAttribute("data-deck');
           openDeck(deckId);
         });
         thumb.addEventListener("keydown", (e) => {
           if (e.key === "Enter" || e.key === " ") {
             const deckId = thumb.getAttribute("data-deck");
             openDeck(deckId);
+          }
+        });
+      });
+
+      // Handle video overlays if needed directly on thumbnail
+      document.querySelectorAll(".course-thumb:not(.deck-thumb)").forEach(thumb => {
+        thumb.addEventListener("click", () => {
+          const id = thumb.getAttribute("data-id");
+          if (id) {
+            // Replace thumb with iframe safely
+            const iframe = document.createElement("iframe");
+            iframe.setAttribute("src", `https://www.youtube.com/embed/${id}?autoplay=1`);
+            iframe.setAttribute("frameborder", "0");
+            iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+            iframe.setAttribute("allowfullscreen", "true");
+            iframe.className = "w-full h-full absolute inset-0";
+            thumb.innerHTML = "";
+            thumb.appendChild(iframe);
           }
         });
       });
