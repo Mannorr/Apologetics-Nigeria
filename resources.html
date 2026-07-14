@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resources — Films & Presentations | Apologetics Nigeria</title>
   <meta name="description" content="Films and in-depth on-page presentations from Apologetics Nigeria — each answering one hard question about Islam, atheism, and the Christian faith." />
-  <meta name="theme-color" content="#040C0E" />
+  <meta name="theme-color" content="#030303" />
   <link rel="canonical" href="https://apologeticsnigeria.org/resources.html" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -29,12 +29,13 @@
   
   <style>
     :root {
-      --dark-bg: #040C0E;
-      --card-bg: #0b1517;
-      --gold: #D4AF37;
-      --gold-hover: #bda030;
-      --light-text: #F4F0EA;
-      --dim-text: #a1b0b3;
+      --dark-bg: #030303;          /* Deep Peterson Academy dark backdrop */
+      --card-bg: #0C1113;          /* Refined slate charcoal */
+      --gold: #D4AF37;             /* Rich warm gold */
+      --gold-hover: #F3CD4F;       /* Highlight gold state */
+      --light-text: #F8F6F2;       /* Creamy off-white paper tone */
+      --dim-text: #8E9C9E;         /* Sophisticated muted slate */
+      --border-color: rgba(212, 175, 55, 0.12);
     }
 
     body {
@@ -42,60 +43,58 @@
       color: var(--light-text);
       font-family: 'Inter', sans-serif;
       overflow-x: hidden;
+      letter-spacing: -0.01em;
     }
 
     /* Elegant Custom Scrollbars */
     ::-webkit-scrollbar {
-      width: 8px;
+      width: 6px;
     }
     ::-webkit-scrollbar-track {
       background: var(--dark-bg);
     }
     ::-webkit-scrollbar-thumb {
-      background: #1c2e32;
-      border-radius: 4px;
+      background: #172224;
+      border-radius: 3px;
     }
     ::-webkit-scrollbar-thumb:hover {
       background: var(--gold);
     }
 
-    /* Brand Logo / Typography Styles */
-    .brand-logo {
-      height: 40px;
-    }
-
-    /* Library Tab Transitions */
     .tab {
-      padding: 0.5rem 1.25rem;
-      border-radius: 9999px;
+      padding: 0.6rem 1.35rem;
+      border-radius: 6px; /* Elegant geometric Peterson style */
       font-weight: 500;
-      font-size: 0.875rem;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      border: 1px solid rgba(212, 175, 55, 0.15);
-      background: rgba(11, 21, 23, 0.4);
+      font-size: 0.85rem;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 1px solid var(--border-color);
+      background: rgba(12, 17, 19, 0.5);
       color: var(--dim-text);
+      letter-spacing: 0.02em;
     }
     .tab:hover {
       color: var(--light-text);
       border-color: rgba(212, 175, 55, 0.4);
+      background: rgba(12, 17, 19, 0.8);
     }
     .tab.is-active {
       background: var(--gold);
-      color: #000;
+      color: #030303;
       border-color: var(--gold);
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.15);
     }
 
-    /* Video/Slide Deck Cards Styling */
     .course-card {
       background: var(--card-bg);
-      border: 1px solid rgba(212, 175, 55, 0.08);
-      border-radius: 1rem;
+      border: 1px solid var(--border-color);
+      border-radius: 8px; /* Classic structural corners */
       overflow: hidden;
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .course-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(212, 175, 55, 0.3);
+      transform: translateY(-3px);
+      border-color: rgba(212, 175, 55, 0.35);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 175, 55, 0.05);
     }
 
     .course-thumb {
@@ -109,10 +108,10 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.5s ease;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .course-thumb:hover img {
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
 
     /* Play Icon on Thumbnails */
@@ -121,15 +120,15 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 52px;
-      height: 52px;
-      background: rgba(212, 175, 55, 0.95);
+      width: 48px;
+      height: 48px;
+      background: var(--gold);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-      transition: transform 0.3s, background 0.3s;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+      transition: all 0.25s ease;
     }
     .play::after {
       content: '';
@@ -137,59 +136,59 @@
       width: 0;
       height: 0;
       border-style: solid;
-      border-width: 8px 0 8px 14px;
-      border-color: transparent transparent transparent #000;
-      margin-left: 4px;
+      border-width: 7px 0 7px 12px;
+      border-color: transparent transparent transparent #030303;
+      margin-left: 3px;
     }
     .course-thumb:hover .play {
       transform: translate(-50%, -50%) scale(1.1);
-      background: #fff;
+      background: var(--light-text);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.7);
     }
 
-    /* Deck Specific Styles */
     .deck-thumb {
-      background: linear-gradient(135deg, #0f2428 0%, #051012 100%);
+      background: linear-gradient(145deg, #0d1618 0%, #06090a 100%);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 1.5rem;
+      padding: 1.75rem;
     }
     .deck-flag {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.12em;
       color: var(--gold);
     }
     .deck-cover-title {
       font-family: 'Newsreader', serif;
-      font-size: 1.35rem;
+      font-size: 1.45rem;
       font-weight: 500;
       line-height: 1.3;
       color: var(--light-text);
-      margin-top: 1rem;
+      margin-top: 1.25rem;
     }
     .deck-cta {
-      font-size: 0.825rem;
+      font-size: 0.8rem;
       color: var(--dim-text);
-      transition: color 0.3s;
+      font-weight: 500;
+      transition: all 0.25s;
     }
     .deck-thumb:hover .deck-cta {
       color: var(--gold);
     }
 
-    /* Interactive Slide Deck Viewer */
     .deck-viewer {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: #020607;
+      background: #050505;
       z-index: 1000;
       opacity: 0;
       pointer-events: none;
-      transition: opacity 0.4s ease;
+      transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
       display: flex;
       flex-direction: column;
     }
@@ -199,41 +198,43 @@
     }
 
     .dv-bar {
-      height: 4px;
-      background: #112124;
+      height: 3px;
+      background: #12181a;
       width: 100%;
     }
     .dv-bar-fill {
       height: 100%;
       background: var(--gold);
       width: 0%;
-      transition: width 0.3s cubic-bezier(0.1, 0.8, 0.3, 1);
+      transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .dv-top {
-      padding: 1.25rem 2rem;
+      padding: 1.5rem 2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid rgba(212, 175, 55, 0.08);
+      background: #080808;
     }
     .dv-series {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
-      letter-spacing: 0.08em;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--gold);
+      font-weight: 500;
     }
     .dv-counter {
       color: var(--dim-text);
-      font-size: 0.875rem;
+      font-size: 0.85rem;
       font-family: 'JetBrains Mono', monospace;
     }
     .dv-close {
       color: var(--light-text);
-      font-size: 1.75rem;
+      font-size: 1.5rem;
       line-height: 1;
-      transition: color 0.3s;
+      transition: color 0.2s;
       cursor: pointer;
     }
     .dv-close:hover {
@@ -253,10 +254,9 @@
       display: flex;
       height: 100%;
       width: 100%;
-      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    /* Individual Slide Styles */
     .deckpage {
       flex: 0 0 100%;
       width: 100%;
@@ -264,25 +264,25 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 2rem;
+      padding: 2.5rem;
       box-sizing: border-box;
     }
     .dp-inner {
-      max-width: 680px;
+      max-width: 700px;
       width: 100%;
       margin: 0 auto;
     }
     .dp-eyebrow {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.825rem;
-      letter-spacing: 0.1em;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--gold);
       margin-bottom: 1.5rem;
     }
     .dp-title {
       font-family: 'Newsreader', serif;
-      font-size: 3.2rem;
+      font-size: 3.3rem;
       font-weight: 300;
       line-height: 1.15;
       color: var(--light-text);
@@ -293,54 +293,55 @@
       color: var(--gold);
     }
     .dp-body {
-      font-size: 1.125rem;
-      line-height: 1.6;
-      color: #e2e8f0;
-      margin-bottom: 1.25rem;
+      font-size: 1.15rem;
+      line-height: 1.65;
+      color: #E5E2DD;
+      margin-bottom: 1.5rem;
     }
     .dp-quote {
       font-family: 'Newsreader', serif;
-      font-size: 1.85rem;
+      font-size: 1.9rem;
       font-style: italic;
-      line-height: 1.4;
+      line-height: 1.45;
       color: var(--gold);
       border-left: 2px solid var(--gold);
-      padding-left: 1.5rem;
-      margin: 1.75rem 0;
+      padding-left: 1.75rem;
+      margin: 2rem 0;
     }
     .dp-verse {
       font-family: 'Newsreader', serif;
-      font-size: 1.65rem;
+      font-size: 1.75rem;
       font-style: italic;
-      line-height: 1.4;
+      line-height: 1.45;
       color: var(--light-text);
       text-align: center;
     }
     .dp-cites {
-      margin-top: 1rem;
+      margin-top: 1.25rem;
       display: flex;
       gap: 0.5rem;
     }
     .dp-cite {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
-      background: rgba(212,175,55,0.12);
+      font-size: 0.72rem;
+      background: rgba(212, 175, 55, 0.08);
       color: var(--gold);
-      padding: 0.25rem 0.65rem;
+      padding: 0.3rem 0.75rem;
       border-radius: 4px;
+      border: 1px solid rgba(212, 175, 55, 0.15);
     }
     .dp-cite-ref {
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.75rem;
       color: var(--dim-text);
       text-align: center;
-      margin-top: 0.75rem;
+      margin-top: 1rem;
     }
 
     /* Swipe & Cover Details */
     .dp-hint {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.825rem;
+      font-size: 0.8rem;
       color: var(--gold);
       animation: bounceH 2s infinite;
       margin-top: 2rem;
@@ -350,32 +351,31 @@
       50% { transform: translateX(6px); }
     }
 
-    /* Deck UI Navigation Arrows */
     .dv-arrow {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: rgba(11,21,23,0.7);
-      border: 1px solid rgba(212,175,55,0.12);
+      background: rgba(12, 17, 19, 0.9);
+      border: 1px solid var(--border-color);
       color: var(--light-text);
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      border-radius: 4px; /* Structured square style like Peterson Academy */
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       font-size: 1.5rem;
-      transition: all 0.3s;
+      transition: all 0.25s;
       z-index: 110;
     }
     .dv-arrow:hover {
       background: var(--gold);
-      color: #000;
+      color: #030303;
       border-color: var(--gold);
     }
-    .dv-prev { left: 1.5rem; }
-    .dv-next { right: 1.5rem; }
+    .dv-prev { left: 2rem; }
+    .dv-next { right: 2rem; }
     .dv-arrow.is-hidden {
       opacity: 0;
       pointer-events: none;
@@ -384,20 +384,23 @@
     /* Mobile Adaptations */
     @media (max-width: 768px) {
       .dp-title {
-        font-size: 2.2rem;
+        font-size: 2.1rem;
       }
       .dp-quote {
-        font-size: 1.4rem;
+        font-size: 1.35rem;
       }
       .dv-arrow {
-        display: none; /* Swipe gestures handle on mobile */
+        display: none; /* Handled by gestures */
+      }
+      .dp-inner {
+        padding: 0.5rem;
       }
     }
   </style>
 </head>
-<body class="interior bg-[#040C0E]">
+<body class="interior bg-[#030303]">
 
-  <header class="w-full border-b border-[#D4AF37]/10 bg-[#040C0E]/90 backdrop-blur sticky top-0 z-50">
+  <header class="w-full border-b border-[#D4AF37]/10 bg-[#030303]/90 backdrop-blur sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="index.html" class="flex items-center" aria-label="Apologetics Nigeria — home">
         <span class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
@@ -421,13 +424,13 @@
   <main class="min-h-screen">
     <h1 class="sr-only">Resources — Films & Presentations</h1>
 
-    <section class="max-w-7xl mx-auto px-6 py-12" id="watch">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+    <section class="max-w-7xl mx-auto px-6 py-16" id="watch">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
         <div>
           <span class="text-[#D4AF37] text-sm uppercase tracking-widest font-mono font-semibold">Media Catalog</span>
           <h2 class="text-4xl md:text-5xl font-light font-serif mt-2">Every question, <em class="text-[#D4AF37] italic">answered</em>.</h2>
         </div>
-        <a class="text-[#D4AF37] hover:text-white font-medium flex items-center gap-2 transition duration-300" href="partner.html">
+        <a class="text-[#D4AF37] hover:text-[#F3CD4F] font-medium flex items-center gap-2 transition duration-300" href="partner.html">
           Partner with our mission →
         </a>
       </div>
@@ -449,51 +452,67 @@
             <img src="https://i.ytimg.com/vi/ePMjFrWp1JY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/ePMjFrWp1JY/hqdefault.jpg'" alt="Is Islam Peace?" loading="lazy" />
             <span class="play" aria-hidden="true"></span>
           </div>
-          <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Islam • Video Lecture</p></div>
+          <div class="p-6">
+            <p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase mb-1">Islam • Video Lecture</p>
+            <h3 class="text-lg font-serif font-medium mt-1 text-white hover:text-[#D4AF37] transition duration-200">Is Islam Peace?</h3>
+          </div>
         </article>
         <article class="course-card" data-cat="islam">
           <div class="course-thumb" data-id="w4HFMAChOQY">
             <img src="https://i.ytimg.com/vi/w4HFMAChOQY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/w4HFMAChOQY/hqdefault.jpg'" alt="Inside Islam" loading="lazy" />
             <span class="play" aria-hidden="true"></span>
           </div>
-          <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Islam • Video Lecture</p></div>
+          <div class="p-6">
+            <p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase mb-1">Islam • Video Lecture</p>
+            <h3 class="text-lg font-serif font-medium mt-1 text-white hover:text-[#D4AF37] transition duration-200">Inside Islam</h3>
+          </div>
         </article>
         <article class="course-card" data-cat="islam">
           <div class="course-thumb" data-id="6XhMBhPiGL0">
             <img src="https://i.ytimg.com/vi/6XhMBhPiGL0/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/6XhMBhPiGL0/hqdefault.jpg'" alt="Analyzing the Qur'an" loading="lazy" />
             <span class="play" aria-hidden="true"></span>
           </div>
-          <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Islam • Video Lecture</p></div>
+          <div class="p-6">
+            <p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase mb-1">Islam • Video Lecture</p>
+            <h3 class="text-lg font-serif font-medium mt-1 text-white hover:text-[#D4AF37] transition duration-200">Analyzing the Qur'an</h3>
+          </div>
         </article>
         <article class="course-card" data-cat="islam">
           <div class="course-thumb" data-id="_fmgTmWfdFE">
             <img src="https://i.ytimg.com/vi/_fmgTmWfdFE/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/_fmgTmWfdFE/hqdefault.jpg'" alt="Understanding Hadith" loading="lazy" />
             <span class="play" aria-hidden="true"></span>
           </div>
-          <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Islam • Video Lecture</p></div>
+          <div class="p-6">
+            <p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase mb-1">Islam • Video Lecture</p>
+            <h3 class="text-lg font-serif font-medium mt-1 text-white hover:text-[#D4AF37] transition duration-200">Understanding Hadith</h3>
+          </div>
         </article>
         <article class="course-card" data-cat="islam">
           <div class="course-thumb" data-id="2ulInp-C-rg">
             <img src="https://i.ytimg.com/vi/2ulInp-C-rg/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/2ulInp-C-rg/hqdefault.jpg'" alt="History of the Quran" loading="lazy" />
             <span class="play" aria-hidden="true"></span>
           </div>
-          <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Islam • Video Lecture</p></div>
+          <div class="p-6">
+            <p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase mb-1">Islam • Video Lecture</p>
+            <h3 class="text-lg font-serif font-medium mt-1 text-white hover:text-[#D4AF37] transition duration-200">History of the Quran</h3>
+          </div>
         </article>
 
-        <!-- Presentation slide decks -->
         <article class="course-card" data-cat="bible">
           <div class="course-thumb deck-thumb" data-deck="deck-01" role="button" tabindex="0" aria-label="Open presentation: Has the Bible been changed?">
             <span class="deck-flag">Presentation · 13 pages</span>
             <span class="deck-cover-title">Has the Bible been changed?</span>
-            <span class="deck-cta">Read the deck →</span>
+            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
           </div>
-          <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Islam • The Bible</p></div>
+          <div class="p-6">
+            <p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Islam • The Bible</p>
+          </div>
         </article>
         <article class="course-card" data-cat="jesus">
           <div class="course-thumb deck-thumb" data-deck="deck-02" role="button" tabindex="0" aria-label="Open presentation: Was Jesus real, or a myth?">
             <span class="deck-flag">Presentation · 20 pages</span>
             <span class="deck-cover-title">Was Jesus real, or a myth?</span>
-            <span class="deck-cta">Read the deck →</span>
+            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
           </div>
           <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Jesus • History</p></div>
         </article>
@@ -501,7 +520,7 @@
           <div class="course-thumb deck-thumb" data-deck="deck-03" role="button" tabindex="0" aria-label="Open presentation: Did Jesus really die?">
             <span class="deck-flag">Presentation · 20 pages</span>
             <span class="deck-cover-title">Did Jesus really die?</span>
-            <span class="deck-cta">Read the deck →</span>
+            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
           </div>
           <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Jesus • History</p></div>
         </article>
@@ -509,7 +528,7 @@
           <div class="course-thumb deck-thumb" data-deck="deck-04" role="button" tabindex="0" aria-label="Open presentation: Was Jesus raised from the dead?">
             <span class="deck-flag">Presentation · 23 pages</span>
             <span class="deck-cover-title">Was Jesus raised from the dead?</span>
-            <span class="deck-cta">Read the deck →</span>
+            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
           </div>
           <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Jesus • History</p></div>
         </article>
@@ -517,7 +536,7 @@
           <div class="course-thumb deck-thumb" data-deck="deck-05" role="button" tabindex="0" aria-label="Open presentation: Was Jesus foretold?">
             <span class="deck-flag">Presentation · 22 pages</span>
             <span class="deck-cover-title">Was Jesus foretold?</span>
-            <span class="deck-cta">Read the deck →</span>
+            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
           </div>
           <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Jesus • Prophecy</p></div>
         </article>
@@ -525,7 +544,7 @@
           <div class="course-thumb deck-thumb" data-deck="deck-06" role="button" tabindex="0" aria-label="Open presentation: Who wrote the Gospels?">
             <span class="deck-flag">Presentation · 16 pages</span>
             <span class="deck-cover-title">Who wrote the Gospels?</span>
-            <span class="deck-cta">Read the deck →</span>
+            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
           </div>
           <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">The Bible • The Gospels</p></div>
         </article>
@@ -533,7 +552,7 @@
           <div class="course-thumb deck-thumb" data-deck="deck-07" role="button" tabindex="0" aria-label="Open presentation: Do the Gospels contradict each other?">
             <span class="deck-flag">Presentation · 15 pages</span>
             <span class="deck-cover-title">Do the Gospels contradict each other?</span>
-            <span class="deck-cta">Read the deck →</span>
+            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
           </div>
           <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">The Bible • The Gospels</p></div>
         </article>
@@ -541,7 +560,7 @@
           <div class="course-thumb deck-thumb" data-deck="deck-08" role="button" tabindex="0" aria-label="Open presentation: Are the Gospels eyewitness accounts?">
             <span class="deck-flag">Presentation · 20 pages</span>
             <span class="deck-cover-title">Are the Gospels eyewitness accounts?</span>
-            <span class="deck-cta">Read the deck →</span>
+            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
           </div>
           <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">The Bible • The Gospels</p></div>
         </article>
@@ -551,7 +570,7 @@
           <div class="course-thumb deck-thumb" data-deck="deck-09" role="button" tabindex="0" aria-label="Open presentation: Is Jesus of Nazareth God?">
             <span class="deck-flag">Presentation · 20 pages</span>
             <span class="deck-cover-title">Is Jesus of Nazareth God?</span>
-            <span class="deck-cta">Read the deck →</span>
+            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
           </div>
           <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Foundations • Deity of Christ</p></div>
         </article>
@@ -561,7 +580,7 @@
           <div class="course-thumb deck-thumb" data-deck="deck-10" role="button" tabindex="0" aria-label="Open presentation: The Cross and the Crown: The God-Man Part 1">
             <span class="deck-flag">Presentation · 20 pages</span>
             <span class="deck-cover-title">The Cross and the Crown: The God-Man Part 1</span>
-            <span class="deck-cta">Read the deck →</span>
+            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
           </div>
           <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Foundations • Christology</p></div>
         </article>
@@ -571,7 +590,7 @@
           <div class="course-thumb deck-thumb" data-deck="deck-11" role="button" tabindex="0" aria-label="Open presentation: The Cross and the Crown: The God-Man Part 2">
             <span class="deck-flag">Presentation · 20 pages</span>
             <span class="deck-cover-title">The Cross and the Crown: The God-Man Part 2</span>
-            <span class="deck-cta">Read the deck →</span>
+            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
           </div>
           <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Foundations • Christology</p></div>
         </article>
@@ -581,7 +600,7 @@
           <div class="course-thumb deck-thumb" data-deck="deck-12" role="button" tabindex="0" aria-label="Open presentation: How to Defend Your Faith Part 1">
             <span class="deck-flag">Presentation · 22 pages</span>
             <span class="deck-cover-title">How to Defend Your Faith Part 1</span>
-            <span class="deck-cta">Read the deck →</span>
+            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
           </div>
           <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Foundations • Apologetics</p></div>
         </article>
@@ -591,7 +610,7 @@
           <div class="course-thumb deck-thumb" data-deck="deck-13" role="button" tabindex="0" aria-label="Open presentation: Catechism: How is a man saved?">
             <span class="deck-flag">Presentation · 30 pages</span>
             <span class="deck-cover-title">Catechism: How is a man saved?</span>
-            <span class="deck-cta">Read the deck →</span>
+            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
           </div>
           <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Foundations • Doctrine</p></div>
         </article>
@@ -601,7 +620,7 @@
           <div class="course-thumb deck-thumb" data-deck="deck-14" role="button" tabindex="0" aria-label="Open presentation: Catechism: How is a man saved? Part 2">
             <span class="deck-flag">Presentation · 22 pages</span>
             <span class="deck-cover-title">Catechism: How is a man saved? Part 2</span>
-            <span class="deck-cta">Read the deck →</span>
+            <span class="deck-cta text-[#D4AF37]">Read the deck →</span>
           </div>
           <div class="p-6"><p class="text-xs text-[#D4AF37] font-semibold font-mono tracking-wider uppercase">Foundations • Doctrine</p></div>
         </article>
@@ -742,7 +761,7 @@
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">And Mark reads exactly like that. Short, fast, vivid, full of an eyewitness’s small details.</p><p class="dp-body">He pauses to explain Jewish customs his Roman readers would not know. He is writing down Peter’s memory. Mark is Peter’s voice, put on paper.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">Then Matthew. A tax collector, called by Jesus from his booth.</p><p class="dp-body">And a tax collector was the one man in that group trained to write, keep records, and take notes. If anyone was writing things down as they happened, it was him.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">His Gospel proves the fit. Written for Jews. Packed with more Old Testament quotations than any other, over sixty of them. Tracing Jesus back to Abraham, the father of the Jewish people.</p><p class="dp-body">A Jewish hand, writing for a Jewish audience.</p></div></article>
-        <article class="deckpage"><div class="dp-inner"><p class="dp-body">Then Luke. A doctor, a Gentile, a travelling companion of Paul. And unlike the others, he opens like a working historian.</p><p class="dp-quote">“Having had perfect understanding of all things from the very first, I write to you, that you might know the certainty of the things you have been taught.”</p><div class="dp-cites"><span class="dp-cite">Luke 1:3-4</span></div></div></article>
+        <article class="deckpage"><div class="dp-inner"><p class="dp-quote">“Having had perfect understanding of all things from the very first, I write to you, that you might know the certainty of the things you have been taught.”</p><div class="dp-cites"><span class="dp-cite">Luke 1:3-4</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">Luke also wrote Acts, where at times he says “we,” because he was there.</p><p class="dp-body">As Paul’s companion he could sit with Peter, with James, with Mary the mother of Jesus. He interviewed the witnesses. He checked his facts.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">So look at what you actually have.</p><p class="dp-body">One Gospel from Peter’s own memory. One from an apostle trained to take notes. One from a historian who interviewed the survivors.</p><p class="dp-body">All three within a generation. All three named by everyone who came after.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">These are not anonymous legends written centuries later.</p><p class="dp-body">They are the church’s first witnesses, writing down what they saw and heard, while the memory was still warm.</p></div></article>
