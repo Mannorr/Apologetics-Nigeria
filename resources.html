@@ -310,6 +310,7 @@
     .library {
       background: var(--ink);
       color: var(--parchment);
+      padding-bottom: clamp(3rem, 6vw, 5rem);
     }
 
     .library-head {
@@ -825,6 +826,30 @@
       pointer-events: none;
     }
 
+    /* ═══════════════════════════════ DROP ZONE A STYLING ═══════════════════════════════ */
+    /* Beautiful styles matching your theme for an on-page "bble" widget container */
+    .bble-experience-section {
+      background: var(--parchment-2);
+      padding: clamp(3.5rem, 8vw, 6rem) 0;
+      border-top: 1px solid var(--line-light);
+      border-bottom: 1px solid var(--line-light);
+    }
+
+    .bble-experience-header {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .bble-experience-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--parchment);
+      border: 1px solid var(--line-light);
+      border-radius: 12px;
+      padding: clamp(1.5rem, 4vw, 3rem);
+      box-shadow: 0 4px 24px rgba(4, 12, 14, 0.03);
+    }
+
     /* ---------- RESPONSIVE STYLING ---------- */
     @media (max-width: 880px) {
       .nav-links {
@@ -872,6 +897,11 @@
       .nav-toggle.open span:nth-child(3) {
         top: 10px;
         transform: rotate(-45deg);
+      }
+
+      body.interior header.nav {
+        background: rgba(246, 242, 233, .92);
+        backdrop-filter: saturate(140%) blur(12px);
       }
 
       body.interior .nav-toggle span {
@@ -1198,6 +1228,31 @@
       </div>
     </section>
 
+    <!-- ═══════════════════════════════ DROP ZONE A (ON-PAGE EMBED) ═══════════════════════════════ -->
+    <!-- If your "bble experience" code is an on-page interactive reader widget, drop its <div> and script here. -->
+    <!-- You can remove this section if your code is only a global floating/analytics script. -->
+    <section class="bble-experience-section" id="bbleExperience">
+      <div class="wrap">
+        <div class="bble-experience-header">
+          <span class="eyebrow">Interactive Feature</span>
+          <h2 class="library-title" style="margin: 1rem auto 0; text-align: center; color: var(--ink);">
+            The <em class="acc">Bible Experience</em>
+          </h2>
+        </div>
+        <div class="bble-experience-container">
+          
+          <!-- PASTE YOUR ON-PAGE "BBLE EXPERIENCE" HTML EMBED CODE BELOW THIS LINE -->
+          <p style="text-align: center; color: var(--stone); font-style: italic;">
+            [Drop your interactive on-page Bible experience widget code, iframes, or HTML elements inside this box]
+          </p>
+          <!-- PASTE YOUR ON-PAGE "BBLE EXPERIENCE" HTML EMBED CODE ABOVE THIS LINE -->
+
+        </div>
+      </div>
+    </section>
+    <!-- ═══════════════════════════════════════════════════════════════════════════════════════════ -->
+
+
     <!-- ═══════════════════════════════ PRESENTATION DECKS (data) ═══════════════════════════════ -->
     <div id="deckData" hidden>
       
@@ -1310,7 +1365,7 @@
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">Skeptics once argued the word was “pierced” only in Christian copies. A Dead Sea Psalms scroll settled it. The reading “pierced my hands and my feet” was there before Christ.</p><p class="dp-body">And another line: “not one of his bones will be broken.”</p><p class="dp-body">The soldiers broke the legs of the two men beside Jesus, to hasten death. When they reached him, he was already dead, so they left his bones unbroken.</p><div class="dp-cites"><span class="dp-cite">Psalm 34:20</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">Then comes the boldest prophecy of them all. Daniel did not just say where, and how.</p><p class="dp-body">He said when.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">Daniel wrote that from the decree to rebuild Jerusalem, there would be 483 years until the Messiah, and then he would be “cut off.” Killed.</p><p class="dp-body">The decree went out around 444 BC. Counting those years forward lands in the early first century, around AD 33. The very time Jesus was crucified.</p><p class="dp-body">Scholars debate the exact decree and the calendar used. But every reasonable method lands in the same window, within Jesus’ lifetime.</p><div class="dp-cites"><span class="dp-cite">Daniel 9:25-26</span></div></div></article>
-        <article class="deckpage"><div class="dp-inner"><p class="dp-body">And Daniel added a line that closes the door.</p><p class="dp-body">The Messiah would come and be cut off before the city and the temple were destroyed.</p><p class="dp-body">The temple fell in AD 70. So the Messiah had to have already come. Any claimant after that is simply too late. The window was open for one generation, and Jesus stepped into it.</p></div></article>
+        <article class="deckpage"><div class="dp-inner"><p class="dp-body">And Daniel added a line that closes the door.</p><p class="dp-body">The Messiah would come and be cut off before the city and the temple were destroyed.</p><p class="dp-body">The temple fell in AD 70. So the Messiah had to have already come. Any claimant after that is simply too late. The window was open for one generation, and Jesus stepped into it.</p><div class="dp-cites"><span class="dp-cite">Daniel 9:25-26</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">One mathematician, Peter Stoner, tried to put a number on all this.</p><p class="dp-body">Take just eight of these prophecies. He estimated the odds of one man fulfilling all eight by chance at one in ten to the seventeenth power.</p><p class="dp-body">These are estimates, not exact science. But even generously, the improbability is hard to wave away.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">To feel that number, Stoner painted a picture.</p><p class="dp-body">Cover the whole state of Texas two feet deep in silver dollars. Mark one single coin, and bury it somewhere in the pile. Blindfold a man, and send him to pick the right one on his first try.</p><p class="dp-body">That is the chance. And Jesus fulfilled far more than eight.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">So return to the skeptic.</p><p class="dp-body">Written after the fact? The scrolls are older than Jesus, kept by his opponents.</p><p class="dp-body">Staged by Jesus? You cannot arrange your own birthplace, your ancestral line, a betrayal price set centuries before, a timeline fixed in Daniel, or the details of an execution not yet invented. Some things are beyond staging.</p></div></article>
@@ -1399,7 +1454,7 @@
         <article class="deckpage"><div class="dp-inner"><p class="dp-quote">“Ye have heard that it was said by them of old time, Thou shalt not kill... But I say unto you, That whosoever is angry with his brother without a cause shall be in danger of the judgment.”</p><p class="dp-body">Six times in the Sermon on the Mount, Jesus used this formula. The law was given by God. No prophet ever said, 'You have heard what God said, but I am telling you something that supersedes it.' The prophets said, 'Thus saith the Lord.' Jesus spoke as the source of the law. Only the Lawgiver can update the law.</p><div class="dp-cites"><span class="dp-cite">Matthew 5:21-22</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-quote">“When the Son of man shall come in his glory... then shall he sit upon the throne of his glory: And before him shall be gathered all nations...”</p><p class="dp-body">He placed Himself on the judgment seat of all humanity. In Joel 3:12, God said: “for there will I sit to judge all the heathen round about.” What God said He would do in Joel, Jesus said He would do in Matthew. Jesus did not claim to assist at the judgment. He claimed to be the Judge.</p><div class="dp-cites"><span class="dp-cite">Matthew 25:31-32</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body"><b>3. JESUS RECEIVED WORSHIP — AND NEVER REFUSED IT</b></p><p class="dp-body">Throughout all of scripture, whenever a man, a prophet, or even an angel received worship, they immediately refused it (e.g., Barnabas and Paul in Acts 14, or the angel in Revelation 22). Receiving worship that belongs only to God is blasphemy.</p><p class="dp-body">And yet, when people worshipped Jesus, He accepted it every single time, such as when the disciples held Him by the feet and worshipped Him in Matthew 28:9.</p></div></article>
-        <article class="deckpage"><div class="dp-inner"><p class="dp-quote">“My Lord and my God.”</p><p class="dp-body">Thomas called Him God directly to His face. Jesus did not correct him. He did not say, “Thomas, do not call me God.” Instead He affirmed it: “Blessed are they that have not seen, and yet have believed.” He accepted the declaration and called it faith. If He were not God, that would be the single greatest act of deception.</p><div class="dp-cites"><span class="dp-cite">John 20:28</span></div></div></article>
+        <article class="deckpage"><div class="dp-inner"><p class="dp-quote">“My Lord and my God.”</p><p class="dp-body">Thomas called Him God directly to His face. Jesus did not correct him. He did not say, "Thomas, do not call me God." Instead He affirmed it: “Blessed are they that have not seen, and yet have believed.” He accepted the declaration and called it faith. If He were not God, that would be the single greatest act of deception.</p><div class="dp-cites"><span class="dp-cite">John 20:28</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body"><b>4. THE WORKS OF JESUS ARE THE WORKS OF GOD</b></p><p class="dp-body">His miracles were not the miracles of a prophet operating under delegated power. They were the works of the Creator exercising inherent authority. The prophets prayed and fire came down or dead were raised. But Jesus did not pray and wait for an answer. He commanded directly:</p><p class="dp-quote">“Peace, be still. And the wind ceased, and there was a great calm.”</p><p class="dp-body">He spoke to nature and nature obeyed. He did not ask God to calm the storm; He commanded the storm Himself. Only the Creator of the wind has authority to command it.</p><div class="dp-cites"><span class="dp-cite">Mark 4:39</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-quote">“Lazarus, come forth. And he that was dead came forth, bound hand and foot with graveclothes.”</p><p class="dp-body">Jesus raised the dead by command. He did not petition heaven; He spoke directly into death. The voice that called Lazarus out of the tomb is the same voice that spoke at creation. John 1 tells us that without Him, nothing was made. He also fed thousands, turned water to wine, and sustains all creation (Colossians 1:17).</p><div class="dp-cites"><span class="dp-cite">John 11:43-44</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body"><b>5. THE APOSTLES AND THE NEW TESTAMENT DECLARE HIM GOD</b></p><p class="dp-body">The apostolic preaching is unanimous: John 1:1 says “the Word was God,” and John 1:14 says the Word became flesh. Paul writes in Colossians 2:9: “For in him dwelleth all the fulness of the Godhead bodily.” The complete nature of God dwelt in Him. Hebrews 1:3 adds He is the express image of His person, and Philippians 2:6 speaks of His equality with God.</p></div></article>
@@ -1415,7 +1470,7 @@
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">Matthew 16:13, “When Jesus came into the coasts of Caesarea Philippi, he asked his disciples, saying, Whom do men say that I the Son of man am?”.</p><p class="dp-body">This Bible text is at the center of Christology, which means “the study of Christ”.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-quote">“And they said, Some say that thou art John the Baptist: some, Elias; and others, Jeremias, or one of the prophets.”</p><p class="dp-body">Till now many people have different ideas of who Jesus is. The Muslims think He is just a prophet, they call him the Prophet Isa, they think He is born of a virgin, they don’t think He rose again.</p><div class="dp-cites"><span class="dp-cite">Matthew 16:14</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">The Jews believe He is just a prophet, but the problem is, a wrong teaching about Jesus affects his nature to be your Lord and Savior.</p><p class="dp-body">For example, a claim against the death of Jesus is a claim against your salvation because for you to be saved, someone has to die for your sins.</p></div></article>
-        <article class="deckpage"><div class="dp-inner"><p class="dp-body">If Jesus did not die, He couldn’t have paid and he couldn’t have also resurrected.</p><p class="dp-body">So it means that anybody who claims that Jesus did not resurrect as well is claiming that you don’t have eternal life.</p></div></article>
+        <article class="deckpage"><div class="dp-inner"><p class="dp-body">If Jesus did not die, He couldn’t have paid and he couldn't have also resurrected.</p><p class="dp-body">So it means that anybody who claims that Jesus did not resurrect as well is claiming that you don’t have eternal life.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">If Jesus did not take the keys by defeating death and resurrecting, there’s no hope for us to have eternal life, that’s why the nature of Jesus and what you know about Jesus must be very right.</p><p class="dp-body">The divinity and the humanity of Jesus must be rightly reconciled for him to be Lord and for Him to be Savior, the cross and the crown have to be reconciled.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">Till today people still have the wrong idea of who Jesus is and so Christology aims to answer the question “who is Jesus?”. A good way to know who Jesus is, is to know who He is not.</p><p class="dp-body">Some controversies came up about the nature of Jesus in the early Church, and these heresies (wrong teachings) are crucial to address.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body"><b>Ebionism:</b> Ebionists believe that Jesus was a natural man born of natural conception by Mary and Joseph. They do not believe that there was any supernatural conception.</p><p class="dp-body">They believe He is the Messiah but they also believe that He is not divine, He is not supernatural, He is ordinary. They believe we are saved by works (Legalism).</p></div></article>
@@ -1448,7 +1503,7 @@
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">Using types and shadows as an example, we knew that Jesus is the Passover lamb, but God made them sacrifice bulls and goats as a type of Christ or as a shadow of Christ. These are traditions that God uses to point at the real work that He is doing.</p><p class="dp-body">Now the writer of Romans is telling us that Adam was the shadow of something else, meaning that Adam, and his life, and the fact that through him, a lot of people entered into debt is telling a story of something else.</p></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-quote">“But not as the offence, so also is the free gift. For if through the offence of one many be dead, much more the grace of God, and the gift by grace, which is by one man, Jesus Christ, hath abounded unto many.”</p><p class="dp-body">We know that Jesus is sinless so he can take the sin of somebody, but now, how is he going to take the sin of the world?</p><p class="dp-body">One man’s offense caused deaths to enter into this world; it is only fitting that by one man’s action, justification and righteousness will come to all men. Adam started a race but he died; Jesus is starting a race with greater glory.</p><div class="dp-cites"><span class="dp-cite">Romans 5:15</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-quote">“For if by one man's offence death reigned by one; much more they which receive abundance of grace and of the gift of righteousness shall reign in life by one, Jesus Christ.”</p><p class="dp-body">Through one man, sin came, and by one man, it is fitting that justification and righteousness will come—that’s the solution. When he died, the justice of God was met and the wages of your sin was paid.</p><p class="dp-body">It was man who sinned; he had to be the man who died. If Jesus is not fully man, you are not saved. A man sinned, so a man had to die. This is why a claim against the full humanity of Christ is a claim against your salvation.</p><div class="dp-cites"><span class="dp-cite">Romans 5:16-17</span></div></div></article>
-        <article class="deckpage"><div class="dp-inner"><p class="dp-body"><b>A claim against the full humanity of Jesus is a claim against his position as both son of God and son of man:</b></p><p class="dp-quote">“For unto us a child is born, unto us a son is given: and the government shall be upon his shoulder: and his name shall be called Wonderful, Counsellor, The mighty God, The everlasting Father, The Prince of Peace.”</p><p class="dp-body">He was called Mighty God, Everlasting father, this is a prophecy about a child that is to come, but that son that would be born, would be God.</p><div class="dp-cites"><span class="dp-cite">Isaiah 9:6</span></div></div></article>
+        <article class="deckpage"><div class="dp-inner"><p class="dp-quote">“For unto us a child is born, unto us a son is given: and the government shall be upon his shoulder: and his name shall be called Wonderful, Counsellor, The mighty God, The everlasting Father, The Prince of Peace.”</p><p class="dp-body">He was called Mighty God, Everlasting father, this is a prophecy about a child that is to come, but that son that would be born, would be God.</p><div class="dp-cites"><span class="dp-cite">Isaiah 9:6</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">The Angel said unto Mary that the paternity of that child will not be from any man, He’ll be from God. Hence, He’ll be called the Son of God because He has no earthly father.</p><p class="dp-body">We’re not saying He is the son of God in terms of a biological conception; we’re saying He is the son of God because His paternity is of God. The title “Son of God” is a reference to the fact that He was born; this goes against Arianism. He was not created, He was begotten.</p><div class="dp-cites"><span class="dp-cite">Luke 1:35</span></div></div></article>
         <article class="deckpage"><div class="dp-inner"><p class="dp-quote">“And there was given him dominion, and glory, and a kingdom, that all people, nations, and languages, should serve him: his dominion is an everlasting dominion, which shall not pass away, and his kingdom that which shall not be destroyed.”</p><p class="dp-body">When people heard the phrase “Son of man,” they knew it was talking about that divine one in the likeness of man who is going to have dominion over the world. When Jesus quoted this, He was disclosing His identity: He is not just human, he is also divine.</p><div class="dp-cites"><span class="dp-cite">Daniel 7:13-14</span></div></div></article>
         <article class="deckpage dp-close"><div class="dp-inner"><p class="dp-body">Was Jesus omniscient on earth? Every divine attribute was there, but he chose to limit himself. He humbled himself to grow in knowledge (Luke 2:52) and experienced human limitations—hunger, thirst, tiredness, and temptation (Hebrews 2:18).</p><p class="dp-body">The ultimate proof was that he died. The merging of these two natures—fully God, fully man—is what theologians call the <b>hypostatic union</b>.</p><p class="dp-verse" style="margin-top:1.5rem">“And being found in fashion as a man, he humbled himself, and became obedient unto death, even the death of the cross.”</p><p class="dp-cite-ref">Philippians 2:8</p></div></article>
@@ -1707,7 +1762,7 @@
           <div class="dp-inner">
             <p class="dp-body">Defense is not a secondary calling. Jude makes this priority incredibly clear:</p>
             <p class="dp-quote">“...it was needful for me to write unto you, and exhort you that ye should earnestly contend for the faith...”</p>
-            <p class="dp-body">The Greek word is <b>epagonizomai</b>—describing an athlete wrestling inside an arena. Apologetics is a strenuous, fervid struggle against error.</p>
+            <p class="dp-body">The Greek word is <b>epagonizomai</b>—describing an athlete wrestling inside an arena. Apologetics is a systematic, fervid struggle against error.</p>
             <div class="dp-cites"><span class="dp-cite">Jude 1:3</span></div>
           </div>
         </article>
@@ -1872,7 +1927,7 @@
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">A man named Martin Luther grew deeply upset about this. Reading his Bible, he realized what the institutional church was doing was a lie.</p><p class="dp-body">He wrote what is now popularly known as the ninety-nine thesis, nailing it directly to the door of the church for all to see.</p></div></article>
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body">This act launched the Protestant movement. Today, we have the Catholic church and the Protestant church. They are called Protestants because they <em>protested</em>.</p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">This act launched the Protestant movement. Today, we have the Catholic church and the Protestant church. They are called Protestants because they <em>protested</em>.</p>
             <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">And although Martin Luther did not coin them alone, his voice helped shape the <b>Five Solas</b> of salvation:</p>
             <p class="dp-body" style="font-family:'JetBrains Mono', monospace; font-size:0.9rem; margin-top:1rem; color:var(--gold-bright);">
               • Sola Scriptura<br>• Sola Christus<br>• Sola Gratia<br>• Sola Fide<br>• Soli Deo Gloria
@@ -1888,7 +1943,7 @@
           </div>
         </article>
 
-        <article class="deckpage"><div class="dp-inner"><p class="dp-body">If you had no other teaching and all you had to go by was scripture alone—and you landed on John 3:16—your answer to “what is the criteria to be saved?” would be exact.</p><p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">It is faith in Christ alone, because it is by scriptures alone.</p></div></article>
+        <article class="deckpage"><div class="dp-inner"><p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">If you had no other teaching and all you had to go by was scripture alone—and you landed on John 3:16—your answer to “what is the criteria to be saved?” would be exact.</p><p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">It is faith in Christ alone, because it is by scriptures alone.</p></div></article>
         <article class="deckpage">
           <div class="dp-inner">
             <p class="dp-quote">“Moreover, brethren, I declare unto you the gospel which I preached unto you... how that Christ died for our sins according to the scriptures; and that he was buried, and that he rose again the third day according to the scriptures.”</p>
@@ -1947,7 +2002,6 @@
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">When the Bible says “the Spirit of Christ,” it references how the source of inspiration for the prophets was Christ Himself.</p>
             <p class="dp-quote">“...worship God: for the testimony of Jesus is the spirit of prophecy.”</p>
             <div class="dp-cites"><span class="dp-cite">Revelation 19:10</span></div>
           </div>
@@ -1964,7 +2018,7 @@
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body">He is the Author and the Finisher of our faith. He starts your faith, He performs it, He completes it, and He is everything in between.</p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">He is the Author and the Finisher of our faith. He starts your faith, He performs it, He completes it, and He is everything in between.</p>
             <p class="dp-quote">“Looking unto Jesus the author and finisher of our faith; who for the joy that was set before him endured the cross...”</p>
             <div class="dp-cites"><span class="dp-cite">Hebrews 12:2</span></div>
           </div>
@@ -1991,15 +2045,15 @@
         <article class="deckpage"><div class="dp-inner"><p class="dp-body">When Jesus quoted Psalm 82 in John 10, He proved that if human judges appointed by God were called "gods," then He—sanctified and sent by the Father—held supreme authority.</p><p class="dp-body">Furthermore, our status as "joint heirs" with Christ refers to the inheritance of eternal life—not sharing in His divine worship.</p></div></article>
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body"><b>3. SOLA GRATIA: Through Grace Alone</b></p>
-            <p class="dp-body">You cannot boast. Even if you walk in perfect consecration, you have no grounds for pride.</p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]"><b>3. SOLA GRATIA: Through Grace Alone</b></p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">You cannot boast. Even if you walk in perfect consecration, you have no grounds for pride.</p>
             <p class="dp-body">It is not you doing the work, but Christ in you doing the work. Salvation from scripture alone, through Christ alone, by grace alone.</p>
           </div>
         </article>
 
         <article class="deckpage dp-close">
           <div class="dp-inner">
-            <p class="dp-body">Let your conviction of salvation be anchored in the absolute truth of scripture alone.</p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">Let your conviction of salvation be anchored in the absolute truth of scripture alone.</p>
             <p class="dp-verse" style="margin-top:2.1rem">“For by grace are ye saved through faith; and that not of yourselves: it is the gift of God: Not of works, lest any man should boast.”</p>
             <p class="dp-cite-ref">Ephesians 2:8-9</p>
           </div>
@@ -2026,7 +2080,7 @@
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body">We cannot operate on blind feelings. There is a precise, historical system that governs what we do.</p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">We cannot operate on blind feelings. There is a precise, historical system that governs what we do.</p>
             <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">We entered into this divine system; we did not invent it. We should not attempt to disrupt or change a scriptural structure that has stood fast for centuries.</p>
           </div>
         </article>
@@ -2042,7 +2096,7 @@
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body">We live in a generation where "grace" has been bastardized and taken to dangerous extremes. What many preach today is a <b>hyper-grace message</b>.</p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">We live in a generation where "grace" has been bastardized and taken to dangerous extremes. What many preach today is a <b>hyper-grace message</b>.</p>
             <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">We fully believe that God's grace is exceedingly, abundantly above. However, the extreme presentation of hyper-grace separates the gift from its moral and behavioral reality.</p>
           </div>
         </article>
@@ -2073,7 +2127,7 @@
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body">Because it is a divine operation, keeping commandments cannot save you:</p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">Because it is a divine operation, keeping commandments cannot save you:</p>
             <p class="dp-quote">“Therefore by the deeds of the law there shall no flesh be justified in his sight: for by the law is the knowledge of sin.”</p>
             <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]">Even if you kept every law perfectly, you would not be saved by your deeds. Salvation is not a reward for behavior; it is a gift of mercy.</p>
             <div class="dp-cites"><span class="dp-cite">Romans 3:20</span></div>
@@ -2100,7 +2154,7 @@
 
         <article class="deckpage">
           <div class="dp-inner">
-            <p class="dp-body"><b>4. SOLA FIDE: Through Faith Alone</b></p>
+            <p class="dp-body font-sans text-sm md:text-base leading-relaxed text-[#E5E2DD]"><b>4. SOLA FIDE: Through Faith Alone</b></p>
             <p class="dp-quote">“But he that shall endure unto the end, the same shall be saved.”</p>
             <p class="dp-body">Jesus warned that as lawlessness abounds in a highly compromised society, the love of many will grow cold. People will walk away due to persecution, intellectual skepticism, and worldly enticement. Enduring faith is saving faith.</p>
             <div class="dp-cites"><span class="dp-cite">Matthew 24:12-13</span></div>
@@ -2416,5 +2470,14 @@
       }, { passive: true });
     });
   </script>
+
+  <!-- ═══════════════════════════════ DROP ZONE B (GLOBAL SCRIPT) ═══════════════════════════════ -->
+  <!-- If your "bble experience" code is a global script (like a bubble overlay, RefTagger tool, or tracking snippet), paste it below. -->
+  
+  <!-- PASTE YOUR GLOBAL "BBLE EXPERIENCE" JAVASCRIPT / SNIPPET BELOW THIS LINE -->
+  
+  <!-- PASTE YOUR GLOBAL "BBLE EXPERIENCE" JAVASCRIPT / SNIPPET ABOVE THIS LINE -->
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════════════════════ -->
 </body>
 </html>
