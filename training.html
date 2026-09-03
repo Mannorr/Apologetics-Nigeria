@@ -107,6 +107,8 @@
   .tr-reg-points li::before{content:"✓";position:absolute;left:0;top:0;color:var(--gold);font-size:.9rem}
   .tr-form{border:1px solid var(--line-light);border-radius:14px;padding:clamp(1.6rem,3.5vw,2.4rem);background:rgba(255,255,255,.45)}
   .tr-form .field{margin-bottom:1.1rem}
+  .tr-req-note{font-family:"Inter",sans-serif;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--stone);margin-bottom:1.4rem}
+  .tr-form input:user-invalid,.tr-form textarea:user-invalid,.tr-form select:user-invalid{border-color:#B3261E;background:rgba(179,38,30,.04)}
   .tr-row{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
 
   /* faq */
@@ -315,9 +317,11 @@
       </ul>
     </div>
 
-    <form class="tr-form reveal d1" id="trainingForm" action="https://formspree.io/f/mkolkrqb" method="POST">
+    <form class="tr-form reveal d1" id="trainingForm" action="https://formspree.io/f/xqpkbrwp" method="POST">
       <input type="hidden" name="_subject" value="Training registration — Defending the Faith (Oct 16–18)" />
       <input type="hidden" name="form_type" value="Training registration — Defending the Faith" />
+
+      <p class="tr-req-note">All fields are required.</p>
 
       <div class="tr-row">
         <div class="field">
@@ -342,14 +346,15 @@
       </div>
 
       <div class="field">
-        <label for="tr-org">Church / Organisation <span class="opt">(optional)</span></label>
-        <input type="text" id="tr-org" name="organisation" autocomplete="organization" />
+        <label for="tr-org">Church / Organisation</label>
+        <input type="text" id="tr-org" name="organisation" required autocomplete="organization" placeholder="Your church, ministry, or “None”" />
       </div>
 
       <div class="field">
         <label for="tr-role">This describes me best</label>
         <div class="select-wrap">
-          <select id="tr-role" name="role">
+          <select id="tr-role" name="role" required>
+            <option value="" disabled selected>Choose one…</option>
             <option>Believer wanting to be equipped</option>
             <option>Youth or campus leader</option>
             <option>Student</option>
@@ -363,7 +368,7 @@
 
       <div class="field">
         <label for="tr-question">What question do you most want answered?</label>
-        <textarea id="tr-question" name="question" rows="4" placeholder="The one you have never had a good answer for."></textarea>
+        <textarea id="tr-question" name="question" rows="4" required placeholder="The one you have never had a good answer for."></textarea>
       </div>
 
       <button type="submit" class="btn btn-gold" id="tr-submit">Register free →</button>
