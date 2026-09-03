@@ -493,3 +493,9 @@
   .dv-prev{left:auto;right:calc(1.1rem + 56px)}
   .dv-next{right:1.1rem}
 }
+
+  /* ===== TRAINING BANNER (remove after 18 Oct 2026) ===== */
+  .tr-banner{display:block;line-height:0;border-radius:12px;overflow:hidden;transition:transform .3s ease,box-shadow .3s ease}
+  .tr-banner img{width:100%;height:auto;display:block}
+  .tr-banner:hover{transform:translateY(-3px);box-shadow:0 18px 44px rgba(4,12,14,.18)}
+  @media (max-width:560px){ .tr-banner{border-radius:9px} }
