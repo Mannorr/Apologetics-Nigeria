@@ -108,6 +108,33 @@
   .tr-form{border:1px solid var(--line-light);border-radius:14px;padding:clamp(1.6rem,3.5vw,2.4rem);background:rgba(255,255,255,.45)}
   .tr-form .field{margin-bottom:1.1rem}
   .tr-req-note{font-family:"Inter",sans-serif;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--stone);margin-bottom:1.4rem}
+
+  /* the global .field rules are written for the dark contact page —
+     re-colour them here for this light card */
+  .tr-form .field label{color:var(--stone)}
+  .tr-form .field input,
+  .tr-form .field select,
+  .tr-form .field textarea{
+    color:var(--ink);
+    background:rgba(255,255,255,.6);
+    border:1px solid var(--line-light);
+  }
+  .tr-form .field input::placeholder,
+  .tr-form .field textarea::placeholder{color:var(--stone);opacity:.65}
+  .tr-form .field select:invalid{color:var(--stone)}
+  .tr-form .field input:focus,
+  .tr-form .field select:focus,
+  .tr-form .field textarea:focus{
+    border-color:var(--gold);
+    background:#fff;
+  }
+  .tr-form .field input:-webkit-autofill,
+  .tr-form .field input:-webkit-autofill:hover,
+  .tr-form .field input:-webkit-autofill:focus{
+    -webkit-text-fill-color:var(--ink);
+    -webkit-box-shadow:0 0 0 100px #fff inset;
+  }
+  .tr-form .select-wrap::after{border-right-color:var(--gold);border-bottom-color:var(--gold)}
   .tr-form input:user-invalid,.tr-form textarea:user-invalid,.tr-form select:user-invalid{border-color:#B3261E;background:rgba(179,38,30,.04)}
   .tr-row{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
 
