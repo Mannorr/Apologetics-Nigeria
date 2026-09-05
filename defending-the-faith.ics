@@ -1,0 +1,52 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Apologetics Nigeria//Defending the Faith//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Defending the Faith
+BEGIN:VEVENT
+UID:dtf-day1-2026@apologeticsnigeria.com
+DTSTAMP:20260905T000000Z
+DTSTART:20261016T180000Z
+DTEND:20261016T210000Z
+SUMMARY:Defending the Faith — Day 1: Foundations
+DESCRIPTION:Free apologetics training with Apologetics Nigeria. 7–10PM WAT. Joining link will be emailed before the session.\nhttps://apologeticsnigeria.com/training.html
+LOCATION:Online
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:Defending the Faith Day 1 starts in 1 hour
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:dtf-day2-2026@apologeticsnigeria.com
+DTSTAMP:20260905T000000Z
+DTSTART:20261017T180000Z
+DTEND:20261017T210000Z
+SUMMARY:Defending the Faith — Day 2: Jesus and Islam
+DESCRIPTION:Free apologetics training with Apologetics Nigeria. 7–10PM WAT. Joining link will be emailed before the session.\nhttps://apologeticsnigeria.com/training.html
+LOCATION:Online
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:Defending the Faith Day 2 starts in 1 hour
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:dtf-day3-2026@apologeticsnigeria.com
+DTSTAMP:20260905T000000Z
+DTSTART:20261018T180000Z
+DTEND:20261018T210000Z
+SUMMARY:Defending the Faith — Day 3: Doubt and the Conversation
+DESCRIPTION:Free apologetics training with Apologetics Nigeria. 7–10PM WAT. Joining link will be emailed before the session.\nhttps://apologeticsnigeria.com/training.html
+LOCATION:Online
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:Defending the Faith Day 3 starts in 1 hour
+END:VALARM
+END:VEVENT
+END:VCALENDAR

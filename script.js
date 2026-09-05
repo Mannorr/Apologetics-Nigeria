@@ -121,6 +121,13 @@ function handleFormSubmit(formId, statusId, submitId) {
         try {
             const res = await fetch(form.action, { method:'POST', body:new FormData(form), headers:{'Accept':'application/json'} });
             if(res.ok){
+                const redirect = form.getAttribute('data-success-redirect');
+                if (redirect) {
+                    statusEl.classList.add('ok');
+                    statusEl.textContent = 'Success — taking you to your details…';
+                    window.location.assign(redirect);
+                    return;
+                }
                 form.reset();
                 statusEl.classList.add('ok');
                 statusEl.textContent = 'Success — thank you.';
@@ -139,6 +146,7 @@ function handleFormSubmit(formId, statusId, submitId) {
 }
 handleFormSubmit('newsForm', 'news-status', 'news-submit');
 handleFormSubmit('contactForm', 'cf-status', 'cf-submit');
+handleFormSubmit('trainingForm', 'tr-status', 'tr-submit');
 
 // 9. Active Nav Highlight
 (function(){
