@@ -13,15 +13,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 
-<!-- ===================================================================
-     THE ONLY LINE TO EDIT IF THE MEETING LINK EVER CHANGES.
-     Update it here and every email, calendar entry and message
-     already sent will keep working.
-     =================================================================== -->
-<script>
-  var MEETING_URL = "https://meet.google.com/pqf-dgfp-jho";
-</script>
-
 <style>
   .jn{min-height:100vh;background:var(--ink);color:var(--parchment);
       display:flex;align-items:center;justify-content:center;padding:2rem 0}
@@ -45,8 +36,6 @@
   .jn-row b{font-family:"Newsreader",serif;font-weight:400;font-size:1.08rem}
   .jn-note{margin-top:2.2rem;font-size:.85rem;color:var(--stone-light);line-height:1.65}
   .jn-note a{color:var(--gold-bright)}
-  .jn-fallback{margin-top:1.4rem;font-size:.8rem;color:var(--stone-light);word-break:break-all}
-  .jn-fallback a{color:var(--stone-light)}
 </style>
 </head>
 <body>
@@ -59,7 +48,12 @@
     <h1>Join the session.</h1>
     <p class="lede">Tap below to enter the live session. If the room hasn't opened yet, wait a moment and try again — we open fifteen minutes before we begin.</p>
 
-    <a id="joinBtn" href="#" class="jn-btn">Join the session →</a>
+    <!-- ==================================================================
+         THE ONLY LINE TO EDIT IF THE MEETING LINK EVER CHANGES.
+         Change the href below, redeploy, and every email, calendar entry
+         and message already sent keeps working.
+         ================================================================== -->
+    <a href="https://meet.google.com/pqf-dgfp-jho" target="_blank" rel="noopener" class="jn-btn">Join the session →</a>
 
     <div class="jn-when">
       <div class="jn-row"><span>Day 1 — Foundations</span><b>Fri 16 Oct · 7PM WAT</b></div>
@@ -73,23 +67,8 @@
       <a href="https://www.instagram.com/apologeticsnigeria/" target="_blank" rel="noopener">Instagram</a>.
     </p>
 
-    <p class="jn-fallback">
-      If the button doesn't work, use: <a id="rawLink" href="#"></a>
-    </p>
   </div>
 </section>
-
-<script>
-  (function () {
-    var a = document.getElementById('joinBtn');
-    var raw = document.getElementById('rawLink');
-    a.href = MEETING_URL;
-    a.target = '_blank';
-    a.rel = 'noopener';
-    raw.href = MEETING_URL;
-    raw.textContent = MEETING_URL;
-  })();
-</script>
 
 </body>
 </html>
