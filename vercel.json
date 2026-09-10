@@ -2,5 +2,37 @@
   "framework": null,
   "buildCommand": null,
   "installCommand": null,
-  "outputDirectory": "."
+  "outputDirectory": ".",
+
+  "rewrites": [
+    { "source": "/defending-the-faith.ics", "destination": "/assets/files/defending-the-faith.ics" },
+    { "source": "/email-hero.jpg",           "destination": "/assets/img/email/email-hero.jpg" },
+    { "source": "/email-verse.jpg",          "destination": "/assets/img/email/email-verse.jpg" },
+    { "source": "/email-invite-hero.jpg",    "destination": "/assets/img/email/email-invite-hero.jpg" },
+    { "source": "/signature-logo.png",       "destination": "/assets/img/brand/signature-logo.png" },
+    { "source": "/signature-logo-light.png", "destination": "/assets/img/brand/signature-logo-light.png" },
+    { "source": "/training-poster.png",      "destination": "/assets/img/training/training-poster.png" },
+    { "source": "/training-poster.jpg",      "destination": "/assets/img/training/training-poster.jpg" },
+    { "source": "/logo.png",                 "destination": "/assets/img/brand/logo.png" },
+    { "source": "/og-image.png",             "destination": "/assets/img/brand/og-image.png" },
+    { "source": "/favicon.png",              "destination": "/assets/img/brand/favicon.png" },
+    { "source": "/founder.png",              "destination": "/assets/img/brand/founder.png" },
+    { "source": "/styles.css",               "destination": "/assets/css/styles.css" },
+    { "source": "/script.js",                "destination": "/assets/js/script.js" },
+    { "source": "/email-signature.html",     "destination": "/templates/email-signature.html" }
+  ],
+
+  "headers": [
+    {
+      "source": "/assets/img/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/assets/files/defending-the-faith.ics",
+      "headers": [
+        { "key": "Content-Type", "value": "text/calendar; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    }
+  ]
 }
