@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Join the session — Defending the Faith | Apologetics Nigeria</title>
+<meta name="description" content="Join the live session of Defending the Faith. 16–18 October, 7–10PM WAT." />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#040C0E" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+
+<!-- ===================================================================
+     THE ONLY LINE TO EDIT IF THE MEETING LINK EVER CHANGES.
+     Update it here and every email, calendar entry and message
+     already sent will keep working.
+     =================================================================== -->
+<script>
+  var MEETING_URL = "https://meet.google.com/pqf-dgfp-jho";
+</script>
+
+<style>
+  .jn{min-height:100vh;background:var(--ink);color:var(--parchment);
+      display:flex;align-items:center;justify-content:center;padding:2rem 0}
+  .jn-inner{max-width:640px;margin:0 auto;text-align:center;padding:0 1.5rem}
+  .jn-logo{width:132px;height:auto;margin:0 auto 2.6rem;display:block;filter:invert(1) brightness(1.6)}
+  .jn-eyebrow{font-family:"Inter",sans-serif;font-size:.68rem;letter-spacing:.2em;
+      text-transform:uppercase;color:var(--gold-bright);margin-bottom:1.1rem}
+  .jn h1{font-family:"Newsreader",serif;font-weight:380;
+      font-size:clamp(2.1rem,5vw,3.2rem);line-height:1.06;margin-bottom:1.1rem}
+  .jn .lede{color:var(--stone-light);margin-bottom:2.4rem;line-height:1.65}
+  .jn-btn{display:inline-block;background:var(--gold);color:#fff;
+      padding:1.15rem 2.6rem;border-radius:100px;text-decoration:none;
+      font-family:"Inter",sans-serif;font-weight:600;font-size:.82rem;
+      letter-spacing:.14em;text-transform:uppercase;transition:transform .25s,background .25s}
+  .jn-btn:hover{transform:translateY(-2px);background:var(--gold-bright)}
+  .jn-when{margin-top:2.8rem;border-top:1px solid var(--line-dark);padding-top:1.8rem}
+  .jn-row{display:flex;justify-content:space-between;align-items:baseline;
+      padding:.7rem 0;border-bottom:1px solid rgba(246,242,233,.07);font-size:.95rem}
+  .jn-row:last-child{border-bottom:none}
+  .jn-row span:first-child{color:var(--stone-light)}
+  .jn-row b{font-family:"Newsreader",serif;font-weight:400;font-size:1.08rem}
+  .jn-note{margin-top:2.2rem;font-size:.85rem;color:var(--stone-light);line-height:1.65}
+  .jn-note a{color:var(--gold-bright)}
+  .jn-fallback{margin-top:1.4rem;font-size:.8rem;color:var(--stone-light);word-break:break-all}
+  .jn-fallback a{color:var(--stone-light)}
+</style>
+</head>
+<body>
+
+<section class="jn">
+  <div class="jn-inner">
+    <img src="logo.png" alt="Apologetics Nigeria" class="jn-logo" onerror="this.remove();" />
+
+    <p class="jn-eyebrow">Defending the Faith</p>
+    <h1>Join the session.</h1>
+    <p class="lede">Tap below to enter the live session. If the room hasn't opened yet, wait a moment and try again — we open fifteen minutes before we begin.</p>
+
+    <a id="joinBtn" href="#" class="jn-btn">Join the session →</a>
+
+    <div class="jn-when">
+      <div class="jn-row"><span>Day 1 — Foundations</span><b>Fri 16 Oct · 7PM WAT</b></div>
+      <div class="jn-row"><span>Day 2 — Jesus &amp; Islam</span><b>Sat 17 Oct · 7PM WAT</b></div>
+      <div class="jn-row"><span>Day 3 — Doubt &amp; the conversation</span><b>Sun 18 Oct · 7PM WAT</b></div>
+    </div>
+
+    <p class="jn-note">
+      Same link every evening — save this page.<br />
+      Trouble getting in? Reply to your confirmation email or message us on
+      <a href="https://www.instagram.com/apologeticsnigeria/" target="_blank" rel="noopener">Instagram</a>.
+    </p>
+
+    <p class="jn-fallback">
+      If the button doesn't work, use: <a id="rawLink" href="#"></a>
+    </p>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var a = document.getElementById('joinBtn');
+    var raw = document.getElementById('rawLink');
+    a.href = MEETING_URL;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    raw.href = MEETING_URL;
+    raw.textContent = MEETING_URL;
+  })();
+</script>
+
+</body>
+</html>
