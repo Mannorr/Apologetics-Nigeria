@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Call for Volunteers — Apologetics Nigeria</title>
+<meta name="description" content="We're building a team. Designers, video editors, writers and social media people who want their craft to count for something. Apply to volunteer with Apologetics Nigeria." />
+<meta name="robots" content="noindex, follow" />
+<meta name="theme-color" content="#040C0E" />
+<link rel="icon" type="image/png" href="assets/img/brand/favicon.png" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Apologetics Nigeria" />
+<meta property="og:title" content="Call for Volunteers — Apologetics Nigeria" />
+<meta property="og:description" content="Designers, editors, writers and social media people. Put your craft to work on something that outlives a campaign." />
+<meta property="og:url" content="https://apologeticsnigeria.com/vol.html" />
+<meta property="og:image" content="https://apologeticsnigeria.com/assets/img/training/volunteers-poster.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --paper:#FEFCFF; --ink:#040C0E; --ink-2:#0C1719; --teal:#1E2C2F;
+    --cyan:#4AC7CB; --yellow:#FEC94B; --red:#C0342E; --red-bright:#E70804;
+    --stone:#8E9A99; --stone-d:#5C6567; --line:rgba(254,252,255,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Inter",-apple-system,sans-serif;background:var(--ink);color:var(--paper);
+       -webkit-font-smoothing:antialiased;line-height:1.6}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 clamp(1.25rem,5vw,2.75rem)}
+  section{padding:clamp(3.5rem,8vw,6rem) 0}
+  a{color:var(--cyan)}
+
+  .grid-bg{position:fixed;inset:0;z-index:0;pointer-events:none;
+    background-image:linear-gradient(rgba(254,252,255,.035) 1px,transparent 1px),
+                     linear-gradient(90deg,rgba(254,252,255,.035) 1px,transparent 1px);
+    background-size:56px 56px}
+  main{position:relative;z-index:1}
+
+  .eyebrow{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:var(--cyan)}
+  h1{font-family:"Newsreader",serif;font-weight:380;font-size:clamp(2.6rem,7vw,5rem);
+     line-height:.98;letter-spacing:-.02em;margin:1.2rem 0}
+  h2{font-family:"Newsreader",serif;font-weight:380;font-size:clamp(1.9rem,4vw,2.9rem);
+     line-height:1.1;letter-spacing:-.015em;margin-bottom:1rem}
+  h3{font-family:"Newsreader",serif;font-weight:400;font-size:1.3rem;line-height:1.2;margin-bottom:.5rem}
+  .lede{color:var(--stone);font-size:clamp(1rem,1.5vw,1.14rem);max-width:56ch}
+  p+p{margin-top:1rem}
+
+  /* hero */
+  .hero{padding-top:clamp(3rem,7vw,5rem);position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;width:900px;height:900px;left:-300px;top:-380px;
+    border-radius:50%;background:radial-gradient(circle,rgba(74,199,203,.20) 0%,rgba(74,199,203,0) 66%)}
+  .hero::after{content:"";position:absolute;width:800px;height:800px;right:-300px;bottom:-420px;
+    border-radius:50%;background:radial-gradient(circle,rgba(192,52,46,.22) 0%,rgba(192,52,46,0) 66%)}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,4rem);
+    align-items:center;position:relative;z-index:2}
+  .poster{border-radius:14px;overflow:hidden;line-height:0;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+  .poster img{width:100%;height:auto;display:block}
+  .cta-row{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2rem}
+  .btn{display:inline-block;padding:1.05rem 2.2rem;border-radius:100px;text-decoration:none;
+    font-weight:600;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;
+    transition:transform .25s,background .25s,color .25s;border:1px solid transparent}
+  .btn-red{background:var(--red-bright);color:#fff}
+  .btn-red:hover{transform:translateY(-2px);background:#ff1a15}
+  .btn-ghost{border-color:var(--line);color:var(--paper)}
+  .btn-ghost:hover{background:var(--paper);color:var(--ink)}
+  .btn-cyan{background:var(--cyan);color:var(--ink)}
+  .btn-cyan:hover{transform:translateY(-2px);background:#6ad6d9}
+
+  /* roles */
+  .roles{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-top:2.6rem}
+  .role{border:1px solid var(--line);border-radius:14px;padding:clamp(1.5rem,3vw,2rem);
+    background:rgba(255,255,255,.02);transition:border-color .3s,background .3s}
+  .role:hover{border-color:rgba(74,199,203,.5);background:rgba(74,199,203,.04)}
+  .role .tag{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;
+    color:var(--yellow);display:block;margin-bottom:.8rem}
+  .role p{color:var(--stone);font-size:.95rem;margin-top:.4rem}
+  .role .need{display:inline-block;margin-top:1rem;font-size:.72rem;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--stone-d);font-weight:600}
+
+  .band{background:var(--teal);border-radius:18px;padding:clamp(2rem,4.5vw,3rem)}
+  .asks{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.4rem;margin-top:1.8rem}
+  .asks div{border-top:2px solid var(--cyan);padding-top:1rem}
+  .asks b{display:block;font-family:"Newsreader",serif;font-size:1.15rem;font-weight:400;margin-bottom:.3rem}
+  .asks span{color:var(--stone);font-size:.93rem;line-height:1.55}
+
+  /* form */
+  .form-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,5vw,4rem);align-items:start}
+  form{border:1px solid var(--line);border-radius:16px;padding:clamp(1.6rem,3.5vw,2.4rem);
+    background:rgba(255,255,255,.03)}
+  .req-note{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--stone-d);margin-bottom:1.5rem}
+  .field{margin-bottom:1.2rem}
+  .field label{display:block;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
+    font-weight:600;color:var(--stone);margin-bottom:.5rem}
+  .field .hint{text-transform:none;letter-spacing:0;font-weight:400;color:var(--stone-d);font-size:.78rem}
+  input[type=text],input[type=email],input[type=tel],input[type=url],select,textarea{
+    width:100%;padding:.95rem 1.05rem;border-radius:9px;border:1px solid var(--line);
+    background:rgba(255,255,255,.04);color:var(--paper);font-family:inherit;font-size:1rem;
+    transition:border-color .25s,background .25s}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--cyan);background:rgba(255,255,255,.07)}
+  input::placeholder,textarea::placeholder{color:var(--stone-d)}
+  select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234AC7CB' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 1.1rem center}
+  select option{background:var(--ink-2);color:var(--paper)}
+  textarea{resize:vertical;min-height:92px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+  input:user-invalid,textarea:user-invalid,select:user-invalid{border-color:#E06A65}
+
+  .checks{display:grid;grid-template-columns:1fr 1fr;gap:.55rem}
+  .check{display:flex;align-items:flex-start;gap:.6rem;padding:.7rem .85rem;border:1px solid var(--line);
+    border-radius:9px;cursor:pointer;font-size:.9rem;transition:border-color .2s,background .2s}
+  .check:hover{border-color:rgba(74,199,203,.5)}
+  .check input{accent-color:var(--cyan);margin-top:.15rem;flex:0 0 auto}
+  .check:has(input:checked){border-color:var(--cyan);background:rgba(74,199,203,.08)}
+
+  .form-status{margin-top:1rem;font-size:.9rem;min-height:1.2em;color:var(--stone)}
+  .form-status.err{color:#E06A65}
+
+  /* success panel */
+  #success{display:none}
+  #success.on{display:block}
+  .success-card{border:1px solid rgba(74,199,203,.4);border-radius:16px;
+    background:linear-gradient(180deg,rgba(74,199,203,.10),rgba(74,199,203,.02));
+    padding:clamp(1.8rem,4vw,2.8rem);text-align:center}
+  .tick{width:56px;height:56px;border-radius:50%;border:2px solid var(--cyan);color:var(--cyan);
+    display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 1.4rem}
+  .urgent{display:inline-block;background:var(--red-bright);color:#fff;font-size:.62rem;
+    letter-spacing:.18em;text-transform:uppercase;font-weight:700;padding:.4rem .9rem;
+    border-radius:100px;margin-bottom:1.1rem}
+
+  footer{border-top:1px solid var(--line);padding:2.5rem 0;text-align:center}
+  footer p{color:var(--stone-d);font-size:.85rem}
+  .strip{display:flex}
+  .strip div{flex:1;height:10px}
+  .strip .c{background:var(--cyan)} .strip .y{background:var(--yellow)} .strip .r{background:var(--red-bright)}
+
+  @media (max-width:900px){
+    .hero-grid,.form-wrap{grid-template-columns:1fr}
+    .poster{order:-1;max-width:420px;margin:0 auto}
+    .roles{grid-template-columns:1fr}
+  }
+  @media (max-width:560px){
+    .row,.checks{grid-template-columns:1fr}
+    .cta-row .btn{width:100%;text-align:center}
+  }
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Apologetics Nigeria</p>
+      <h1>Call for<br />volunteers.</h1>
+      <p class="lede">We are building a team of people who can actually do the work — designers, editors, writers, social media people — and who want their craft to count for something longer than a campaign.</p>
+      <p class="lede" style="margin-top:1rem">If that is you, we would like to meet you.</p>
+      <div class="cta-row">
+        <a href="#apply" class="btn btn-red">Apply to volunteer →</a>
+        <a href="#roles" class="btn btn-ghost">See the roles</a>
+      </div>
+    </div>
+    <div class="poster">
+      <img src="assets/img/training/volunteers-poster.jpg" alt="Call for volunteers — Apologetics Nigeria. Visual designer, video editor, content and social media manager, content writers." />
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section>
+  <div class="wrap">
+    <div style="max-width:760px">
+      <p class="eyebrow">Why this matters</p>
+      <h2 style="margin-top:1rem">Most believers are not short on faith.<br />They are short on language.</h2>
+      <p class="lede" style="margin-top:1.4rem">Apologetics Nigeria exists to fix that — examining the claims of Islam through its own primary sources, making the historical case for Christ, and equipping ordinary believers to answer the questions they are actually being asked.</p>
+      <p class="lede">In October we run our first training. Over two hundred people have registered in a matter of weeks, from Lagos to Abuja to London to Houston. The demand is real, and it is well past what one person can carry.</p>
+      <p class="lede">So we are opening the doors. Not for busywork — for real responsibility, on work that reaches people who have nobody else answering their questions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ROLES -->
+<section id="roles">
+  <div class="wrap">
+    <p class="eyebrow">Where we need you</p>
+    <h2 style="margin-top:1rem">The roles.</h2>
+    <p class="lede">Pick what you are genuinely good at. You can choose more than one, but choose honestly — we would rather have one thing done excellently.</p>
+
+    <div class="roles">
+      <div class="role">
+        <span class="tag">Creative</span>
+        <h3>Visual designer</h3>
+        <p>Social graphics, flyers, presentation decks and campaign assets, working inside an established brand system. You should be comfortable in Figma, Illustrator or Photoshop, and comfortable being given a brand and asked to stay inside it.</p>
+        <span class="need">Portfolio required</span>
+      </div>
+
+      <div class="role">
+        <span class="tag">Creative</span>
+        <h3>Video editor</h3>
+        <p>Cutting teaching sessions into shorts and full episodes, subtitles, thumbnails, and turning three hours of recording into things people will actually watch. Premiere, Final Cut, DaVinci or CapCut — we care about the result, not the tool.</p>
+        <span class="need">Showreel or samples required</span>
+      </div>
+
+      <div class="role">
+        <span class="tag">Content</span>
+        <h3>Content &amp; social media manager</h3>
+        <p>Owning the posting schedule across Instagram, TikTok and YouTube, writing captions, replying to comments and DMs, and reporting what is working. This role needs someone consistent rather than someone occasionally brilliant.</p>
+        <span class="need">Accounts you have run</span>
+      </div>
+
+      <div class="role">
+        <span class="tag">Content</span>
+        <h3>Content writer</h3>
+        <p>Scripts, articles, teaching notes and research summaries. Everything we publish is sourced — you will be asked to cite where a claim comes from, and to write carefully about people we disagree with.</p>
+        <span class="need">Writing samples required</span>
+      </div>
+
+      <div class="role">
+        <span class="tag">Operations</span>
+        <h3>Notes &amp; resources</h3>
+        <p>Taking notes during sessions and turning them into the one-page summaries and slide packs we send out afterwards. If you are the person whose notes everyone borrows, this is your role.</p>
+        <span class="need">Ongoing, session-based</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HONEST TERMS -->
+<section>
+  <div class="wrap">
+    <div class="band">
+      <p class="eyebrow" style="color:var(--yellow)">Before you apply</p>
+      <h2 style="margin-top:.8rem">Let us be straight with you.</h2>
+      <div class="asks">
+        <div><b>This is unpaid</b><span>We are not in a position to pay yet. We will not pretend otherwise, and we will not waste your time.</span></div>
+        <div><b>It is remote</b><span>Everything runs online. Where you live does not matter — several of our people are outside Nigeria.</span></div>
+        <div><b>We need experts</b><span>Not enthusiasm alone. Send your portfolio, showreel or writing samples. We will actually look at them.</span></div>
+        <div><b>Consistency over volume</b><span>A few reliable hours a week beats a burst of brilliance followed by silence.</span></div>
+        <div><b>You get the credit</b><span>Your name on the work, the pieces for your portfolio, and a reference whenever you need one.</span></div>
+        <div><b>You will be stretched</b><span>Real briefs, real deadlines, real audiences. You will get better at your craft here.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLY -->
+<section id="apply">
+  <div class="wrap form-wrap">
+    <div>
+      <p class="eyebrow">Apply</p>
+      <h2 style="margin-top:1rem">Tell us what you do.</h2>
+      <p class="lede">It takes about three minutes. We read every application, and we reply to everyone — including the ones we cannot take on right now.</p>
+      <p class="lede" style="margin-top:1.2rem;color:var(--yellow)"><strong>One thing before you start:</strong> after you submit, you will be asked to join our volunteers WhatsApp group. That is where everything actually happens — briefs, deadlines, questions. Please join it. An application without the group is an application we cannot act on.</p>
+    </div>
+
+    <div>
+      <form id="volForm" action="https://formspree.io/f/mzezbggj" method="POST">
+        <input type="hidden" name="_subject" value="Volunteer application — Apologetics Nigeria" />
+        <input type="hidden" name="form_type" value="Volunteer application" />
+
+        <p class="req-note">All fields required unless marked optional.</p>
+
+        <div class="row">
+          <div class="field">
+            <label for="v-name">Full name</label>
+            <input type="text" id="v-name" name="name" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="v-email">Email</label>
+            <input type="email" id="v-email" name="email" required autocomplete="email" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="v-phone">WhatsApp number</label>
+            <input type="tel" id="v-phone" name="whatsapp" required placeholder="+234…" autocomplete="tel" />
+          </div>
+          <div class="field">
+            <label for="v-loc">City &amp; country</label>
+            <input type="text" id="v-loc" name="location" required placeholder="Lagos, Nigeria" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Which roles are you applying for? <span class="hint">Choose all that apply</span></label>
+          <div class="checks">
+            <label class="check"><input type="checkbox" name="roles" value="Visual designer" /> Visual designer</label>
+            <label class="check"><input type="checkbox" name="roles" value="Video editor" /> Video editor</label>
+            <label class="check"><input type="checkbox" name="roles" value="Content & social media" /> Content &amp; social media</label>
+            <label class="check"><input type="checkbox" name="roles" value="Content writer" /> Content writer</label>
+            <label class="check"><input type="checkbox" name="roles" value="Notes & resources" /> Notes &amp; resources</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="v-exp">Years doing this</label>
+          <select id="v-exp" name="experience" required>
+            <option value="" disabled selected>Choose one…</option>
+            <option>Less than a year</option>
+            <option>1–2 years</option>
+            <option>3–5 years</option>
+            <option>More than 5 years</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="v-cv">Portfolio, showreel or CV — link
+            <span class="hint">Behance, Dribbble, Drive, YouTube, LinkedIn, personal site. Please check the link is public.</span>
+          </label>
+          <input type="url" id="v-cv" name="portfolio" required placeholder="https://" />
+        </div>
+
+        <div class="field">
+          <label for="v-cv2">A second link <span class="hint">Optional — a CV, another portfolio, or accounts you've run</span></label>
+          <input type="url" id="v-cv2" name="portfolio_2" placeholder="https://" />
+        </div>
+
+        <div class="field">
+          <label for="v-about">What have you worked on that you're proud of?</label>
+          <textarea id="v-about" name="about" rows="3" required placeholder="A project, a client, a channel you grew. Be specific."></textarea>
+        </div>
+
+        <div class="field">
+          <label for="v-why">Why this, and how much time can you give?</label>
+          <textarea id="v-why" name="why" rows="3" required placeholder="Be honest about your capacity — we would rather know now."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-red" id="v-submit" style="border:none;cursor:pointer;font-family:inherit">Submit application →</button>
+        <p class="form-status" id="v-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <!-- SUCCESS -->
+      <div id="success">
+        <div class="success-card">
+          <div class="tick" aria-hidden="true">&#10003;</div>
+          <span class="urgent">One step left</span>
+          <h2 style="font-size:clamp(1.6rem,3.4vw,2.2rem)">Now join the group.</h2>
+          <p class="lede" style="margin:1rem auto 0;text-align:left;max-width:46ch">
+            Your application is in and we will read it properly. But everything after this — briefs,
+            deadlines, questions, the actual work — runs through the volunteers WhatsApp group.
+          </p>
+          <p class="lede" style="margin:.9rem auto 0;text-align:left;max-width:46ch;color:var(--yellow)">
+            <strong>If you don't join, we have no way of reaching you with anything real.</strong>
+          </p>
+          <div class="cta-row" style="justify-content:center;margin-top:2rem">
+            <a href="https://chat.whatsapp.com/LtYB9Ypf9HKAgxHWOvVD0z?s=cl&amp;p=i&amp;mlu=4&amp;ilr=4"
+               target="_blank" rel="noopener" class="btn btn-cyan">Join the volunteers group →</a>
+          </div>
+          <p style="margin-top:1.6rem;font-size:.84rem;color:var(--stone-d)">
+            Group members can see each other's phone numbers, as in any WhatsApp group.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="strip"><div class="c"></div><div class="y"></div><div class="r"></div></div>
+
+<footer>
+  <div class="wrap">
+    <p><strong style="color:var(--paper);font-family:'Newsreader',serif;font-size:1.05rem;font-weight:400">Apologetics Nigeria</strong></p>
+    <p style="margin-top:.5rem">Grounded believers · defended faith · a generation that can give a reason for its hope.</p>
+    <p style="margin-top:.8rem"><a href="https://apologeticsnigeria.com">apologeticsnigeria.com</a> &nbsp;·&nbsp; <a href="https://www.instagram.com/apologeticsnigeria/" target="_blank" rel="noopener">Instagram</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var form   = document.getElementById('volForm');
+  var status = document.getElementById('v-status');
+  var btn    = document.getElementById('v-submit');
+  var done   = document.getElementById('success');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    // at least one role must be chosen
+    if (!form.querySelectorAll('input[name="roles"]:checked').length) {
+      status.classList.add('err');
+      status.textContent = 'Please choose at least one role.';
+      return;
+    }
+
+    status.classList.remove('err');
+    status.textContent = 'Sending…';
+    btn.disabled = true;
+    btn.style.opacity = '.6';
+
+    try {
+      var res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        status.textContent = '';
+        done.classList.add('on');
+        done.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        throw new Error('rejected');
+      }
+    } catch (err) {
+      status.classList.add('err');
+      status.textContent = 'Something went wrong. Please try again, or email us.';
+      btn.disabled = false;
+      btn.style.opacity = '1';
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
