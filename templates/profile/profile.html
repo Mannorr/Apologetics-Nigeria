@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Apologetics Nigeria — Ministry Profile</title>
+<style>
+@font-face{font-family:"Bodoni Moda";src:url(fonts/bodoni-moda-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:"Bodoni Moda";src:url(fonts/bodoni-moda-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:"Bodoni Moda";src:url(fonts/bodoni-moda-latin-800-normal.woff2);font-weight:800}
+@font-face{font-family:"Inter";src:url(fonts/inter-latin-400-normal.woff2);font-weight:400}
+@font-face{font-family:"Inter";src:url(fonts/inter-latin-500-normal.woff2);font-weight:500}
+@font-face{font-family:"Inter";src:url(fonts/inter-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:"Newsreader";src:url(fonts/newsreader-latin-opsz-italic.woff2);font-style:italic;font-weight:200 800}
+
+@page{size:A4;margin:0}
+:root{
+  --ink:#040C0E; --teal:#1E2C2F; --cyan:#4AC7CB; --yellow:#FEC94B; --red:#E70804; --paper:#FEFCFF;
+  --body:#4d5456; --muted:#8a9092; --rule:#e3e4e4;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#888}
+body{font-family:"Inter",Arial,sans-serif;color:var(--body);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;background:var(--paper);page-break-after:always;break-after:page}
+.page:last-child{page-break-after:auto;break-after:auto}
+a{color:inherit;text-decoration:none}
+
+/* ── cover ── */
+.cover{background:var(--ink);color:#fff}
+.cover::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(70% 45% at 18% 10%,rgba(74,199,203,.3),transparent 70%),
+             radial-gradient(55% 40% at 95% 90%,rgba(254,201,75,.22),transparent 70%)}
+.cover::after{content:"";position:absolute;inset:0;opacity:.5;
+  background-image:linear-gradient(rgba(74,199,203,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(74,199,203,.09) 1px,transparent 1px);
+  background-size:13mm 13mm}
+.cover-in{position:absolute;inset:0;z-index:2;padding:26mm 20mm 17mm;display:flex;flex-direction:column}
+.c-brand{font-size:8.2pt;font-weight:600;letter-spacing:.34em;text-transform:uppercase;color:var(--cyan)}
+.c-rule{width:24mm;height:1.3mm;background:var(--cyan);margin:10mm 0 9mm}
+.c-title{font-family:"Bodoni Moda",Georgia,serif;font-weight:800;font-size:44pt;line-height:.94;text-transform:uppercase;color:#fff}
+.c-title em{font-family:"Newsreader",Georgia,serif;font-style:italic;font-weight:300;text-transform:none;color:var(--cyan);display:block;font-size:40pt;line-height:1}
+.c-lede{margin-top:9mm;max-width:120mm;font-size:10.5pt;line-height:1.62;color:rgba(255,255,255,.74)}
+.c-to{margin-top:auto;font-size:7.4pt;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+.c-name{font-family:"Bodoni Moda",Georgia,serif;font-weight:800;font-size:25pt;line-height:1.1;margin-top:3mm;color:#fff}
+.c-sub{font-family:"Newsreader",Georgia,serif;font-style:italic;font-size:12.5pt;color:var(--cyan);margin-top:2mm}
+.c-facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:.3mm solid rgba(255,255,255,.18);margin-top:11mm;padding:7mm 0 0}
+.c-facts .k{font-size:6.8pt;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.c-facts .v{font-family:"Bodoni Moda",Georgia,serif;font-weight:800;font-size:14pt;line-height:1.2;text-transform:uppercase;margin-top:3mm;color:#fff}
+.c-strip{position:absolute;left:0;right:0;bottom:0;z-index:3}
+.c-strip .cy{background:var(--cyan);display:flex;justify-content:space-between;padding:4.2mm 20mm;font-size:7.2pt;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--ink)}
+.c-strip .ye{background:var(--yellow);height:3.6mm}
+
+/* ── section openers:每 section gets its own colour band ── */
+.band{position:absolute;left:0;right:0;top:0;height:46mm;display:flex;align-items:flex-end;padding:0 20mm 7mm;color:var(--ink)}
+.band .n{font-family:"Bodoni Moda",Georgia,serif;font-weight:800;font-size:40pt;line-height:.8;margin-right:9mm}
+.band h2{font-family:"Bodoni Moda",Georgia,serif;font-weight:800;font-size:27pt;line-height:.92;text-transform:uppercase}
+.band .sub{font-family:"Newsreader",Georgia,serif;font-style:italic;font-size:12pt;margin-top:2.5mm;opacity:.82}
+.band--cyan{background:var(--cyan)}
+.band--yellow{background:var(--yellow)}
+.band--red{background:var(--red);color:#fff}
+.band--ink{background:var(--ink);color:#fff}
+.band--teal{background:var(--teal);color:#fff}
+.body{position:absolute;inset:46mm 20mm 0;padding-top:11mm}
+.foot{position:absolute;left:20mm;right:20mm;bottom:12mm;display:flex;justify-content:space-between;border-top:.25mm solid var(--rule);padding-top:4mm;
+  font-size:6.6pt;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.page--ink{background:var(--ink)}
+.page--ink .foot{color:rgba(255,255,255,.4);border-top-color:rgba(255,255,255,.16)}
+
+.lead{font-family:"Newsreader",Georgia,serif;font-size:15pt;line-height:1.42;color:var(--ink);max-width:150mm}
+.page--ink .lead{color:#fff}
+.lead em{font-style:italic;color:#1b8f93}
+.p{font-size:9.6pt;line-height:1.65;margin-top:4mm;max-width:155mm}
+.p b{color:var(--ink);font-weight:600}
+.page--ink .p{color:rgba(255,255,255,.76)}
+.page--ink .p b{color:#fff}
+h3{font-family:"Bodoni Moda",Georgia,serif;font-weight:700;font-size:13pt;color:var(--ink);margin:7mm 0 3mm}
+.page--ink h3{color:#fff}
+.k{font-size:6.8pt;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--red)}
+
+/* two column */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:9mm;margin-top:8mm}
+.cols--3{grid-template-columns:repeat(3,1fr)}
+.cols--img{grid-template-columns:62mm 1fr;gap:10mm;align-items:start}
+.cols img{width:100%;display:block}
+
+/* numbered blocks */
+.blocks{margin-top:8mm;border-top:.5mm solid var(--ink)}
+.page--ink .blocks{border-top-color:rgba(255,255,255,.3)}
+.block{display:grid;grid-template-columns:16mm 1fr;gap:6mm;padding:4.2mm 0;border-bottom:.25mm solid var(--rule)}
+.page--ink .block{border-bottom-color:rgba(255,255,255,.14)}
+.block .no{font-family:"Bodoni Moda",Georgia,serif;font-weight:800;font-size:15pt;color:var(--red);line-height:1}
+.page--ink .block .no{color:var(--cyan)}
+.block h4{font-family:"Bodoni Moda",Georgia,serif;font-weight:800;font-size:12.5pt;text-transform:uppercase;color:var(--ink);margin-bottom:1.4mm}
+.page--ink .block h4{color:#fff}
+.block p{font-size:9pt;line-height:1.55}
+.page--ink .block p{color:rgba(255,255,255,.72)}
+
+/* stats */
+.stats{margin-top:6mm}
+.stat{display:grid;grid-template-columns:52mm 1fr;gap:8mm;padding:6mm 0;border-top:.25mm solid rgba(255,255,255,.18);align-items:start}
+.stat .fig{font-family:"Bodoni Moda",Georgia,serif;font-weight:800;font-size:30pt;line-height:.9;color:var(--yellow)}
+.stat p{font-size:9.2pt;line-height:1.55;color:rgba(255,255,255,.78)}
+.stat .src{display:block;margin-top:2.5mm;font-size:6.6pt;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+
+/* cards */
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:4mm;margin-top:6mm}
+.card{border:.35mm solid var(--rule);padding:4.6mm 5mm;background:#fff}
+.card .k{color:var(--red)}
+.card h4{font-family:"Bodoni Moda",Georgia,serif;font-weight:800;font-size:13pt;text-transform:uppercase;color:var(--ink);margin:2.4mm 0 2mm}
+.card p{font-size:8.5pt;line-height:1.5}
+.card .need{display:inline-block;margin-top:3mm;background:var(--yellow);color:var(--ink);font-size:6.6pt;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:1.6mm 2.6mm}
+
+/* creed list */
+.creed{columns:2;column-gap:10mm;margin-top:7mm}
+.creed div{break-inside:avoid;margin-bottom:4.4mm}
+.creed .n{font-family:"Bodoni Moda",Georgia,serif;font-weight:800;font-size:9.5pt;color:var(--red);margin-right:2mm}
+.creed h4{display:inline;font-family:"Bodoni Moda",Georgia,serif;font-weight:800;font-size:10.5pt;text-transform:uppercase;color:var(--ink)}
+.creed p{font-size:8.8pt;line-height:1.5;margin-top:1.4mm}
+
+/* give */
+.give{background:var(--teal);color:#fff;padding:6mm 7mm;margin-top:6mm;border-radius:2mm}
+.give .k{color:var(--yellow)}
+.give h4{font-family:"Bodoni Moda",Georgia,serif;font-weight:800;font-size:16pt;text-transform:uppercase;margin:3mm 0 3mm}
+.give p{font-size:8.6pt;line-height:1.55;color:rgba(255,255,255,.78);max-width:135mm}
+.give .ways{display:grid;grid-template-columns:1fr 1fr;gap:4mm;margin-top:5mm}
+.give .way{border:.35mm solid rgba(255,255,255,.25);padding:4.4mm 5mm}
+.give .way .t{font-size:6.6pt;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--cyan)}
+.give .way .u{font-family:"Bodoni Moda",Georgia,serif;font-weight:700;font-size:10.5pt;color:#fff;margin-top:2mm;word-break:break-all}
+.give .note{margin-top:5mm;font-size:7.6pt;letter-spacing:.06em;color:var(--yellow)}
+
+ul.dash{list-style:none;margin-top:3mm}
+ul.dash li{position:relative;padding-left:7mm;font-size:9pt;line-height:1.5;margin-bottom:2.2mm}
+ul.dash li::before{content:"";position:absolute;left:0;top:2.1mm;width:3.6mm;height:.9mm;background:var(--red)}
+.page--ink ul.dash li{color:rgba(255,255,255,.76)}
+.page--ink ul.dash li::before{background:var(--cyan)}
+
+/* contents */
+.toc{margin-top:10mm;border-top:.5mm solid var(--ink)}
+.toc a{display:grid;grid-template-columns:14mm 1fr 18mm;padding:4.6mm 0;border-bottom:.25mm solid var(--rule);align-items:baseline}
+.toc .n{font-family:"Bodoni Moda",Georgia,serif;font-weight:800;font-size:11pt;color:var(--red)}
+.toc .t{font-family:"Bodoni Moda",Georgia,serif;font-weight:700;font-size:13pt;text-transform:uppercase;color:var(--ink)}
+.toc .d{font-size:8.6pt;color:var(--body);grid-column:2;margin-top:1mm}
+.toc .pg{font-size:7.6pt;letter-spacing:.2em;color:var(--muted);text-align:right}
+.ataglance{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:.3mm solid var(--rule);margin-top:9mm}
+.ataglance div{padding:4.6mm 5mm;border-right:.25mm solid var(--rule);border-bottom:.25mm solid var(--rule)}
+.ataglance div:nth-child(2n){border-right:0}
+.ataglance div:nth-last-child(-n+2){border-bottom:0}
+.ataglance .k{color:var(--muted);font-weight:500}
+.ataglance .v{font-family:"Bodoni Moda",Georgia,serif;font-weight:700;font-size:11.5pt;color:var(--ink);margin-top:1.8mm;line-height:1.25}
+
+/* back cover */
+.back{background:var(--ink);color:#fff}
+.back-in{position:absolute;inset:0;z-index:2;padding:30mm 20mm 20mm;display:flex;flex-direction:column}
+.back q{display:block;font-family:"Newsreader",Georgia,serif;font-style:italic;font-size:17pt;line-height:1.38;quotes:none;max-width:140mm}
+.back .ref{margin-top:4mm;font-size:6.8pt;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--cyan)}
+.contact{margin-top:auto;display:grid;grid-template-columns:repeat(2,1fr);gap:6mm 8mm;border-top:.3mm solid rgba(255,255,255,.2);padding-top:7mm}
+.contact .k{color:rgba(255,255,255,.5);font-weight:500}
+.contact .v{font-family:"Bodoni Moda",Georgia,serif;font-weight:700;font-size:12pt;color:#fff;margin-top:2mm}
+.back .sdg{margin-top:9mm;font-family:"Newsreader",Georgia,serif;font-style:italic;font-size:12pt;color:var(--cyan)}
+</style>
+</head>
+<body>
+
+<!-- ═════════ COVER ═════════ -->
+<section class="page cover">
+  <div class="cover-in">
+    <p class="c-brand">Apologetics Nigeria</p>
+    <div class="c-rule"></div>
+    <h1 class="c-title">Give a reason<em>for the hope.</em></h1>
+    <p class="c-lede">We partner with churches, pastors, and ministry groups to equip believers to defend the faith and share the gospel — with clarity, confidence, and joy.</p>
+
+    <p class="c-to">Ministry profile</p>
+    <p class="c-name">Apologetics Nigeria</p>
+    <p class="c-sub">Non-denominational apologetics · Lagos, Nigeria</p>
+
+    <div class="c-facts">
+      <div><p class="k">Who we serve</p><p class="v">Churches &amp;<br />believers</p></div>
+      <div><p class="k">Where</p><p class="v">Nigeria first,<br />open to all</p></div>
+      <div><p class="k">Cost to the church</p><p class="v">Free to<br />attend</p></div>
+    </div>
+  </div>
+  <div class="c-strip">
+    <div class="cy"><span>Training</span><span>Resources</span><span>Media</span><span>Partnership</span></div>
+    <div class="ye"></div>
+  </div>
+</section>
+
+<!-- ═════════ CONTENTS ═════════ -->
+<section class="page">
+  <div class="band band--ink"><span class="n">00</span><div><h2>What is<br />inside.</h2></div></div>
+  <div class="body">
+    <p class="lead">A short profile of who we are, what we do, and the three ways anyone can stand with the work.</p>
+
+    <div class="toc">
+      <a href="#s1"><span class="n">01</span><span class="t">Who we are</span><span class="pg">P. 03</span><span class="d">The vision, the founder, and the conviction the ministry is built on.</span></a>
+      <a href="#s2"><span class="n">02</span><span class="t">The need</span><span class="pg">P. 04</span><span class="d">Why apologetics, and why now, in Nigeria.</span></a>
+      <a href="#s3"><span class="n">03</span><span class="t">How we work</span><span class="pg">P. 05</span><span class="d">Five commitments that shape every partnership.</span></a>
+      <a href="#s4"><span class="n">04</span><span class="t">What we do</span><span class="pg">P. 06</span><span class="d">Training, curriculum, resources, and media.</span></a>
+      <a href="#s5"><span class="n">05</span><span class="t">What we believe</span><span class="pg">P. 08</span><span class="d">Our statement of faith, in nine affirmations.</span></a>
+      <a href="#s6"><span class="n">06</span><span class="t">Partner &amp; give</span><span class="pg">P. 09</span><span class="d">Invite us, pray, or fuel the work financially.</span></a>
+      <a href="#s7"><span class="n">07</span><span class="t">Volunteer</span><span class="pg">P. 10</span><span class="d">Where we need people, and what we ask of them.</span></a>
+    </div>
+
+    <div class="ataglance">
+      <div><p class="k">What we are</p><p class="v">A non-denominational Christian apologetics ministry</p></div>
+      <div><p class="k">Based in</p><p class="v">Lagos, Nigeria</p></div>
+      <div><p class="k">Founder</p><p class="v">Oluwanifemi Adeniran (MANNORR)</p></div>
+      <div><p class="k">Website</p><p class="v">apologeticsnigeria.com</p></div>
+    </div>
+  </div>
+  <div class="foot"><span>Apologetics Nigeria</span><span>Ministry profile</span></div>
+</section>
+
+<!-- ═════════ 01 WHO WE ARE ═════════ -->
+<section class="page" id="s1">
+  <div class="band band--cyan"><span class="n">01</span><div><h2>Who we are.</h2><p class="sub">We build conviction inside the local church.</p></div></div>
+  <div class="body">
+    <p class="lead">Apologetics Nigeria exists to build apologetics capacity <em>where believers already serve</em> — so that every partner church becomes a place where hard questions are welcomed, faith is grounded, and the gospel is shared with conviction.</p>
+    <p class="p">We don't pull believers out of their churches. We come alongside the church, equip its people, and leave it stronger from the inside.</p>
+
+    <div class="cols cols--img" style="margin-top:10mm">
+      <div>
+        <img src="img/founder.jpg" alt="Oluwanifemi Adeniran" />
+        <p class="k" style="margin-top:3mm;color:var(--muted)">Founder</p>
+        <p style="font-family:'Bodoni Moda',Georgia,serif;font-weight:800;font-size:12pt;color:var(--ink);margin-top:1.5mm;line-height:1.15">Oluwanifemi Adeniran</p>
+        <p style="font-family:'Newsreader',Georgia,serif;font-style:italic;font-size:10pt;color:#1b8f93;margin-top:1mm">Founder &amp; Lead Apologist</p>
+      </div>
+      <div>
+        <h3 style="margin-top:0">Meet the founder</h3>
+        <p class="p" style="margin-top:2mm">Oluwanifemi Adeniran founded Apologetics Nigeria out of a simple conviction: the church here deserves to be equipped — not merely encouraged, but genuinely prepared to answer the hardest questions of its generation.</p>
+        <p class="p">For several years he served in apologetics ministry with churches across Ireland and the United Kingdom, teaching young believers to think clearly, hold their faith with conviction, and give an honest, gracious defense of the gospel. That work has now come home to Nigeria.</p>
+        <p class="p">He brings together the two disciplines this ministry depends on — serious theological study and the craft of clear, compelling communication. He is currently pursuing graduate study in theology, working toward a doctorate in apologetics, and continues to teach, film, and engage these questions publicly.</p>
+        <p class="p"><b>His conviction is plain:</b> the answer to a generation's doubts is not less Christianity, but a deeper, better-understood faith — carried by a church that knows what it believes, and why.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Apologetics Nigeria</span><span>01 · Who we are</span></div>
+</section>
+
+<!-- ═════════ 02 THE NEED ═════════ -->
+<section class="page page--ink" id="s2">
+  <div class="band band--yellow"><span class="n">02</span><div><h2>The need.</h2><p class="sub">Why apologetics, and why now.</p></div></div>
+  <div class="body">
+    <p class="lead">Nigeria has no shortage of Christianity. It has a shortage of <em>grounding</em>.</p>
+
+    <div class="stats">
+      <div class="stat">
+        <p class="fig">39%</p>
+        <p>The share of Nigeria's population projected to be Christian by 2050 — down from roughly 43–46% today, as the Muslim share rises toward 58%.
+          <span class="src">Source — Pew Research Center</span></p>
+      </div>
+      <div class="stat">
+        <p class="fig">80–90%</p>
+        <p>Of pastors and church leaders across Africa have little or no formal biblical or theological training. Where training is scarce, false teaching meets little resistance.
+          <span class="src">Source — World Evangelical Alliance · Langham Partnership</span></p>
+      </div>
+      <div class="stat">
+        <p class="fig">Rising</p>
+        <p>Irreligion among young Nigerians — sharpest among men under 30 — driven not by science, but by disillusionment with a faith many were never truly taught.
+          <span class="src">Source — World Values Survey, 2025</span></p>
+      </div>
+    </div>
+
+    <p class="lead" style="margin-top:10mm;max-width:130mm">A faith inherited but not understood does not survive the questions of a <em>new generation</em>.</p>
+  </div>
+  <div class="foot"><span>Apologetics Nigeria</span><span>02 · The need</span></div>
+</section>
+
+<!-- ═════════ 03 HOW WE WORK ═════════ -->
+<section class="page" id="s3">
+  <div class="band band--red"><span class="n">03</span><div><h2>How we work.</h2><p class="sub">Small, faithful, and built to last.</p></div></div>
+  <div class="body">
+    <p class="lead">Five commitments shape every partnership we take on.</p>
+    <div class="blocks">
+      <div class="block"><span class="no">01</span><div><h4>We serve, not compete</h4><p>We equip a church's own people and leave the capability inside the church — never gathering a following of our own.</p></div></div>
+      <div class="block"><span class="no">02</span><div><h4>Multiply through leaders</h4><p>Wherever possible we equip existing leaders to carry apologetics forward themselves, so a small team can strengthen many congregations.</p></div></div>
+      <div class="block"><span class="no">03</span><div><h4>A clear foundations track</h4><p>Twelve weeks moving from the existence of God, through the person and work of Jesus, to engaging Islam and atheism and starting real conversations.</p></div></div>
+      <div class="block"><span class="no">04</span><div><h4>Reach a generation online</h4><p>Films, a podcast, courses, and social content — so the teaching reaches those who live online, not only those in the room.</p></div></div>
+      <div class="block"><span class="no">05</span><div><h4>Grown on proven fruit</h4><p>A few committed partner churches first, real fruit documented, then expansion only on a foundation that has proven solid.</p></div></div>
+    </div>
+  </div>
+  <div class="foot"><span>Apologetics Nigeria</span><span>03 · How we work</span></div>
+</section>
+
+<!-- ═════════ 04 WHAT WE DO ═════════ -->
+<section class="page" id="s4">
+  <div class="band band--teal"><span class="n">04</span><div><h2>What we do.</h2><p class="sub">Training, curriculum, resources, media.</p></div></div>
+  <div class="body">
+    <p class="lead">Four ways the work reaches people: in the room, in the local church, on the page, and online.</p>
+
+    <div class="cards">
+      <div class="card">
+        <p class="k">01 · Training</p>
+        <h4>Live training for churches</h4>
+        <p>Training, workshops and conversations for the believers and leaders of a church or ministry — hosted by the church, taught by us, and built for the questions its people are actually being asked.</p>
+        <span class="need">Invite us</span>
+      </div>
+      <div class="card">
+        <p class="k">02 · Curriculum</p>
+        <h4>A 12-week foundations track</h4>
+        <p>A clear, structured course — from the existence of God to engaging Islam and atheism and starting real conversations — contextualised for the questions Nigerians are actually asking. Yours when you partner.</p>
+        <span class="need">Request the outline</span>
+      </div>
+      <div class="card">
+        <p class="k">03 · Resources</p>
+        <h4>A free library, online</h4>
+        <p>Twenty in-depth presentations and a growing set of films, each answering one hard question about Islam, atheism, Jesus, and the Bible. Free to read, watch and share at apologeticsnigeria.com/resources.</p>
+        <span class="need">Free to use</span>
+      </div>
+      <div class="card">
+        <p class="k">04 · Media</p>
+        <h4>Films, podcast and social</h4>
+        <p>Films, a podcast, courses and social content, so the teaching reaches those who live online — not only those in the room.</p>
+        <span class="need">@apologeticsnigeria</span>
+      </div>
+    </div>
+
+    <h3>Defending the Faith — our first public training</h3>
+    <p class="p">A free three-day introduction to apologetics, live online on 16–18 October 2026, 7–10PM WAT. Over two hundred people registered in a matter of weeks, from Lagos and Abuja to London and Houston. Every session is recorded, and replays, notes and slides go to everyone registered.</p>
+    <img src="img/banner.jpg" alt="Defending the Faith — 16–18 October, 7–10PM WAT" style="width:100%;height:26mm;object-fit:cover;object-position:50% 45%;margin-top:4mm;display:block" />
+  </div>
+  <div class="foot"><span>Apologetics Nigeria</span><span>04 · What we do</span></div>
+</section>
+
+<!-- ═════════ 05 WHAT WE BELIEVE ═════════ -->
+<section class="page" id="s5">
+  <div class="band band--cyan"><span class="n">05</span><div><h2>What we believe.</h2><p class="sub">Our statement of faith.</p></div></div>
+  <div class="body">
+    <p class="lead">Apologetics Nigeria is a non-denominational Christian ministry. We hold to the historic Christian faith — summarised in these affirmations, and the ground on which we teach and partner with churches.</p>
+
+    <div class="creed">
+      <div><span class="n">01</span><h4>The Scriptures</h4><p>The Bible is the inspired and authoritative Word of God — our final rule for faith and life.</p></div>
+      <div><span class="n">02</span><h4>One God</h4><p>There is one God, eternally existing in three persons: the Father, the Son, and the Holy Spirit.</p></div>
+      <div><span class="n">03</span><h4>Jesus Christ</h4><p>Jesus is fully God and fully man — born of a virgin, sinless in life, crucified for our sins, and raised bodily from the dead.</p></div>
+      <div><span class="n">04</span><h4>Humanity</h4><p>Every person is made in God's image yet fallen in sin, and cannot save themselves by their own effort.</p></div>
+      <div><span class="n">05</span><h4>Salvation</h4><p>Salvation is a gift of God's grace, received through faith in Jesus Christ alone — not earned by works.</p></div>
+      <div><span class="n">06</span><h4>The Holy Spirit</h4><p>The Holy Spirit indwells, transforms, and empowers every believer to live and to witness for Christ.</p></div>
+      <div><span class="n">07</span><h4>The Church</h4><p>The church is the body of Christ, called to worship God, grow in truth, and make disciples of all nations.</p></div>
+      <div><span class="n">08</span><h4>The Great Commission</h4><p>Every believer is called to share and defend the gospel — with clarity, courage, and love.</p></div>
+      <div><span class="n">09</span><h4>The Hope to Come</h4><p>Jesus Christ will return in glory to judge the living and the dead, and to make all things new.</p></div>
+    </div>
+  </div>
+  <div class="foot"><span>Apologetics Nigeria</span><span>05 · What we believe</span></div>
+</section>
+
+<!-- ═════════ 06 PARTNER & GIVE ═════════ -->
+<section class="page" id="s6">
+  <div class="band band--yellow"><span class="n">06</span><div><h2>Partner &amp; give.</h2><p class="sub">Three ways to stand with the work.</p></div></div>
+  <div class="body">
+    <div class="blocks" style="margin-top:2mm">
+      <div class="block"><span class="no">01</span><div><h4>Invite — open the door</h4><p>Host training, a workshop, or a conversation for the believers and leaders in your church or ministry. Write to hello@apologeticsnigeria.com and we will plan it around you.</p></div></div>
+      <div class="block"><span class="no">02</span><div><h4>Pray — stand in the gap</h4><p>Pray for grounded believers, a defended faith, and a generation that can give a reason for its hope.</p></div></div>
+      <div class="block"><span class="no">03</span><div><h4>Give — fuel the work</h4><p>Support with a one-off gift, a monthly partnership, or by sponsoring a specific training, film, or resource.</p></div></div>
+    </div>
+
+    <div class="give">
+      <p class="k">Give &amp; sponsor</p>
+      <h4>Help equip a generation to stand.</h4>
+      <p>Recurring monthly partnership is the most valuable kind of support — it gives the work stability — while sponsorships let us take on larger projects. As our registration with the Corporate Affairs Commission (CAC) is completed, a dedicated ministry account will follow.</p>
+      <div class="ways">
+        <div class="way"><p class="t">Give in Naira</p><p class="u"><a href="https://flutterwave.com/pay/qjh7xrxiukiq">flutterwave.com/pay/qjh7xrxiukiq</a></p></div>
+        <div class="way"><p class="t">Give internationally</p><p class="u"><a href="https://buy.stripe.com/cNieVe85O0jq3eQ2up1wY00">buy.stripe.com/cNieVe85O0jq</a></p></div>
+      </div>
+      <p class="note">* Every penny goes into the spread of the gospel.</p>
+    </div>
+
+    <h3>What your support pays for</h3>
+    <ul class="dash">
+      <li><b>Teaching that stays free.</b> Every session, recording and set of notes is given away without charge, so that no believer is priced out of being able to answer for their faith.</li>
+      <li><b>Production.</b> Films, decks, notes and the resource library — researched, sourced and designed rather than thrown together.</li>
+      <li><b>Reach.</b> Getting the teaching in front of the people asking the questions, online and in churches.</li>
+    </ul>
+  </div>
+  <div class="foot"><span>Apologetics Nigeria</span><span>06 · Partner &amp; give</span></div>
+</section>
+
+<!-- ═════════ 07 VOLUNTEER ═════════ -->
+<section class="page page--ink" id="s7">
+  <div class="band band--red"><span class="n">07</span><div><h2>Volunteer.</h2><p class="sub">Bring your craft to the work.</p></div></div>
+  <div class="body">
+    <p class="lead">We are building a team of people who can actually do the work — designers, editors, writers, social media people — and who want their craft to count for <em>something longer than a campaign</em>.</p>
+
+    <h3 style="margin-top:8mm">Where we need you</h3>
+    <ul class="dash">
+      <li><b>Visual designer</b> — social graphics, flyers, decks and campaign assets inside an established brand system. Portfolio required.</li>
+      <li><b>Video editor</b> — teaching sessions cut into shorts and full episodes, subtitles and thumbnails. Showreel required.</li>
+      <li><b>Content &amp; social media manager</b> — the posting schedule across Instagram, TikTok and YouTube, captions, comments and DMs.</li>
+      <li><b>Content writer</b> — scripts, articles, teaching notes and research summaries. Everything we publish is sourced.</li>
+      <li><b>Notes &amp; resources</b> — turning sessions into the one-page summaries and slide packs we send out afterwards.</li>
+    </ul>
+
+    <h3>Let us be straight with you</h3>
+    <div class="cols cols--3" style="margin-top:4mm">
+      <div><p class="k" style="color:var(--cyan)">Unpaid</p><p class="p" style="margin-top:2mm">We are not in a position to pay yet. We will not pretend otherwise, and we will not waste your time.</p></div>
+      <div><p class="k" style="color:var(--cyan)">Remote</p><p class="p" style="margin-top:2mm">Everything runs online. Where you live does not matter — several of our people are outside Nigeria.</p></div>
+      <div><p class="k" style="color:var(--cyan)">Experts, not enthusiasm</p><p class="p" style="margin-top:2mm">Send your portfolio, showreel or writing samples. We will actually look at them.</p></div>
+    </div>
+    <p class="p" style="margin-top:7mm"><b>You get the credit</b> — your name on the work, the pieces for your portfolio, and a reference whenever you need one. Apply at <b>apologeticsnigeria.com/vol</b>.</p>
+  </div>
+  <div class="foot"><span>Apologetics Nigeria</span><span>07 · Volunteer</span></div>
+</section>
+
+<!-- ═════════ BACK COVER ═════════ -->
+<section class="page back">
+  <div class="back-in">
+    <p class="c-brand">Apologetics Nigeria</p>
+    <div class="c-rule"></div>
+    <q>“Always be prepared to give an answer to everyone who asks you to give the reason for the hope that you have. But do this with gentleness and respect.”</q>
+    <p class="ref">1 Peter 3:15</p>
+
+    <div class="contact">
+      <div><p class="k">Email</p><p class="v"><a href="mailto:hello@apologeticsnigeria.com">hello@apologeticsnigeria.com</a></p></div>
+      <div><p class="k">Website</p><p class="v"><a href="https://apologeticsnigeria.com">apologeticsnigeria.com</a></p></div>
+      <div><p class="k">Instagram</p><p class="v"><a href="https://www.instagram.com/apologeticsnigeria/">@apologeticsnigeria</a></p></div>
+      <div><p class="k">Based in</p><p class="v">Lagos, Nigeria</p></div>
+    </div>
+    <p class="sdg">Grounded believers · defended faith · a generation that can give a reason for its hope.</p>
+  </div>
+  <div class="c-strip">
+    <div class="cy"><span>Invite</span><span>Pray</span><span>Give</span><span>Volunteer</span></div>
+    <div class="ye"></div>
+  </div>
+</section>
+
+</body>
+</html>

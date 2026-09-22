@@ -31,12 +31,15 @@ Static site. No build step. Deployed on Vercel straight from `main`.
     defending-the-faith.ics  Calendar file — 3 events, 2 reminders each
     defending-the-faith-attendee-pack.pdf
                              6-page attendee pack, downloaded from registered.html
+    apologetics-nigeria-profile.pdf
+                             10-page ministry profile, downloaded from the homepage
 
 /templates
   email-signature.html       Copy-paste email signatures (open in a browser)
   email-reminder.html        Mailchimp reminder email (Code your own → Paste in code)
   attendee-pack/             Source of the attendee pack PDF. Edit pack.html, then
                              run `python3 render.py` inside the folder (needs Playwright)
+  profile/                   Source of the ministry profile PDF — same method
 ```
 
 ---
