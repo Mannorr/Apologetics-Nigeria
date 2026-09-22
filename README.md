@@ -17,8 +17,12 @@ Static site. No build step. Deployed on Vercel straight from `main`.
   vercel.json                Deploy config + legacy URL rewrites
 
 /assets
-  /css/styles.css            Single global stylesheet
-  /js/script.js              Nav, reveal animations, form submission
+  /css/v2.css                The stylesheet every page uses
+  /js/v2.js                  All behaviour: nav, menu, forms, deck viewer, filters,
+                             countdowns, homepage interactions. No dependencies.
+  /fonts                     Archivo, Newsreader, IBM Plex Mono (self-hosted)
+  /css/styles.css            v1 — no page uses it. Kept only because vercel.json
+  /js/script.js              still serves /styles.css and /script.js (see Rules)
   /img
     /brand                   logo, favicon, og-image, founder, signature logos
     /training                Speaker posters, event posters, banners
@@ -77,23 +81,41 @@ Do this *before* announcing any change. The page updates silently.
 | Yellow     | `#FEC94B` | Lower footer strip, labels on dark          |
 | Red        | `#E70804` | Eyebrow labels, rules, primary buttons      |
 
-Type: **Newsreader** for display and quotes, **Inter** for UI and body.
+Website type (v2): **Archivo** condensed for headlines, **Newsreader** for body and
+italic accents, **IBM Plex Mono** for labels and metadata — all in `/assets/fonts`.
+Motif: the slanted corner cut from the logomark, used on buttons, cards and images.
 Print and social work uses **Bodoni Moda** at low optical size for display.
+
+Website colours are `--ink #040C0E`, `--paper #F6F2E9`, `--paper-2 #EDE7DA`,
+`--gold #A9803F`, `--gold-2 #C9A25A`, `--stone #6B6659`, `--stone-2 #8B958F`.
 
 ---
 
 ## Forms
 
-Both forms post to Formspree and are handled by `handleFormSubmit` in
-`assets/js/script.js`.
+All forms post to Formspree and are handled in `assets/js/v2.js` (section 15).
 
 | Form         | Endpoint                          | On success                |
 |--------------|-----------------------------------|---------------------------|
 | Contact      | `formspree.io/f/mkolkrqb`         | Inline confirmation       |
 | Registration | `formspree.io/f/xqpkbrwp`         | Redirects to `registered.html` |
+| Newsletter   | `formspree.io/f/mkolkrqb`         | Inline confirmation       |
+| Volunteers   | `formspree.io/f/mzezbggj`         | Shows the WhatsApp step   |
 
 The redirect is driven by `data-success-redirect` on the form element, with
 Formspree's `_next` field as a no-JavaScript fallback.
+
+---
+
+## Checking nothing broke
+
+```
+python3 tests/check.py verify
+```
+
+Runs ~550 checks on every page — links, forms, decks, videos, mobile menu, meta
+tags, legacy URLs — against `tests/baseline.json`. See `tests/FUNCTIONALITY.md`.
+Only re-record the baseline (`snapshot`) on purpose, from a version you trust.
 
 ---
 
@@ -101,7 +123,7 @@ Formspree's `_next` field as a no-JavaScript fallback.
 
 Remove or archive:
 
-- Training banner block in `index.html` — marked `remove after 18 Oct 2026`
-- `.tr-banner` rules at the end of `assets/css/styles.css`
+- The ticket section in `index.html` — marked `remove after 18 Oct 2026`
+  (the `.ticket` / `.promo` rules in `v2.css` can stay; nothing else uses them)
 
 Keep `training.html` and `join.html` live as a record.

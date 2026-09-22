@@ -21,117 +21,153 @@
 <meta name="twitter:title" content="Partner With Us — Invite, Pray, Give | Apologetics Nigeria" />
 <meta name="twitter:description" content="Partner with Apologetics Nigeria — invite us to train your church, pray for the work, or give to support the spread of the gospel." />
 <meta name="twitter:image" content="https://apologeticsnigeria.com/assets/img/brand/og-image.png" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/styles.css" />
+<link rel="preload" href="assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/newsreader-italic.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="assets/css/v2.css" />
+<script>document.documentElement.classList.add("js")</script>
 </head>
-<body class="interior">
+<body class="v2 page-partner" id="top">
 
-<header class="nav" id="nav">
-  <div class="wrap nav-inner">
-    <a href="index" class="brand" aria-label="Apologetics Nigeria — home">
-      <img src="assets/img/brand/logo.png" alt="Apologetics Nigeria" class="brand-logo" id="brandLogo" onerror="this.remove();" />
-    </a>
-    <nav class="nav-links" id="navlinks">
-      <a href="training" class="lk" data-page="training">Training</a>
-      <a href="resources" class="lk" data-page="resources">Resources</a>
-      <a href="about" class="lk" data-page="about">About</a>
-      <a href="beliefs" class="lk" data-page="beliefs">Beliefs</a>
-      <a href="partner" class="lk" data-page="partner">Partner</a>
-      <a href="contact" class="lk" data-page="contact">Contact</a>
-      <a href="partner#give" class="btn btn-gold">Give</a>
-    </nav>
-    <button class="nav-toggle" id="navtoggle" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ═════════ NAV ═════════ -->
+<header class="bar" id="bar" data-theme="dark">
+  <a href="index" class="bar-brand" aria-label="Apologetics Nigeria — home">
+    <img src="assets/img/brand/logo.png" alt="" width="4080" height="2295" />
+  </a>
+  <p class="bar-clock mono" aria-hidden="true"><span class="dot"></span>Lagos, NG&nbsp;<span data-clock>--:--</span>&nbsp;WAT</p>
+  <div class="bar-actions">
+    <a href="partner#give" class="cta cta--gold cta--sm" data-cursor="Give">Give</a>
+    <button class="bar-menu" id="menuBtn" aria-expanded="false" aria-controls="menu">
+      <span class="bar-menu-label mono">Menu</span>
+      <span class="bar-menu-icon" aria-hidden="true"><i></i><i></i></span>
     </button>
   </div>
 </header>
 
-<main>
-<h1 class="sr-only">Partner With Us</h1>
-<!-- PARTNER + GIVE -->
-<section id="partner">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="eyebrow">Stand with us</p>
-      <h2 class="h2">Three ways to partner.</h2>
-    </div>
-    <div class="ways">
-      <div class="way reveal">
-        <span class="wnum">01 / Invite</span>
-        <h3>Open the door</h3>
-        <p>Host training, a workshop, or a conversation for the believers and leaders in your church or ministry.</p>
+<!-- ═════════ MENU OVERLAY ═════════ -->
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Site menu" hidden>
+  <div class="menu-inner" tabindex="-1">
+    <nav class="menu-links" aria-label="Primary">
+      <a href="training" data-i="01"><span class="menu-word">Training</span><em>Defending the Faith · 16–18 Oct</em></a>
+      <a href="resources" data-i="02"><span class="menu-word">Resources</span><em>Talks, decks and video library</em></a>
+      <a href="about" data-i="03"><span class="menu-word">About</span><em>Who we are</em></a>
+      <a href="beliefs" data-i="04"><span class="menu-word">Beliefs</span><em>What we hold</em></a>
+      <a href="partner" aria-current="page" data-i="05"><span class="menu-word">Partner</span><em>Churches, pastors, ministry groups</em></a>
+      <a href="contact" data-i="06"><span class="menu-word">Contact</span><em>Write to us</em></a>
+    </nav>
+    <aside class="menu-side">
+      <p class="mono menu-k">Always be prepared</p>
+      <p class="menu-verse">“…to give an answer to everyone who asks you to give the reason for the hope that you have.”</p>
+      <p class="mono menu-k">1 Peter 3:15</p>
+      <div class="menu-side-foot">
+        <a href="partner#give" class="cta cta--gold">Support the work</a>
+        <a href="https://www.instagram.com/apologeticsnigeria/" target="_blank" rel="noopener" class="mono ulink">Instagram ↗</a>
       </div>
-      <div class="way reveal d1">
-        <span class="wnum">02 / Pray</span>
-        <h3>Stand in the gap</h3>
-        <p>Pray for grounded believers, a defended faith, and a generation that can give a reason for its hope.</p>
-      </div>
-      <div class="way reveal d2">
-        <span class="wnum">03 / Give</span>
-        <h3>Fuel the work</h3>
-        <p>Support with a one-off gift, a monthly partnership, or by sponsoring a specific training, film, or resource.</p>
-      </div>
-    </div>
+    </aside>
+  </div>
+</div>
 
-    <!-- GIVE -->
-    <div class="give" id="give">
-      <div class="gwrap">
-        <p class="eyebrow">Give &amp; sponsor</p>
-        <h3>Help equip a generation to stand.</h3>
-        <p class="gnote">Recurring monthly partnership is the most valuable kind of support — it gives the work stability — while sponsorships let us take on larger projects. As our registration with the Corporate Affairs Commission (CAC) is completed, a dedicated ministry account will follow.</p>
-        <div class="give-cta">
-          <a href="https://flutterwave.com/pay/qjh7xrxiukiq" target="_blank" rel="noopener" class="btn btn-gold">Give in Naira →</a>
-          <a href="https://buy.stripe.com/cNieVe85O0jq3eQ2up1wY00" target="_blank" rel="noopener" class="btn btn-ghost">Give internationally →</a>
-        </div>
-        <p class="give-foot"><span class="ast">*</span> Every penny goes into the spread of the gospel.</p>
-      </div>
+<div class="cursor" aria-hidden="true"><span class="cursor-label"></span></div>
+
+<main id="main">
+<h1 class="sr-only">Partner With Us</h1>
+
+<section class="phero" data-theme="dark" data-lamp>
+  <p class="phero-index mono"><b>05</b> / 06 — Partner</p>
+  <p class="kicker mono kicker--gold">Stand with us</p>
+  <h2 class="phero-title"><span class="t-cond">Three ways</span> <em class="t-serif">to partner.</em></h2>
+  <div class="phero-foot">
+    <div class="phero-actions" style="justify-self:start">
+      <a href="#give" class="cta cta--gold" data-cursor="Give">Give &amp; sponsor <span class="arr" aria-hidden="true">↓</span></a>
+      <a href="#curriculum" class="cta cta--line">The curriculum</a>
     </div>
   </div>
 </section>
 
+<!-- PARTNER + GIVE -->
+<section class="sec sec--paper" id="partner" data-theme="light">
+  <div class="cards cards--3 ways">
+    <article class="card card--hover reveal">
+      <span class="card-ghost" aria-hidden="true">01</span>
+      <span class="card-k"><span>01 / Invite</span></span>
+      <h3>Open the door</h3>
+      <p>Host training, a workshop, or a conversation for the believers and leaders in your church or ministry.</p>
+    </article>
+    <article class="card card--hover reveal">
+      <span class="card-ghost" aria-hidden="true">02</span>
+      <span class="card-k"><span>02 / Pray</span></span>
+      <h3>Stand in the gap</h3>
+      <p>Pray for grounded believers, a defended faith, and a generation that can give a reason for its hope.</p>
+    </article>
+    <article class="card card--hover reveal">
+      <span class="card-ghost" aria-hidden="true">03</span>
+      <span class="card-k"><span>03 / Give</span></span>
+      <h3>Fuel the work</h3>
+      <p>Support with a one-off gift, a monthly partnership, or by sponsoring a specific training, film, or resource.</p>
+    </article>
+  </div>
+
+  <!-- GIVE -->
+  <div class="give reveal" id="give" style="margin-top:clamp(1.5rem,3vw,2.5rem)">
+    <p class="kicker mono">Give &amp; sponsor</p>
+    <h3 class="give-title"><span class="t-cond">Help equip</span> <em class="t-serif">a generation to stand.</em></h3>
+    <div class="give-body">
+      <p>Recurring monthly partnership is the most valuable kind of support — it gives the work stability — while sponsorships let us take on larger projects. As our registration with the Corporate Affairs Commission (CAC) is completed, a dedicated ministry account will follow.</p>
+      <div class="give-ctas">
+        <a href="https://flutterwave.com/pay/qjh7xrxiukiq" target="_blank" rel="noopener" class="cta cta--gold" data-cursor="Give">Give in Naira <span class="arr" aria-hidden="true">→</span></a>
+        <a href="https://buy.stripe.com/cNieVe85O0jq3eQ2up1wY00" target="_blank" rel="noopener" class="cta cta--line" data-cursor="Give">Give internationally →</a>
+      </div>
+      <p class="give-foot"><span class="ast">*</span> Every penny goes into the spread of the gospel.</p>
+    </div>
+  </div>
+</section>
 
 <!-- CURRICULUM CTA -->
-<section class="tint" id="curriculum">
-  <div class="wrap ccta-inner">
-    <div class="ccta-text">
-      <p class="eyebrow">The curriculum</p>
-      <h2 class="h2">A complete 12-week curriculum — <em class="acc">yours when you partner</em>.</h2>
-      <p class="lede ccta-lede">We teach a clear, structured foundations track — from the existence of God to engaging Islam and atheism and starting real conversations — contextualised for the questions Nigerians are actually asking. Reach out and we'll walk you through the full outline.</p>
+<section class="sec sec--tint" id="curriculum" data-theme="light">
+  <div class="band">
+    <div class="sec-head" style="margin-bottom:0">
+      <p class="kicker mono">The curriculum</p>
+      <h2 class="sec-title reveal"><span class="t-cond">A complete 12-week curriculum —</span> <em class="t-serif">yours when you partner.</em></h2>
+      <p class="sec-lede">We teach a clear, structured foundations track — from the existence of God to engaging Islam and atheism and starting real conversations — contextualised for the questions Nigerians are actually asking. Reach out and we'll walk you through the full outline.</p>
     </div>
-    <div class="ccta-action">
-      <a href="contact" class="btn btn-dark" id="reqCurriculum">Request the curriculum →</a>
-    </div>
+    <a href="contact" class="cta cta--ink" id="reqCurriculum" data-cursor="Ask">Request the curriculum <span class="arr" aria-hidden="true">→</span></a>
   </div>
 </section>
-
-<!-- SCRIPTURE -->
 </main>
 
-<footer class="site">
-  <div class="wrap">
-    <div class="foot-inner">
-      <img src="assets/img/brand/logo.png" alt="Apologetics Nigeria" class="foot-logo" onerror="this.remove();" />
-      <nav class="foot-nav" aria-label="Footer">
-        <a href="training">Training</a>
-        <a href="resources">Resources</a>
-        <a href="about">About</a>
-        <a href="beliefs">Beliefs</a>
-        <a href="partner">Partner</a>
-        <a href="contact">Contact</a>
-        <a href="https://www.instagram.com/apologeticsnigeria/" target="_blank" rel="noopener">Instagram</a>
-        <a href="privacy">Privacy</a>
-      </nav>
-      <div class="foot-bottom">
-        <p class="foot-tag">Grounded believers · defended faith · a generation that can give a reason for its hope.</p>
-        <p class="foot-copy">© 2026 Apologetics Nigeria</p>
-      </div>
+
+<!-- ═════════ FOOTER ═════════ -->
+<footer class="foot" data-theme="dark">
+  <div class="foot-top">
+    <p class="foot-tag">Grounded believers · defended faith · a generation that can give a reason for its hope.</p>
+    <nav class="foot-col" aria-label="Footer">
+      <p class="mono foot-k">Explore</p>
+      <a href="training">Training</a>
+      <a href="resources">Resources</a>
+      <a href="about">About</a>
+      <a href="beliefs">Beliefs</a>
+      <a href="partner" aria-current="page">Partner</a>
+      <a href="contact">Contact</a>
+    </nav>
+    <div class="foot-col">
+      <p class="mono foot-k">Elsewhere</p>
+      <a href="https://www.instagram.com/apologeticsnigeria/" target="_blank" rel="noopener">Instagram ↗</a>
+      <a href="privacy">Privacy</a>
+      <a href="#top">Back to top ↑</a>
     </div>
+  </div>
+  <div class="foot-mark" aria-hidden="true">
+    <span class="foot-word" id="footWord">Apologetics Nigeria</span>
+  </div>
+  <div class="foot-bottom mono">
+    <img src="assets/img/brand/logo.png" alt="Apologetics Nigeria" class="foot-logo" width="4080" height="2295" loading="lazy" />
+    <p>© 2026 Apologetics Nigeria</p>
+    <p>Lagos, NG · <span data-clock>--:--</span> WAT</p>
   </div>
 </footer>
 
-<script src="assets/js/script.js"></script>
+<script src="assets/js/v2.js" defer></script>
 
 </body>
 </html>

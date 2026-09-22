@@ -9,216 +9,190 @@
 <meta name="theme-color" content="#040C0E" />
 <link rel="icon" type="image/png" href="assets/img/brand/favicon.png" />
 <link rel="apple-touch-icon" href="assets/img/brand/apple-touch-icon.png" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/styles.css" />
-
-<style>
-  /* ===== REGISTERED / THANK YOU PAGE ===== */
-  .rg-hero{background:var(--ink);color:var(--parchment);padding:clamp(7.5rem,13vw,10.5rem) 0 clamp(3.5rem,7vw,5.5rem);text-align:center}
-  .rg-check{width:64px;height:64px;border-radius:50%;border:2px solid var(--gold-bright);
-    display:flex;align-items:center;justify-content:center;margin:0 auto 1.8rem;
-    color:var(--gold-bright);font-size:1.7rem;line-height:1}
-  .rg-hero h1{font-family:"Newsreader",serif;font-weight:380;font-size:clamp(2.4rem,5.6vw,4rem);
-    line-height:1.04;letter-spacing:-.015em;margin-bottom:1.1rem}
-  .rg-hero .lede{color:var(--stone-light);max-width:46ch;margin:0 auto;font-size:clamp(1rem,1.5vw,1.1rem)}
-
-  .rg-block{max-width:760px;margin:0 auto}
-  .rg-item{border-top:1px solid var(--line-dark);padding:clamp(1.8rem,3.5vw,2.4rem) 0}
-  .rg-item:last-of-type{border-bottom:1px solid var(--line-dark)}
-  .rg-item h2{font-family:"Inter",sans-serif;font-size:.68rem;letter-spacing:.2em;
-    text-transform:uppercase;color:var(--gold);margin-bottom:1rem;font-weight:600}
-  .rg-item h3{font-family:"Newsreader",serif;font-weight:400;font-size:clamp(1.45rem,2.6vw,1.9rem);
-    line-height:1.2;margin-bottom:.9rem}
-  .rg-item p{font-size:1rem;line-height:1.65;color:var(--stone);margin-bottom:.85rem}
-  .rg-item p:last-child{margin-bottom:0}
-  .rg-item p strong{color:var(--ink);font-weight:600}
-
-  .rg-when{font-family:"Newsreader",serif;font-size:clamp(1.5rem,3vw,2.05rem);line-height:1.3;margin-bottom:1rem}
-  .rg-tz{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;font-size:.9rem;color:var(--stone);margin-top:.4rem}
-  .rg-tz b{color:var(--ink);font-weight:600}
-
-  .rg-days{display:flex;flex-direction:column;gap:1.3rem;margin-top:.4rem}
-  .rg-day{display:flex;gap:1.2rem;align-items:flex-start}
-  .rg-day .n{flex:0 0 auto;font-family:"Inter",sans-serif;font-size:.64rem;letter-spacing:.16em;
-    text-transform:uppercase;color:var(--gold);font-weight:600;padding-top:.35rem;width:56px}
-  .rg-day .c strong{display:block;font-family:"Newsreader",serif;font-size:1.22rem;
-    font-weight:400;color:var(--ink);margin-bottom:.25rem}
-  .rg-day .c span{font-size:.96rem;line-height:1.55;color:var(--stone)}
-
-  .rg-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.3rem}
-  .rg-note{font-size:.87rem;color:var(--stone);margin-top:1rem;line-height:1.6}
-
-  .rg-give{background:var(--ink);color:var(--parchment);border-radius:18px;
-    padding:clamp(2.2rem,5vw,3.4rem);margin-top:clamp(3rem,6vw,4.5rem);text-align:center}
-  .rg-give .eyebrow{color:var(--gold-bright);margin-bottom:1rem}
-  .rg-give h2{font-family:"Newsreader",serif;font-weight:380;
-    font-size:clamp(1.8rem,3.6vw,2.6rem);line-height:1.15;margin-bottom:1.1rem;color:var(--parchment)}
-  .rg-give p{color:var(--stone-light);max-width:52ch;margin:0 auto 1.9rem;line-height:1.65;font-size:1rem}
-  .rg-give-cta{display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center}
-
-  @media (max-width:560px){
-    .rg-day{flex-direction:column;gap:.4rem}
-    .rg-day .n{width:auto;padding-top:0}
-    .rg-cta .btn,.rg-give-cta .btn{width:100%;text-align:center;justify-content:center}
-  }
-</style>
+<link rel="preload" href="assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/newsreader-italic.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="assets/css/v2.css" />
+<script>document.documentElement.classList.add("js")</script>
 </head>
-<body class="interior">
+<body class="v2 page-registered" id="top">
 
-<header class="nav" id="nav">
-  <div class="wrap nav-inner">
-    <a href="index" class="brand" aria-label="Apologetics Nigeria — home">
-      <img src="assets/img/brand/logo.png" alt="Apologetics Nigeria" class="brand-logo" id="brandLogo" onerror="this.remove();" />
-    </a>
-    <nav class="nav-links" id="navlinks">
-      <a href="training" class="lk" data-page="training">Training</a>
-      <a href="resources" class="lk" data-page="resources">Resources</a>
-      <a href="about" class="lk" data-page="about">About</a>
-      <a href="beliefs" class="lk" data-page="beliefs">Beliefs</a>
-      <a href="partner" class="lk" data-page="partner">Partner</a>
-      <a href="contact" class="lk" data-page="contact">Contact</a>
-      <a href="partner#give" class="btn btn-gold">Give</a>
-    </nav>
-    <button class="nav-toggle" id="navtoggle" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ═════════ NAV ═════════ -->
+<header class="bar" id="bar" data-theme="dark">
+  <a href="index" class="bar-brand" aria-label="Apologetics Nigeria — home">
+    <img src="assets/img/brand/logo.png" alt="" width="4080" height="2295" />
+  </a>
+  <p class="bar-clock mono" aria-hidden="true"><span class="dot"></span>Lagos, NG&nbsp;<span data-clock>--:--</span>&nbsp;WAT</p>
+  <div class="bar-actions">
+    <a href="partner#give" class="cta cta--gold cta--sm" data-cursor="Give">Give</a>
+    <button class="bar-menu" id="menuBtn" aria-expanded="false" aria-controls="menu">
+      <span class="bar-menu-label mono">Menu</span>
+      <span class="bar-menu-icon" aria-hidden="true"><i></i><i></i></span>
     </button>
   </div>
 </header>
 
-<main>
+<!-- ═════════ MENU OVERLAY ═════════ -->
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Site menu" hidden>
+  <div class="menu-inner" tabindex="-1">
+    <nav class="menu-links" aria-label="Primary">
+      <a href="training" data-i="01"><span class="menu-word">Training</span><em>Defending the Faith · 16–18 Oct</em></a>
+      <a href="resources" data-i="02"><span class="menu-word">Resources</span><em>Talks, decks and video library</em></a>
+      <a href="about" data-i="03"><span class="menu-word">About</span><em>Who we are</em></a>
+      <a href="beliefs" data-i="04"><span class="menu-word">Beliefs</span><em>What we hold</em></a>
+      <a href="partner" data-i="05"><span class="menu-word">Partner</span><em>Churches, pastors, ministry groups</em></a>
+      <a href="contact" data-i="06"><span class="menu-word">Contact</span><em>Write to us</em></a>
+    </nav>
+    <aside class="menu-side">
+      <p class="mono menu-k">Always be prepared</p>
+      <p class="menu-verse">“…to give an answer to everyone who asks you to give the reason for the hope that you have.”</p>
+      <p class="mono menu-k">1 Peter 3:15</p>
+      <div class="menu-side-foot">
+        <a href="partner#give" class="cta cta--gold">Support the work</a>
+        <a href="https://www.instagram.com/apologeticsnigeria/" target="_blank" rel="noopener" class="mono ulink">Instagram ↗</a>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<div class="cursor" aria-hidden="true"><span class="cursor-label"></span></div>
+
+<main id="main">
 
 <!-- HERO -->
-<section class="rg-hero">
-  <div class="wrap">
-    <div class="rg-check" aria-hidden="true">&#10003;</div>
-    <h1>You're registered.</h1>
-    <p class="lede">Thank you for signing up for Defending the Faith, and welcome. Here is everything you need.</p>
+<section class="phero rg-hero" data-theme="dark" data-lamp>
+  <div class="tick-mark" aria-hidden="true">&#10003;</div>
+  <h1 class="phero-title" aria-label="You're registered."><span class="t-cond" aria-hidden="true">You're</span> <em class="t-serif" aria-hidden="true">registered.</em></h1>
+  <div class="phero-foot">
+    <p class="phero-lede">Thank you for signing up for Defending the Faith, and welcome. Here is everything you need.</p>
+    <div class="phero-actions">
+      <a href="assets/files/defending-the-faith.ics" class="cta cta--gold" download data-cursor="Save">Add all three evenings to your calendar</a>
+    </div>
   </div>
 </section>
 
 <!-- DETAILS -->
-<section>
-  <div class="wrap rg-block">
-
-    <div class="rg-item reveal">
-      <h2>When</h2>
-      <p class="rg-when">Friday 16, Saturday 17 and Sunday 18 October<br />7:00&ndash;10:00PM WAT each evening</p>
-      <p>If you're joining from outside Nigeria:</p>
-      <div class="rg-tz">
-        <span>United Kingdom <b>7&ndash;10PM</b></span>
-        <span>Toronto &amp; New York <b>2&ndash;5PM</b></span>
-        <span>Los Angeles <b>11AM&ndash;2PM</b></span>
-      </div>
-      <div class="rg-cta">
-        <a href="assets/files/defending-the-faith.ics" class="btn btn-dark" download>Add all three evenings to your calendar</a>
-      </div>
-    </div>
-
-    <div class="rg-item reveal">
-      <h2>Where</h2>
-      <h3>Live online.</h3>
-      <p>Your joining link will be emailed to you before the first session, and again on the day. Nothing else is needed &mdash; no app, no account, no ticket.</p>
-    </div>
-
-    <div class="rg-item reveal">
-      <h2>What we'll cover</h2>
-      <div class="rg-days">
-        <div class="rg-day">
-          <span class="n">Day 01</span>
-          <span class="c"><strong>Foundations</strong><span>What apologetics is, the case that God exists, and why the Bible can be trusted as history.</span></span>
-        </div>
-        <div class="rg-day">
-          <span class="n">Day 02</span>
-          <span class="c"><strong>Jesus and Islam</strong><span>The evidence for the resurrection, whether Jesus claimed deity, and engaging Islam through its own primary sources.</span></span>
-        </div>
-        <div class="rg-day">
-          <span class="n">Day 03</span>
-          <span class="c"><strong>Doubt and the conversation</strong><span>Suffering and evil, answering atheism, handling your own doubts, and how to actually have the conversation.</span></span>
+<section class="sec sec--paper" data-theme="light">
+  <div class="rows rg-block">
+    <div class="row reveal">
+      <h2 class="row-k">When</h2>
+      <div>
+        <p class="when-big">Friday 16, Saturday 17 and Sunday 18 October<br />7:00&ndash;10:00PM WAT each evening</p>
+        <p>If you're joining from outside Nigeria:</p>
+        <div class="tz-list">
+          <span>United Kingdom <b>7&ndash;10PM</b></span>
+          <span>Toronto &amp; New York <b>2&ndash;5PM</b></span>
+          <span>Los Angeles <b>11AM&ndash;2PM</b></span>
         </div>
       </div>
-      <p class="rg-note">No prior study is assumed. Come as you are.</p>
     </div>
 
-    <div class="rg-item reveal">
-      <h2>If you miss an evening</h2>
-      <p>Every session is recorded. Replays go to everyone registered, along with the notes and slides. <strong>A missed session is not a lost session.</strong></p>
-    </div>
-
-    <div class="rg-item reveal">
-      <h2>Join the WhatsApp group &mdash; optional</h2>
-      <p>We've opened a group for reminders, updates and questions between sessions. It's the fastest way to stay in the loop, and you can ask the things you'd rather not ask live.</p>
-      <div class="rg-cta">
-        <a href="https://chat.whatsapp.com/IkdbpteTCXp7W58NPxYBaK?s=cl&amp;p=i&amp;mlu=4&amp;ilr=4" target="_blank" rel="noopener" class="btn btn-gold">Join the WhatsApp group →</a>
+    <div class="row reveal">
+      <h2 class="row-k">Where</h2>
+      <div>
+        <h3>Live online.</h3>
+        <p>Your joining link will be emailed to you before the first session, and again on the day. Nothing else is needed &mdash; no app, no account, no ticket.</p>
       </div>
-      <p class="rg-note">Completely optional &mdash; everything important still comes by email either way. One thing to know before you join: as with any WhatsApp group, members can see each other's phone numbers. If you'd rather not, simply stay on email and you'll miss nothing.</p>
     </div>
 
-    <div class="rg-item reveal">
-      <h2>One more thing</h2>
-      <p>You told us the question you most want answered. We read every one of them, and they are already shaping what gets taught.</p>
-      <p>Several of you asked about suffering &mdash; why God allows pain, why the righteous still die, whether God has favourites. <strong>Those are not side questions, and we will not treat them as such.</strong></p>
+    <div class="row reveal">
+      <h2 class="row-k">What we'll cover</h2>
+      <div>
+        <div class="day-rows">
+          <div><span class="n">Day 01</span><span class="c"><strong>Foundations</strong><span>What apologetics is, the case that God exists, and why the Bible can be trusted as history.</span></span></div>
+          <div><span class="n">Day 02</span><span class="c"><strong>Jesus and Islam</strong><span>The evidence for the resurrection, whether Jesus claimed deity, and engaging Islam through its own primary sources.</span></span></div>
+          <div><span class="n">Day 03</span><span class="c"><strong>Doubt and the conversation</strong><span>Suffering and evil, answering atheism, handling your own doubts, and how to actually have the conversation.</span></span></div>
+        </div>
+        <p class="note">No prior study is assumed. Come as you are.</p>
+      </div>
     </div>
 
+    <div class="row reveal">
+      <h2 class="row-k">If you miss an evening</h2>
+      <div><p>Every session is recorded. Replays go to everyone registered, along with the notes and slides. <strong>A missed session is not a lost session.</strong></p></div>
+    </div>
+
+    <div class="row reveal">
+      <h2 class="row-k">Join the WhatsApp group &mdash; optional</h2>
+      <div>
+        <p>We've opened a group for reminders, updates and questions between sessions. It's the fastest way to stay in the loop, and you can ask the things you'd rather not ask live.</p>
+        <div class="row-actions">
+          <a href="https://chat.whatsapp.com/IkdbpteTCXp7W58NPxYBaK?s=cl&amp;p=i&amp;mlu=4&amp;ilr=4" target="_blank" rel="noopener" class="cta cta--ink" data-cursor="Join">Join the WhatsApp group <span class="arr" aria-hidden="true">→</span></a>
+        </div>
+        <p class="note">Completely optional &mdash; everything important still comes by email either way. One thing to know before you join: as with any WhatsApp group, members can see each other's phone numbers. If you'd rather not, simply stay on email and you'll miss nothing.</p>
+      </div>
+    </div>
+
+    <div class="row reveal">
+      <h2 class="row-k">One more thing</h2>
+      <div>
+        <p>You told us the question you most want answered. We read every one of them, and they are already shaping what gets taught.</p>
+        <p>Several of you asked about suffering &mdash; why God allows pain, why the righteous still die, whether God has favourites. <strong>Those are not side questions, and we will not treat them as such.</strong></p>
+      </div>
+    </div>
   </div>
-</section>
 
-<!-- GIVE -->
-<section>
-  <div class="wrap">
-    <div class="rg-give reveal">
-      <p class="eyebrow">Support the work</p>
-      <h2>This training is free. It is not costless.</h2>
+  <!-- GIVE -->
+  <div class="give rg-give reveal" style="margin-top:clamp(3rem,6vw,5rem)">
+    <p class="kicker mono">Support the work</p>
+    <h2 class="give-title"><span class="t-cond">This training is free.</span> <em class="t-serif">It is not costless.</em></h2>
+    <div class="give-body">
       <p>Every session, every recording and every set of notes is given away without charge, so that no believer is priced out of being able to answer for their faith. If you would like to help us keep it that way, you can give here. Nothing is expected &mdash; your seat is yours either way.</p>
-      <div class="rg-give-cta">
-        <a href="https://flutterwave.com/pay/qjh7xrxiukiq" target="_blank" rel="noopener" class="btn btn-gold">Give in Naira →</a>
-        <a href="https://buy.stripe.com/cNieVe85O0jq3eQ2up1wY00" target="_blank" rel="noopener" class="btn btn-ghost">Give internationally →</a>
+      <div class="give-ctas">
+        <a href="https://flutterwave.com/pay/qjh7xrxiukiq" target="_blank" rel="noopener" class="cta cta--gold" data-cursor="Give">Give in Naira <span class="arr" aria-hidden="true">→</span></a>
+        <a href="https://buy.stripe.com/cNieVe85O0jq3eQ2up1wY00" target="_blank" rel="noopener" class="cta cta--line" data-cursor="Give">Give internationally →</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- SHARE -->
-<section style="padding-top:0">
-  <div class="wrap rg-block" style="text-align:center">
-    <p style="font-family:'Newsreader',serif;font-size:clamp(1.3rem,2.4vw,1.65rem);line-height:1.35;margin-bottom:1.3rem">
-      Know someone who has gone quiet when the hard question came?</p>
-    <p style="color:var(--stone);margin-bottom:1.6rem">Send them the training. Registration is open until the first session.</p>
-    <div class="rg-cta" style="justify-content:center">
-      <a href="https://wa.me/?text=I%20just%20registered%20for%20Defending%20the%20Faith%20%E2%80%94%20a%20free%203-day%20apologetics%20training%2C%2016%E2%80%9318%20October%2C%207%E2%80%9310PM%20WAT.%20Thought%20of%20you%3A%20https%3A%2F%2Fapologeticsnigeria.com%2Ftraining" target="_blank" rel="noopener" class="btn btn-dark">Share on WhatsApp →</a>
-      <a href="training" class="btn btn-ghost" style="color:var(--ink);border-color:var(--ink)">Back to the training page</a>
+<section class="sec sec--tint" data-theme="light">
+  <div class="share">
+    <p class="share-q reveal">Know someone who has gone quiet when the <em>hard question</em> came?</p>
+    <p class="sec-lede" style="margin-bottom:1.8rem">Send them the training. Registration is open until the first session.</p>
+    <div class="row-actions">
+      <a href="https://wa.me/?text=I%20just%20registered%20for%20Defending%20the%20Faith%20%E2%80%94%20a%20free%203-day%20apologetics%20training%2C%2016%E2%80%9318%20October%2C%207%E2%80%9310PM%20WAT.%20Thought%20of%20you%3A%20https%3A%2F%2Fapologeticsnigeria.com%2Ftraining" target="_blank" rel="noopener" class="cta cta--ink" data-cursor="Share">Share on WhatsApp <span class="arr" aria-hidden="true">→</span></a>
+      <a href="training" class="cta cta--line" style="color:var(--ink)">Back to the training page</a>
     </div>
-    <p style="font-family:'Newsreader',serif;font-style:italic;color:var(--gold);margin-top:2.6rem;font-size:1.05rem">
-      See you on the 16th. &mdash; Soli Deo Gloria</p>
+    <p class="sign">See you on the 16th. &mdash; Soli Deo Gloria</p>
   </div>
 </section>
-
 </main>
 
-<footer class="site">
-  <div class="wrap">
-    <div class="foot-inner">
-      <img src="assets/img/brand/logo.png" alt="Apologetics Nigeria" class="foot-logo" onerror="this.remove();" />
-      <nav class="foot-nav" aria-label="Footer">
-        <a href="training">Training</a>
-        <a href="resources">Resources</a>
-        <a href="about">About</a>
-        <a href="beliefs">Beliefs</a>
-        <a href="partner">Partner</a>
-        <a href="contact">Contact</a>
-        <a href="https://www.instagram.com/apologeticsnigeria/" target="_blank" rel="noopener">Instagram</a>
-        <a href="privacy">Privacy</a>
-      </nav>
-      <div class="foot-bottom">
-        <p class="foot-tag">Grounded believers · defended faith · a generation that can give a reason for its hope.</p>
-        <p class="foot-copy">© 2026 Apologetics Nigeria</p>
-      </div>
+
+<!-- ═════════ FOOTER ═════════ -->
+<footer class="foot" data-theme="dark">
+  <div class="foot-top">
+    <p class="foot-tag">Grounded believers · defended faith · a generation that can give a reason for its hope.</p>
+    <nav class="foot-col" aria-label="Footer">
+      <p class="mono foot-k">Explore</p>
+      <a href="training">Training</a>
+      <a href="resources">Resources</a>
+      <a href="about">About</a>
+      <a href="beliefs">Beliefs</a>
+      <a href="partner">Partner</a>
+      <a href="contact">Contact</a>
+    </nav>
+    <div class="foot-col">
+      <p class="mono foot-k">Elsewhere</p>
+      <a href="https://www.instagram.com/apologeticsnigeria/" target="_blank" rel="noopener">Instagram ↗</a>
+      <a href="privacy">Privacy</a>
+      <a href="#top">Back to top ↑</a>
     </div>
+  </div>
+  <div class="foot-mark" aria-hidden="true">
+    <span class="foot-word" id="footWord">Apologetics Nigeria</span>
+  </div>
+  <div class="foot-bottom mono">
+    <img src="assets/img/brand/logo.png" alt="Apologetics Nigeria" class="foot-logo" width="4080" height="2295" loading="lazy" />
+    <p>© 2026 Apologetics Nigeria</p>
+    <p>Lagos, NG · <span data-clock>--:--</span> WAT</p>
   </div>
 </footer>
 
-<script src="assets/js/script.js"></script>
+<script src="assets/js/v2.js" defer></script>
 
 </body>
 </html>

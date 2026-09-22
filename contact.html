@@ -21,58 +21,89 @@
 <meta name="twitter:title" content="Contact | Apologetics Nigeria" />
 <meta name="twitter:description" content="Get in touch with Apologetics Nigeria — invite us to train your church, request the curriculum, or ask a question." />
 <meta name="twitter:image" content="https://apologeticsnigeria.com/assets/img/brand/og-image.png" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/styles.css" />
+<link rel="preload" href="assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/newsreader-italic.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="assets/css/v2.css" />
+<script>document.documentElement.classList.add("js")</script>
 </head>
-<body class="interior">
+<body class="v2 page-contact" id="top">
 
-<header class="nav" id="nav">
-  <div class="wrap nav-inner">
-    <a href="index" class="brand" aria-label="Apologetics Nigeria — home">
-      <img src="assets/img/brand/logo.png" alt="Apologetics Nigeria" class="brand-logo" id="brandLogo" onerror="this.remove();" />
-    </a>
-    <nav class="nav-links" id="navlinks">
-      <a href="training" class="lk" data-page="training">Training</a>
-      <a href="resources" class="lk" data-page="resources">Resources</a>
-      <a href="about" class="lk" data-page="about">About</a>
-      <a href="beliefs" class="lk" data-page="beliefs">Beliefs</a>
-      <a href="partner" class="lk" data-page="partner">Partner</a>
-      <a href="contact" class="lk" data-page="contact">Contact</a>
-      <a href="partner#give" class="btn btn-gold">Give</a>
-    </nav>
-    <button class="nav-toggle" id="navtoggle" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ═════════ NAV ═════════ -->
+<header class="bar" id="bar" data-theme="dark">
+  <a href="index" class="bar-brand" aria-label="Apologetics Nigeria — home">
+    <img src="assets/img/brand/logo.png" alt="" width="4080" height="2295" />
+  </a>
+  <p class="bar-clock mono" aria-hidden="true"><span class="dot"></span>Lagos, NG&nbsp;<span data-clock>--:--</span>&nbsp;WAT</p>
+  <div class="bar-actions">
+    <a href="partner#give" class="cta cta--gold cta--sm" data-cursor="Give">Give</a>
+    <button class="bar-menu" id="menuBtn" aria-expanded="false" aria-controls="menu">
+      <span class="bar-menu-label mono">Menu</span>
+      <span class="bar-menu-icon" aria-hidden="true"><i></i><i></i></span>
     </button>
   </div>
 </header>
 
-<main>
+<!-- ═════════ MENU OVERLAY ═════════ -->
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Site menu" hidden>
+  <div class="menu-inner" tabindex="-1">
+    <nav class="menu-links" aria-label="Primary">
+      <a href="training" data-i="01"><span class="menu-word">Training</span><em>Defending the Faith · 16–18 Oct</em></a>
+      <a href="resources" data-i="02"><span class="menu-word">Resources</span><em>Talks, decks and video library</em></a>
+      <a href="about" data-i="03"><span class="menu-word">About</span><em>Who we are</em></a>
+      <a href="beliefs" data-i="04"><span class="menu-word">Beliefs</span><em>What we hold</em></a>
+      <a href="partner" data-i="05"><span class="menu-word">Partner</span><em>Churches, pastors, ministry groups</em></a>
+      <a href="contact" aria-current="page" data-i="06"><span class="menu-word">Contact</span><em>Write to us</em></a>
+    </nav>
+    <aside class="menu-side">
+      <p class="mono menu-k">Always be prepared</p>
+      <p class="menu-verse">“…to give an answer to everyone who asks you to give the reason for the hope that you have.”</p>
+      <p class="mono menu-k">1 Peter 3:15</p>
+      <div class="menu-side-foot">
+        <a href="partner#give" class="cta cta--gold">Support the work</a>
+        <a href="https://www.instagram.com/apologeticsnigeria/" target="_blank" rel="noopener" class="mono ulink">Instagram ↗</a>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<div class="cursor" aria-hidden="true"><span class="cursor-label"></span></div>
+
+<main id="main">
 <h1 class="sr-only">Contact Apologetics Nigeria</h1>
+
+<section class="phero" data-theme="dark" data-lamp>
+  <p class="phero-index mono"><b>06</b> / 06 — Contact</p>
+  <p class="kicker mono kicker--gold">Get in touch</p>
+  <h2 class="phero-title"><span class="t-cond">Let's talk</span> <em class="t-serif">about your church.</em></h2>
+  <div class="phero-foot">
+    <p class="phero-lede">Whether you'd like to invite us, request the curriculum, explore partnership, or support the work — we'd love to hear from you.</p>
+  </div>
+</section>
+
 <!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="wrap contact-grid">
-    <div class="contact-intro">
-      <p class="eyebrow reveal">Get in touch</p>
-      <h2 class="h2 reveal">Let's talk about your church.</h2>
-      <p class="lede contact-lede reveal">Whether you'd like to invite us, request the curriculum, explore partnership, or support the work — we'd love to hear from you.</p>
-      <div class="contact-methods reveal d1">
+<section class="sec sec--paper contact" id="contact" data-theme="light">
+  <div class="split">
+    <div class="sticky-col">
+      <div class="channels contact-methods">
         <a href="mailto:hello@apologeticsnigeria.com"><span class="k">Email</span> hello@apologeticsnigeria.com</a>
         <a href="https://www.instagram.com/apologeticsnigeria/"><span class="k">Instagram</span> @apologeticsnigeria</a>
         <span><span class="k">Based in</span> Lagos, Nigeria</span>
       </div>
     </div>
 
-    <form class="contact-form reveal d1" id="contactForm" action="https://formspree.io/f/mkolkrqb" method="POST">
+    <form class="fm contact-form" id="contactForm" action="https://formspree.io/f/mkolkrqb" method="POST">
       <input type="hidden" name="_subject" value="New enquiry — Apologetics Nigeria website" />
-      <div class="field">
-        <label for="cf-name">Name</label>
-        <input type="text" id="cf-name" name="name" required autocomplete="name" />
-      </div>
-      <div class="field">
-        <label for="cf-email">Email</label>
-        <input type="email" id="cf-email" name="email" required autocomplete="email" />
+      <div class="fm-row">
+        <div class="field">
+          <label for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="name" required autocomplete="name" />
+        </div>
+        <div class="field">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" required autocomplete="email" />
+        </div>
       </div>
       <div class="field">
         <label for="cf-org">Church / Organisation <span class="opt">(optional)</span></label>
@@ -95,37 +126,45 @@
         <label for="cf-message">Message</label>
         <textarea id="cf-message" name="message" rows="5" required></textarea>
       </div>
-      <button type="submit" class="btn btn-gold" id="cf-submit">Send message →</button>
-      <p class="form-status" id="cf-status" role="status" aria-live="polite"></p>
+      <button type="submit" class="cta cta--ink" id="cf-submit" data-cursor="Send"><span class="cta-t">Send message</span> <span class="arr" aria-hidden="true">→</span></button>
+      <p class="form-status mono" id="cf-status" role="status" aria-live="polite"></p>
     </form>
   </div>
 </section>
-
 </main>
 
-<footer class="site">
-  <div class="wrap">
-    <div class="foot-inner">
-      <img src="assets/img/brand/logo.png" alt="Apologetics Nigeria" class="foot-logo" onerror="this.remove();" />
-      <nav class="foot-nav" aria-label="Footer">
-        <a href="training">Training</a>
-        <a href="resources">Resources</a>
-        <a href="about">About</a>
-        <a href="beliefs">Beliefs</a>
-        <a href="partner">Partner</a>
-        <a href="contact">Contact</a>
-        <a href="https://www.instagram.com/apologeticsnigeria/" target="_blank" rel="noopener">Instagram</a>
-        <a href="privacy">Privacy</a>
-      </nav>
-      <div class="foot-bottom">
-        <p class="foot-tag">Grounded believers · defended faith · a generation that can give a reason for its hope.</p>
-        <p class="foot-copy">© 2026 Apologetics Nigeria</p>
-      </div>
+
+<!-- ═════════ FOOTER ═════════ -->
+<footer class="foot" data-theme="dark">
+  <div class="foot-top">
+    <p class="foot-tag">Grounded believers · defended faith · a generation that can give a reason for its hope.</p>
+    <nav class="foot-col" aria-label="Footer">
+      <p class="mono foot-k">Explore</p>
+      <a href="training">Training</a>
+      <a href="resources">Resources</a>
+      <a href="about">About</a>
+      <a href="beliefs">Beliefs</a>
+      <a href="partner">Partner</a>
+      <a href="contact" aria-current="page">Contact</a>
+    </nav>
+    <div class="foot-col">
+      <p class="mono foot-k">Elsewhere</p>
+      <a href="https://www.instagram.com/apologeticsnigeria/" target="_blank" rel="noopener">Instagram ↗</a>
+      <a href="privacy">Privacy</a>
+      <a href="#top">Back to top ↑</a>
     </div>
+  </div>
+  <div class="foot-mark" aria-hidden="true">
+    <span class="foot-word" id="footWord">Apologetics Nigeria</span>
+  </div>
+  <div class="foot-bottom mono">
+    <img src="assets/img/brand/logo.png" alt="Apologetics Nigeria" class="foot-logo" width="4080" height="2295" loading="lazy" />
+    <p>© 2026 Apologetics Nigeria</p>
+    <p>Lagos, NG · <span data-clock>--:--</span> WAT</p>
   </div>
 </footer>
 
-<script src="assets/js/script.js"></script>
+<script src="assets/js/v2.js" defer></script>
 
 </body>
 </html>

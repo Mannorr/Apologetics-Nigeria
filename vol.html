@@ -19,244 +19,170 @@
 <meta name="twitter:title" content="Call for Volunteers — Apologetics Nigeria" />
 <meta name="twitter:description" content="Designers, editors, writers and social media people. Put your craft to work on something that outlives a campaign." />
 <meta name="twitter:image" content="https://apologeticsnigeria.com/assets/img/training/volunteers-poster.jpg" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/styles.css" />
-
-<style>
-  /* ===== VOLUNTEERS PAGE ===== */
-  .vl-hero{background:var(--ink);color:var(--parchment);padding:clamp(7rem,12vw,10rem) 0 clamp(3.5rem,7vw,5.5rem)}
-  .vl-hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2.5rem,6vw,5rem);align-items:center}
-  .vl-hero h1{font-family:"Newsreader",serif;font-size:clamp(2.6rem,6.4vw,4.6rem);font-weight:380;
-    line-height:1.02;letter-spacing:-.015em;margin-bottom:1.2rem}
-  .vl-hero .lede{color:var(--stone-light);max-width:48ch}
-  .vl-hero .lede + .lede{margin-top:1rem}
-  .vl-cta{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2.2rem}
-  .vl-poster{border-radius:14px;overflow:hidden;line-height:0;box-shadow:0 30px 70px rgba(4,12,14,.45)}
-  .vl-poster img{width:100%;height:auto;display:block}
-
-  /* roles */
-  .vl-roles{display:grid;grid-template-columns:repeat(2,1fr);gap:1.3rem;margin-top:2.6rem}
-  .vl-role{border:1px solid var(--line-light);border-radius:12px;
-    padding:clamp(1.5rem,3vw,2rem);background:rgba(255,255,255,.35);
-    transition:border-color .3s,transform .3s}
-  .vl-role:hover{border-color:var(--gold);transform:translateY(-2px)}
-  .vl-role .tag{display:block;font-family:"Inter",sans-serif;font-size:.6rem;letter-spacing:.18em;
-    text-transform:uppercase;font-weight:600;color:var(--gold);margin-bottom:.8rem}
-  .vl-role h3{font-family:"Newsreader",serif;font-weight:400;font-size:clamp(1.25rem,2.2vw,1.5rem);
-    line-height:1.2;margin-bottom:.6rem}
-  .vl-role p{font-size:.95rem;line-height:1.6;color:var(--stone)}
-  .vl-role .need{display:inline-block;margin-top:1.1rem;font-family:"Inter",sans-serif;font-size:.68rem;
-    letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--gold);opacity:.85}
-
-  /* honest terms */
-  .vl-terms{background:var(--ink);color:var(--parchment);border-radius:18px;
-    padding:clamp(2rem,5vw,3.4rem)}
-  .vl-asks{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1.5rem;margin-top:2rem}
-  .vl-asks div{border-top:1px solid var(--line-dark);padding-top:1.1rem}
-  .vl-asks b{display:block;font-family:"Newsreader",serif;font-size:1.15rem;font-weight:400;
-    color:var(--parchment);margin-bottom:.35rem}
-  .vl-asks span{color:var(--stone-light);font-size:.94rem;line-height:1.55}
-
-  /* form — on the dark section, so the global field styles apply as designed */
-  .vl-apply{background:var(--ink);color:var(--parchment)}
-  .vl-form-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2.5rem,6vw,5rem);align-items:start}
-  .vl-note{color:var(--gold-bright);font-size:.97rem;line-height:1.6;margin-top:1.4rem}
-  .vl-form{border:1px solid var(--line-dark);border-radius:14px;
-    padding:clamp(1.6rem,3.5vw,2.4rem);background:rgba(255,255,255,.03)}
-  .vl-req{font-family:"Inter",sans-serif;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
-    color:var(--stone-light);margin-bottom:1.5rem}
-  .vl-row{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
-  .vl-form .field{margin-bottom:1.15rem}
-  .vl-form .field .hint{display:block;text-transform:none;letter-spacing:0;font-weight:400;
-    color:var(--stone-light);font-size:.78rem;margin-top:.25rem}
-  .vl-form input:user-invalid,.vl-form textarea:user-invalid,.vl-form select:user-invalid{border-color:#E06A65}
-
-  .vl-checks{display:grid;grid-template-columns:1fr 1fr;gap:.55rem}
-  /* these are <label> elements, so they must out-specify the global .field label rule */
-  .vl-form .field label.vl-check{
-    display:flex;align-items:center;gap:.65rem;padding:.8rem .95rem;
-    border:1px solid var(--line-dark);border-radius:9px;cursor:pointer;
-    font-family:"Inter",sans-serif;font-size:.9rem;font-weight:400;
-    letter-spacing:normal;text-transform:none;color:var(--parchment);
-    margin:0;transition:border-color .2s,background .2s}
-  .vl-form .field label.vl-check:hover{border-color:var(--gold)}
-  .vl-form .field label.vl-check input{accent-color:var(--gold-bright);flex:0 0 auto;
-    width:17px;height:17px;margin:0;cursor:pointer}
-  .vl-form .field label.vl-check:has(input:checked){border-color:var(--gold-bright);background:rgba(201,162,90,.12)}
-
-  /* success */
-  #vlSuccess{display:none}
-  #vlSuccess.on{display:block}
-  .vl-success{border:1px solid rgba(201,162,90,.45);border-radius:14px;
-    background:linear-gradient(180deg,rgba(201,162,90,.10),rgba(201,162,90,.02));
-    padding:clamp(1.8rem,4vw,2.8rem);text-align:center}
-  .vl-tick{width:56px;height:56px;border-radius:50%;border:2px solid var(--gold-bright);
-    color:var(--gold-bright);display:flex;align-items:center;justify-content:center;
-    font-size:1.5rem;margin:0 auto 1.4rem}
-  .vl-step{display:inline-block;background:var(--gold);color:#fff;font-family:"Inter",sans-serif;
-    font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;
-    padding:.42rem .95rem;border-radius:100px;margin-bottom:1.1rem}
-  .vl-success h2{font-family:"Newsreader",serif;font-weight:380;
-    font-size:clamp(1.6rem,3.4vw,2.2rem);line-height:1.15;margin-bottom:1rem;color:var(--parchment)}
-  .vl-success p{color:var(--stone-light);line-height:1.65;max-width:46ch;margin:0 auto;text-align:left}
-  .vl-success p + p{margin-top:.9rem}
-  .vl-fine{margin-top:1.6rem !important;text-align:center !important;font-size:.84rem;opacity:.75}
-
-  @media (max-width:900px){
-    .vl-hero-grid,.vl-form-grid{grid-template-columns:1fr}
-    .vl-poster{order:-1;max-width:400px}
-    .vl-roles{grid-template-columns:1fr}
-  }
-  @media (max-width:560px){
-    .vl-row,.vl-checks{grid-template-columns:1fr}
-    .vl-cta .btn{width:100%;text-align:center}
-  }
-</style>
+<link rel="preload" href="assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/newsreader-italic.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="assets/css/v2.css" />
+<script>document.documentElement.classList.add("js")</script>
 </head>
-<body class="interior">
+<body class="v2 page-vol" id="top">
 
-<header class="nav" id="nav">
-  <div class="wrap nav-inner">
-    <a href="index" class="brand" aria-label="Apologetics Nigeria — home">
-      <img src="assets/img/brand/logo.png" alt="Apologetics Nigeria" class="brand-logo" id="brandLogo" onerror="this.remove();" />
-    </a>
-    <nav class="nav-links" id="navlinks">
-      <a href="training" class="lk" data-page="training">Training</a>
-      <a href="resources" class="lk" data-page="resources">Resources</a>
-      <a href="about" class="lk" data-page="about">About</a>
-      <a href="beliefs" class="lk" data-page="beliefs">Beliefs</a>
-      <a href="partner" class="lk" data-page="partner">Partner</a>
-      <a href="contact" class="lk" data-page="contact">Contact</a>
-      <a href="partner#give" class="btn btn-gold">Give</a>
-    </nav>
-    <button class="nav-toggle" id="navtoggle" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ═════════ NAV ═════════ -->
+<header class="bar" id="bar" data-theme="dark">
+  <a href="index" class="bar-brand" aria-label="Apologetics Nigeria — home">
+    <img src="assets/img/brand/logo.png" alt="" width="4080" height="2295" />
+  </a>
+  <p class="bar-clock mono" aria-hidden="true"><span class="dot"></span>Lagos, NG&nbsp;<span data-clock>--:--</span>&nbsp;WAT</p>
+  <div class="bar-actions">
+    <a href="partner#give" class="cta cta--gold cta--sm" data-cursor="Give">Give</a>
+    <button class="bar-menu" id="menuBtn" aria-expanded="false" aria-controls="menu">
+      <span class="bar-menu-label mono">Menu</span>
+      <span class="bar-menu-icon" aria-hidden="true"><i></i><i></i></span>
     </button>
   </div>
 </header>
 
-<main>
+<!-- ═════════ MENU OVERLAY ═════════ -->
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Site menu" hidden>
+  <div class="menu-inner" tabindex="-1">
+    <nav class="menu-links" aria-label="Primary">
+      <a href="training" data-i="01"><span class="menu-word">Training</span><em>Defending the Faith · 16–18 Oct</em></a>
+      <a href="resources" data-i="02"><span class="menu-word">Resources</span><em>Talks, decks and video library</em></a>
+      <a href="about" data-i="03"><span class="menu-word">About</span><em>Who we are</em></a>
+      <a href="beliefs" data-i="04"><span class="menu-word">Beliefs</span><em>What we hold</em></a>
+      <a href="partner" data-i="05"><span class="menu-word">Partner</span><em>Churches, pastors, ministry groups</em></a>
+      <a href="contact" data-i="06"><span class="menu-word">Contact</span><em>Write to us</em></a>
+    </nav>
+    <aside class="menu-side">
+      <p class="mono menu-k">Always be prepared</p>
+      <p class="menu-verse">“…to give an answer to everyone who asks you to give the reason for the hope that you have.”</p>
+      <p class="mono menu-k">1 Peter 3:15</p>
+      <div class="menu-side-foot">
+        <a href="partner#give" class="cta cta--gold">Support the work</a>
+        <a href="https://www.instagram.com/apologeticsnigeria/" target="_blank" rel="noopener" class="mono ulink">Instagram ↗</a>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<div class="cursor" aria-hidden="true"><span class="cursor-label"></span></div>
+
+<main id="main">
 
 <!-- HERO -->
-<section class="vl-hero">
-  <div class="wrap vl-hero-grid">
+<section class="phero phero--media vl-hero" data-theme="dark" data-lamp>
+  <div class="phero-grid">
     <div>
-      <p class="eyebrow" style="color:var(--gold-bright)">Apologetics Nigeria</p>
-      <h1>Call for<br />volunteers.</h1>
-      <p class="lede">We are building a team of people who can actually do the work — designers, editors, writers, social media people — and who want their craft to count for something longer than a campaign.</p>
-      <p class="lede">If that is you, we would like to meet you.</p>
-      <div class="vl-cta">
-        <a href="#apply" class="btn btn-gold">Apply to volunteer →</a>
-        <a href="#roles" class="btn btn-ghost">See the roles</a>
+      <p class="kicker mono kicker--gold">Apologetics Nigeria</p>
+      <h1 class="phero-title" aria-label="Call for volunteers."><span class="t-cond" aria-hidden="true">Call for</span> <em class="t-serif" aria-hidden="true">volunteers.</em></h1>
+      <div class="phero-foot">
+        <div>
+          <p class="phero-lede">We are building a team of people who can actually do the work — designers, editors, writers, social media people — and who want their craft to count for something longer than a campaign.</p>
+          <p class="phero-lede">If that is you, we would like to meet you.</p>
+        </div>
+        <div class="phero-actions">
+          <a href="#apply" class="cta cta--gold" data-cursor="Apply">Apply to volunteer <span class="arr" aria-hidden="true">→</span></a>
+          <a href="#roles" class="cta cta--line">See the roles</a>
+        </div>
       </div>
     </div>
-    <div class="vl-poster">
-      <img src="assets/img/training/volunteers-poster.jpg" alt="Call for volunteers — Apologetics Nigeria. Visual designer, video editor, content and social media manager, content writers." />
-    </div>
+    <figure class="phero-fig vl-poster">
+      <img src="assets/img/training/volunteers-poster.jpg" alt="Call for volunteers — Apologetics Nigeria. Visual designer, video editor, content and social media manager, content writers." width="900" height="1126" />
+    </figure>
   </div>
 </section>
 
 <!-- WHY -->
-<section id="why">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="eyebrow">Why this matters</p>
-      <h2 class="h2">Most believers are not short on faith.<br />They are short on language.</h2>
+<section class="sec sec--paper" id="why" data-theme="light">
+  <div class="split">
+    <div class="sec-head">
+      <p class="kicker mono">Why this matters</p>
+      <h2 class="sec-title sec-title--sm reveal" aria-label="Most believers are not short on faith. They are short on language."><span class="t-cond" aria-hidden="true">Most believers are not short on faith.</span> <em class="t-serif" aria-hidden="true">They are short on language.</em></h2>
     </div>
-    <div class="reveal d1" style="max-width:62ch">
-      <p class="lede">Apologetics Nigeria exists to fix that — examining the claims of Islam through its own primary sources, making the historical case for Christ, and equipping ordinary believers to answer the questions they are actually being asked.</p>
-      <p style="margin-top:1.2rem">In October we run our first training. Over two hundred people have registered in a matter of weeks, from Lagos to Abuja to London to Houston. The demand is real, and it is well past what one person can carry.</p>
-      <p style="margin-top:1.2rem">So we are opening the doors. Not for busywork — for real responsibility, on work that reaches people who have nobody else answering their questions.</p>
+    <div class="prose">
+      <p>Apologetics Nigeria exists to fix that — examining the claims of Islam through its own primary sources, making the historical case for Christ, and equipping ordinary believers to answer the questions they are actually being asked.</p>
+      <p>In October we run our first training. Over two hundred people have registered in a matter of weeks, from Lagos to Abuja to London to Houston. The demand is real, and it is well past what one person can carry.</p>
+      <p>So we are opening the doors. Not for busywork — for real responsibility, on work that reaches people who have nobody else answering their questions.</p>
     </div>
   </div>
 </section>
 
 <!-- ROLES -->
-<section class="tint" id="roles">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="eyebrow">Where we need you</p>
-      <h2 class="h2">The roles.</h2>
-      <p class="lede">Pick what you are genuinely good at. You can choose more than one, but choose honestly — we would rather have one thing done excellently.</p>
-    </div>
-
-    <div class="vl-roles">
-      <div class="vl-role reveal">
-        <span class="tag">Creative</span>
-        <h3>Visual designer</h3>
-        <p>Social graphics, flyers, presentation decks and campaign assets, working inside an established brand system. You should be comfortable in Figma, Illustrator or Photoshop, and comfortable being given a brand and asked to stay inside it.</p>
-        <span class="need">Portfolio required</span>
-      </div>
-
-      <div class="vl-role reveal d1">
-        <span class="tag">Creative</span>
-        <h3>Video editor</h3>
-        <p>Cutting teaching sessions into shorts and full episodes, subtitles, thumbnails, and turning three hours of recording into things people will actually watch. Premiere, Final Cut, DaVinci or CapCut — we care about the result, not the tool.</p>
-        <span class="need">Showreel or samples required</span>
-      </div>
-
-      <div class="vl-role reveal">
-        <span class="tag">Content</span>
-        <h3>Content &amp; social media manager</h3>
-        <p>Owning the posting schedule across Instagram, TikTok and YouTube, writing captions, replying to comments and DMs, and reporting what is working. This role needs someone consistent rather than someone occasionally brilliant.</p>
-        <span class="need">Accounts you have run</span>
-      </div>
-
-      <div class="vl-role reveal d1">
-        <span class="tag">Content</span>
-        <h3>Content writer</h3>
-        <p>Scripts, articles, teaching notes and research summaries. Everything we publish is sourced — you will be asked to cite where a claim comes from, and to write carefully about people we disagree with.</p>
-        <span class="need">Writing samples required</span>
-      </div>
-
-      <div class="vl-role reveal">
-        <span class="tag">Operations</span>
-        <h3>Notes &amp; resources</h3>
-        <p>Taking notes during sessions and turning them into the one-page summaries and slide packs we send out afterwards. If you are the person whose notes everyone borrows, this is your role.</p>
-        <span class="need">Ongoing, session-based</span>
-      </div>
-    </div>
+<section class="sec sec--tint" id="roles" data-theme="light">
+  <div class="sec-head">
+    <p class="kicker mono">Where we need you</p>
+    <h2 class="sec-title reveal"><span class="t-cond">The</span> <em class="t-serif">roles.</em></h2>
+    <p class="sec-lede">Pick what you are genuinely good at. You can choose more than one, but choose honestly — we would rather have one thing done excellently.</p>
+  </div>
+  <div class="cards vl-roles">
+    <article class="card card--hover reveal">
+      <span class="card-k"><span class="tag">Creative</span></span>
+      <h3>Visual designer</h3>
+      <p>Social graphics, flyers, presentation decks and campaign assets, working inside an established brand system. You should be comfortable in Figma, Illustrator or Photoshop, and comfortable being given a brand and asked to stay inside it.</p>
+      <span class="role-need need">Portfolio required</span>
+    </article>
+    <article class="card card--hover reveal">
+      <span class="card-k"><span class="tag">Creative</span></span>
+      <h3>Video editor</h3>
+      <p>Cutting teaching sessions into shorts and full episodes, subtitles, thumbnails, and turning three hours of recording into things people will actually watch. Premiere, Final Cut, DaVinci or CapCut — we care about the result, not the tool.</p>
+      <span class="role-need need">Showreel or samples required</span>
+    </article>
+    <article class="card card--hover reveal">
+      <span class="card-k"><span class="tag">Content</span></span>
+      <h3>Content &amp; social media manager</h3>
+      <p>Owning the posting schedule across Instagram, TikTok and YouTube, writing captions, replying to comments and DMs, and reporting what is working. This role needs someone consistent rather than someone occasionally brilliant.</p>
+      <span class="role-need need">Accounts you have run</span>
+    </article>
+    <article class="card card--hover reveal">
+      <span class="card-k"><span class="tag">Content</span></span>
+      <h3>Content writer</h3>
+      <p>Scripts, articles, teaching notes and research summaries. Everything we publish is sourced — you will be asked to cite where a claim comes from, and to write carefully about people we disagree with.</p>
+      <span class="role-need need">Writing samples required</span>
+    </article>
+    <article class="card card--hover reveal">
+      <span class="card-k"><span class="tag">Operations</span></span>
+      <h3>Notes &amp; resources</h3>
+      <p>Taking notes during sessions and turning them into the one-page summaries and slide packs we send out afterwards. If you are the person whose notes everyone borrows, this is your role.</p>
+      <span class="role-need need">Ongoing, session-based</span>
+    </article>
   </div>
 </section>
 
 <!-- HONEST TERMS -->
-<section>
-  <div class="wrap">
-    <div class="vl-terms reveal">
-      <p class="eyebrow" style="color:var(--gold-bright)">Before you apply</p>
-      <h2 class="h2" style="color:var(--parchment);margin-top:.9rem">Let us be straight with you.</h2>
-      <div class="vl-asks">
-        <div><b>This is unpaid</b><span>We are not in a position to pay yet. We will not pretend otherwise, and we will not waste your time.</span></div>
-        <div><b>It is remote</b><span>Everything runs online. Where you live does not matter — several of our people are outside Nigeria.</span></div>
-        <div><b>We need experts</b><span>Not enthusiasm alone. Send your portfolio, showreel or writing samples. We will actually look at them.</span></div>
-        <div><b>Consistency over volume</b><span>A few reliable hours a week beats a burst of brilliance followed by silence.</span></div>
-        <div><b>You get the credit</b><span>Your name on the work, the pieces for your portfolio, and a reference whenever you need one.</span></div>
-        <div><b>You will be stretched</b><span>Real briefs, real deadlines, real audiences. You will get better at your craft here.</span></div>
-      </div>
-    </div>
+<section class="sec sec--ink2" data-theme="dark">
+  <div class="sec-head vl-terms">
+    <p class="kicker mono kicker--gold">Before you apply</p>
+    <h2 class="sec-title reveal"><span class="t-cond">Let us be</span> <em class="t-serif">straight with you.</em></h2>
+  </div>
+  <div class="terms vl-asks">
+    <div><b>This is unpaid</b><span>We are not in a position to pay yet. We will not pretend otherwise, and we will not waste your time.</span></div>
+    <div><b>It is remote</b><span>Everything runs online. Where you live does not matter — several of our people are outside Nigeria.</span></div>
+    <div><b>We need experts</b><span>Not enthusiasm alone. Send your portfolio, showreel or writing samples. We will actually look at them.</span></div>
+    <div><b>Consistency over volume</b><span>A few reliable hours a week beats a burst of brilliance followed by silence.</span></div>
+    <div><b>You get the credit</b><span>Your name on the work, the pieces for your portfolio, and a reference whenever you need one.</span></div>
+    <div><b>You will be stretched</b><span>Real briefs, real deadlines, real audiences. You will get better at your craft here.</span></div>
   </div>
 </section>
 
 <!-- APPLY -->
-<section class="vl-apply" id="apply">
-  <div class="wrap vl-form-grid">
-    <div class="reveal">
-      <p class="eyebrow" style="color:var(--gold-bright)">Apply</p>
-      <h2 class="h2" style="color:var(--parchment)">Tell us what you do.</h2>
-      <p class="lede" style="color:var(--stone-light)">It takes about three minutes. We read every application, and we reply to everyone — including the ones we cannot take on right now.</p>
-      <p class="vl-note"><strong>One thing before you start:</strong> after you submit, you will be asked to join our volunteers WhatsApp group. That is where everything actually happens — briefs, deadlines, questions. Please join it. An application without the group is an application we cannot act on.</p>
+<section class="sec sec--ink vl-apply" id="apply" data-theme="dark">
+  <div class="split">
+    <div class="sticky-col">
+      <p class="kicker mono kicker--gold">Apply</p>
+      <h2 class="sec-title sec-title--sm reveal" style="margin:1.6rem 0"><span class="t-cond">Tell us</span> <em class="t-serif">what you do.</em></h2>
+      <p class="sec-lede">It takes about three minutes. We read every application, and we reply to everyone — including the ones we cannot take on right now.</p>
+      <p class="callout vl-note"><strong>One thing before you start:</strong> after you submit, you will be asked to join our volunteers WhatsApp group. That is where everything actually happens — briefs, deadlines, questions. Please join it. An application without the group is an application we cannot act on.</p>
     </div>
 
-    <div class="reveal d1">
-      <form class="vl-form" id="volForm" action="https://formspree.io/f/mzezbggj" method="POST">
+    <div>
+      <form class="fm vl-form" id="volForm" action="https://formspree.io/f/mzezbggj" method="POST">
         <input type="hidden" name="_subject" value="Volunteer application — Apologetics Nigeria" />
         <input type="hidden" name="form_type" value="Volunteer application" />
 
-        <p class="vl-req">All fields required unless marked optional.</p>
+        <p class="fm-note">All fields required unless marked optional.</p>
 
-        <div class="vl-row">
+        <div class="fm-row">
           <div class="field">
             <label for="v-name">Full name</label>
             <input type="text" id="v-name" name="name" required autocomplete="name" />
@@ -267,7 +193,7 @@
           </div>
         </div>
 
-        <div class="vl-row">
+        <div class="fm-row">
           <div class="field">
             <label for="v-phone">WhatsApp number</label>
             <input type="tel" id="v-phone" name="whatsapp" required placeholder="+234…" autocomplete="tel" />
@@ -278,16 +204,16 @@
           </div>
         </div>
 
-        <div class="field">
-          <label>Which roles are you applying for?<span class="hint">Choose all that apply</span></label>
-          <div class="vl-checks">
-            <label class="vl-check"><input type="checkbox" name="roles" value="Visual designer" /> Visual designer</label>
-            <label class="vl-check"><input type="checkbox" name="roles" value="Video editor" /> Video editor</label>
-            <label class="vl-check"><input type="checkbox" name="roles" value="Content and social media" /> Content &amp; social media</label>
-            <label class="vl-check"><input type="checkbox" name="roles" value="Content writer" /> Content writer</label>
-            <label class="vl-check"><input type="checkbox" name="roles" value="Notes and resources" /> Notes &amp; resources</label>
+        <fieldset class="field" style="border:0">
+          <legend class="field-label">Which roles are you applying for?<span class="hint">Choose all that apply</span></legend>
+          <div class="checks vl-checks" style="margin-top:.8rem">
+            <label class="check"><input type="checkbox" name="roles" value="Visual designer" /> Visual designer</label>
+            <label class="check"><input type="checkbox" name="roles" value="Video editor" /> Video editor</label>
+            <label class="check"><input type="checkbox" name="roles" value="Content and social media" /> Content &amp; social media</label>
+            <label class="check"><input type="checkbox" name="roles" value="Content writer" /> Content writer</label>
+            <label class="check"><input type="checkbox" name="roles" value="Notes and resources" /> Notes &amp; resources</label>
           </div>
-        </div>
+        </fieldset>
 
         <div class="field">
           <label for="v-exp">Years doing this</label>
@@ -326,95 +252,62 @@
           <textarea id="v-why" name="why" rows="3" required placeholder="Be honest about your capacity — we would rather know now."></textarea>
         </div>
 
-        <button type="submit" class="btn btn-gold" id="v-submit">Submit application →</button>
-        <p class="form-status" id="v-status" role="status" aria-live="polite"></p>
+        <button type="submit" class="cta cta--gold" id="v-submit" data-cursor="Apply"><span class="cta-t">Submit application</span> <span class="arr" aria-hidden="true">→</span></button>
+        <p class="form-status mono" id="v-status" role="status" aria-live="polite"></p>
       </form>
 
       <!-- SUCCESS -->
       <div id="vlSuccess">
-        <div class="vl-success">
-          <div class="vl-tick" aria-hidden="true">&#10003;</div>
-          <span class="vl-step">One step left</span>
-          <h2>Now join the group.</h2>
+        <div class="success vl-success">
+          <div class="tick-mark" aria-hidden="true">&#10003;</div>
+          <span class="mono" style="color:var(--gold-2)">One step left</span>
+          <h2><span class="t-cond">Now join the group.</span></h2>
           <p>Your application is in and we will read it properly. But everything after this — briefs, deadlines, questions, the actual work — runs through the volunteers WhatsApp group.</p>
-          <p style="color:var(--gold-bright)"><strong>If you don't join, we have no way of reaching you with anything real.</strong></p>
-          <div class="vl-cta" style="justify-content:center;margin-top:2rem">
+          <p class="strong"><strong>If you don't join, we have no way of reaching you with anything real.</strong></p>
+          <div class="row-actions" style="margin-top:2rem">
             <a href="https://chat.whatsapp.com/LtYB9Ypf9HKAgxHWOvVD0z?s=cl&amp;p=i&amp;mlu=4&amp;ilr=4"
-               target="_blank" rel="noopener" class="btn btn-gold">Join the volunteers group →</a>
+               target="_blank" rel="noopener" class="cta cta--gold" data-cursor="Join">Join the volunteers group <span class="arr" aria-hidden="true">→</span></a>
           </div>
-          <p class="vl-fine">Group members can see each other's phone numbers, as in any WhatsApp group.</p>
+          <p class="fine">Group members can see each other's phone numbers, as in any WhatsApp group.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 </main>
 
-<footer class="site">
-  <div class="wrap">
-    <div class="foot-inner">
-      <img src="assets/img/brand/logo.png" alt="Apologetics Nigeria" class="foot-logo" onerror="this.remove();" />
-      <nav class="foot-nav" aria-label="Footer">
-        <a href="training">Training</a>
-        <a href="resources">Resources</a>
-        <a href="about">About</a>
-        <a href="beliefs">Beliefs</a>
-        <a href="partner">Partner</a>
-        <a href="contact">Contact</a>
-        <a href="https://www.instagram.com/apologeticsnigeria/" target="_blank" rel="noopener">Instagram</a>
-        <a href="privacy">Privacy</a>
-      </nav>
-      <div class="foot-bottom">
-        <p class="foot-tag">Grounded believers · defended faith · a generation that can give a reason for its hope.</p>
-        <p class="foot-copy">© 2026 Apologetics Nigeria</p>
-      </div>
+
+<!-- ═════════ FOOTER ═════════ -->
+<footer class="foot" data-theme="dark">
+  <div class="foot-top">
+    <p class="foot-tag">Grounded believers · defended faith · a generation that can give a reason for its hope.</p>
+    <nav class="foot-col" aria-label="Footer">
+      <p class="mono foot-k">Explore</p>
+      <a href="training">Training</a>
+      <a href="resources">Resources</a>
+      <a href="about">About</a>
+      <a href="beliefs">Beliefs</a>
+      <a href="partner">Partner</a>
+      <a href="contact">Contact</a>
+    </nav>
+    <div class="foot-col">
+      <p class="mono foot-k">Elsewhere</p>
+      <a href="https://www.instagram.com/apologeticsnigeria/" target="_blank" rel="noopener">Instagram ↗</a>
+      <a href="privacy">Privacy</a>
+      <a href="#top">Back to top ↑</a>
     </div>
+  </div>
+  <div class="foot-mark" aria-hidden="true">
+    <span class="foot-word" id="footWord">Apologetics Nigeria</span>
+  </div>
+  <div class="foot-bottom mono">
+    <img src="assets/img/brand/logo.png" alt="Apologetics Nigeria" class="foot-logo" width="4080" height="2295" loading="lazy" />
+    <p>© 2026 Apologetics Nigeria</p>
+    <p>Lagos, NG · <span data-clock>--:--</span> WAT</p>
   </div>
 </footer>
 
-<script src="assets/js/script.js"></script>
-<script>
-(function () {
-  var form = document.getElementById('volForm');
-  if (!form) return;
-  var status = document.getElementById('v-status');
-  var btn    = document.getElementById('v-submit');
-  var done   = document.getElementById('vlSuccess');
-
-  form.addEventListener('submit', async function (e) {
-    e.preventDefault();
-
-    if (!form.querySelectorAll('input[name="roles"]:checked').length) {
-      status.classList.remove('ok');
-      status.textContent = 'Please choose at least one role.';
-      return;
-    }
-
-    status.classList.remove('ok');
-    status.textContent = 'Sending…';
-    btn.disabled = true;
-    btn.style.opacity = '.6';
-
-    try {
-      var res = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      });
-      if (!res.ok) throw new Error('rejected');
-      form.style.display = 'none';
-      status.textContent = '';
-      done.classList.add('on');
-      done.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    } catch (err) {
-      status.textContent = 'Something went wrong. Please try again in a moment.';
-      btn.disabled = false;
-      btn.style.opacity = '1';
-    }
-  });
-})();
-</script>
+<script src="assets/js/v2.js" defer></script>
 
 </body>
 </html>
