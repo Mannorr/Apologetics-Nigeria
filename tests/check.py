@@ -246,6 +246,8 @@ def behaviours(ctx, ctx_err, ctx_mobile, rep, base):
         rep.ok(n == 1, 'join.html', f'expected exactly 1 Google Meet link, found {n}'); pg.close()
     r = ctx.request.get(f'{BASE}/assets/files/defending-the-faith.ics')
     rep.ok(r.status == 200 and b'BEGIN:VCALENDAR' in r.body(), 'calendar', '.ics file missing or invalid')
+    r = ctx.request.get(f'{BASE}/assets/files/defending-the-faith-attendee-pack.pdf')
+    rep.ok(r.status == 200 and r.body()[:5] == b'%PDF-', 'attendee pack', 'attendee pack PDF missing or invalid')
     for src in REWRITES:
         s = ctx.request.get(BASE + src).status
         rep.ok(s == 200, 'vercel.json', f'legacy URL {src} -> {s}')

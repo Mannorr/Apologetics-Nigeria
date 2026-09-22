@@ -31,6 +31,7 @@ exactly one POST; error message and re-enabled button when Formspree fails.
 ## Must never break
 - `join.html` — exactly one Google Meet link (see README)
 - `assets/files/defending-the-faith.ics` — valid calendar file
+- `assets/files/defending-the-faith-attendee-pack.pdf` — the attendee pack linked from `registered`
 
 ## Fixed during the v2 rebuild (baseline updated on purpose)
 - Mobile menu on every page except home showed only one link (72px panel). Fixed.

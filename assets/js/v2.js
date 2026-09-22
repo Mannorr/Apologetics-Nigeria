@@ -433,6 +433,7 @@
       st.className = 'form-status mono'; st.textContent = 'Sending…'; btn.disabled = true; var orig = label.textContent; label.textContent = 'Sending…';
       send(form, function () {
         var redirect = form.getAttribute('data-success-redirect');
+        if (ids[0] === 'trainingForm') { try { var fn = (form.elements.name.value || '').trim().split(/\s+/)[0]; if (fn) sessionStorage.setItem('an-reg-name', fn.slice(0, 40)); } catch (err) {} }
         st.classList.add('ok');
         if (redirect) { st.textContent = 'Success — taking you to your details…'; window.location.assign(redirect); return; }
         form.reset(); st.textContent = 'Success — thank you.';
@@ -459,6 +460,10 @@
   if (req) req.addEventListener('click', function () { try { sessionStorage.setItem('an-reason', 'Requesting the curriculum'); } catch (e) {} });
   var reason = document.getElementById('cf-reason');
   if (reason) { try { var r = sessionStorage.getItem('an-reason'); if (r) { reason.value = r; sessionStorage.removeItem('an-reason'); } } catch (e) {} }
+
+  // confirmation page: greet by first name if they just registered in this tab
+  var regName = $('[data-reg-name]');
+  if (regName) { try { var nm = sessionStorage.getItem('an-reg-name'); if (nm) regName.textContent = ', ' + nm + ','; } catch (e) {} }
 
   /* ─── 16. Lamp glow on page heroes ─── */
   $$('[data-lamp]').forEach(function (el) {

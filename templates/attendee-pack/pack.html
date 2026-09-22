@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Defending the Faith — Attendee Pack | Apologetics Nigeria</title>
+<style>
+@font-face{font-family:"Bodoni Moda";src:url(fonts/bodoni-moda-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:"Bodoni Moda";src:url(fonts/bodoni-moda-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:"Bodoni Moda";src:url(fonts/bodoni-moda-latin-800-normal.woff2);font-weight:800}
+@font-face{font-family:"Inter";src:url(fonts/inter-latin-400-normal.woff2);font-weight:400}
+@font-face{font-family:"Inter";src:url(fonts/inter-latin-500-normal.woff2);font-weight:500}
+@font-face{font-family:"Inter";src:url(fonts/inter-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:"Newsreader";src:url(fonts/newsreader-latin-opsz-italic.woff2);font-style:italic;font-weight:200 800}
+
+@page{size:A4;margin:0}
+:root{
+  --ink:#040C0E; --teal:#1E2C2F; --cyan:#4AC7CB; --yellow:#FEC94B; --red:#E70804; --paper:#FEFCFF;
+  --body:#4d5456; --muted:#8a9092; --rule:#e3e4e4;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#888}
+body{font-family:"Inter",Arial,sans-serif;color:var(--body);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;background:var(--paper);page-break-after:always;break-after:page}
+.page:last-child{page-break-after:auto;break-after:auto}
+a{color:inherit;text-decoration:none}
+
+/* ── cover ── */
+.cover{background:var(--ink);color:#fff}
+.cover::before{content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(70% 45% at 20% 12%,rgba(74,199,203,.28),transparent 70%),
+    radial-gradient(50% 35% at 92% 92%,rgba(254,201,75,.22),transparent 70%)}
+.cover::after{content:"";position:absolute;inset:0;opacity:.55;
+  background-image:linear-gradient(rgba(74,199,203,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(74,199,203,.09) 1px,transparent 1px);
+  background-size:13mm 13mm}
+.cover-in{position:absolute;inset:0;z-index:2;padding:26mm 20mm 17mm 20mm;display:flex;flex-direction:column}
+.c-brand{font-size:8.2pt;font-weight:600;letter-spacing:.34em;text-transform:uppercase;color:var(--cyan)}
+.c-rule{width:24mm;height:1.3mm;background:var(--cyan);margin:10mm 0 9mm}
+.c-title{font-family:"Bodoni Moda",Georgia,serif;font-weight:800;font-size:46pt;line-height:.92;text-transform:uppercase;letter-spacing:-.005em;color:#fff}
+.c-lede{margin-top:8mm;max-width:118mm;font-size:10.5pt;line-height:1.6;color:rgba(255,255,255,.72)}
+.c-to{margin-top:auto;font-size:7.4pt;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+.c-name{font-family:"Bodoni Moda",Georgia,serif;font-weight:800;font-size:25pt;line-height:1.1;margin-top:3mm;color:#fff}
+.c-sub{font-family:"Newsreader",Georgia,serif;font-style:italic;font-size:12.5pt;color:var(--cyan);margin-top:2mm}
+.c-facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:.3mm solid rgba(255,255,255,.18);margin-top:12mm;padding:7mm 0 12mm}
+.c-facts .k{font-size:6.8pt;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.c-facts .v{font-family:"Bodoni Moda",Georgia,serif;font-weight:800;font-size:14pt;line-height:1.2;text-transform:uppercase;margin-top:3mm;color:#fff}
+.c-strip{position:absolute;left:0;right:0;bottom:0;z-index:3}
+.c-strip .cy{background:var(--cyan);display:flex;justify-content:space-between;padding:4.2mm 20mm;font-size:7.2pt;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--ink)}
+.c-strip .ye{background:var(--yellow);height:3.6mm}
+
+/* ── inner pages ── */
+.inner{padding:22mm 20mm 0 20mm}
+.label{font-size:7.2pt;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--red)}
+h2{font-family:"Bodoni Moda",Georgia,serif;font-weight:800;font-size:25pt;line-height:.98;text-transform:uppercase;color:var(--ink);margin-top:3.5mm}
+.intro{font-size:9.6pt;line-height:1.62;margin-top:5mm;max-width:150mm}
+.intro b,.p b,li b{color:var(--ink);font-weight:600}
+h3{font-family:"Bodoni Moda",Georgia,serif;font-weight:700;font-size:13pt;color:var(--ink);margin:9mm 0 3mm}
+.p{font-size:9.4pt;line-height:1.62;margin-bottom:2.8mm}
+.foot{position:absolute;left:20mm;right:20mm;bottom:12mm;display:flex;justify-content:space-between;border-top:.25mm solid var(--rule);padding-top:4mm;
+  font-size:6.6pt;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+
+.table{margin-top:7mm;border-top:.45mm solid var(--ink)}
+.tr{display:grid;grid-template-columns:36mm 1fr;padding:3.6mm 0;border-bottom:.25mm solid var(--rule);font-size:9.4pt;line-height:1.5;color:var(--ink)}
+.tr .k{font-size:6.8pt;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--red);padding-top:.8mm}
+.tr .v span{color:var(--body)}
+
+.tz{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:.25mm solid var(--rule);margin-top:3mm}
+.tz div{padding:3.4mm 3.6mm;border-right:.25mm solid var(--rule)}
+.tz div:last-child{border-right:0}
+.tz .k{font-size:6.6pt;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.tz .v{font-family:"Bodoni Moda",Georgia,serif;font-weight:800;font-size:11.5pt;color:var(--ink);margin-top:1.6mm}
+
+ul.dash{list-style:none;margin-top:2mm}
+ul.dash li{position:relative;padding-left:7mm;font-size:9.3pt;line-height:1.55;margin-bottom:2.6mm}
+ul.dash li::before{content:"";position:absolute;left:0;top:2.1mm;width:3.6mm;height:.9mm;background:var(--red)}
+
+/* three evenings */
+.days{margin-top:7mm;display:flex;flex-direction:column;gap:5mm}
+.day{display:grid;grid-template-columns:30mm 1fr;border-top:.45mm solid var(--ink);padding-top:4.2mm}
+.day .n{font-family:"Bodoni Moda",Georgia,serif;font-weight:800;font-size:28pt;line-height:.85;color:var(--ink)}
+.day .n small{display:block;font-family:"Inter",Arial,sans-serif;font-weight:600;font-size:6.6pt;letter-spacing:.24em;text-transform:uppercase;color:var(--red);margin-bottom:2mm}
+.day .date{font-size:6.8pt;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.day h4{font-family:"Bodoni Moda",Georgia,serif;font-weight:800;font-size:15pt;text-transform:uppercase;color:var(--ink);margin:1.6mm 0 .6mm}
+.day .who{font-family:"Newsreader",Georgia,serif;font-style:italic;font-size:10.5pt;color:#1b8f93}
+.day ul{list-style:none;margin-top:2.6mm}
+.day li{position:relative;padding-left:5.5mm;font-size:9.1pt;line-height:1.5;margin-bottom:1.5mm}
+.day li::before{content:"";position:absolute;left:0;top:1.9mm;width:2.2mm;height:2.2mm;background:var(--cyan)}
+
+/* run of show */
+.ros{display:grid;grid-template-columns:repeat(3,1fr);gap:6mm;margin-top:8mm}
+.ros-col h4{font-family:"Bodoni Moda",Georgia,serif;font-weight:800;font-size:12pt;text-transform:uppercase;color:var(--ink);padding-bottom:2.2mm;border-bottom:.8mm solid var(--red)}
+.ros-col .d{font-size:6.6pt;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:1.6mm}
+.slot{display:grid;grid-template-columns:14.5mm 1fr;gap:2mm;padding:2.5mm 0;border-bottom:.25mm solid var(--rule);font-size:8.3pt;line-height:1.42;color:var(--body)}
+.slot .t{font-family:"Bodoni Moda",Georgia,serif;font-weight:800;font-size:8.8pt;color:var(--ink)}
+.slot.hl{color:var(--ink);font-weight:500}
+.slot.hl .t{color:#1b8f93}
+.note{margin-top:7mm;padding:4.5mm 5mm;border-left:1mm solid var(--cyan);background:#f2fafa;font-size:9pt;line-height:1.55;color:var(--ink)}
+
+/* speakers */
+.spk{display:grid;grid-template-columns:1fr 1fr;gap:8mm 8mm;margin-top:8mm}
+.sp{display:grid;grid-template-columns:30mm 1fr;gap:4.5mm;align-items:start}
+.sp img{width:30mm;height:36mm;object-fit:cover;display:block}
+.sp .d{font-size:6.4pt;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--red)}
+.sp h4{font-family:"Bodoni Moda",Georgia,serif;font-weight:800;font-size:12.5pt;line-height:1.1;text-transform:uppercase;color:var(--ink);margin:1.4mm 0 .8mm}
+.sp .r{font-family:"Newsreader",Georgia,serif;font-style:italic;font-size:10pt;color:#1b8f93;margin-bottom:1.8mm}
+.sp p{font-size:8.6pt;line-height:1.5}
+.quote{margin-top:12mm;border-top:.45mm solid var(--ink);padding-top:6mm}
+.quote q{display:block;font-family:"Newsreader",Georgia,serif;font-style:italic;font-size:14pt;line-height:1.4;color:var(--ink);quotes:none}
+.quote .ref{margin-top:3mm;font-size:6.8pt;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--red)}
+
+/* joining */
+.joinbox{margin-top:7mm;background:var(--teal);border-radius:2.2mm;padding:6.5mm 7mm;color:#fff}
+.joinbox .k{font-size:6.8pt;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--yellow)}
+.joinbox .link{font-family:"Bodoni Moda",Georgia,serif;font-weight:800;font-size:17pt;margin-top:3mm;color:#fff}
+.joinbox p{font-size:8.8pt;line-height:1.55;color:rgba(255,255,255,.76);margin-top:2.6mm}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:0 9mm}
+.two h3{margin-top:7mm}
+.sign{margin-top:8mm;border-top:.45mm solid var(--ink);padding-top:5mm}
+.sign .sdg{font-family:"Newsreader",Georgia,serif;font-style:italic;font-size:12pt;color:var(--red)}
+.sign .nm{font-family:"Bodoni Moda",Georgia,serif;font-weight:800;font-size:13pt;color:var(--ink);margin-top:3mm}
+.sign .rl{font-size:6.8pt;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:1mm}
+.sign .url{font-size:8pt;color:var(--body);margin-top:1.6mm}
+</style>
+</head>
+<body>
+
+<!-- ═════════ 1 · COVER ═════════ -->
+<section class="page cover">
+  <div class="cover-in">
+    <p class="c-brand">Apologetics Nigeria</p>
+    <div class="c-rule"></div>
+    <h1 class="c-title">Your seat<br />is saved.</h1>
+    <p class="c-lede">A three-day introduction to apologetics for believers who are tired of going quiet when the hard question comes. Everything you need for the three evenings is in this pack. Please keep it.</p>
+
+    <p class="c-to">Attendee pack</p>
+    <p class="c-name">Defending the Faith</p>
+    <p class="c-sub">Introduction to Apologetics · live online</p>
+
+    <div class="c-facts">
+      <div><p class="k">Dates</p><p class="v">Fri 16 –<br />Sun 18 Oct</p></div>
+      <div><p class="k">Each evening</p><p class="v">7–10PM<br />WAT</p></div>
+      <div><p class="k">Format</p><p class="v">Live online<br />free</p></div>
+    </div>
+  </div>
+  <div class="c-strip">
+    <div class="cy"><span>3 Days</span><span>9 Hours</span><span>Free to attend</span></div>
+    <div class="ye"></div>
+  </div>
+</section>
+
+<!-- ═════════ 2 · DETAILS ═════════ -->
+<section class="page inner">
+  <p class="label">Your seat</p>
+  <h2>The details.</h2>
+  <p class="intro">Thank you for registering, and welcome. Everything is in one place here so nothing depends on an email thread. <b>Please keep it — the joining link on the last page does not change.</b></p>
+
+  <div class="table">
+    <div class="tr"><span class="k">Dates</span><span class="v">Friday 16, Saturday 17 and Sunday 18 October 2026</span></div>
+    <div class="tr"><span class="k">Time</span><span class="v">7:00 – 10:00PM WAT each evening <span>(West Africa Time, GMT+1)</span></span></div>
+    <div class="tr"><span class="k">Room opens</span><span class="v">6:45PM WAT <span>— fifteen minutes before we begin</span></span></div>
+    <div class="tr"><span class="k">Format</span><span class="v">Live online <span>— teaching, worked examples and live Q&amp;A every evening</span></span></div>
+    <div class="tr"><span class="k">Platform</span><span class="v">Google Meet <span>— join through</span> <a href="https://apologeticsnigeria.com/join">apologeticsnigeria.com/join</a></span></div>
+    <div class="tr"><span class="k">Recording</span><span class="v">Every session is recorded <span>— replays, notes and slides go to everyone registered</span></span></div>
+    <div class="tr"><span class="k">Cost</span><span class="v">Free <span>— no ticket, no fee, nothing gated</span></span></div>
+  </div>
+
+  <h3>Joining from abroad</h3>
+  <div class="tz">
+    <div><p class="k">Lagos &amp; London</p><p class="v">7–10PM</p></div>
+    <div><p class="k">Toronto &amp; New York</p><p class="v">2–5PM</p></div>
+    <div><p class="k">Houston</p><p class="v">1–4PM</p></div>
+    <div><p class="k">Los Angeles</p><p class="v">11AM–2PM</p></div>
+  </div>
+
+  <h3>Before the first evening</h3>
+  <ul class="dash">
+    <li><b>Add all three evenings to your calendar</b> — <a href="https://apologeticsnigeria.com/defending-the-faith.ics">apologeticsnigeria.com/defending-the-faith.ics</a> adds them in one go, with reminders.</li>
+    <li><b>Bookmark the joining page</b> — <a href="https://apologeticsnigeria.com/join">apologeticsnigeria.com/join</a>. Same link every evening.</li>
+    <li><b>Check the device you will join from.</b> Google Meet opens in a web browser; on a phone, install the Meet app beforehand.</li>
+    <li><b>Bring your question.</b> Every session ends with live Q&amp;A, and honest questions are the ones we most want.</li>
+  </ul>
+
+  <div class="foot"><span>Apologetics Nigeria</span><span>Defending the Faith · 16–18 October 2026</span></div>
+</section>
+
+<!-- ═════════ 3 · THE THREE EVENINGS ═════════ -->
+<section class="page inner">
+  <p class="label">The programme</p>
+  <h2>The three<br />evenings.</h2>
+  <p class="intro">Each evening runs three hours. Come to all three if you can; each one stands on its own if you cannot. No prior study is assumed. Come as you are.</p>
+
+  <div class="days">
+    <div class="day">
+      <p class="n"><small>Day</small>01</p>
+      <div>
+        <p class="date">Friday 16 October · 7–10PM WAT</p>
+        <h4>Foundations</h4>
+        <p class="who">With Pastor Ernest Olusanya</p>
+        <ul>
+          <li>What apologetics is — and what it is not</li>
+          <li>The case that God exists: cause, design, and moral law</li>
+          <li>Why the Bible can be trusted as a historical document</li>
+          <li>Manuscripts, transmission, and the “it was changed” objection</li>
+        </ul>
+      </div>
+    </div>
+    <div class="day">
+      <p class="n"><small>Day</small>02</p>
+      <div>
+        <p class="date">Saturday 17 October · 7–10PM WAT</p>
+        <h4>Jesus &amp; Islam</h4>
+        <p class="who">With Daniel Odili &amp; MANNORR</p>
+        <ul>
+          <li>Why Jesus? What sets him apart from every other teacher and prophet</li>
+          <li>His deity: what the Qur’an denies, and what Jesus himself claimed</li>
+          <li>His death: the crucifixion, and the Qur’an’s denial of it (4:157)</li>
+          <li>His resurrection: the claim Christianity stands or falls on</li>
+        </ul>
+      </div>
+    </div>
+    <div class="day">
+      <p class="n"><small>Day</small>03</p>
+      <div>
+        <p class="date">Sunday 18 October · 7–10PM WAT</p>
+        <h4>Doubt &amp; the conversation</h4>
+        <p class="who">With Ben Clifton &amp; MANNORR</p>
+        <ul>
+          <li>Suffering, evil, and the questions that hurt</li>
+          <li>Answering atheism and the “no evidence” claim</li>
+          <li>Handling your own doubts without fear</li>
+          <li>How to actually start — and finish — the conversation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot"><span>Apologetics Nigeria</span><span>Defending the Faith · 16–18 October 2026</span></div>
+</section>
+
+<!-- ═════════ 4 · RUN OF SHOW ═════════ -->
+<section class="page inner">
+  <p class="label">Each evening</p>
+  <h2>Run of show.</h2>
+  <p class="intro">So you know where each evening is going. Timings are a guide and may move by a few minutes on the night; the room opens at 6:45PM WAT every evening.</p>
+
+  <div class="ros">
+    <div class="ros-col">
+      <p class="d">Fri 16 Oct</p>
+      <h4>Foundations</h4>
+      <div class="slot"><span class="t">7:00</span><span>Welcome (MANNORR)</span></div>
+      <div class="slot hl"><span class="t">7:10</span><span>What apologetics is, and the case that God exists — Pastor Ernest Olusanya</span></div>
+      <div class="slot"><span class="t">8:00</span><span>Live Q&amp;A</span></div>
+      <div class="slot"><span class="t">8:15</span><span>Break</span></div>
+      <div class="slot hl"><span class="t">8:25</span><span>Why the Bible can be trusted as history</span></div>
+      <div class="slot"><span class="t">9:15</span><span>Live Q&amp;A</span></div>
+      <div class="slot"><span class="t">9:45</span><span>Close, and what is coming on Day Two</span></div>
+      <div class="slot"><span class="t">10:00</span><span>End</span></div>
+    </div>
+    <div class="ros-col">
+      <p class="d">Sat 17 Oct</p>
+      <h4>Jesus &amp; Islam</h4>
+      <div class="slot"><span class="t">7:00</span><span>Welcome (MANNORR)</span></div>
+      <div class="slot hl"><span class="t">7:05</span><span>Why Jesus? — Daniel Odili</span></div>
+      <div class="slot"><span class="t">7:45</span><span>Live Q&amp;A</span></div>
+      <div class="slot hl"><span class="t">8:05</span><span>What Islam rejects: his deity — MANNORR</span></div>
+      <div class="slot hl"><span class="t">8:35</span><span>What Islam rejects: his death</span></div>
+      <div class="slot hl"><span class="t">9:05</span><span>What Islam rejects: his resurrection</span></div>
+      <div class="slot"><span class="t">9:35</span><span>Live Q&amp;A, then close</span></div>
+    </div>
+    <div class="ros-col">
+      <p class="d">Sun 18 Oct</p>
+      <h4>Doubt &amp; the conversation</h4>
+      <div class="slot"><span class="t">7:00</span><span>Welcome (MANNORR)</span></div>
+      <div class="slot hl"><span class="t">7:05</span><span>Answering the claim that there is no evidence for God — Ben Clifton</span></div>
+      <div class="slot"><span class="t">7:35</span><span>Live Q&amp;A with Ben</span></div>
+      <div class="slot hl"><span class="t">7:50</span><span>Suffering, evil and the questions that hurt — MANNORR</span></div>
+      <div class="slot hl"><span class="t">8:45</span><span>Handling doubt, and how to actually have the conversation</span></div>
+      <div class="slot"><span class="t">9:30</span><span>Closing charge</span></div>
+      <div class="slot"><span class="t">10:00</span><span>Close of the training</span></div>
+    </div>
+  </div>
+
+  <div class="note"><b>Can’t make every evening?</b> Still come to the ones you can. Every session is recorded, and the replay, notes and slides go to everyone registered. A missed session is not a lost session.</div>
+
+  <div class="foot"><span>Apologetics Nigeria</span><span>Defending the Faith · 16–18 October 2026</span></div>
+</section>
+
+<!-- ═════════ 5 · SPEAKERS ═════════ -->
+<section class="page inner">
+  <p class="label">Who is teaching</p>
+  <h2>Four voices,<br />three evenings.</h2>
+  <p class="intro">Each evening is carried by someone who has spent years with the material — and every session ends with live Q&amp;A, so you can ask them directly.</p>
+
+  <div class="spk">
+    <div class="sp">
+      <img src="img/ernest.jpg" alt="" />
+      <div>
+        <p class="d">Day 01 · Friday 16 October</p>
+        <h4>Pastor Ernest Olusanya</h4>
+        <p class="r">Guest speaker</p>
+        <p>Foundations — what apologetics is, the case that God exists, and why the Bible can be trusted as history.</p>
+      </div>
+    </div>
+    <div class="sp">
+      <img src="img/daniel.jpg" alt="" />
+      <div>
+        <p class="d">Day 02 · Saturday 17 October</p>
+        <h4>Daniel Odili</h4>
+        <p class="r">Guest speaker</p>
+        <p>Why Jesus? — the question the whole evening turns on. Daniel opens Day Two before it moves into what Islam rejects about him.</p>
+      </div>
+    </div>
+    <div class="sp">
+      <img src="img/mannorr.jpg" alt="" />
+      <div>
+        <p class="d">All three evenings</p>
+        <h4>MANNORR</h4>
+        <p class="r">Host · Founder, Apologetics Nigeria</p>
+        <p>Examines the claims of Islam through its own trusted sources and makes the historical case for Christ. On Day Two, takes the evening through his deity, his death and his resurrection.</p>
+      </div>
+    </div>
+    <div class="sp">
+      <img src="img/ben.jpg" alt="" />
+      <div>
+        <p class="d">Day 03 · Sunday 18 October</p>
+        <h4>Ben Clifton</h4>
+        <p class="r">President of Apologetics on Mission</p>
+        <p>Answering the claim that there is no evidence for God — followed by live Q&amp;A.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="quote">
+    <q>“But sanctify the Lord God in your hearts: and be ready always to give an answer to every man that asketh you a reason of the hope that is in you with meekness and fear.”</q>
+    <p class="ref">1 Peter 3:15</p>
+  </div>
+
+  <div class="foot"><span>Apologetics Nigeria</span><span>Defending the Faith · 16–18 October 2026</span></div>
+</section>
+
+<!-- ═════════ 6 · HOW TO JOIN ═════════ -->
+<section class="page inner">
+  <p class="label">Joining</p>
+  <h2>How to join.</h2>
+
+  <div class="joinbox">
+    <p class="k">Your link — the same every evening</p>
+    <p class="link"><a href="https://apologeticsnigeria.com/join">apologeticsnigeria.com/join</a></p>
+    <p>Bookmark this page rather than any meeting address. If the meeting room ever changes, this page updates silently and your link keeps working. The room opens fifteen minutes before we begin.</p>
+  </div>
+
+  <p class="p" style="margin-top:6mm">Your joining link will also be emailed to you before the first session, and again on the day. Nothing else is needed — no app, no account, no ticket. <b>Trouble getting in?</b> Reply to your confirmation email or message us on Instagram, <a href="https://www.instagram.com/apologeticsnigeria/"><b>@apologeticsnigeria</b></a>.</p>
+
+  <div class="two">
+    <div>
+      <h3>The WhatsApp group — optional</h3>
+      <p class="p">Reminders, updates and questions between sessions — and the place to ask the things you would rather not ask live. <a href="https://chat.whatsapp.com/IkdbpteTCXp7W58NPxYBaK?s=cl&amp;p=i&amp;mlu=4&amp;ilr=4"><b>Join from the link on your confirmation page.</b></a></p>
+      <p class="p">As with any WhatsApp group, members can see each other’s phone numbers. If you would rather not, stay on email and you will miss nothing.</p>
+    </div>
+    <div>
+      <h3>Bring someone</h3>
+      <p class="p">Know someone who has gone quiet when the hard question came? Send them the training. Registration is open until the first session at <a href="https://apologeticsnigeria.com/training"><b>apologeticsnigeria.com/training</b></a>.</p>
+      <p class="p">Coming as a church group or fellowship? Ask each person to register with their own email so they receive their own joining link and replays.</p>
+    </div>
+  </div>
+
+  <h3>This training is free. It is not costless.</h3>
+  <p class="p">Every session, every recording and every set of notes is given away without charge, so that no believer is priced out of being able to answer for their faith. If you would like to help us keep it that way, you can give at <a href="https://apologeticsnigeria.com/partner#give"><b>apologeticsnigeria.com/partner</b></a>. Nothing is expected — your seat is yours either way.</p>
+
+  <div class="sign">
+    <p class="sdg">See you on the 16th. — Soli Deo Gloria</p>
+    <p class="nm">MANNORR</p>
+    <p class="rl">Founder, Apologetics Nigeria</p>
+    <p class="url">apologeticsnigeria.com</p>
+  </div>
+
+  <div class="foot"><span>Apologetics Nigeria</span><span>Defending the Faith · 16–18 October 2026</span></div>
+</section>
+
+</body>
+</html>

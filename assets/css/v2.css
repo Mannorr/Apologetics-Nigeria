@@ -951,3 +951,16 @@ body.deck-open .bar{transform:translateY(-110%)}
 .vl-roles{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media (max-width:1000px){.vl-roles{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:640px){.vl-roles{grid-template-columns:1fr}}
+
+/* registered: attendee pack */
+.pack-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(2rem,6vw,6rem);align-items:center}
+.pack-cover{--cut:22px;position:relative;display:block;transform:rotate(-2.2deg);transition:transform .8s var(--ease);max-width:440px}
+.pack-cover img{width:100%;height:auto;box-shadow:0 50px 80px -30px rgba(4,12,14,.55),0 0 0 1px rgba(4,12,14,.08)}
+.pack-cover:hover{transform:rotate(0) translateY(-6px)}
+.pack-badge{position:absolute;left:-.8rem;bottom:1.4rem;background:var(--gold-2);color:var(--ink);padding:.55rem .8rem;font-weight:500;
+  clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px))}
+.pack-list{list-style:none;margin:1.8rem 0 2rem;border-top:1px solid var(--line-l)}
+.pack-list li{display:grid;grid-template-columns:3rem 1fr;padding:.85rem 0;border-bottom:1px solid var(--line-l);font-size:1.08rem}
+.pack-list .mono{color:var(--gold);padding-top:.25rem}
+.inline-link{color:var(--gold);text-decoration:underline;text-underline-offset:.18em}
+@media (max-width:1000px){.pack-grid{grid-template-columns:1fr}.pack-cover{max-width:320px;margin:0 auto 1rem}}
