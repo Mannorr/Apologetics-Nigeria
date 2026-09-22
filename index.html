@@ -21,231 +21,371 @@
 <meta name="twitter:title" content="Apologetics Nigeria — Give a reason for the hope" />
 <meta name="twitter:description" content="Apologetics Nigeria partners with churches, pastors, and ministry groups to equip believers to defend the faith and share the gospel — with clarity, confidence, and joy." />
 <meta name="twitter:image" content="https://apologeticsnigeria.com/assets/img/brand/og-image.png" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/styles.css" />
+<link rel="preload" href="assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/newsreader-italic.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="assets/css/v2.css" />
+<script>document.documentElement.classList.add("js")</script>
 </head>
-<body>
+<body class="v2">
 
-<header class="nav" id="nav">
-  <div class="wrap nav-inner">
-    <a href="index" class="brand" aria-label="Apologetics Nigeria — home">
-      <img src="assets/img/brand/logo.png" alt="Apologetics Nigeria" class="brand-logo" id="brandLogo" onerror="this.remove();" />
-    </a>
-    <nav class="nav-links" id="navlinks">
-      <a href="training" class="lk" data-page="training">Training</a>
-      <a href="resources" class="lk" data-page="resources">Resources</a>
-      <a href="about" class="lk" data-page="about">About</a>
-      <a href="beliefs" class="lk" data-page="beliefs">Beliefs</a>
-      <a href="partner" class="lk" data-page="partner">Partner</a>
-      <a href="contact" class="lk" data-page="contact">Contact</a>
-      <a href="partner#give" class="btn btn-gold">Give</a>
-    </nav>
-    <button class="nav-toggle" id="navtoggle" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ═════════ NAV ═════════ -->
+<header class="bar" id="bar" data-theme="dark">
+  <a href="index" class="bar-brand" aria-label="Apologetics Nigeria — home">
+    <img src="assets/img/brand/logo.png" alt="" width="4080" height="2295" />
+  </a>
+  <p class="bar-clock mono" aria-hidden="true"><span class="dot"></span>Lagos, NG&nbsp;<span data-clock>--:--</span>&nbsp;WAT</p>
+  <div class="bar-actions">
+    <a href="partner#give" class="cta cta--gold cta--sm" data-cursor="Give">Give</a>
+    <button class="bar-menu" id="menuBtn" aria-expanded="false" aria-controls="menu">
+      <span class="bar-menu-label mono">Menu</span>
+      <span class="bar-menu-icon" aria-hidden="true"><i></i><i></i></span>
     </button>
   </div>
 </header>
 
-<main>
-<!-- HERO -->
-<section class="hero" id="top">
-  <div class="wrap">
-    <p class="eyebrow reveal">Non-denominational apologetics · Nigeria</p>
-    <h1 class="display reveal d1">Give a <em class="acc">reason</em> for the hope.</h1>
-    <p class="lede reveal d2">We partner with churches, pastors, and ministry groups to equip believers to defend the faith and share the gospel — with clarity, confidence, and joy.</p>
-    <div class="hero-cta reveal d3">
-      <a href="partner" class="btn btn-gold">Partner with us</a>
-      <a href="partner#give" class="btn btn-ghost">Support the work</a>
+<!-- ═════════ MENU OVERLAY ═════════ -->
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Site menu" hidden>
+  <div class="menu-inner" tabindex="-1">
+    <nav class="menu-links" aria-label="Primary">
+      <a href="training" data-i="01"><span class="menu-word">Training</span><em>Defending the Faith · 16–18 Oct</em></a>
+      <a href="resources" data-i="02"><span class="menu-word">Resources</span><em>Talks, decks and video library</em></a>
+      <a href="about" data-i="03"><span class="menu-word">About</span><em>Who we are</em></a>
+      <a href="beliefs" data-i="04"><span class="menu-word">Beliefs</span><em>What we hold</em></a>
+      <a href="partner" data-i="05"><span class="menu-word">Partner</span><em>Churches, pastors, ministry groups</em></a>
+      <a href="contact" data-i="06"><span class="menu-word">Contact</span><em>Write to us</em></a>
+    </nav>
+    <aside class="menu-side">
+      <p class="mono menu-k">Always be prepared</p>
+      <p class="menu-verse">“…to give an answer to everyone who asks you to give the reason for the hope that you have.”</p>
+      <p class="mono menu-k">1 Peter 3:15</p>
+      <div class="menu-side-foot">
+        <a href="partner#give" class="cta cta--gold">Support the work</a>
+        <a href="https://www.instagram.com/apologeticsnigeria/" target="_blank" rel="noopener" class="mono ulink">Instagram ↗</a>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<div class="cursor" aria-hidden="true"><span class="cursor-label"></span></div>
+
+<main id="main">
+
+<!-- ═════════ HERO ═════════ -->
+<section class="hero" id="top" data-theme="dark">
+  <!-- Question field: real questions from the resource library, each linking to its deck. -->
+  <nav class="qfield" id="qfield" aria-label="Questions we answer">
+    <div class="qfield-base">
+      <a href="resources#deck-01">Has the Bible been changed?</a>
+      <a href="resources#deck-02">Was Jesus real, or a myth?</a>
+      <a href="resources#deck-03">Did Jesus really die?</a>
+      <a href="resources#deck-04">Was Jesus raised from the dead?</a>
+      <a href="resources#deck-05">Was Jesus foretold?</a>
+      <a href="resources#deck-06">Who wrote the Gospels?</a>
+      <a href="resources#deck-07">Do the Gospels contradict each other?</a>
+      <a href="resources#deck-08">Are the Gospels eyewitness accounts?</a>
+      <a href="resources#deck-09">Is Jesus of Nazareth God?</a>
+      <a href="resources#deck-13">How is a man saved?</a>
+      <a href="resources">Is Islam Peace?</a>
+    </div>
+    <div class="qfield-lit" aria-hidden="true"></div>
+  </nav>
+
+  <div class="hero-inner">
+    <p class="hero-rail mono">Non-denominational apologetics · Nigeria</p>
+
+    <h1 class="hero-title" aria-label="Give a reason for the hope.">
+      <span class="ln" aria-hidden="true"><span class="ln-in t-cond">Give a</span></span>
+      <span class="ln ln--serif" aria-hidden="true"><span class="ln-in t-serif"><em>reason</em></span></span>
+      <span class="ln" aria-hidden="true"><span class="ln-in t-cond">for the hope.</span></span>
+    </h1>
+
+    <div class="hero-foot">
+      <p class="hero-lede">We partner with churches, pastors, and ministry groups to equip believers to defend the faith and share the gospel — with clarity, confidence, and joy.</p>
+      <div class="hero-cta">
+        <a href="partner" class="cta cta--gold" data-cursor="Open">Partner with us <span class="arr" aria-hidden="true">→</span></a>
+        <a href="partner#give" class="cta cta--line" data-cursor="Give">Support the work</a>
+      </div>
+      <p class="hero-hint mono" aria-hidden="true"><span class="hint-dot"></span>Move the light · every question opens an answer</p>
     </div>
   </div>
 </section>
 
-<!-- TRAINING PROMO (remove after 18 Oct 2026) -->
-<section class="tint" id="training-promo" style="padding:clamp(2.2rem,4.5vw,3.2rem) 0">
-  <div class="wrap" style="margin-bottom:clamp(1.6rem,3.5vw,2.4rem)">
-    <a href="training" class="tr-banner" aria-label="Defending the Faith — free apologetics training, 16–18 October">
+
+<!-- ═════════ TRAINING PROMO (remove after 18 Oct 2026) ═════════ -->
+<section class="promo" id="training-promo" data-theme="light">
+  <article class="ticket reveal">
+    <a href="training" class="ticket-art" aria-label="Defending the Faith — free apologetics training, 16–18 October" data-cursor="Open">
       <picture>
         <source media="(max-width:640px)" srcset="assets/img/training/training-banner-mobile.png" />
-        <img src="assets/img/training/training-banner.jpg" alt="Defending the Faith — free three-day apologetics training, 16–18 October, 7–10PM WAT" width="2400" height="800" />
+        <img src="assets/img/training/training-banner.jpg" alt="Defending the Faith — free three-day apologetics training, 16–18 October, 7–10PM WAT" width="2400" height="800" loading="lazy" />
       </picture>
     </a>
-  </div>
-  <div class="wrap" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.4rem 2rem">
-    <div style="flex:1 1 340px">
-      <p class="eyebrow" style="margin-bottom:.6rem">Free training · 16–18 October</p>
-      <h2 style="font-family:'Newsreader',serif;font-weight:380;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.15;margin-bottom:.5rem">Defending the Faith — three evenings, no cost.</h2>
-      <p style="color:var(--stone);font-size:.98rem;max-width:56ch">An introduction to apologetics, live online, 7–10PM WAT. Learn to answer the questions your faith is actually being asked.</p>
+    <div class="ticket-body">
+      <p class="kicker mono">Free training · 16–18 October</p>
+      <h2 class="ticket-title">Defending the Faith — <em>three evenings, no cost.</em></h2>
+      <p class="ticket-copy">An introduction to apologetics, live online, 7–10PM WAT. Learn to answer the questions your faith is actually being asked.</p>
+      <a href="training" class="cta cta--ink" data-cursor="Open">See the training <span class="arr" aria-hidden="true">→</span></a>
     </div>
-    <a href="training" class="btn btn-dark">See the training →</a>
+    <div class="ticket-stub" data-countdown="2026-10-16T19:00:00+01:00" data-countdown-end="2026-10-18T22:00:00+01:00">
+      <p class="mono stub-k" data-cd-label>Starts in</p>
+      <div class="cd" role="timer" aria-live="off">
+        <div><b data-cd="d">--</b><span class="mono">Days</span></div>
+        <div><b data-cd="h">--</b><span class="mono">Hrs</span></div>
+        <div><b data-cd="m">--</b><span class="mono">Min</span></div>
+        <div><b data-cd="s">--</b><span class="mono">Sec</span></div>
+      </div>
+      <ol class="stub-days mono" aria-label="Session dates">
+        <li><b>16</b>Fri</li><li><b>17</b>Sat</li><li><b>18</b>Sun</li>
+      </ol>
+      <p class="mono stub-k">October · 7–10PM WAT · Online</p>
+    </div>
+  </article>
+</section>
+
+
+<!-- ═════════ THE NEED ═════════ -->
+<section class="need" id="need" data-theme="dark">
+  <div class="need-open">
+    <p class="kicker mono kicker--gold">The need · why now</p>
+    <p class="need-lede" data-words>Nigeria has no shortage of Christianity. It has a shortage of <em>grounding</em>.</p>
+  </div>
+
+  <div class="scrolly" id="scrolly">
+    <div class="scrolly-pin">
+      <div class="scrolly-grid">
+        <div class="scrolly-copy">
+          <p class="mono scrolly-count"><span data-step-n>01</span> / 03</p>
+          <div class="facts">
+            <article class="fact is-on" data-step="0">
+              <div class="fact-num">39%</div>
+              <p>The share of Nigeria's population projected to be Christian by 2050 — down from roughly 43–46% today, as the Muslim share rises toward 58%.</p>
+              <p class="src mono">Source — Pew Research Center</p>
+            </article>
+            <article class="fact" data-step="1">
+              <div class="fact-num">80–90%</div>
+              <p>Of pastors and church leaders across Africa have little or no formal biblical or theological training. Where training is scarce, false teaching meets little resistance.</p>
+              <p class="src mono">Source — World Evangelical Alliance · Langham Partnership</p>
+            </article>
+            <article class="fact" data-step="2">
+              <div class="fact-num">Rising</div>
+              <p>Irreligion among young Nigerians — sharpest among men under 30 — driven not by science, but by disillusionment with a faith many were never truly taught.</p>
+              <p class="src mono">Source — World Values Survey, 2025</p>
+            </article>
+          </div>
+        </div>
+
+        <figure class="matrix-wrap" aria-hidden="true">
+          <div class="matrix" id="matrix"></div>
+          <figcaption class="matrix-key mono">
+            <span class="k k0"><i class="sw sw-fill"></i>Christian, per 100 Nigerians <b data-matrix-read>Today ≈ 45</b></span>
+            <span class="k k1"><i class="sw sw-hollow"></i>Little or no training <i class="sw sw-dash"></i>Range <i class="sw sw-fill"></i>Trained</span>
+            <span class="k k2"><i class="sw sw-fill"></i>Direction of travel, not a count</span>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="scrolly-rail" aria-hidden="true"><i id="scrollyBar"></i></div>
+    </div>
+  </div>
+
+  <div class="need-close">
+    <p class="need-foot" data-words>A faith inherited but not understood does not survive the questions of a <em>new generation</em>.</p>
   </div>
 </section>
 
 
-<!-- NEED -->
-<section class="dark" id="need">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="eyebrow">The need · why now</p>
-    </div>
-    <p class="need-lede reveal">Nigeria has no shortage of Christianity. It has a shortage of <em class="acc">grounding</em>.</p>
+<!-- ═════════ HOW WE WORK ═════════ -->
+<section class="work" id="work" data-theme="light">
+  <header class="work-head">
+    <p class="kicker mono">How we work</p>
+    <h2 class="work-title reveal"><span class="t-cond">Small, faithful,</span> <em class="t-serif">and built to last.</em></h2>
+  </header>
 
-    <div class="stat reveal">
-      <div class="num" data-count="39" data-suffix="%">39%</div>
-      <div class="txt">
-        <p>The share of Nigeria's population projected to be Christian by 2050 — down from roughly 43–46% today, as the Muslim share rises toward 58%.</p>
-        <p class="src">Source — Pew Research Center</p>
+  <div class="accord" id="accord">
+    <article class="panel is-open">
+      <button class="panel-btn" aria-expanded="true" aria-controls="p1" id="pb1">
+        <span class="panel-i mono">01</span><span class="panel-tag mono">The church first</span>
+      </button>
+      <div class="panel-body" id="p1" role="region" aria-labelledby="pb1">
+        <h3>We serve, not compete</h3>
+        <p>We equip a church's own people and leave the capability inside the church — never gathering a following of our own.</p>
       </div>
-    </div>
-
-    <div class="stat reveal">
-      <div class="num">80–90%</div>
-      <div class="txt">
-        <p>Of pastors and church leaders across Africa have little or no formal biblical or theological training. Where training is scarce, false teaching meets little resistance.</p>
-        <p class="src">Source — World Evangelical Alliance · Langham Partnership</p>
+      <span class="panel-ghost" aria-hidden="true">01</span>
+    </article>
+    <article class="panel">
+      <button class="panel-btn" aria-expanded="false" aria-controls="p2" id="pb2">
+        <span class="panel-i mono">02</span><span class="panel-tag mono">Train the trainers</span>
+      </button>
+      <div class="panel-body" id="p2" role="region" aria-labelledby="pb2">
+        <h3>Multiply through leaders</h3>
+        <p>Wherever possible we equip existing leaders to carry apologetics forward themselves, so a small team can strengthen many congregations.</p>
       </div>
-    </div>
-
-    <div class="stat reveal">
-      <div class="num" style="font-size:clamp(2.6rem,7vw,5.5rem)">Rising</div>
-      <div class="txt">
-        <p>Irreligion among young Nigerians — sharpest among men under 30 — driven not by science, but by disillusionment with a faith many were never truly taught.</p>
-        <p class="src">Source — World Values Survey, 2025</p>
+      <span class="panel-ghost" aria-hidden="true">02</span>
+    </article>
+    <article class="panel">
+      <button class="panel-btn" aria-expanded="false" aria-controls="p3" id="pb3">
+        <span class="panel-i mono">03</span><span class="panel-tag mono">Curriculum</span>
+      </button>
+      <div class="panel-body" id="p3" role="region" aria-labelledby="pb3">
+        <h3>A clear foundations track</h3>
+        <p>Twelve weeks moving from the existence of God, through the person and work of Jesus, to engaging Islam and atheism and starting real conversations.</p>
       </div>
-    </div>
-
-    <p class="need-foot reveal">A faith inherited but not understood does not survive the questions of a <em>new generation</em>.</p>
+      <span class="panel-ghost" aria-hidden="true">03</span>
+    </article>
+    <article class="panel">
+      <button class="panel-btn" aria-expanded="false" aria-controls="p4" id="pb4">
+        <span class="panel-i mono">04</span><span class="panel-tag mono">Media engine</span>
+      </button>
+      <div class="panel-body" id="p4" role="region" aria-labelledby="pb4">
+        <h3>Reach a generation online</h3>
+        <p>Films, a podcast, courses, and social content — so the teaching reaches those who live online, not only those in the room.</p>
+      </div>
+      <span class="panel-ghost" aria-hidden="true">04</span>
+    </article>
+    <article class="panel">
+      <button class="panel-btn" aria-expanded="false" aria-controls="p5" id="pb5">
+        <span class="panel-i mono">05</span><span class="panel-tag mono">Little by little</span>
+      </button>
+      <div class="panel-body" id="p5" role="region" aria-labelledby="pb5">
+        <h3>Grown on proven fruit</h3>
+        <p>A few committed partner churches first, real fruit documented, then expansion only on a foundation that has proven solid.</p>
+      </div>
+      <span class="panel-ghost" aria-hidden="true">05</span>
+    </article>
   </div>
 </section>
 
 
-<!-- HOW WE WORK -->
-<section id="work">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="eyebrow">How we work</p>
-      <h2 class="h2">Small, faithful, and built to last.</h2>
+<!-- ═════════ RESOURCES REEL ═════════ -->
+<section class="reel-sec" id="films" data-theme="dark">
+  <header class="reel-head">
+    <h2 class="reel-title reveal"><span class="t-cond">Explore the</span> <em class="t-serif">resources.</em></h2>
+    <div class="reel-ctrl">
+      <p class="mono reel-count"><span data-reel-n>01</span> / 06</p>
+      <button class="reel-arrow" data-reel="-1" aria-label="Previous">←</button>
+      <button class="reel-arrow" data-reel="1" aria-label="Next">→</button>
     </div>
-    <div class="work-list">
-      <div class="work-item reveal">
-        <span class="tag">The church first</span>
-        <div class="desc"><h3>We serve, not compete</h3><p>We equip a church's own people and leave the capability inside the church — never gathering a following of our own.</p></div>
+  </header>
+
+  <div class="reel" id="reel" tabindex="0" role="region" aria-label="Featured resources — scroll horizontally" data-cursor="Drag">
+    <article class="reel-card">
+      <div class="course-thumb" data-id="ePMjFrWp1JY" data-cursor="Play">
+        <img src="https://i.ytimg.com/vi/ePMjFrWp1JY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/ePMjFrWp1JY/hqdefault.jpg'" alt="" loading="lazy" draggable="false" />
+        <span class="play" aria-hidden="true"></span>
       </div>
-      <div class="work-item reveal">
-        <span class="tag">Train the trainers</span>
-        <div class="desc"><h3>Multiply through leaders</h3><p>Wherever possible we equip existing leaders to carry apologetics forward themselves, so a small team can strengthen many congregations.</p></div>
+      <p class="reel-meta mono"><span>01</span>Islam • Apologetics</p>
+      <h3 class="reel-name">Is Islam Peace?</h3>
+    </article>
+    <article class="reel-card">
+      <div class="course-thumb" data-id="w4HFMAChOQY" data-cursor="Play">
+        <img src="https://i.ytimg.com/vi/w4HFMAChOQY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/w4HFMAChOQY/hqdefault.jpg'" alt="" loading="lazy" draggable="false" />
+        <span class="play" aria-hidden="true"></span>
       </div>
-      <div class="work-item reveal">
-        <span class="tag">Curriculum</span>
-        <div class="desc"><h3>A clear foundations track</h3><p>Twelve weeks moving from the existence of God, through the person and work of Jesus, to engaging Islam and atheism and starting real conversations.</p></div>
+      <p class="reel-meta mono"><span>02</span>Islam • Apologetics</p>
+      <h3 class="reel-name">Inside Islam</h3>
+    </article>
+    <article class="reel-card">
+      <div class="course-thumb" data-id="6XhMBhPiGL0" data-cursor="Play">
+        <img src="https://i.ytimg.com/vi/6XhMBhPiGL0/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/6XhMBhPiGL0/hqdefault.jpg'" alt="" loading="lazy" draggable="false" />
+        <span class="play" aria-hidden="true"></span>
       </div>
-      <div class="work-item reveal">
-        <span class="tag">Media engine</span>
-        <div class="desc"><h3>Reach a generation online</h3><p>Films, a podcast, courses, and social content — so the teaching reaches those who live online, not only those in the room.</p></div>
+      <p class="reel-meta mono"><span>03</span>Islam • Apologetics</p>
+      <h3 class="reel-name">Analyzing the Qur'an</h3>
+    </article>
+    <article class="reel-card">
+      <div class="course-thumb" data-id="_fmgTmWfdFE" data-cursor="Play">
+        <img src="https://i.ytimg.com/vi/_fmgTmWfdFE/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/_fmgTmWfdFE/hqdefault.jpg'" alt="" loading="lazy" draggable="false" />
+        <span class="play" aria-hidden="true"></span>
       </div>
-      <div class="work-item reveal">
-        <span class="tag">Little by little</span>
-        <div class="desc"><h3>Grown on proven fruit</h3><p>A few committed partner churches first, real fruit documented, then expansion only on a foundation that has proven solid.</p></div>
+      <p class="reel-meta mono"><span>04</span>Islam • Apologetics</p>
+      <h3 class="reel-name">Understanding Hadith</h3>
+    </article>
+    <article class="reel-card">
+      <div class="course-thumb" data-id="2ulInp-C-rg" data-cursor="Play">
+        <img src="https://i.ytimg.com/vi/2ulInp-C-rg/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/2ulInp-C-rg/hqdefault.jpg'" alt="" loading="lazy" draggable="false" />
+        <span class="play" aria-hidden="true"></span>
       </div>
+      <p class="reel-meta mono"><span>05</span>Islam • Apologetics</p>
+      <h3 class="reel-name">History of the Quran</h3>
+    </article>
+    <article class="reel-card reel-card--end">
+      <a href="resources" class="reel-end" data-cursor="Open">
+        <span class="mono">06 · The library</span>
+        <span class="reel-end-t">Explore all <em>resources</em>&nbsp;<span class="arr" aria-hidden="true">→</span></span>
+        <span class="reel-end-list mono">Islam · Atheism · Jesus · The Bible · Foundations</span>
+      </a>
+    </article>
+  </div>
+  <div class="reel-progress" aria-hidden="true"><i id="reelBar"></i></div>
+</section>
+
+
+<!-- ═════════ SCRIPTURE MARQUEE ═════════ -->
+<section class="verse" aria-label="1 Peter 3:15" data-theme="gold">
+  <p class="sr-only">Always be prepared to give an answer to everyone who asks you to give the reason for the hope that you have. But do this with gentleness and respect. 1 Peter 3:15</p>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="marquee">
+      <span class="mq-item">Always be prepared to give an answer to everyone who asks you to give the reason for the hope that you have. But do this with <em>gentleness and respect</em>.<b>1 Peter 3:15</b></span>
     </div>
   </div>
 </section>
 
 
-<!-- FEATURED FILMS -->
-<section class="library" id="films">
-  <div class="wrap">
-    <div class="library-head reveal">
-      <h2 class="library-title">Explore the <em class="acc">resources</em>.</h2>
-      <a class="library-link" href="resources">Explore all resources →</a>
+<!-- ═════════ NEWSLETTER ═════════ -->
+<section class="letter" id="newsletter" data-theme="light">
+  <div class="letter-grid">
+    <div class="letter-copy">
+      <p class="kicker mono">Stay equipped</p>
+      <h2 class="letter-title reveal"><span class="t-cond">Answers,</span> <em class="t-serif">in your inbox.</em></h2>
+      <p class="letter-lede">Occasional emails with new videos, clear answers to the questions believers are actually asked, and resources to help you defend your faith. No spam — unsubscribe anytime.</p>
     </div>
-    <div class="library-grid">
-      <article class="course-card reveal" data-cat="islam">
-        <div class="course-thumb" data-id="ePMjFrWp1JY">
-          <img src="https://i.ytimg.com/vi/ePMjFrWp1JY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/ePMjFrWp1JY/hqdefault.jpg'" alt="" loading="lazy" />
-          <span class="play" aria-hidden="true"></span>
-        </div>
-        <div class="course-meta"><p class="course-tags">Islam • Apologetics</p></div>
-      </article>
-      <article class="course-card reveal" data-cat="islam">
-        <div class="course-thumb" data-id="w4HFMAChOQY">
-          <img src="https://i.ytimg.com/vi/w4HFMAChOQY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/w4HFMAChOQY/hqdefault.jpg'" alt="" loading="lazy" />
-          <span class="play" aria-hidden="true"></span>
-        </div>
-        <div class="course-meta"><p class="course-tags">Islam • Apologetics</p></div>
-      </article>
-      <article class="course-card reveal" data-cat="islam">
-        <div class="course-thumb" data-id="6XhMBhPiGL0">
-          <img src="https://i.ytimg.com/vi/6XhMBhPiGL0/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/6XhMBhPiGL0/hqdefault.jpg'" alt="" loading="lazy" />
-          <span class="play" aria-hidden="true"></span>
-        </div>
-        <div class="course-meta"><p class="course-tags">Islam • Apologetics</p></div>
-      </article>
-      <article class="course-card reveal" data-cat="islam">
-        <div class="course-thumb" data-id="_fmgTmWfdFE">
-          <img src="https://i.ytimg.com/vi/_fmgTmWfdFE/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/_fmgTmWfdFE/hqdefault.jpg'" alt="" loading="lazy" />
-          <span class="play" aria-hidden="true"></span>
-        </div>
-        <div class="course-meta"><p class="course-tags">Islam • Apologetics</p></div>
-      </article>
-      <article class="course-card reveal" data-cat="islam">
-        <div class="course-thumb" data-id="2ulInp-C-rg">
-          <img src="https://i.ytimg.com/vi/2ulInp-C-rg/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/2ulInp-C-rg/hqdefault.jpg'" alt="" loading="lazy" />
-          <span class="play" aria-hidden="true"></span>
-        </div>
-        <div class="course-meta"><p class="course-tags">Islam • Apologetics</p></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- NEWSLETTER -->
-<section class="newsletter" id="newsletter">
-  <div class="wrap news-inner">
-    <div class="news-copy reveal">
-      <p class="eyebrow">Stay equipped</p>
-      <h2 class="h2">Answers, <em class="acc">in your inbox</em>.</h2>
-      <p class="lede news-lede">Occasional emails with new videos, clear answers to the questions believers are actually asked, and resources to help you defend your faith. No spam — unsubscribe anytime.</p>
-    </div>
-    <form class="news-form reveal d1" id="newsForm" action="https://formspree.io/f/mkolkrqb" method="POST">
+    <form class="letter-form" id="newsForm" action="https://formspree.io/f/mkolkrqb" method="POST">
       <input type="hidden" name="_subject" value="New newsletter signup — Apologetics Nigeria" />
       <input type="hidden" name="form-type" value="newsletter" />
-      <label class="sr-only" for="news-email">Email address</label>
-      <div class="news-row">
+      <label class="mono letter-label" for="news-email">Email address</label>
+      <div class="letter-row">
         <input type="email" id="news-email" name="email" placeholder="your@email.com" required autocomplete="email" />
-        <button type="submit" class="btn btn-gold" id="news-submit">Subscribe →</button>
+        <button type="submit" class="letter-go" id="news-submit" data-cursor="Send"><span class="letter-go-t">Subscribe</span><span class="arr" aria-hidden="true">→</span></button>
       </div>
-      <p class="form-status" id="news-status" role="status" aria-live="polite"></p>
+      <p class="form-status mono" id="news-status" role="status" aria-live="polite"></p>
     </form>
   </div>
 </section>
 
 </main>
 
-<footer class="site">
-  <div class="wrap">
-    <div class="foot-inner">
-      <img src="assets/img/brand/logo.png" alt="Apologetics Nigeria" class="foot-logo" onerror="this.remove();" />
-      <nav class="foot-nav" aria-label="Footer">
-        <a href="training">Training</a>
-        <a href="resources">Resources</a>
-        <a href="about">About</a>
-        <a href="beliefs">Beliefs</a>
-        <a href="partner">Partner</a>
-        <a href="contact">Contact</a>
-        <a href="https://www.instagram.com/apologeticsnigeria/" target="_blank" rel="noopener">Instagram</a>
-        <a href="privacy">Privacy</a>
-      </nav>
-      <div class="foot-bottom">
-        <p class="foot-tag">Grounded believers · defended faith · a generation that can give a reason for its hope.</p>
-        <p class="foot-copy">© 2026 Apologetics Nigeria</p>
-      </div>
+<!-- ═════════ FOOTER ═════════ -->
+<footer class="foot" data-theme="dark">
+  <div class="foot-top">
+    <p class="foot-tag">Grounded believers · defended faith · a generation that can give a reason for its hope.</p>
+    <nav class="foot-col" aria-label="Footer">
+      <p class="mono foot-k">Explore</p>
+      <a href="training">Training</a>
+      <a href="resources">Resources</a>
+      <a href="about">About</a>
+      <a href="beliefs">Beliefs</a>
+      <a href="partner">Partner</a>
+      <a href="contact">Contact</a>
+    </nav>
+    <div class="foot-col">
+      <p class="mono foot-k">Elsewhere</p>
+      <a href="https://www.instagram.com/apologeticsnigeria/" target="_blank" rel="noopener">Instagram ↗</a>
+      <a href="privacy">Privacy</a>
+      <a href="#top">Back to top ↑</a>
     </div>
+  </div>
+  <div class="foot-mark" aria-hidden="true">
+    <span class="foot-word" id="footWord">Apologetics Nigeria</span>
+  </div>
+  <div class="foot-bottom mono">
+    <img src="assets/img/brand/logo.png" alt="Apologetics Nigeria" class="foot-logo" width="4080" height="2295" loading="lazy" />
+    <p>© 2026 Apologetics Nigeria</p>
+    <p>Lagos, NG · <span data-clock>--:--</span> WAT</p>
   </div>
 </footer>
 
-<script src="assets/js/script.js"></script>
+<script src="assets/js/v2.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
