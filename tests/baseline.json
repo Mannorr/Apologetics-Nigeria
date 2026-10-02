@@ -9,10 +9,13 @@
   ],
   "ids": [
    "about",
-   "brandLogo",
-   "nav",
-   "navlinks",
-   "navtoggle",
+   "bar",
+   "footWord",
+   "main",
+   "marquee",
+   "menu",
+   "menuBtn",
+   "top",
    "vision"
   ],
   "lang": "en",
@@ -20,14 +23,17 @@
   "links": [
    "/",
    "/about",
+   "/about#main",
+   "/about#top",
    "/beliefs",
    "/contact",
+   "/events",
    "/partner",
    "/partner#give",
    "/privacy",
    "/resources",
-   "/training",
-   "https://www.instagram.com/apologeticsnigeria/"
+   "https://www.instagram.com/apologeticsnigeria/",
+   "https://www.youtube.com/@Apologetics-ng"
   ],
   "meta": {
    "description": "Meet the founder of Apologetics Nigeria and the vision behind equipping the Nigerian church to defend the faith and share the gospel.",
@@ -51,11 +57,13 @@
    "Statement of Faith"
   ],
   "ids": [
+   "bar",
    "beliefs",
-   "brandLogo",
-   "nav",
-   "navlinks",
-   "navtoggle"
+   "footWord",
+   "main",
+   "menu",
+   "menuBtn",
+   "top"
   ],
   "lang": "en",
   "ld": [],
@@ -63,13 +71,16 @@
    "/",
    "/about",
    "/beliefs",
+   "/beliefs#main",
+   "/beliefs#top",
    "/contact",
+   "/events",
    "/partner",
    "/partner#give",
    "/privacy",
    "/resources",
-   "/training",
-   "https://www.instagram.com/apologeticsnigeria/"
+   "https://www.instagram.com/apologeticsnigeria/",
+   "https://www.youtube.com/@Apologetics-ng"
   ],
   "meta": {
    "description": "The statement of faith of Apologetics Nigeria \u2014 the historic Christian beliefs we hold, teach, and defend.",
@@ -163,7 +174,7 @@
    "Contact Apologetics Nigeria"
   ],
   "ids": [
-   "brandLogo",
+   "bar",
    "cf-email",
    "cf-message",
    "cf-name",
@@ -173,9 +184,11 @@
    "cf-submit",
    "contact",
    "contactForm",
-   "nav",
-   "navlinks",
-   "navtoggle"
+   "footWord",
+   "main",
+   "menu",
+   "menuBtn",
+   "top"
   ],
   "lang": "en",
   "ld": [],
@@ -184,12 +197,15 @@
    "/about",
    "/beliefs",
    "/contact",
+   "/contact#main",
+   "/contact#top",
+   "/events",
    "/partner",
    "/partner#give",
    "/privacy",
    "/resources",
-   "/training",
    "https://www.instagram.com/apologeticsnigeria/",
+   "https://www.youtube.com/@Apologetics-ng",
    "mailto:hello@apologeticsnigeria.com"
   ],
   "meta": {
@@ -203,6 +219,58 @@
    "twitter:image": "https://apologeticsnigeria.com/assets/img/brand/og-image.png"
   },
   "title": "Contact | Apologetics Nigeria",
+  "videos": []
+ },
+ "events.html": {
+  "canonical": "https://apologeticsnigeria.com/events",
+  "decks": [],
+  "favicon": true,
+  "forms": [],
+  "h1": [
+   "Where we gather."
+  ],
+  "ids": [
+   "bar",
+   "footWord",
+   "main",
+   "menu",
+   "menuBtn",
+   "past",
+   "pastEvents",
+   "top",
+   "upcoming",
+   "upcomingEvents"
+  ],
+  "lang": "en",
+  "ld": [],
+  "links": [
+   "/",
+   "/about",
+   "/beliefs",
+   "/contact",
+   "/events",
+   "/events#main",
+   "/events#top",
+   "/events#upcoming",
+   "/partner",
+   "/partner#give",
+   "/privacy",
+   "/resources",
+   "/training",
+   "https://www.instagram.com/apologeticsnigeria/",
+   "https://www.youtube.com/@Apologetics-ng"
+  ],
+  "meta": {
+   "description": "Upcoming and past events from Apologetics Nigeria: live apologetics trainings and gatherings for believers who want to give a reason for their hope.",
+   "og:description": "Upcoming and past events from Apologetics Nigeria: live apologetics trainings and gatherings for believers who want to give a reason for their hope.",
+   "og:image": "https://apologeticsnigeria.com/assets/img/brand/og-image.png",
+   "og:title": "Events \u2014 Apologetics Training and Gatherings | Apologetics Nigeria",
+   "og:url": "https://apologeticsnigeria.com/events",
+   "robots": null,
+   "twitter:card": "summary_large_image",
+   "twitter:image": "https://apologeticsnigeria.com/assets/img/brand/og-image.png"
+  },
+  "title": "Events \u2014 Apologetics Training and Gatherings | Apologetics Nigeria",
   "videos": []
  },
  "index.html": {
@@ -250,17 +318,37 @@
    "Give a reason for the hope."
   ],
   "ids": [
-   "brandLogo",
+   "accord",
+   "bar",
    "films",
-   "nav",
-   "navlinks",
-   "navtoggle",
+   "footWord",
+   "main",
+   "marquee",
+   "matrix",
+   "menu",
+   "menuBtn",
    "need",
    "news-email",
    "news-status",
    "news-submit",
    "newsForm",
    "newsletter",
+   "p1",
+   "p2",
+   "p3",
+   "p4",
+   "p5",
+   "pb1",
+   "pb2",
+   "pb3",
+   "pb4",
+   "pb5",
+   "profile",
+   "qfield",
+   "reel",
+   "reelBar",
+   "scrolly",
+   "scrollyBar",
    "top",
    "training-promo",
    "work"
@@ -287,15 +375,30 @@
   ],
   "links": [
    "/",
+   "/#main",
+   "/#top",
    "/about",
+   "/assets/files/apologetics-nigeria-profile.pdf",
    "/beliefs",
    "/contact",
+   "/events",
    "/partner",
    "/partner#give",
    "/privacy",
    "/resources",
+   "/resources#deck-01",
+   "/resources#deck-02",
+   "/resources#deck-03",
+   "/resources#deck-04",
+   "/resources#deck-05",
+   "/resources#deck-06",
+   "/resources#deck-07",
+   "/resources#deck-08",
+   "/resources#deck-09",
+   "/resources#deck-13",
    "/training",
-   "https://www.instagram.com/apologeticsnigeria/"
+   "https://www.instagram.com/apologeticsnigeria/",
+   "https://www.youtube.com/@Apologetics-ng"
   ],
   "meta": {
    "description": "Apologetics Nigeria partners with churches, pastors, and ministry groups to equip believers to defend the faith and share the gospel \u2014 with clarity, confidence, and joy.",
@@ -324,10 +427,13 @@
   "h1": [
    "Join the session."
   ],
-  "ids": [],
+  "ids": [
+   "main"
+  ],
   "lang": "en",
   "ld": [],
   "links": [
+   "/",
    "https://meet.google.com/dfb-iyfh-dfe",
    "https://www.instagram.com/apologeticsnigeria/"
   ],
@@ -353,14 +459,16 @@
    "Partner With Us"
   ],
   "ids": [
-   "brandLogo",
+   "bar",
    "curriculum",
+   "footWord",
    "give",
-   "nav",
-   "navlinks",
-   "navtoggle",
+   "main",
+   "menu",
+   "menuBtn",
    "partner",
-   "reqCurriculum"
+   "reqCurriculum",
+   "top"
   ],
   "lang": "en",
   "ld": [],
@@ -369,14 +477,18 @@
    "/about",
    "/beliefs",
    "/contact",
+   "/events",
    "/partner",
+   "/partner#curriculum",
    "/partner#give",
+   "/partner#main",
+   "/partner#top",
    "/privacy",
    "/resources",
-   "/training",
    "https://buy.stripe.com/cNieVe85O0jq3eQ2up1wY00",
    "https://flutterwave.com/pay/qjh7xrxiukiq",
-   "https://www.instagram.com/apologeticsnigeria/"
+   "https://www.instagram.com/apologeticsnigeria/",
+   "https://www.youtube.com/@Apologetics-ng"
   ],
   "meta": {
    "description": "Partner with Apologetics Nigeria \u2014 invite us to train your church, pray for the work, or give to support the spread of the gospel.",
@@ -400,11 +512,18 @@
    "Privacy Policy"
   ],
   "ids": [
-   "brandLogo",
-   "nav",
-   "navlinks",
-   "navtoggle",
-   "privacy"
+   "bar",
+   "footWord",
+   "main",
+   "menu",
+   "menuBtn",
+   "p-choices",
+   "p-collect",
+   "p-contact",
+   "p-processed",
+   "p-use",
+   "privacy",
+   "top"
   ],
   "lang": "en",
   "ld": [],
@@ -413,12 +532,20 @@
    "/about",
    "/beliefs",
    "/contact",
+   "/events",
    "/partner",
    "/partner#give",
    "/privacy",
+   "/privacy#main",
+   "/privacy#p-choices",
+   "/privacy#p-collect",
+   "/privacy#p-contact",
+   "/privacy#p-processed",
+   "/privacy#p-use",
+   "/privacy#top",
    "/resources",
-   "/training",
    "https://www.instagram.com/apologeticsnigeria/",
+   "https://www.youtube.com/@Apologetics-ng",
    "mailto:hello@apologeticsnigeria.com"
   ],
   "meta": {
@@ -443,29 +570,38 @@
    "You're registered."
   ],
   "ids": [
-   "brandLogo",
-   "nav",
-   "navlinks",
-   "navtoggle"
+   "bar",
+   "footWord",
+   "main",
+   "menu",
+   "menuBtn",
+   "pack",
+   "top"
   ],
   "lang": "en",
   "ld": [],
   "links": [
    "/",
    "/about",
+   "/assets/files/defending-the-faith-attendee-pack.pdf",
    "/assets/files/defending-the-faith.ics",
    "/beliefs",
    "/contact",
+   "/events",
+   "/join",
    "/partner",
    "/partner#give",
    "/privacy",
+   "/registered#main",
+   "/registered#top",
    "/resources",
    "/training",
    "https://buy.stripe.com/cNieVe85O0jq3eQ2up1wY00",
    "https://chat.whatsapp.com/IkdbpteTCXp7W58NPxYBaK?s=cl&p=i&mlu=4&ilr=4",
    "https://flutterwave.com/pay/qjh7xrxiukiq",
    "https://wa.me/?text=I%20just%20registered%20for%20Defending%20the%20Faith%20%E2%80%94%20a%20free%203-day%20apologetics%20training%2C%2016%E2%80%9318%20October%2C%207%E2%80%9310PM%20WAT.%20Thought%20of%20you%3A%20https%3A%2F%2Fapologeticsnigeria.com%2Ftraining",
-   "https://www.instagram.com/apologeticsnigeria/"
+   "https://www.instagram.com/apologeticsnigeria/",
+   "https://www.youtube.com/@Apologetics-ng"
   ],
   "meta": {
    "description": "You're registered for Defending the Faith, 16\u201318 October, 7\u201310PM WAT. Here's everything you need before the first session.",
@@ -510,7 +646,7 @@
    "Resources \u2014 Films & Presentations"
   ],
   "ids": [
-   "brandLogo",
+   "bar",
    "deckData",
    "deckViewer",
    "dvBar",
@@ -521,10 +657,12 @@
    "dvSeries",
    "dvStage",
    "dvTrack",
+   "footWord",
    "libraryGrid",
-   "nav",
-   "navlinks",
-   "navtoggle",
+   "main",
+   "menu",
+   "menuBtn",
+   "top",
    "watch"
   ],
   "lang": "en",
@@ -534,12 +672,15 @@
    "/about",
    "/beliefs",
    "/contact",
+   "/events",
    "/partner",
    "/partner#give",
    "/privacy",
    "/resources",
-   "/training",
-   "https://www.instagram.com/apologeticsnigeria/"
+   "/resources#main",
+   "/resources#top",
+   "https://www.instagram.com/apologeticsnigeria/",
+   "https://www.youtube.com/@Apologetics-ng"
   ],
   "meta": {
    "description": "Films and in-depth on-page presentations from Apologetics Nigeria \u2014 each answering one hard question about Islam, atheism, and the Christian faith.",
@@ -677,14 +818,16 @@
    "Defending the Faith."
   ],
   "ids": [
-   "brandLogo",
+   "bar",
    "faq",
-   "nav",
-   "navlinks",
-   "navtoggle",
+   "footWord",
+   "main",
+   "menu",
+   "menuBtn",
    "register",
    "schedule",
    "speakers",
+   "top",
    "tr-email",
    "tr-location",
    "tr-name",
@@ -752,13 +895,16 @@
    "/about",
    "/beliefs",
    "/contact",
+   "/events",
    "/partner",
    "/partner#give",
    "/privacy",
    "/resources",
-   "/training",
+   "/training#main",
    "/training#register",
-   "https://www.instagram.com/apologeticsnigeria/"
+   "/training#top",
+   "https://www.instagram.com/apologeticsnigeria/",
+   "https://www.youtube.com/@Apologetics-ng"
   ],
   "meta": {
    "description": "A free three-day online apologetics training with Pastor Ernest Olusanya, Daniel Odili, MANNORR and Ben Clifton. 16\u201318 October 2026, 7\u201310PM WAT. Learn to answer the questions your faith is actually being asked \u2014 and register free.",
@@ -942,11 +1088,13 @@
   ],
   "ids": [
    "apply",
-   "brandLogo",
-   "nav",
-   "navlinks",
-   "navtoggle",
+   "bar",
+   "footWord",
+   "main",
+   "menu",
+   "menuBtn",
    "roles",
+   "top",
    "v-about",
    "v-cv",
    "v-cv2",
@@ -969,15 +1117,18 @@
    "/about",
    "/beliefs",
    "/contact",
+   "/events",
    "/partner",
    "/partner#give",
    "/privacy",
    "/resources",
-   "/training",
    "/vol#apply",
+   "/vol#main",
    "/vol#roles",
+   "/vol#top",
    "https://chat.whatsapp.com/LtYB9Ypf9HKAgxHWOvVD0z?s=cl&p=i&mlu=4&ilr=4",
-   "https://www.instagram.com/apologeticsnigeria/"
+   "https://www.instagram.com/apologeticsnigeria/",
+   "https://www.youtube.com/@Apologetics-ng"
   ],
   "meta": {
    "description": "We're building a team. Designers, video editors, writers and social media people who want their craft to count for something. Apply to volunteer with Apologetics Nigeria.",

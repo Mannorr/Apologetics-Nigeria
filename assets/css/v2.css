@@ -970,3 +970,11 @@ body.deck-open .bar{transform:translateY(-110%)}
 .profile .pack-cover{transform:rotate(2deg);justify-self:end}
 .profile .pack-badge{left:auto;right:-.8rem}
 @media (max-width:1000px){.profile .pack-grid{grid-template-columns:1fr}.profile .pack-cover{justify-self:start;margin:1.5rem 0 0}}
+
+/* ══════════ EVENTS ══════════ */
+.ev-card{text-decoration:none;color:inherit}
+.ev-card--soon{background:transparent;outline:1px dashed var(--line-l);outline-offset:-1px}
+.sec--tint .ev-card--soon{background:transparent}
+.ev-card--soon h3,.ev-card--soon .card-k{color:var(--stone)}
+.ev-back{display:table;margin-bottom:1.4rem;color:var(--stone-2)}
+.ev-back:hover{color:var(--paper)}

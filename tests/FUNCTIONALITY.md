@@ -41,3 +41,8 @@ exactly one POST; error message and re-enabled button when Formspree fails.
 - `resources.html` twitter:image pointed at `https://assets/img/...` (broken). Fixed.
 - Training and volunteer H1s read "Defendingthe Faith." / "Call forvolunteers." to
   screen readers and search engines (a `<br>` with no space). Fixed.
+
+## Baseline updated on purpose, 2 Oct 2026
+- Nav and footer "Training" became "Events" (`/events`). `/training` is unchanged and
+  still linked from the homepage ticket, `registered`, and the Defending the Faith card.
+- New page `events.html` added to the baseline.

@@ -9,6 +9,7 @@ Static site. No build step. Deployed on Vercel straight from `main`.
 ```
 /                            Pages only — every .html here is a live URL
   index.html                 Home
+  events.html                All events: Upcoming cards, then Past (see "Events")
   training.html              Defending the Faith — event page + registration form
   registered.html            Post-registration thank-you (noindex)
   join.html                  Permanent joining page — see "The join page" below
@@ -127,11 +128,30 @@ Only re-record the baseline (`snapshot`) on purpose, from a version you trust.
 
 ---
 
+## Events
+
+`events.html` lists every event as a card. Each event keeps its own page at the root
+(`training.html` is Defending the Faith). To add one:
+
+1. Create the event page at the root, e.g. `answering-islam-2027.html`, by copying
+   `training.html`. Add `<a href="events" class="ev-back mono ulink">← All events</a>`
+   above its hero pill.
+2. In `events.html`, replace the matching "Coming soon" `<article>` with an
+   `<a href="answering-islam-2027" class="card card--hover ev-card reveal"
+   data-event-end="...">`, copying the Defending the Faith card.
+3. Run `python3 tests/check.py verify`.
+
+Past events move themselves: once `data-event-end` has passed, `v2.js` (section 19)
+moves the card into the Past section and shows it. Nothing to edit.
+
+---
+
 ## After the event (18 October 2026)
 
 Remove or archive:
 
 - The ticket section in `index.html` — marked `remove after 18 Oct 2026`
+- The menu subtitle `Next: Defending the Faith · 16–18 Oct` on every page: point it at the next event
   (the `.ticket` / `.promo` rules in `v2.css` can stay; nothing else uses them)
 
 Keep `training.html` and `join.html` live as a record.

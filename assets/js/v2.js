@@ -558,5 +558,16 @@
     if (hashDeck) openDeck(hashDeck);
   }
 
+  /* ─── 19. Events: cards move to Past once their end date has passed ─── */
+  var pastGrid = $('#pastEvents');
+  if (pastGrid) {
+    $$('[data-event-end]').forEach(function (card) {
+      if (Date.now() < new Date(card.dataset.eventEnd).getTime()) return;
+      var st = $('[data-ev-status]', card); if (st && st.dataset.evPast) st.textContent = st.dataset.evPast;
+      pastGrid.appendChild(card);
+    });
+    if (pastGrid.children.length) $('#past').hidden = false;
+  }
+
   runScroll();
 })();
