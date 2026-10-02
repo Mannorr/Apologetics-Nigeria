@@ -978,3 +978,7 @@ body.deck-open .bar{transform:translateY(-110%)}
 .ev-card--soon h3,.ev-card--soon .card-k{color:var(--stone)}
 .ev-back{display:table;margin-bottom:1.4rem;color:var(--stone-2)}
 .ev-back:hover{color:var(--paper)}
+.ev-thumb{--pad:clamp(1.5rem,2.4vw,2.2rem);margin:calc(-1 * var(--pad)) calc(-1 * var(--pad)) .6rem;aspect-ratio:16/9;overflow:hidden;background:var(--ink)}
+.ev-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s var(--ease)}
+.ev-card:hover .ev-thumb img{transform:scale(1.04)}
+.ev-card:has(.ev-thumb) h3{margin-top:.4rem}
