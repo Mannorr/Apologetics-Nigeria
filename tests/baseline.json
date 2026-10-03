@@ -451,6 +451,58 @@
   "title": "Join the session \u2014 Defending the Faith | Apologetics Nigeria",
   "videos": []
  },
+ "opened-veil-confirmed.html": {
+  "canonical": "https://apologeticsnigeria.com/opened-veil-confirmed",
+  "decks": [],
+  "favicon": true,
+  "forms": [],
+  "h1": [
+   "You are in",
+   "Almost there",
+   "Thank you"
+  ],
+  "ids": [
+   "bar",
+   "footWord",
+   "main",
+   "menu",
+   "menuBtn",
+   "ovDone",
+   "top"
+  ],
+  "lang": "en",
+  "ld": [],
+  "links": [
+   "/",
+   "/about",
+   "/beliefs",
+   "/contact",
+   "/events",
+   "/opened-veil",
+   "/opened-veil#register",
+   "/opened-veil-confirmed#main",
+   "/opened-veil-confirmed#top",
+   "/partner",
+   "/partner#give",
+   "/privacy",
+   "/resources",
+   "https://wa.me/?text=I%20just%20registered%20for%20Opened%20Veil%3A%20The%20Bible%20Experience%20(Apologetics%20Nigeria%2C%20January%202027).%20Join%20me%3A%20https%3A%2F%2Fapologeticsnigeria.com%2Fopened-veil",
+   "https://www.instagram.com/apologeticsnigeria/",
+   "https://www.youtube.com/@Apologetics-ng"
+  ],
+  "meta": {
+   "description": "Opened Veil: The Bible Experience. Apologetics Nigeria 2027, hosted by MANNORR, January 2027. Register with a commitment fee from \u20a63,000.",
+   "og:description": "Opened Veil: The Bible Experience. Apologetics Nigeria 2027, hosted by MANNORR, January 2027. Register with a commitment fee from \u20a63,000.",
+   "og:image": "https://apologeticsnigeria.com/assets/img/events/opened-veil-2027-wide.jpg",
+   "og:title": "Opened Veil: The Bible Experience, January 2027",
+   "og:url": "https://apologeticsnigeria.com/opened-veil-confirmed",
+   "robots": "noindex",
+   "twitter:card": "summary_large_image",
+   "twitter:image": "https://apologeticsnigeria.com/assets/img/events/opened-veil-2027-wide.jpg"
+  },
+  "title": "You are registered: Opened Veil 2027 | Apologetics Nigeria",
+  "videos": []
+ },
  "opened-veil.html": {
   "canonical": "https://apologeticsnigeria.com/opened-veil",
   "decks": [],
@@ -466,7 +518,7 @@
       "options": null,
       "required": false,
       "type": "hidden",
-      "value": "Registration \u2014 Opened Veil: The Bible Experience (Jan 2027)"
+      "value": "Registration \u2014 Opened Veil 2027 (commitment fee pending)"
      },
      {
       "accept": null,
@@ -476,6 +528,33 @@
       "required": false,
       "type": "hidden",
       "value": "Registration \u2014 Opened Veil 2027"
+     },
+     {
+      "accept": null,
+      "choice": null,
+      "name": "payment_status",
+      "options": null,
+      "required": false,
+      "type": "hidden",
+      "value": "Pending: sent to payment"
+     },
+     {
+      "accept": null,
+      "choice": null,
+      "name": "ref",
+      "options": null,
+      "required": false,
+      "type": "hidden",
+      "value": ""
+     },
+     {
+      "accept": null,
+      "choice": null,
+      "name": "amount",
+      "options": null,
+      "required": false,
+      "type": "hidden",
+      "value": ""
      },
      {
       "accept": null,
@@ -542,6 +621,69 @@
      },
      {
       "accept": null,
+      "choice": "3000",
+      "name": "amount_choice",
+      "options": null,
+      "required": false,
+      "type": "radio",
+      "value": null
+     },
+     {
+      "accept": null,
+      "choice": "5000",
+      "name": "amount_choice",
+      "options": null,
+      "required": false,
+      "type": "radio",
+      "value": null
+     },
+     {
+      "accept": null,
+      "choice": "10000",
+      "name": "amount_choice",
+      "options": null,
+      "required": false,
+      "type": "radio",
+      "value": null
+     },
+     {
+      "accept": null,
+      "choice": "other",
+      "name": "amount_choice",
+      "options": null,
+      "required": false,
+      "type": "radio",
+      "value": null
+     },
+     {
+      "accept": null,
+      "choice": null,
+      "name": "amount_other",
+      "options": null,
+      "required": false,
+      "type": "number",
+      "value": null
+     },
+     {
+      "accept": null,
+      "choice": "flutterwave",
+      "name": "provider",
+      "options": null,
+      "required": false,
+      "type": "radio",
+      "value": null
+     },
+     {
+      "accept": null,
+      "choice": "stripe",
+      "name": "provider",
+      "options": null,
+      "required": false,
+      "type": "radio",
+      "value": null
+     },
+     {
+      "accept": null,
       "choice": null,
       "name": "question",
       "options": null,
@@ -556,7 +698,7 @@
    }
   ],
   "h1": [
-   "Opened Veil"
+   "Opened Veil: The Bible Experience. Apologetics Nigeria 2027"
   ],
   "ids": [
    "bar",
@@ -566,15 +708,19 @@
    "main",
    "menu",
    "menuBtn",
+   "ov-amount-other",
    "ov-email",
    "ov-location",
    "ov-name",
    "ov-org",
+   "ov-other-wrap",
    "ov-phone",
+   "ov-prov-note",
    "ov-question",
    "ov-role",
    "ov-status",
    "ov-submit",
+   "ov-total",
    "register",
    "theme",
    "top",
@@ -601,8 +747,8 @@
    "https://www.youtube.com/@Apologetics-ng"
   ],
   "meta": {
-   "description": "Opened Veil is the Apologetics Nigeria theme for 2027. The Bible Experience, hosted by MANNORR, January 2027. Register to hear the dates and venue first.",
-   "og:description": "Opened Veil is the Apologetics Nigeria theme for 2027. The Bible Experience, hosted by MANNORR, January 2027. Register to hear the dates and venue first.",
+   "description": "Opened Veil: The Bible Experience. Apologetics Nigeria 2027, hosted by MANNORR, January 2027. Register with a commitment fee from \u20a63,000.",
+   "og:description": "Opened Veil: The Bible Experience. Apologetics Nigeria 2027, hosted by MANNORR, January 2027. Register with a commitment fee from \u20a63,000.",
    "og:image": "https://apologeticsnigeria.com/assets/img/events/opened-veil-2027-wide.jpg",
    "og:title": "Opened Veil: The Bible Experience, January 2027",
    "og:url": "https://apologeticsnigeria.com/opened-veil",

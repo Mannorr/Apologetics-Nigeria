@@ -424,7 +424,7 @@
       .then(function (res) { if (res.ok) onOk(); else onErr('Something went wrong. Please try again.'); })
       .catch(function () { onErr('Network error. Please try again.'); });
   };
-  [['newsForm', 'news-status', 'news-submit'], ['contactForm', 'cf-status', 'cf-submit'], ['trainingForm', 'tr-status', 'tr-submit'], ['veilForm', 'ov-status', 'ov-submit']].forEach(function (ids) {
+  [['newsForm', 'news-status', 'news-submit'], ['contactForm', 'cf-status', 'cf-submit'], ['trainingForm', 'tr-status', 'tr-submit']].forEach(function (ids) {
     var form = document.getElementById(ids[0]); if (!form) return;
     var st = document.getElementById(ids[1]), btn = document.getElementById(ids[2]);
     var label = $('.letter-go-t', btn) || $('.cta-t', btn) || btn;

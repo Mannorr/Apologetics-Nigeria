@@ -11,7 +11,8 @@ Static site. No build step. Deployed on Vercel straight from `main`.
   index.html                 Home
   events.html                All events: Upcoming cards, then Past (see "Events")
   training.html              Defending the Faith — event page + registration form
-  opened-veil.html           Opened Veil 2027 — event page + registration form
+  opened-veil.html           Opened Veil 2027 — event page, registration + commitment fee
+  opened-veil-confirmed.html Where Stripe/Flutterwave return payers (noindex)
   registered.html            Post-registration thank-you (noindex)
   join.html                  Permanent joining page — see "The join page" below
   resources.html             Talks, decks and video library
@@ -111,7 +112,7 @@ All forms post to Formspree and are handled in `assets/js/v2.js` (section 15).
 | Registration | `formspree.io/f/xqpkbrwp`         | Redirects to `registered.html` |
 | Newsletter   | `formspree.io/f/mkolkrqb`         | Inline confirmation       |
 | Volunteers   | `formspree.io/f/mzezbggj`         | Shows the WhatsApp step   |
-| Opened Veil  | `formspree.io/f/mgavgvaz`         | Inline confirmation (`data-success-text`) |
+| Opened Veil  | `formspree.io/f/mgavgvaz`         | Saves, then sends to Stripe or Flutterwave (see `assets/js/opened-veil.js`); both return to `opened-veil-confirmed` |
 
 The redirect is driven by `data-success-redirect` on the form element, with
 Formspree's `_next` field as a no-JavaScript fallback.

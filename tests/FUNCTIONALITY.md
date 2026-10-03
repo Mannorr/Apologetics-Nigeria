@@ -53,3 +53,9 @@ exactly one POST; error message and re-enabled button when Formspree fails.
 - The January 2027 placeholder card on `events` now links to `/opened-veil`.
 - Same day: `opened-veil` restyled in the event's own identity (`assets/css/opened-veil.css`,
   Cinzel + Michroma self-hosted). Share image is now the 16:9 flyer; H1 reads "Opened Veil".
+- Same day: Opened Veil registration now takes a commitment fee (from ₦3,000). `#veilForm`
+  logic lives in `assets/js/opened-veil.js`: details go to Formspree first, then a short
+  "registered, taking you to payment" message, then Stripe (one payment link per amount,
+  plus a custom-amount link with a ₦3,000 minimum) or Flutterwave. Both return to
+  `opened-veil-confirmed.html` (noindex), which records the return on Formspree.
+  The page header is now the supplied banner image.
