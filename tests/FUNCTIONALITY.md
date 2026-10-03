@@ -61,3 +61,7 @@ exactly one POST; error message and re-enabled button when Formspree fails.
   The page header is now the supplied banner image.
 - Same day: Opened Veil card thumbnail and share image now built from the landscape banner (`opened-veil-2027.jpg`, `opened-veil-2027-share.jpg`).
 - Same day: confirmation page (paid state) shows the Opened Veil WhatsApp group; card thumbnail and share image now use the 16:9 landscape flyer.
+- Same day: Opened Veil shows a "Coming soon" screen with a countdown until registration opens
+  (18 Oct 2026, 22:00 WAT — `window.OV_OPENS` in `opened-veil.html`), then unlocks itself.
+  `?preview=open` shows the full page early; `check.py` sets `window.__OV_PREVIEW` so tests always
+  see the form. The events card shows "Opens 18 Oct" and a live countdown (`data-opens-at`, v2.js §18b).

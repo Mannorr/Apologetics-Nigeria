@@ -127,3 +127,17 @@ var OV = {
     fetch('https://formspree.io/f/mgavgvaz', { method: 'POST', body: fd, headers: { Accept: 'application/json' } }).then(function () { try { sessionStorage.setItem(key, '1'); } catch (e) {} }).catch(function () {});
   }
 })();
+
+/* ── Coming soon gate on /opened-veil ── */
+(function () {
+  var soon = document.getElementById('ovSoon'); if (!soon || !window.OV_OPENS) return;
+  var at = new Date(window.OV_OPENS).getTime(), root = document.documentElement, pad = function (n) { return (n < 10 ? '0' : '') + n; };
+  var tick = function () {
+    var diff = at - Date.now();
+    if (diff <= 0) { if (root.classList.contains('ov-locked')) { root.classList.remove('ov-locked'); window.scrollTo(0, 0); } return false; }
+    var v = { d: Math.floor(diff / 864e5), h: Math.floor(diff / 36e5) % 24, m: Math.floor(diff / 6e4) % 60, s: Math.floor(diff / 1e3) % 60 };
+    soon.querySelectorAll('[data-oc]').forEach(function (c) { c.textContent = pad(v[c.getAttribute('data-oc')]); });
+    return true;
+  };
+  if (tick()) { var iv = setInterval(function () { if (!tick()) clearInterval(iv); }, 1000); }
+})();

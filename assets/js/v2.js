@@ -558,6 +558,19 @@
     if (hashDeck) openDeck(hashDeck);
   }
 
+  /* ─── 18b. "Opens at" countdowns (e.g. Opened Veil card): ticks [data-oc] cells, then swaps to data-opened ─── */
+  $$('[data-opens-at]').forEach(function (el) {
+    var at = new Date(el.getAttribute('data-opens-at')).getTime(), pad = function (n) { return (n < 10 ? '0' : '') + n; };
+    var t = function () {
+      var diff = at - Date.now();
+      if (diff <= 0) { var o = el.getAttribute('data-opened'); if (o) el.textContent = o; else el.hidden = true; return false; }
+      var v = { d: Math.floor(diff / 864e5), h: Math.floor(diff / 36e5) % 24, m: Math.floor(diff / 6e4) % 60, s: Math.floor(diff / 1e3) % 60 };
+      $$('[data-oc]', el).forEach(function (c) { c.textContent = pad(v[c.getAttribute('data-oc')]); });
+      return true;
+    };
+    if (t()) { var iv = setInterval(function () { if (!t()) clearInterval(iv); }, 1000); }
+  });
+
   /* ─── 19. Events: cards move to Past once their end date has passed ─── */
   var pastGrid = $('#pastEvents');
   if (pastGrid) {

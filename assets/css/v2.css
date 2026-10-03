@@ -983,3 +983,6 @@ body.deck-open .bar{transform:translateY(-110%)}
 .ev-card:hover .ev-thumb img{transform:scale(1.04)}
 .ev-card:has(.ev-thumb) h3{margin-top:.4rem}
 
+.ev-opens{display:block;margin-top:.6rem;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.ev-opens b{font-variant-numeric:tabular-nums;color:var(--ink)}
+.ev-opens[hidden]{display:none}

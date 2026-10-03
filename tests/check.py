@@ -90,6 +90,7 @@ def open_page(ctx, url, errors):
     return pg
 
 def block_noise(ctx, form_status=200):
+    ctx.add_init_script('window.__OV_PREVIEW = 1')  # show the full Opened Veil page even before registration opens
     ctx.route(re.compile(r'https://(i\.ytimg\.com|fonts\.(googleapis|gstatic)\.com|www\.youtube-nocookie\.com)/.*'), lambda r: r.abort())
     ctx.route(re.compile(r'https://formspree\.io/.*'),
               lambda r: r.fulfill(status=form_status, content_type='application/json', body='{"ok":true,"next":"/thanks"}' if form_status == 200 else '{"error":"x"}'))

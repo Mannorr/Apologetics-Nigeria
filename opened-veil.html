@@ -26,7 +26,7 @@
 <link rel="preload" href="assets/fonts/cinzel-700.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="assets/css/v2.css" />
 <link rel="stylesheet" href="assets/css/opened-veil.css" />
-<script>document.documentElement.classList.add("js")</script>
+<script>document.documentElement.classList.add("js");/* Opened Veil: show "coming soon" until registration opens. Preview the full page with ?preview=open */window.OV_OPENS="2026-10-18T22:00:00+01:00";if(Date.now()<new Date(window.OV_OPENS).getTime()&&!/preview=open/.test(location.search)&&!window.__OV_PREVIEW){document.documentElement.classList.add("ov-locked")}</script>
 </head>
 <body class="v2 page-veil" id="top">
 
@@ -89,6 +89,26 @@
     <span class="ov-label">Commitment fee <b>From ₦3,000</b></span>
   </div>
   <a href="#register" class="ov-btn" data-cursor="Register">Register here</a>
+</section>
+
+<!-- COMING SOON: shown until registration opens (window.OV_OPENS). Logic: assets/js/opened-veil.js -->
+<section class="ov-soon ov-sec ov-sec--night ov-grain" id="ovSoon" data-theme="dark">
+  <div class="ov-pillars" aria-hidden="true"></div>
+  <div class="ov-soon__in">
+    <p class="ov-kick ov-label">Coming soon</p>
+    <h2 class="ov-h2"><span class="ov-wide">Registration opens</span><span class="ov-wide"><em>18 October</em></span></h2>
+    <div class="ov-cd" role="timer" aria-live="off" aria-label="Time until registration opens">
+      <div><b data-oc="d">--</b><span class="ov-label">Days</span></div>
+      <div><b data-oc="h">--</b><span class="ov-label">Hours</span></div>
+      <div><b data-oc="m">--</b><span class="ov-label">Minutes</span></div>
+      <div><b data-oc="s">--</b><span class="ov-label">Seconds</span></div>
+    </div>
+    <p class="ov-soon__lede">Opened Veil: The Bible Experience is our theme for 2027, hosted by MANNORR. Registration and the commitment fee open at the close of Defending the Faith on Sunday 18 October.</p>
+    <div class="ov-done-actions">
+      <a class="ov-btn" href="training" data-cursor="Open">Join Defending the Faith · 16–18 Oct</a>
+      <a class="ov-btn ov-btn--ghost ov-btn--light" href="https://www.instagram.com/apologeticsnigeria/" target="_blank" rel="noopener">Follow for the launch ↗</a>
+    </div>
+  </div>
 </section>
 
 <!-- THE THEME -->

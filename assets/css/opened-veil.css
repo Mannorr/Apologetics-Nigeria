@@ -174,3 +174,17 @@
 .ov-group p{line-height:1.6;margin:0 0 1.2rem}
 .ov-group .ov-btn{background:#1FA855}.ov-group .ov-btn:hover{background:#168a45}
 .ov-group .ov-small{margin:1.1rem 0 0;font-size:.85rem}
+
+/* ── coming soon gate ── */
+.ov-soon{display:none}
+.ov-locked .ov-soon{display:block;min-height:70vh}
+.ov-locked main > section:not(.ov-banner):not(.ov-soon){display:none}
+.ov-locked .ov-strip .ov-btn{display:none}
+.ov-soon__in{position:relative;z-index:2;max-width:980px;margin:0 auto;text-align:center}
+.ov-soon .ov-h2{color:#fff}.ov-soon .ov-h2 .ov-wide{transform-origin:center}
+.ov-cd{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(.5rem,1.5vw,1.2rem);max-width:760px;margin:2.4rem auto}
+.ov-cd div{background:rgba(11,12,22,.75);border:1px solid rgba(25,198,214,.35);padding:clamp(1rem,2.4vw,1.8rem) .4rem;display:flex;flex-direction:column;gap:.6rem}
+.ov-cd b{font-family:var(--ov-display);font-weight:700;font-size:clamp(2.2rem,6.5vw,4.8rem);line-height:1;color:#fff;font-variant-numeric:tabular-nums;text-shadow:0 0 18px rgba(170,220,255,.7),0 0 40px rgba(120,190,255,.4)}
+.ov-cd .ov-label{color:var(--ov-teal);font-size:.62rem}
+.ov-soon__lede{max-width:640px;margin:0 auto 1.4rem;line-height:1.6;color:rgba(238,235,198,.85);font-size:1.08rem}
+.ov-btn--light{color:#fff;border-color:rgba(255,255,255,.7)}.ov-btn--light:hover{background:#fff;color:var(--ov-navy)}
