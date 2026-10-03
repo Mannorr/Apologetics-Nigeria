@@ -18,7 +18,7 @@ var OV = {
   flwPublicKey: '',
   // Flutterwave payment pages (2027 account). One per amount, like Stripe; 'custom' lets the payer type an amount.
   // Set each page's "Redirect after payment" to https://apologeticsnigeria.com/opened-veil-confirmed
-  flw: { 3000: '', 5000: '', 10000: '', custom: '' },
+  flw: { 3000: '', 5000: '', 10000: '', custom: 'https://flutterwave.com/pay/openedveil' },
   flwLink: 'https://flutterwave.com/pay/qjh7xrxiukiq',  // fallback until the 2027 pages are added
   confirmUrl: 'https://apologeticsnigeria.com/opened-veil-confirmed'
 };
@@ -84,8 +84,11 @@ var OV = {
       .then(function (res) {
         if (!res.ok) throw new Error('bad');
         st.classList.add('ok');
-        st.textContent = 'Thank you, you are registered (ref ' + ref + '). Taking you to secure payment…';
-        setTimeout(function () { go(d); }, 1600);
+        var flwTyped = d.provider === 'flutterwave' && !OV.flwPublicKey && !OV.flw[String(d.amount)];
+        st.textContent = 'Thank you, you are registered (ref ' + ref + '). ' + (flwTyped
+          ? 'Taking you to Flutterwave: enter ' + fmt(d.amount) + ' and use the same email on the next page.'
+          : 'Taking you to secure payment…');
+        setTimeout(function () { go(d); }, flwTyped ? 3200 : 1600);
       })
       .catch(function () { st.className = 'form-status mono err'; st.textContent = 'Something went wrong saving your registration. Please try again.'; btn.disabled = false; refresh(); });
   });
