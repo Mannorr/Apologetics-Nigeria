@@ -153,7 +153,10 @@ moves the card into the Past section and shows it. Nothing to edit.
 
 Remove or archive:
 
-- The ticket section in `index.html` — marked `remove after 18 Oct 2026`
+- Nothing on the homepage: the events carousel (`#training-promo`) drops the Defending the Faith slide
+  by itself after 18 Oct 22:00 WAT (`data-slide-until`), hides its arrows and dots, and the Opened Veil
+  slide switches to "Now open / Register now". Delete that slide's markup whenever convenient.
+  To add a future event, add another `.promo-slide` inside `.promo-track` (v2.js §18c).
 - The menu subtitle `Next: Defending the Faith · 16–18 Oct` on every page: point it at the next event
   (the `.ticket` / `.promo` rules in `v2.css` can stay; nothing else uses them)
 

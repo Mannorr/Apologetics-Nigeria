@@ -65,3 +65,5 @@ exactly one POST; error message and re-enabled button when Formspree fails.
   (18 Oct 2026, 22:00 WAT — `window.OV_OPENS` in `opened-veil.html`), then unlocks itself.
   `?preview=open` shows the full page early; `check.py` sets `window.__OV_PREVIEW` so tests always
   see the form. The events card shows "Opens 18 Oct" and a live countdown (`data-opens-at`, v2.js §18b).
+- 3 Oct 2026: homepage ticket became an events carousel (Defending the Faith + Opened Veil, 7s auto-advance,
+  pause on hover/focus, dots, arrows, swipe; v2.js §18c). Baseline re-recorded.

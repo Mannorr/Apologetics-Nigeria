@@ -986,3 +986,57 @@ body.deck-open .bar{transform:translateY(-110%)}
 .ev-opens{display:block;margin-top:.6rem;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
 .ev-opens b{font-variant-numeric:tabular-nums;color:var(--ink)}
 .ev-opens[hidden]{display:none}
+
+/* ── Homepage events carousel ── */
+.promo-carousel{position:relative}
+.js .promo-carousel.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .promo-carousel.reveal.in{opacity:1;transform:none}
+.promo-track{display:grid}
+.promo-slide{grid-area:1/1;transition:opacity .8s var(--ease),visibility .8s;opacity:0;visibility:hidden}
+.promo-slide.is-active{opacity:1;visibility:visible}
+.promo-slide[data-gone]{display:none}
+.promo-nav{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:1.2rem}
+.promo-nav[hidden]{display:none}
+.promo-arrow{background:none;border:1px solid rgba(4,12,14,.2);width:2.4rem;height:2.4rem;cursor:pointer;font-size:1rem;color:var(--ink);transition:all .25s}
+.promo-arrow:hover{background:var(--ink);color:var(--paper)}
+.promo-dots{display:flex;gap:.5rem}
+.promo-dots button{width:2.2rem;height:4px;border:0;padding:0;background:rgba(4,12,14,.18);cursor:pointer;position:relative;overflow:hidden}
+.promo-dots button[aria-selected="true"]{background:rgba(4,12,14,.18)}
+.promo-dots button[aria-selected="true"]::after{content:"";position:absolute;inset:0;background:var(--gold);transform-origin:left;animation:promoFill var(--promo-t,7s) linear forwards}
+.promo-carousel.is-paused .promo-dots button::after{animation-play-state:paused}
+@keyframes promoFill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+/* Opened Veil slide — keeps the event's own identity */
+@font-face{font-family:"OV Display";src:url(../fonts/cinzel-700.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"OV Wide";src:url(../fonts/michroma.woff2) format("woff2");font-weight:400;font-display:swap}
+.ticket--veil{background:#EEEBC6;color:#1A1A12}
+.ticket--veil .ov-art{position:relative;background:
+  repeating-linear-gradient(90deg,transparent 0 5%,rgba(25,198,214,.55) 9%,rgba(1,91,239,.35) 12%,transparent 14.3%),
+  linear-gradient(180deg,#12131F 0%,#12131F 52%,#2b4a3c 78%,#1d1f12 100%);display:flex;flex-direction:column;justify-content:center;aspect-ratio:3/1}
+.ticket--veil .ov-art img{height:auto;object-fit:contain;transform:none!important}
+.ov-art__host{display:block;text-align:center;padding:.9rem 0 1rem;font-family:"OV Display",Georgia,serif;font-weight:700;text-transform:uppercase;line-height:1.05}
+.ov-art__host small{display:block;font-size:clamp(.8rem,1.3vw,1.2rem);letter-spacing:.7em;padding-left:.7em;color:#f3b8b0}
+.ov-art__host strong{display:block;font-size:clamp(1.6rem,3.4vw,3.2rem);letter-spacing:.42em;padding-left:.42em;color:#D9441C;font-weight:700}
+.ticket--veil .ov-k{font-family:"OV Wide",var(--f-mono);letter-spacing:.24em;color:#C4222A}
+.ticket--veil .ov-k::before{color:#3B90D3}
+.ov-title2{font-family:"OV Display",Georgia,serif!important;font-stretch:100%!important;font-weight:700!important;letter-spacing:.12em!important;color:#12131F}
+.ov-title2 em{font-family:"OV Display",Georgia,serif!important;font-style:normal!important;font-weight:700!important;font-size:.42em!important;letter-spacing:.55em!important;color:#D9441C!important;margin-top:.6rem}
+.ticket--veil .ticket-copy{color:#4b4a36}
+.ov-cta{grid-column:2;grid-row:2/4;align-self:end;display:inline-flex;align-items:center;gap:.8rem;background:#C4222A;color:#fff;font-family:"OV Wide",var(--f-mono);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;padding:1rem 1.8rem;transition:background .3s}
+.ov-cta:hover{background:#a51a21}
+.ov-stub{background:#12131F!important;overflow:hidden}
+.ov-stub::after{content:"";position:absolute;inset:0;opacity:.28;pointer-events:none;background:repeating-linear-gradient(90deg,transparent 0 9%,rgba(25,198,214,.7) 15%,rgba(1,91,239,.45) 19%,transparent 24%);filter:blur(5px)}
+.ov-stub > *{position:relative;z-index:1}
+.ov-stub::before{background:repeating-linear-gradient(to bottom,#EEEBC6 0 6px,transparent 6px 13px)!important}
+.ov-stub .stub-k{font-family:"OV Wide",var(--f-mono);font-size:.62rem;letter-spacing:.22em;color:#19C6D6}
+.ov-cd2{margin-top:1rem}
+.ov-cd2 div{border-top-color:rgba(25,198,214,.35)}
+.ov-cd2 b{font-family:"OV Display",Georgia,serif!important;font-stretch:100%!important;color:#fff!important;font-size:clamp(2rem,3vw,3rem)!important;text-shadow:0 0 14px rgba(170,220,255,.7)}
+.ov-cd2 span{font-family:"OV Wide",var(--f-mono);color:rgba(238,235,198,.7)!important}
+.ov-open-now[hidden]{display:none}
+.ov-open-now__big{font-family:"OV Display",Georgia,serif;font-weight:700;font-size:clamp(2.2rem,3.4vw,3.2rem);letter-spacing:.08em;text-transform:uppercase;color:#fff;margin:.6rem 0;text-shadow:0 0 14px rgba(170,220,255,.7)}
+@media (max-width:880px){.ov-cta{grid-column:1;grid-row:auto;justify-self:start;margin-top:.6rem}.ticket--veil .ov-art{aspect-ratio:auto;padding-top:1rem}}
+@media (prefers-reduced-motion:reduce){.promo-slide{transition:none}.promo-dots button[aria-selected="true"]::after{animation:none;transform:none}}
+.ov-verse{margin:0;font-family:"OV Display",Georgia,serif;font-weight:700;font-size:clamp(.95rem,1.25vw,1.15rem);line-height:1.45;color:#EEEBC6;border-left:2px solid #C4222A;padding-left:.9rem}
+.ov-verse cite{display:block;margin-top:.55rem;font-style:normal;font-family:"OV Wide",var(--f-mono);font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;color:#f3b8b0}
+@media (max-width:880px){.ticket--veil .ov-art{padding-top:.4rem}.ov-verse{margin:1.2rem 0}}

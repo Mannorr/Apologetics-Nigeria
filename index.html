@@ -114,9 +114,11 @@
 </section>
 
 
-<!-- ═════════ TRAINING PROMO (remove after 18 Oct 2026) ═════════ -->
+<!-- ═════════ EVENTS CAROUSEL (Defending the Faith slide removes itself after 18 Oct 2026) ═════════ -->
 <section class="promo" id="training-promo" data-theme="light">
-  <article class="ticket reveal">
+  <div class="promo-carousel reveal" aria-roledescription="carousel" aria-label="Upcoming events" data-interval="7000">
+    <div class="promo-track">
+  <article class="ticket promo-slide" data-slide-until="2026-10-18T22:00:00+01:00" aria-roledescription="slide" aria-label="1 of 2">
     <a href="training" class="ticket-art" aria-label="Defending the Faith — free apologetics training, 16–18 October" data-cursor="Open">
       <picture>
         <source media="(max-width:640px)" srcset="assets/img/training/training-banner-mobile.png" />
@@ -143,6 +145,44 @@
       <p class="mono stub-k">October · 7–10PM WAT · Online</p>
     </div>
   </article>
+  <!-- SLIDE: Opened Veil 2027 (its own identity; fonts from assets/fonts) -->
+  <article class="ticket ticket--veil promo-slide" aria-roledescription="slide" aria-label="2 of 2">
+    <a href="opened-veil" class="ticket-art ov-art" aria-label="Opened Veil: The Bible Experience, January 2027" data-cursor="Open">
+      <img src="assets/img/events/opened-veil-banner.jpg" alt="Opened Veil: The Bible Experience" width="1920" height="394" loading="lazy" />
+      <span class="ov-art__host"><small>Host</small><strong>Mannorr</strong></span>
+    </a>
+    <div class="ticket-body">
+      <p class="kicker mono ov-k">Apologetics Nigeria 2027 · January</p>
+      <h2 class="ticket-title ov-title2">Opened Veil <em>The Bible Experience</em></h2>
+      <p class="ticket-copy">Our theme for 2027: a gathering to open the Scriptures together and see Christ in all of them. Register with a commitment fee from ₦3,000.</p>
+      <a href="opened-veil" class="ov-cta" data-cursor="Open"><span data-opens-at="2026-10-18T22:00:00+01:00" data-opened="Register now">Coming soon</span> <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="ticket-stub ov-stub">
+      <div data-opens-at="2026-10-18T22:00:00+01:00" data-opened="">
+        <p class="mono stub-k">Registration opens in</p>
+        <div class="cd ov-cd2" role="timer" aria-live="off">
+          <div><b data-oc="d">--</b><span class="mono">Days</span></div>
+          <div><b data-oc="h">--</b><span class="mono">Hrs</span></div>
+          <div><b data-oc="m">--</b><span class="mono">Min</span></div>
+          <div><b data-oc="s">--</b><span class="mono">Sec</span></div>
+        </div>
+      </div>
+      <div class="ov-open-now" data-show-after="2026-10-18T22:00:00+01:00" hidden>
+        <p class="mono stub-k">Registration</p>
+        <p class="ov-open-now__big">Now open</p>
+        <p class="mono stub-k">Commitment fee from ₦3,000</p>
+      </div>
+      <blockquote class="ov-verse">“The veil of the temple was torn in two from top to bottom.”<cite>Matthew 27:51</cite></blockquote>
+      <p class="mono stub-k">January 2027 · Venue to be announced</p>
+    </div>
+  </article>
+    </div>
+    <div class="promo-nav">
+      <button type="button" class="promo-arrow" data-dir="-1" aria-label="Previous event">←</button>
+      <div class="promo-dots" role="tablist" aria-label="Choose an event"></div>
+      <button type="button" class="promo-arrow" data-dir="1" aria-label="Next event">→</button>
+    </div>
+  </div>
 </section>
 
 
