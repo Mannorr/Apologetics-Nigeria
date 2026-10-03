@@ -169,3 +169,8 @@
 .ov-btn--ghost:hover{background:var(--ov-ink);color:#fff}
 #ov-other-wrap[hidden]{display:none}
 .ov-steps li::before{width:2.1rem;line-height:1.6rem;padding:0;text-align:center;top:0}
+.ov-group{max-width:620px;margin:2rem auto 0;padding:1.8rem 1.6rem;background:#fff;border-top:6px solid #25D366;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.08)}
+.ov-group .ov-label{color:#128C4A;margin:0 0 .8rem}
+.ov-group p{line-height:1.6;margin:0 0 1.2rem}
+.ov-group .ov-btn{background:#1FA855}.ov-group .ov-btn:hover{background:#168a45}
+.ov-group .ov-small{margin:1.1rem 0 0;font-size:.85rem}
