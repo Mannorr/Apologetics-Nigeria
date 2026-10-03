@@ -556,11 +556,12 @@
    }
   ],
   "h1": [
-   "Opened Veil."
+   "Opened Veil"
   ],
   "ids": [
    "bar",
    "expect",
+   "flyers",
    "footWord",
    "main",
    "menu",
@@ -584,6 +585,8 @@
   "links": [
    "/",
    "/about",
+   "/assets/img/events/opened-veil-2027-poster.jpg",
+   "/assets/img/events/opened-veil-2027-wide.jpg",
    "/beliefs",
    "/contact",
    "/events",
@@ -600,12 +603,12 @@
   "meta": {
    "description": "Opened Veil is the Apologetics Nigeria theme for 2027. The Bible Experience, hosted by MANNORR, January 2027. Register to hear the dates and venue first.",
    "og:description": "Opened Veil is the Apologetics Nigeria theme for 2027. The Bible Experience, hosted by MANNORR, January 2027. Register to hear the dates and venue first.",
-   "og:image": "https://apologeticsnigeria.com/assets/img/events/opened-veil-2027.jpg",
+   "og:image": "https://apologeticsnigeria.com/assets/img/events/opened-veil-2027-wide.jpg",
    "og:title": "Opened Veil: The Bible Experience, January 2027",
    "og:url": "https://apologeticsnigeria.com/opened-veil",
    "robots": null,
    "twitter:card": "summary_large_image",
-   "twitter:image": "https://apologeticsnigeria.com/assets/img/events/opened-veil-2027.jpg"
+   "twitter:image": "https://apologeticsnigeria.com/assets/img/events/opened-veil-2027-wide.jpg"
   },
   "title": "Opened Veil: The Bible Experience, January 2027 | Apologetics Nigeria",
   "videos": []

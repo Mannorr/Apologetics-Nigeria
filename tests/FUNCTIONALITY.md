@@ -51,3 +51,5 @@ exactly one POST; error message and re-enabled button when Formspree fails.
 - New page `opened-veil.html` (Opened Veil 2027) added, with `#veilForm` posting to
   `f/mgavgvaz` and an inline confirmation (`data-success-text`).
 - The January 2027 placeholder card on `events` now links to `/opened-veil`.
+- Same day: `opened-veil` restyled in the event's own identity (`assets/css/opened-veil.css`,
+  Cinzel + Michroma self-hosted). Share image is now the 16:9 flyer; H1 reads "Opened Veil".

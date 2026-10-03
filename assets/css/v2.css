@@ -983,7 +983,3 @@ body.deck-open .bar{transform:translateY(-110%)}
 .ev-card:hover .ev-thumb img{transform:scale(1.04)}
 .ev-card:has(.ev-thumb) h3{margin-top:.4rem}
 
-/* Opened Veil event page */
-.ov-verse{margin:2rem 0;padding:1.4rem 0 1.4rem 1.6rem;border-left:3px solid var(--gold)}
-.ov-verse p{font-family:"Newsreader",serif;font-style:italic;font-size:clamp(1.25rem,2vw,1.6rem);line-height:1.4;margin:0}
-.ov-verse cite{display:block;margin-top:.8rem;font-style:normal;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stone)}
