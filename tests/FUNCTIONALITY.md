@@ -46,3 +46,8 @@ exactly one POST; error message and re-enabled button when Formspree fails.
 - Nav and footer "Training" became "Events" (`/events`). `/training` is unchanged and
   still linked from the homepage ticket, `registered`, and the Defending the Faith card.
 - New page `events.html` added to the baseline.
+
+## Baseline updated on purpose, 3 Oct 2026
+- New page `opened-veil.html` (Opened Veil 2027) added, with `#veilForm` posting to
+  `f/mgavgvaz` and an inline confirmation (`data-success-text`).
+- The January 2027 placeholder card on `events` now links to `/opened-veil`.

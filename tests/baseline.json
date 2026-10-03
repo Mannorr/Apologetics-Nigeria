@@ -252,6 +252,7 @@
    "/events#main",
    "/events#top",
    "/events#upcoming",
+   "/opened-veil",
    "/partner",
    "/partner#give",
    "/privacy",
@@ -448,6 +449,165 @@
    "twitter:image": null
   },
   "title": "Join the session \u2014 Defending the Faith | Apologetics Nigeria",
+  "videos": []
+ },
+ "opened-veil.html": {
+  "canonical": "https://apologeticsnigeria.com/opened-veil",
+  "decks": [],
+  "favicon": true,
+  "forms": [
+   {
+    "action": "https://formspree.io/f/mgavgvaz",
+    "fields": [
+     {
+      "accept": null,
+      "choice": null,
+      "name": "_subject",
+      "options": null,
+      "required": false,
+      "type": "hidden",
+      "value": "Registration \u2014 Opened Veil: The Bible Experience (Jan 2027)"
+     },
+     {
+      "accept": null,
+      "choice": null,
+      "name": "form_type",
+      "options": null,
+      "required": false,
+      "type": "hidden",
+      "value": "Registration \u2014 Opened Veil 2027"
+     },
+     {
+      "accept": null,
+      "choice": null,
+      "name": "name",
+      "options": null,
+      "required": true,
+      "type": "text",
+      "value": null
+     },
+     {
+      "accept": null,
+      "choice": null,
+      "name": "email",
+      "options": null,
+      "required": true,
+      "type": "email",
+      "value": null
+     },
+     {
+      "accept": null,
+      "choice": null,
+      "name": "whatsapp",
+      "options": null,
+      "required": true,
+      "type": "tel",
+      "value": null
+     },
+     {
+      "accept": null,
+      "choice": null,
+      "name": "location",
+      "options": null,
+      "required": true,
+      "type": "text",
+      "value": null
+     },
+     {
+      "accept": null,
+      "choice": null,
+      "name": "organisation",
+      "options": null,
+      "required": false,
+      "type": "text",
+      "value": null
+     },
+     {
+      "accept": null,
+      "choice": null,
+      "name": "role",
+      "options": [
+       "",
+       "Believer wanting to know the Bible better",
+       "Youth or campus leader",
+       "Student",
+       "Parent",
+       "Pastor or church worker",
+       "Sceptic or seeker",
+       "Something else"
+      ],
+      "required": true,
+      "type": "select",
+      "value": null
+     },
+     {
+      "accept": null,
+      "choice": null,
+      "name": "question",
+      "options": null,
+      "required": false,
+      "type": "textarea",
+      "value": null
+     }
+    ],
+    "id": "veilForm",
+    "method": "post",
+    "redirect": null
+   }
+  ],
+  "h1": [
+   "Opened Veil."
+  ],
+  "ids": [
+   "bar",
+   "expect",
+   "footWord",
+   "main",
+   "menu",
+   "menuBtn",
+   "ov-email",
+   "ov-location",
+   "ov-name",
+   "ov-org",
+   "ov-phone",
+   "ov-question",
+   "ov-role",
+   "ov-status",
+   "ov-submit",
+   "register",
+   "theme",
+   "top",
+   "veilForm"
+  ],
+  "lang": "en",
+  "ld": [],
+  "links": [
+   "/",
+   "/about",
+   "/beliefs",
+   "/contact",
+   "/events",
+   "/opened-veil#main",
+   "/opened-veil#register",
+   "/opened-veil#top",
+   "/partner",
+   "/partner#give",
+   "/privacy",
+   "/resources",
+   "https://www.instagram.com/apologeticsnigeria/",
+   "https://www.youtube.com/@Apologetics-ng"
+  ],
+  "meta": {
+   "description": "Opened Veil is the Apologetics Nigeria theme for 2027. The Bible Experience, hosted by MANNORR, January 2027. Register to hear the dates and venue first.",
+   "og:description": "Opened Veil is the Apologetics Nigeria theme for 2027. The Bible Experience, hosted by MANNORR, January 2027. Register to hear the dates and venue first.",
+   "og:image": "https://apologeticsnigeria.com/assets/img/events/opened-veil-2027.jpg",
+   "og:title": "Opened Veil: The Bible Experience, January 2027",
+   "og:url": "https://apologeticsnigeria.com/opened-veil",
+   "robots": null,
+   "twitter:card": "summary_large_image",
+   "twitter:image": "https://apologeticsnigeria.com/assets/img/events/opened-veil-2027.jpg"
+  },
+  "title": "Opened Veil: The Bible Experience, January 2027 | Apologetics Nigeria",
   "videos": []
  },
  "partner.html": {
