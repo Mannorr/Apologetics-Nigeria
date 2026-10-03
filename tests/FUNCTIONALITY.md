@@ -59,3 +59,4 @@ exactly one POST; error message and re-enabled button when Formspree fails.
   plus a custom-amount link with a ₦3,000 minimum) or Flutterwave. Both return to
   `opened-veil-confirmed.html` (noindex), which records the return on Formspree.
   The page header is now the supplied banner image.
+- Same day: Opened Veil card thumbnail and share image now built from the landscape banner (`opened-veil-2027.jpg`, `opened-veil-2027-share.jpg`).
