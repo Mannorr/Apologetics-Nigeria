@@ -16,7 +16,10 @@ var OV = {
   // and returns to /opened-veil-confirmed automatically. Without it, the payment link below is used:
   // set its redirect URL in the Flutterwave dashboard to https://apologeticsnigeria.com/opened-veil-confirmed?provider=flutterwave
   flwPublicKey: '',
-  flwLink: 'https://flutterwave.com/pay/qjh7xrxiukiq',
+  // Flutterwave payment pages (2027 account). One per amount, like Stripe; 'custom' lets the payer type an amount.
+  // Set each page's "Redirect after payment" to https://apologeticsnigeria.com/opened-veil-confirmed
+  flw: { 3000: '', 5000: '', 10000: '', custom: '' },
+  flwLink: 'https://flutterwave.com/pay/qjh7xrxiukiq',  // fallback until the 2027 pages are added
   confirmUrl: 'https://apologeticsnigeria.com/opened-veil-confirmed'
 };
 
@@ -65,7 +68,7 @@ var OV = {
       });
       btn.disabled = false; refresh(); return;
     }
-    window.location.assign(OV.flwLink);
+    window.location.assign(OV.flw[String(d.amount)] || OV.flw.custom || OV.flwLink);
   };
 
   form.addEventListener('submit', function (e) {
@@ -93,7 +96,11 @@ var OV = {
    Flutterwave returns ?provider=flutterwave&status=successful|cancelled&tx_ref=…&transaction_id=… */
 (function () {
   var box = document.getElementById('ovDone'); if (!box) return;
-  var q = new URLSearchParams(location.search), prov = q.get('provider') || '', status = (q.get('status') || '').toLowerCase();
+  // tolerate redirects that append "?status=…" to a URL that already has a query string
+  var q = new URLSearchParams(location.search.replace(/\?/g, '&').replace(/^&/, ''));
+  var prov = (q.get('provider') || '').toLowerCase();
+  if (!prov && (q.get('transaction_id') || q.get('tx_ref') || q.get('status'))) prov = 'flutterwave';
+  var status = (q.get('status') || '').toLowerCase();
   var reg = {}; try { reg = JSON.parse(sessionStorage.getItem('ov-reg') || '{}'); } catch (e) {}
   var state = 'unknown';
   if (prov === 'stripe' && q.get('session_id')) state = 'paid';
