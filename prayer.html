@@ -63,9 +63,29 @@
   .pm[data-state="live"] .pm-join{background:var(--yel);color:var(--ink)}
   .pm-code{margin:.9rem 0 0;font-family:var(--f-mono);font-size:.8rem;color:rgba(255,255,255,.55)}
   .pm-code b{color:#fff;font-weight:500;letter-spacing:.06em}
-  .pm-more{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;margin:1.8rem 0 0}
-  .pm-more a{font-family:var(--f-mono);font-size:.8rem;color:var(--aqua);text-decoration:underline;text-underline-offset:4px}
-  .pm-more a:hover{color:#fff}
+  .pm-more{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.8rem 0 0}
+  .pm-btn{display:inline-flex;align-items:center;gap:.7rem;min-height:3.25rem;padding:.85rem 1.25rem;border:1.5px solid var(--aqua);background:rgba(155,231,242,.08);color:#fff;
+      font-family:"OV Wide",var(--f-mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;line-height:1.2;transition:background .2s,color .2s,transform .2s}
+  .pm-btn svg{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;color:var(--aqua);transition:color .2s}
+  .pm-btn:hover,.pm-btn:focus-visible{background:var(--aqua);color:var(--ink);transform:translateY(-2px)}
+  .pm-btn:hover svg,.pm-btn:focus-visible svg{color:var(--ink)}
+  .pm-btn:focus-visible{outline:2px solid var(--yel);outline-offset:3px}
+  .pm-btn--wa{border-color:#25D366;background:rgba(37,211,102,.1)}
+  .pm-btn--wa svg{color:#25D366}
+  .pm-btn--wa:hover,.pm-btn--wa:focus-visible{background:#25D366}
+  .pm-btn--join{border-color:var(--blue);background:var(--blue)}
+  .pm-btn--join svg{color:#fff}
+  .pm-btn--join:hover,.pm-btn--join:focus-visible{background:var(--blue-2);border-color:var(--blue-2);color:#fff}
+  .pm-btn--join:hover svg{color:#fff}
+  .pm[data-state="live"] .pm-btn--join{background:var(--yel);border-color:var(--yel);color:var(--ink)}
+  .pm[data-state="live"] .pm-btn--join svg{color:var(--ink)}
+  .pm-btn i{font-style:normal}
+  .pm-quick{background:#0B1419;border-bottom:1px solid rgba(155,231,242,.22);padding:1rem var(--g);display:flex;align-items:center;justify-content:center;gap:1rem 2rem;flex-wrap:wrap}
+  .pm-quick__k{margin:0;display:flex;flex-direction:column;gap:.3rem}
+  .pm-quick__k b{font-family:var(--f-disp);font-weight:700;font-stretch:75%;font-size:1.3rem;color:var(--aqua);text-transform:uppercase;line-height:1}
+  .pm-quick__k span{font-family:"OV Wide",var(--f-mono);font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+  .pm-quick__btns{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center}
+  .pm-quick .pm-btn{min-height:2.9rem;padding:.7rem 1rem;font-size:.66rem}
   .pm-note{margin:1.6rem 0 0;font-size:.98rem;line-height:1.55;color:rgba(255,255,255,.6);max-width:48ch}
   .pm-ended{display:none}
   .pm[data-state="ended"] .pm-ended{display:block}
@@ -77,9 +97,18 @@
     .pm-grid{grid-template-columns:1fr}
     .pm-flyer{max-width:420px;margin:0 auto;width:100%}
     .pm-join{width:100%;justify-content:center}
+    .pm-more{display:grid;grid-template-columns:1fr}
+    .pm-more .pm-btn{justify-content:center}
+    .pm-quick{flex-direction:column;align-items:stretch;text-align:center}
+    .pm-quick__k{align-items:center}
+    .pm-quick__btns{display:grid;grid-template-columns:1fr 1fr}
+    .pm-quick__btns .pm-btn{justify-content:center;font-size:.6rem;padding:.7rem .6rem;letter-spacing:.08em}
+    .pm-quick .pm-sm-hide{display:none}
+    .pm-quick__btns .pm-btn--join{grid-column:1/-1;font-size:.72rem}
+    .pm-quick__btns .pm-btn--wa{grid-column:1/-1}
   }
   @media (max-width:420px){.pm-facts{grid-template-columns:1fr 1fr}.pm-facts div:last-child{grid-column:1/-1}}
-  @media (prefers-reduced-motion:reduce){.pm-join{transition:none}.pm[data-state="live"] .pm-status i{animation:none}}
+  @media (prefers-reduced-motion:reduce){.pm-join,.pm-btn{transition:none}.pm[data-state="live"] .pm-status i{animation:none}}
 </style>
 <script>document.documentElement.classList.add("js")</script>
 </head>
@@ -92,6 +121,17 @@
     <a href="index" aria-label="Apologetics Nigeria — home"><img src="assets/img/brand/logo.png" alt="" width="4080" height="2295" /></a>
     <span>Apologetics Nigeria</span>
   </header>
+
+
+  <nav class="pm-quick pm-live-only" aria-label="Quick actions">
+    <p class="pm-quick__k"><b>Fri 9 Oct · 8:30PM WAT</b><span>Save the date, then join here</span></p>
+    <div class="pm-quick__btns">
+      <a class="pm-btn pm-btn--join" href="https://meet.google.com/dzc-pbxh-tyw" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3"/></svg><span>Join on Google Meet</span></a>
+      <a class="pm-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Prayer%20Meeting%20%E2%80%94%20Apologetics%20Nigeria&amp;dates=20261009T193000Z%2F20261009T210000Z&amp;details=Preparation%20for%20the%20conference.%20Guest%3A%20The%20Mosope.%0A%0AJoin%20here%3A%20https%3A%2F%2Fapologeticsnigeria.com%2Fprayer&amp;location=https%3A%2F%2Fapologeticsnigeria.com%2Fprayer" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span><i class="pm-sm-hide">Add to </i>Google Calendar</span></a>
+            <a class="pm-btn" href="prayer-meeting.ics"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span><i class="pm-sm-hide">Add to </i>Apple / Outlook</span></a>
+            <a class="pm-btn pm-btn--wa" href="https://wa.me/?text=Join%20us%20for%20the%20Apologetics%20Nigeria%20prayer%20meeting%2C%20Friday%209%20Oct%20at%208%3A30PM%20(WAT)%2C%20with%20The%20Mosope.%20Join%20here%3A%20https%3A%2F%2Fapologeticsnigeria.com%2Fprayer" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.2A8 8 0 1 1 20 12z"/></svg><span>Share on WhatsApp</span></a>
+    </div>
+  </nav>
 
   <main class="pm-main" id="main">
     <div class="pm-grid">
@@ -130,9 +170,9 @@
           <p class="pm-code">Meeting code: <b>dzc-pbxh-tyw</b></p>
 
           <div class="pm-more">
-            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Prayer%20Meeting%20%E2%80%94%20Apologetics%20Nigeria&amp;dates=20261009T193000Z%2F20261009T210000Z&amp;details=Preparation%20for%20the%20conference.%20Guest%3A%20The%20Mosope.%0A%0AJoin%20here%3A%20https%3A%2F%2Fapologeticsnigeria.com%2Fprayer&amp;location=https%3A%2F%2Fapologeticsnigeria.com%2Fprayer" target="_blank" rel="noopener">Add to Google Calendar</a>
-            <a href="prayer-meeting.ics">Add to Apple / Outlook</a>
-            <a href="https://wa.me/?text=Join%20us%20for%20the%20Apologetics%20Nigeria%20prayer%20meeting%2C%20Friday%209%20Oct%20at%208%3A30PM%20(WAT)%2C%20with%20The%20Mosope.%20Join%20here%3A%20https%3A%2F%2Fapologeticsnigeria.com%2Fprayer" target="_blank" rel="noopener">Share on WhatsApp</a>
+            <a class="pm-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Prayer%20Meeting%20%E2%80%94%20Apologetics%20Nigeria&amp;dates=20261009T193000Z%2F20261009T210000Z&amp;details=Preparation%20for%20the%20conference.%20Guest%3A%20The%20Mosope.%0A%0AJoin%20here%3A%20https%3A%2F%2Fapologeticsnigeria.com%2Fprayer&amp;location=https%3A%2F%2Fapologeticsnigeria.com%2Fprayer" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span><i class="pm-sm-hide">Add to </i>Google Calendar</span></a>
+            <a class="pm-btn" href="prayer-meeting.ics"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span><i class="pm-sm-hide">Add to </i>Apple / Outlook</span></a>
+            <a class="pm-btn pm-btn--wa" href="https://wa.me/?text=Join%20us%20for%20the%20Apologetics%20Nigeria%20prayer%20meeting%2C%20Friday%209%20Oct%20at%208%3A30PM%20(WAT)%2C%20with%20The%20Mosope.%20Join%20here%3A%20https%3A%2F%2Fapologeticsnigeria.com%2Fprayer" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.2A8 8 0 1 1 20 12z"/></svg><span>Share on WhatsApp</span></a>
           </div>
 
           <p class="pm-note">The room opens 15 minutes before we start. On a phone, the link opens the Google Meet app, or meet.google.com in your browser.</p>
