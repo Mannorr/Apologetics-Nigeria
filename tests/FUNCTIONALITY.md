@@ -69,3 +69,7 @@ exactly one POST; error message and re-enabled button when Formspree fails.
   pause on hover/focus, dots, arrows, swipe; v2.js §18c). Baseline re-recorded.
 - 5 Oct 2026: added /prayer (private prayer meeting page, Google Meet link, countdown/live/ended states) and /prayer-meeting.ics. Baseline re-recorded.
 - 5 Oct 2026: /prayer buttons enlarged (calendar, WhatsApp) and repeated in a top quick-action bar with Join. Baseline re-recorded.
+
+## Baseline updated on purpose, 5 Oct 2026
+- Contact email changed from hello@apologeticsnigeria.com to info.apologeticsnigeria@gmail.com
+  (contact, privacy, email signature, ministry profile PDF).
