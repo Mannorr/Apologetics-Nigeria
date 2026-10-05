@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Apologetics Nigeria//Prayer Meeting//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Apologetics Nigeria Prayer Meeting
+BEGIN:VEVENT
+UID:prayer-2026-10-09@apologeticsnigeria.com
+DTSTAMP:20261005T120000Z
+DTSTART:20261009T193000Z
+DTEND:20261009T210000Z
+SUMMARY:Prayer Meeting — Apologetics Nigeria
+DESCRIPTION:Preparation for the conference. Guest: The Mosope.\n\nJoin here: https://apologeticsnigeria.com/prayer
+LOCATION:https://apologeticsnigeria.com/prayer
+URL;VALUE=URI:https://apologeticsnigeria.com/prayer
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Prayer meeting starts in 30 minutes
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT5M
+ACTION:DISPLAY
+DESCRIPTION:Prayer meeting starts in 5 minutes — join now
+END:VALARM
+END:VEVENT
+END:VCALENDAR

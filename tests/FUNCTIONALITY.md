@@ -67,3 +67,4 @@ exactly one POST; error message and re-enabled button when Formspree fails.
   see the form. The events card shows "Opens 18 Oct" and a live countdown (`data-opens-at`, v2.js §18b).
 - 3 Oct 2026: homepage ticket became an events carousel (Defending the Faith + Opened Veil, 7s auto-advance,
   pause on hover/focus, dots, arrows, swipe; v2.js §18c). Baseline re-recorded.
+- 5 Oct 2026: added /prayer (private prayer meeting page, Google Meet link, countdown/live/ended states) and /prayer-meeting.ics. Baseline re-recorded.

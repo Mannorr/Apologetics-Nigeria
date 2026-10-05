@@ -816,6 +816,42 @@
   "title": "Partner With Us \u2014 Invite, Pray, Give | Apologetics Nigeria",
   "videos": []
  },
+ "prayer.html": {
+  "canonical": "https://apologeticsnigeria.com/prayer",
+  "decks": [],
+  "favicon": true,
+  "forms": [],
+  "h1": [
+   "PrayerMeeting"
+  ],
+  "ids": [
+   "main",
+   "pm"
+  ],
+  "lang": "en",
+  "ld": [],
+  "links": [
+   "/",
+   "/assets/img/events/prayer-meeting-9-oct.jpg",
+   "/prayer-meeting.ics",
+   "/training",
+   "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Prayer%20Meeting%20%E2%80%94%20Apologetics%20Nigeria&dates=20261009T193000Z%2F20261009T210000Z&details=Preparation%20for%20the%20conference.%20Guest%3A%20The%20Mosope.%0A%0AJoin%20here%3A%20https%3A%2F%2Fapologeticsnigeria.com%2Fprayer&location=https%3A%2F%2Fapologeticsnigeria.com%2Fprayer",
+   "https://meet.google.com/dzc-pbxh-tyw",
+   "https://wa.me/?text=Join%20us%20for%20the%20Apologetics%20Nigeria%20prayer%20meeting%2C%20Friday%209%20Oct%20at%208%3A30PM%20(WAT)%2C%20with%20The%20Mosope.%20Join%20here%3A%20https%3A%2F%2Fapologeticsnigeria.com%2Fprayer"
+  ],
+  "meta": {
+   "description": "Prayer meeting in preparation for the conference. Friday 9 October, 8:30PM WAT, with guest The Mosope. Join online on Google Meet.",
+   "og:description": "Preparation for the conference, with guest The Mosope. Tap to join on Google Meet.",
+   "og:image": "https://apologeticsnigeria.com/assets/img/events/prayer-meeting-9-oct.jpg",
+   "og:title": "Prayer Meeting \u00b7 Friday 9 Oct, 8:30PM",
+   "og:url": "https://apologeticsnigeria.com/prayer",
+   "robots": "noindex, nofollow",
+   "twitter:card": "summary_large_image",
+   "twitter:image": "https://apologeticsnigeria.com/assets/img/events/prayer-meeting-9-oct.jpg"
+  },
+  "title": "Prayer Meeting \u00b7 Friday 9 October | Apologetics Nigeria",
+  "videos": []
+ },
  "privacy.html": {
   "canonical": "https://apologeticsnigeria.com/privacy",
   "decks": [],

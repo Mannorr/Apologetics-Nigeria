@@ -11,6 +11,10 @@
       "destination": "/assets/files/defending-the-faith.ics"
     },
     {
+      "source": "/prayer-meeting.ics",
+      "destination": "/assets/files/prayer-meeting.ics"
+    },
+    {
       "source": "/email-hero.jpg",
       "destination": "/assets/img/email/email-hero.jpg"
     },
@@ -83,6 +87,19 @@
     },
     {
       "source": "/assets/files/defending-the-faith.ics",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/calendar; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    },
+    {
+      "source": "/assets/files/prayer-meeting.ics",
       "headers": [
         {
           "key": "Content-Type",

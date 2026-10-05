@@ -15,6 +15,7 @@ Static site. No build step. Deployed on Vercel straight from `main`.
   opened-veil-confirmed.html Where Stripe/Flutterwave return payers (noindex)
   registered.html            Post-registration thank-you (noindex)
   join.html                  Permanent joining page — see "The join page" below
+  prayer.html                Private prayer meeting page (/prayer), noindex, not in the menu — see below
   resources.html             Talks, decks and video library
   about.html  beliefs.html  partner.html  contact.html  privacy.html
   vercel.json                Deploy config + legacy URL rewrites
@@ -67,6 +68,15 @@ paths, so anything in `/assets/img/email` is referenced as
 `https://apologeticsnigeria.com/assets/img/email/...`.
 
 ---
+
+## The prayer meeting page
+
+`/prayer` is a private page for the prayer meeting (Fri 9 Oct 2026, 8:30PM WAT, guest The Mosope).
+It is noindex and not linked from the menu, so only people with the link find it.
+The Google Meet link is one line marked in `prayer.html`. The times live in `data-start`,
+`data-open` (room opens) and `data-end` on `#pm`: the page counts down, shows "We are live now"
+from 8:15PM, and "This meeting has ended" after 10:30PM. Calendar file: `/prayer-meeting.ics`
+(assumes 8:30–10PM). For the next prayer meeting, swap the flyer, the date text and those times.
 
 ## The join page
 
