@@ -1040,3 +1040,29 @@ body.deck-open .bar{transform:translateY(-110%)}
 .ov-verse{margin:0;font-family:"OV Display",Georgia,serif;font-weight:700;font-size:clamp(.95rem,1.25vw,1.15rem);line-height:1.45;color:#EEEBC6;border-left:2px solid #C4222A;padding-left:.9rem}
 .ov-verse cite{display:block;margin-top:.55rem;font-style:normal;font-family:"OV Wide",var(--f-mono);font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;color:#f3b8b0}
 @media (max-width:880px){.ticket--veil .ov-art{padding-top:.4rem}.ov-verse{margin:1.2rem 0}}
+
+/* ══════════ COUNTDOWN PAGE (/countdown): black and white ══════════ */
+.page-countdown{--gold:var(--paper);--gold-2:var(--paper)}
+.cdp::before{background:radial-gradient(circle clamp(260px,40vw,620px) at var(--mx,50%) var(--my,35%),rgba(246,242,233,.08),transparent 70%)}
+.cdp h1 .t-cond{font-size:clamp(3.2rem,15vw,8rem)}
+.cdp h1 .t-serif{font-size:clamp(3.4rem,16vw,8.8rem)}
+.cdp-cd{margin:0 0 2.4rem;flex-wrap:wrap}
+.cdp-live{margin-bottom:2.4rem}
+.cdp-live .jn-btn{width:100%;justify-content:center;font-size:1.05rem}
+.cdp-small{color:var(--stone-2);font-size:.72rem;letter-spacing:.06em;margin-top:.9rem}
+.cdp-thanks{margin-bottom:2.4rem}
+.cdp-thanks p{color:rgba(246,242,233,.74);max-width:50ch;font-size:1.1rem;margin-bottom:1.2rem}
+.cdp-days .jn-row span{display:flex;flex-direction:column;gap:.25rem}
+.cdp-days .jn-row span em{font-style:italic;font-family:var(--f-serif);color:var(--paper);font-size:1.05rem}
+.cdp-days .jn-row.is-now{border-bottom-color:var(--paper)}
+.cdp-days .jn-row.is-now span,.cdp-days .jn-row.is-now b{color:var(--paper)}
+.cdp-days .jn-row.is-now b::before{content:"● ";font-size:.7em;vertical-align:.15em}
+.cdp-days .jn-row.is-done{opacity:.45}
+.cdp-tz{margin-top:1rem}
+.cdp-links{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line-d);border:1px solid var(--line-d);margin-top:2.4rem}
+.cdp-link{display:flex;flex-direction:column;gap:.35rem;padding:1.1rem 1.2rem;background:var(--ink);text-decoration:none;color:var(--paper);transition:background .3s}
+.cdp-link span{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--stone-2)}
+.cdp-link b{font-weight:400;font-size:1.08rem;word-break:break-word}
+.cdp-link:hover,.cdp-link:focus-visible{background:#12191b}
+.cdp [hidden]{display:none !important}
+@media (min-width:640px){.cdp-links{grid-template-columns:1fr 1fr}}

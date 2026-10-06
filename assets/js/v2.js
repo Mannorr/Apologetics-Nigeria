@@ -625,5 +625,55 @@
     if (pastGrid.children.length) $('#past').hidden = false;
   }
 
+  /* ─── 20. Countdown page (/countdown): headline changes by date, all WAT ─── */
+  var cdp = $('[data-cdp]');
+  if (cdp) {
+    var WAT = '+01:00', D = cdp.dataset;
+    var dayList = D.cdpDays.split(',');
+    var at = (location.search.match(/[?&]at=([^&]+)/) || [])[1];     // preview: ?at=2026-10-16T19:00
+    var atOffset = at ? new Date(decodeURIComponent(at) + (/[zZ]|[+-]\d\d:?\d\d$/.test(decodeURIComponent(at)) ? '' : WAT)).getTime() - Date.now() : 0;
+    var t = function (day, hm) { return new Date(day + 'T' + hm + ':00' + WAT).getTime(); };
+    var lagosDate = function (ms) { return new Date(ms + 36e5).toISOString().slice(0, 10); };   // Nigeria has no daylight saving
+    var dayDiff = function (a, b) { return Math.round((Date.parse(b) - Date.parse(a)) / 864e5); };
+    var head = { a: $('[data-cdp-a]', cdp), b: $('[data-cdp-b]', cdp), lede: $('[data-cdp-lede]', cdp), h1: $('h1', cdp) };
+    var last = '';
+    var paint = function () {
+      var now = Date.now() + (isNaN(atOffset) ? 0 : atOffset), today = lagosDate(now), st;
+      var openN = function (i) { return t(dayList[i], D.cdpOpen); }, endN = function (i) { return t(dayList[i], D.cdpEnd); };
+      if (now >= endN(2)) st = { p: 'after', a: 'Thank', b: 'you.', l: 'Three evenings, done. Thank you for being part of Defending the Faith.' };
+      else if (now < openN(0)) {
+        var left = dayDiff(today, dayList[0]);
+        if (today === dayList[0]) st = { p: 'before', d: 1, a: 'Tonight,', b: 'Day 1.', l: 'Foundations, with Pastor Ernest Olusanya. The room opens at 6:45PM WAT.' };
+        else if (left === 1) st = { p: 'before', a: 'Tomorrow.', b: 'Day 1.', l: 'We begin tomorrow, Friday 16 October, at 7PM WAT. Add it to your calendar now.' };
+        else st = { p: 'before', a: left + ' days', b: 'to go.', l: 'Three evenings, 7 to 10PM WAT, live online. Free.' };
+      } else {
+        for (var i = 0; i < 3; i++) {
+          var lab = ['Foundations, with Pastor Ernest Olusanya.', 'Jesus and Islam, with Daniel Odili and MANNORR.', 'Doubt and the conversation, with Ben Clifton and MANNORR.'][i];
+          if (now >= openN(i) && now < endN(i)) { st = { p: 'live', d: i + 1, a: 'We are', b: 'live.', l: 'Day ' + (i + 1) + ': ' + lab + ' Tap below to join.' }; break; }
+          if (i < 2 && now >= endN(i) && now < openN(i + 1)) {
+            var nl = ['', 'Jesus and Islam, with Daniel Odili and MANNORR.', 'Doubt and the conversation, with Ben Clifton and MANNORR.'][i + 1];
+            st = today === dayList[i + 1]
+              ? { p: 'during', d: i + 2, a: 'Tonight,', b: 'Day ' + (i + 2) + '.', l: nl + ' The room opens at 6:45PM WAT.' }
+              : { p: 'during', d: i + 2, a: 'Tomorrow,', b: 'Day ' + (i + 2) + '.', l: 'Day ' + (i + 1) + ' is done. ' + nl + ' 7PM WAT.' };
+            break;
+          }
+        }
+      }
+      var key = st.p + st.a + st.b + st.l;
+      if (key === last) return; last = key;
+      head.a.textContent = st.a; head.b.textContent = st.b; head.lede.textContent = st.l;
+      head.h1.setAttribute('aria-label', st.a + ' ' + st.b);
+      cdp.dataset.phase = st.p;
+      $$('[data-cdp-show]', cdp).forEach(function (el) { el.hidden = el.dataset.cdpShow.split(' ').indexOf(st.p) < 0; });
+      $$('[data-cdp-hide]', cdp).forEach(function (el) { el.hidden = el.dataset.cdpHide === st.p; });
+      $$('[data-cdp-day]', cdp).forEach(function (el) {
+        var n = +el.dataset.cdpDay;
+        el.classList.toggle('is-now', n === st.d);
+        el.classList.toggle('is-done', st.p === 'after' || (st.d ? n < st.d : false));
+      });
+    };
+    paint(); setInterval(paint, 15000);
+  }
+
   runScroll();
 })();

@@ -14,6 +14,9 @@ Static site. No build step. Deployed on Vercel straight from `main`.
   opened-veil.html           Opened Veil 2027 — event page, registration + commitment fee
   opened-veil-confirmed.html Where Stripe/Flutterwave return payers (noindex)
   registered.html            Post-registration thank-you (noindex)
+  countdown.html             Defending the Faith countdown, sent by email (noindex). Headline
+                             changes by date on its own: v2.js section 20. Preview a state
+                             with /countdown?at=2026-10-16T19:00 (WAT)
   join.html                  Permanent joining page — see "The join page" below
   prayer.html                Private prayer meeting page (/prayer), noindex, not in the menu — see below
   resources.html             Talks, decks and video library

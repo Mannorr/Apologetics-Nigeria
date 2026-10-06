@@ -73,3 +73,7 @@ exactly one POST; error message and re-enabled button when Formspree fails.
 ## Baseline updated on purpose, 5 Oct 2026
 - Contact email changed from hello@apologeticsnigeria.com to info.apologeticsnigeria@gmail.com
   (contact, privacy, email signature, ministry profile PDF).
+
+## Added 6 Oct 2026
+- `countdown.html` (emailed URL, must never move). States tested at every boundary minute
+  (days to go, Tomorrow, Tonight Day X, live 6:45 to 10PM, Tomorrow Day X, Thank you) by fixing the browser clock.

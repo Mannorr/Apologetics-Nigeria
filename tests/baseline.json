@@ -221,6 +221,41 @@
   "title": "Contact | Apologetics Nigeria",
   "videos": []
  },
+ "countdown.html": {
+  "canonical": "https://apologeticsnigeria.com/countdown",
+  "decks": [],
+  "favicon": true,
+  "forms": [],
+  "h1": [
+   "10 days to go."
+  ],
+  "ids": [
+   "main"
+  ],
+  "lang": "en",
+  "ld": [],
+  "links": [
+   "/",
+   "/assets/files/defending-the-faith.ics",
+   "/join",
+   "/training",
+   "https://chat.whatsapp.com/EV0Sg9cUhEEFWT2fMKxZqT?mode=gi_t",
+   "https://www.youtube.com/@Apologetics-ng",
+   "mailto:info.apologeticsnigeria@gmail.com"
+  ],
+  "meta": {
+   "description": "Defending the Faith, 16 to 18 October 2026, 7 to 10PM WAT. Your countdown, joining link, calendar and WhatsApp group in one place.",
+   "og:description": "16 to 18 October, 7 to 10PM WAT. Joining link, calendar and WhatsApp group in one place.",
+   "og:image": "https://apologeticsnigeria.com/assets/img/training/training-poster.jpg",
+   "og:title": "Defending the Faith: the countdown",
+   "og:url": "https://apologeticsnigeria.com/countdown",
+   "robots": "noindex, nofollow",
+   "twitter:card": "summary_large_image",
+   "twitter:image": "https://apologeticsnigeria.com/assets/img/training/training-poster.jpg"
+  },
+  "title": "Countdown | Defending the Faith | Apologetics Nigeria",
+  "videos": []
+ },
  "events.html": {
   "canonical": "https://apologeticsnigeria.com/events",
   "decks": [],
