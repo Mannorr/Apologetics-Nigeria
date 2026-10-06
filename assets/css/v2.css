@@ -1066,3 +1066,13 @@ body.deck-open .bar{transform:translateY(-110%)}
 .cdp-link:hover,.cdp-link:focus-visible{background:#12191b}
 .cdp [hidden]{display:none !important}
 @media (min-width:640px){.cdp-links{grid-template-columns:1fr 1fr}}
+/* countdown: speakers + three evenings, black and white */
+.cdp-more{border-top:1px solid var(--line-d)}
+.cdp-more .sp-topic{color:var(--stone-2)}
+.cdp-more .day{background:var(--ink-2);outline:1px solid var(--line-d);outline-offset:-1px}
+.cdp-more .day li::before{background:var(--paper)}
+.cdp-more--days{padding-top:clamp(3rem,6vw,5rem)}
+.cdp-more .sp:hover .sp-img img{filter:grayscale(1) contrast(1.05)}
+.cdp-more .day.is-now{outline:2px solid var(--paper);outline-offset:-2px}
+.cdp-more .day.is-done{opacity:.5}
+.cdp-more > .sec-head,.cdp-more > .speakers,.cdp-more > .days{max-width:1180px;margin-left:auto;margin-right:auto}

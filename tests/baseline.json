@@ -230,7 +230,9 @@
    "10 days to go."
   ],
   "ids": [
-   "main"
+   "main",
+   "schedule",
+   "speakers"
   ],
   "lang": "en",
   "ld": [],

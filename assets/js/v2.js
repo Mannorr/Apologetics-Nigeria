@@ -666,7 +666,7 @@
       cdp.dataset.phase = st.p;
       $$('[data-cdp-show]', cdp).forEach(function (el) { el.hidden = el.dataset.cdpShow.split(' ').indexOf(st.p) < 0; });
       $$('[data-cdp-hide]', cdp).forEach(function (el) { el.hidden = el.dataset.cdpHide === st.p; });
-      $$('[data-cdp-day]', cdp).forEach(function (el) {
+      $$('[data-cdp-day]').forEach(function (el) {
         var n = +el.dataset.cdpDay;
         el.classList.toggle('is-now', n === st.d);
         el.classList.toggle('is-done', st.p === 'after' || (st.d ? n < st.d : false));
