@@ -703,7 +703,8 @@ body.menu-open .bar{--bar-bg:rgba(4,12,14,.2);--bar-line:transparent}
 .tz .mono{font-weight:500}
 .tz-item{display:inline-flex;gap:.6rem;align-items:baseline;font-size:1.02rem}
 .tz-item b{font-family:var(--f-disp);font-stretch:70%;font-weight:700;letter-spacing:.01em}
-.speakers{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(10px,1.4vw,20px)}
+.speakers{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(10px,1.4vw,20px)}
+@media (max-width:1200px) and (min-width:1001px){.speakers{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .sp{display:flex;flex-direction:column;gap:1rem}
 .sp-img{--cut:20px;aspect-ratio:4/5;overflow:hidden;background:var(--ink-2);
   clip-path:polygon(0 0,calc(100% - var(--cut)) 0,100% var(--cut),100% 100%,var(--cut) 100%,0 calc(100% - var(--cut)))}

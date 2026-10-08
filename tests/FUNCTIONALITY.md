@@ -77,3 +77,9 @@ exactly one POST; error message and re-enabled button when Formspree fails.
 ## Added 6 Oct 2026
 - `countdown.html` (emailed URL, must never move). States tested at every boundary minute
   (days to go, Tomorrow, Tonight Day X, live 6:45 to 10PM, Tomorrow Day X, Thank you) by fixing the browser clock.
+- 8 Oct 2026: Derrick Uittenbosch (Executive Director, Apologetics Canada) added: closing charge, Day 3, 9:30PM WAT.
+  Speaker card on /training and /countdown ("Five voices"), Day 3 schedule lines, countdown labels (v2.js), JSON-LD
+  performer, new guests flyer (training/guests-2026-v2.*) as hero + share image, new homepage banner
+  (training-banner-v2.jpg, mobile uses guests-2026-v2.jpg), new events thumbnail, .ics Day 3 description,
+  attendee pack PDF re-rendered, email template. Old /training-poster.(jpg|png) URLs now serve the new guests flyer.
+  New images use new filenames because /assets/img is cached as immutable. Baseline re-recorded.

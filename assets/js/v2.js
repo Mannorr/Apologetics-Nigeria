@@ -648,10 +648,10 @@
         else st = { p: 'before', a: left + ' days', b: 'to go.', l: 'Three evenings, 7 to 10PM WAT, live online. Free.' };
       } else {
         for (var i = 0; i < 3; i++) {
-          var lab = ['Foundations, with Pastor Ernest Olusanya.', 'Jesus and Islam, with Daniel Odili and MANNORR.', 'Doubt and the conversation, with Ben Clifton and MANNORR.'][i];
+          var lab = ['Foundations, with Pastor Ernest Olusanya.', 'Jesus and Islam, with Daniel Odili and MANNORR.', 'Doubt and the conversation, with Ben Clifton and MANNORR, and a closing charge from Derrick Uittenbosch.'][i];
           if (now >= openN(i) && now < endN(i)) { st = { p: 'live', d: i + 1, a: 'We are', b: 'live.', l: 'Day ' + (i + 1) + ': ' + lab + ' Tap below to join.' }; break; }
           if (i < 2 && now >= endN(i) && now < openN(i + 1)) {
-            var nl = ['', 'Jesus and Islam, with Daniel Odili and MANNORR.', 'Doubt and the conversation, with Ben Clifton and MANNORR.'][i + 1];
+            var nl = ['', 'Jesus and Islam, with Daniel Odili and MANNORR.', 'Doubt and the conversation, with Ben Clifton and MANNORR, and a closing charge from Derrick Uittenbosch.'][i + 1];
             st = today === dayList[i + 1]
               ? { p: 'during', d: i + 2, a: 'Tonight,', b: 'Day ' + (i + 2) + '.', l: nl + ' The room opens at 6:45PM WAT.' }
               : { p: 'during', d: i + 2, a: 'Tomorrow,', b: 'Day ' + (i + 2) + '.', l: 'Day ' + (i + 1) + ' is done. ' + nl + ' 7PM WAT.' };

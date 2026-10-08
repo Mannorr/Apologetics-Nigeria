@@ -6,7 +6,7 @@ METHOD:PUBLISH
 X-WR-CALNAME:Defending the Faith
 BEGIN:VEVENT
 UID:dtf-day1-2026@apologeticsnigeria.com
-DTSTAMP:20260913T000000Z
+DTSTAMP:20261008T050000Z
 DTSTART:20261016T180000Z
 DTEND:20261016T210000Z
 SUMMARY:Defending the Faith — Day 1: Foundations
@@ -28,7 +28,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:dtf-day2-2026@apologeticsnigeria.com
-DTSTAMP:20260913T000000Z
+DTSTAMP:20261008T050000Z
 DTSTART:20261017T180000Z
 DTEND:20261017T210000Z
 SUMMARY:Defending the Faith — Day 2: Jesus and Islam
@@ -50,11 +50,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:dtf-day3-2026@apologeticsnigeria.com
-DTSTAMP:20260913T000000Z
+DTSTAMP:20261008T050000Z
 DTSTART:20261018T180000Z
 DTEND:20261018T210000Z
 SUMMARY:Defending the Faith — Day 3: Doubt and the Conversation
-DESCRIPTION:Suffering and evil, answering atheism, handling your own doubts, and how to have the conversation.\n\nJoin here: https://apologeticsnigeria.com/join\n\nThe room opens 15 minutes before we begin. Same link every evening.\nFree three-day apologetics training from Apologetics Nigeria.
+DESCRIPTION:Suffering and evil, answering atheism, handling your own doubts, and how to have the conversation. With Ben Clifton and MANNORR. Closing charge at 9:30PM WAT from Derrick Uittenbosch, Executive Director of Apologetics Canada.\n\nJoin here: https://apologeticsnigeria.com/join\n\nThe room opens 15 minutes before we begin. Same link every evening.\nFree three-day apologetics training from Apologetics Nigeria.
 LOCATION:https://apologeticsnigeria.com/join
 URL;VALUE=URI:https://apologeticsnigeria.com/join
 STATUS:CONFIRMED

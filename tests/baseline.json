@@ -227,7 +227,7 @@
   "favicon": true,
   "forms": [],
   "h1": [
-   "10 days to go."
+   "8 days to go."
   ],
   "ids": [
    "main",
@@ -248,12 +248,12 @@
   "meta": {
    "description": "Defending the Faith, 16 to 18 October 2026, 7 to 10PM WAT. Your countdown, joining link, calendar and WhatsApp group in one place.",
    "og:description": "16 to 18 October, 7 to 10PM WAT. Joining link, calendar and WhatsApp group in one place.",
-   "og:image": "https://apologeticsnigeria.com/assets/img/training/training-poster.jpg",
+   "og:image": "https://apologeticsnigeria.com/assets/img/training/guests-2026-v2.jpg",
    "og:title": "Defending the Faith: the countdown",
    "og:url": "https://apologeticsnigeria.com/countdown",
    "robots": "noindex, nofollow",
    "twitter:card": "summary_large_image",
-   "twitter:image": "https://apologeticsnigeria.com/assets/img/training/training-poster.jpg"
+   "twitter:image": "https://apologeticsnigeria.com/assets/img/training/guests-2026-v2.jpg"
   },
   "title": "Countdown | Defending the Faith | Apologetics Nigeria",
   "videos": []
@@ -1236,7 +1236,7 @@
     "endDate": "2026-10-18T22:00:00+01:00",
     "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
     "eventStatus": "https://schema.org/EventScheduled",
-    "image": "https://apologeticsnigeria.com/assets/img/training/training-poster.jpg",
+    "image": "https://apologeticsnigeria.com/assets/img/training/guests-2026-v2.jpg",
     "location": {
      "@type": "VirtualLocation",
      "url": "https://apologeticsnigeria.com/training"
@@ -1271,6 +1271,11 @@
       "@type": "Person",
       "jobTitle": "President of Apologetics on Mission",
       "name": "Ben Clifton"
+     },
+     {
+      "@type": "Person",
+      "jobTitle": "Executive Director of Apologetics Canada",
+      "name": "Derrick Uittenbosch"
      }
     ],
     "startDate": "2026-10-16T19:00:00+01:00"
@@ -1293,14 +1298,14 @@
    "https://www.youtube.com/@Apologetics-ng"
   ],
   "meta": {
-   "description": "A free three-day online apologetics training with Pastor Ernest Olusanya, Daniel Odili, MANNORR and Ben Clifton. 16\u201318 October 2026, 7\u201310PM WAT. Learn to answer the questions your faith is actually being asked \u2014 and register free.",
-   "og:description": "A free three-day online apologetics training with Pastor Ernest Olusanya, Daniel Odili, MANNORR and Ben Clifton. 16\u201318 October 2026, 7\u201310PM WAT. Register free.",
-   "og:image": "https://apologeticsnigeria.com/assets/img/training/training-poster.jpg",
+   "description": "A free three-day online apologetics training with Pastor Ernest Olusanya, Daniel Odili, MANNORR, Ben Clifton and Derrick Uittenbosch. 16\u201318 October 2026, 7\u201310PM WAT. Learn to answer the questions your faith is actually being asked \u2014 and register free.",
+   "og:description": "A free three-day online apologetics training with Pastor Ernest Olusanya, Daniel Odili, MANNORR, Ben Clifton and Derrick Uittenbosch. 16\u201318 October 2026, 7\u201310PM WAT. Register free.",
+   "og:image": "https://apologeticsnigeria.com/assets/img/training/guests-2026-v2.jpg",
    "og:title": "Defending the Faith \u2014 Free 3-Day Apologetics Training, Oct 16\u201318",
    "og:url": "https://apologeticsnigeria.com/training",
    "robots": null,
    "twitter:card": "summary_large_image",
-   "twitter:image": "https://apologeticsnigeria.com/assets/img/training/training-poster.jpg"
+   "twitter:image": "https://apologeticsnigeria.com/assets/img/training/guests-2026-v2.jpg"
   },
   "title": "Defending the Faith \u2014 Free 3-Day Apologetics Training, Oct 16\u201318 | Apologetics Nigeria",
   "videos": []
