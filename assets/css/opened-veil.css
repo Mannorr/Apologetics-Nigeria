@@ -193,3 +193,17 @@
 .ov-cd .ov-label{color:var(--ov-teal);font-size:.62rem}
 .ov-soon__lede{max-width:640px;margin:0 auto 1.4rem;line-height:1.6;color:rgba(238,235,198,.85);font-size:1.08rem}
 .ov-btn--light{color:#fff;border-color:rgba(255,255,255,.7)}.ov-btn--light:hover{background:#fff;color:var(--ov-navy)}
+
+/* Key facts list (event page "The day", confirmation "Before you come") */
+.ov-facts{display:block;margin:0;border-top:2px solid var(--ov-ink);text-align:left}
+.ov-facts div{display:grid;grid-template-columns:minmax(0,11rem) minmax(0,1fr);gap:1rem 1.6rem;padding:1.15rem 0;border-bottom:1px solid rgba(26,26,18,.18)}
+.ov-facts dt{font-family:var(--ov-wide);font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--ov-rust);padding-top:.35rem}
+.ov-facts dd{margin:0;font-size:clamp(1rem,1.3vw,1.18rem);line-height:1.6;color:#3b3a2c}
+.ov-facts dd b{color:var(--ov-ink)}
+.ov-before{max-width:620px;margin:2.4rem auto 0}
+.ov-before > .ov-label{margin:0 0 1rem;text-align:left;color:var(--ov-ink)}
+.ov-faq .faq{position:relative;z-index:2}
+.ov-faq .faq summary{color:var(--ov-cream)}
+.ov-faq .faq .fa{color:rgba(238,235,198,.8)}
+.ov-faq .faq a{color:var(--ov-teal)}
+@media (max-width:640px){.ov-facts div{grid-template-columns:1fr;gap:.35rem}}

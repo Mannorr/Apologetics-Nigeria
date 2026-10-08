@@ -526,6 +526,7 @@
    "/resources",
    "https://chat.whatsapp.com/Jy7BFuSjuDg3ezJM0FgbJy",
    "https://wa.me/?text=I%20just%20registered%20for%20Opened%20Veil%3A%20The%20Bible%20Experience%20(Apologetics%20Nigeria%2C%20January%202027).%20Join%20me%3A%20https%3A%2F%2Fapologeticsnigeria.com%2Fopened-veil",
+   "https://www.google.com/maps/search/?api=1&query=PCI+Event+Hall%2C+34+Ijaiye+Road%2C+Ogba%2C+Lagos",
    "https://www.instagram.com/apologeticsnigeria/",
    "https://www.youtube.com/@Apologetics-ng"
   ],
@@ -741,7 +742,9 @@
   ],
   "ids": [
    "bar",
+   "details",
    "expect",
+   "faq",
    "flyers",
    "footWord",
    "main",
@@ -764,7 +767,8 @@
    "register",
    "theme",
    "top",
-   "veilForm"
+   "veilForm",
+   "whofor"
   ],
   "lang": "en",
   "ld": [],
@@ -788,8 +792,8 @@
    "https://www.youtube.com/@Apologetics-ng"
   ],
   "meta": {
-   "description": "Opened Veil: The Bible Experience. Apologetics Nigeria 2027, hosted by MANNORR, January 2027. Register with a commitment fee from \u20a63,000.",
-   "og:description": "Opened Veil: The Bible Experience. Apologetics Nigeria 2027, hosted by MANNORR, January 2027. Register with a commitment fee from \u20a63,000.",
+   "description": "Opened Veil: The Bible Experience. Apologetics Nigeria 2027, hosted by MANNORR. January 2027, 11:00 AM, Ogba, Lagos. Registration is compulsory, with a commitment fee from \u20a63,000.",
+   "og:description": "Opened Veil: The Bible Experience. Apologetics Nigeria 2027, hosted by MANNORR. January 2027, 11:00 AM, Ogba, Lagos. Registration is compulsory, with a commitment fee from \u20a63,000.",
    "og:image": "https://apologeticsnigeria.com/assets/img/events/opened-veil-2027-share.jpg",
    "og:title": "Opened Veil: The Bible Experience, January 2027",
    "og:url": "https://apologeticsnigeria.com/opened-veil",
