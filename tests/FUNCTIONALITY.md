@@ -83,3 +83,4 @@ exactly one POST; error message and re-enabled button when Formspree fails.
   (training-banner-v2.jpg, mobile uses guests-2026-v2.jpg), new events thumbnail, .ics Day 3 description,
   attendee pack PDF re-rendered, email template. Old /training-poster.(jpg|png) URLs now serve the new guests flyer.
   New images use new filenames because /assets/img is cached as immutable. Baseline re-recorded.
+- 14 Oct 2026: partner#give shows the UBA bank transfer details (founder's account, labelled 'Dedicated giving account' until CAC registration) with a copy button ([data-copy], v2.js). Baseline re-recorded.

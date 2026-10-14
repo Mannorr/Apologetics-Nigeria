@@ -676,4 +676,15 @@
   }
 
   runScroll();
+
+  /* ─── Copy-to-clipboard buttons (partner#give bank account) ─── */
+  $$('[data-copy]').forEach(function (b) {
+    var label = b.textContent;
+    b.addEventListener('click', function () {
+      var v = b.getAttribute('data-copy'), done = function () { b.textContent = 'Copied ✓'; b.classList.add('is-done'); setTimeout(function () { b.textContent = label; b.classList.remove('is-done'); }, 2000); };
+      if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(v).then(done, function () { fallback(); });
+      else fallback();
+      function fallback() { var t = document.createElement('textarea'); t.value = v; t.setAttribute('readonly', ''); t.style.position = 'fixed'; t.style.opacity = '0'; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); done(); } catch (e) {} t.remove(); }
+    });
+  });
 })();

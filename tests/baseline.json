@@ -227,7 +227,7 @@
   "favicon": true,
   "forms": [],
   "h1": [
-   "8 days to go."
+   "2 days to go."
   ],
   "ids": [
    "main",
@@ -811,6 +811,7 @@
    "Partner With Us"
   ],
   "ids": [
+   "bankNum",
    "bar",
    "curriculum",
    "footWord",
