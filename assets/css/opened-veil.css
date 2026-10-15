@@ -220,3 +220,7 @@
 .ov-spk p{margin:0;line-height:1.5;font-size:.98rem;color:rgba(238,235,198,.75)}
 @media (max-width:900px){.ov-speakers{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:420px){.ov-spk__body{padding:1rem 1rem 1.2rem}.ov-spk p{font-size:.9rem}}
+
+/* countdown labels fit four boxes on small phones */
+@media (max-width:480px){.ov-cd{gap:.4rem;grid-template-columns:repeat(4,minmax(0,1fr))}.ov-cd div{min-width:0}.ov-cd .ov-label{letter-spacing:.08em;font-size:.52rem}}
+@media (max-width:360px){.ov-cd .ov-label{letter-spacing:0;font-size:.48rem}}
