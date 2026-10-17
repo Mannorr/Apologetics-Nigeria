@@ -227,7 +227,7 @@
   "favicon": true,
   "forms": [],
   "h1": [
-   "Tonight, Day 1."
+   "Tonight, Day 2."
   ],
   "ids": [
    "main",
@@ -464,7 +464,7 @@
   "favicon": true,
   "forms": [],
   "h1": [
-   "Join the session."
+   "Watch live."
   ],
   "ids": [
    "main"
@@ -474,10 +474,11 @@
   "links": [
    "/",
    "https://meet.google.com/dfb-iyfh-dfe",
-   "https://www.instagram.com/apologeticsnigeria/"
+   "https://www.instagram.com/apologeticsnigeria/",
+   "https://www.youtube.com/@Mannorr_apn/live"
   ],
   "meta": {
-   "description": "Join the live session of Defending the Faith. 16\u201318 October, 7\u201310PM WAT.",
+   "description": "Watch Defending the Faith live on YouTube. 16 to 18 October, 7 to 10PM WAT.",
    "og:description": null,
    "og:image": null,
    "og:title": null,
@@ -486,7 +487,7 @@
    "twitter:card": null,
    "twitter:image": null
   },
-  "title": "Join the session \u2014 Defending the Faith | Apologetics Nigeria",
+  "title": "Watch live: Defending the Faith | Apologetics Nigeria",
   "videos": []
  },
  "opened-veil-confirmed.html": {
