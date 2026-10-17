@@ -121,11 +121,11 @@ All forms post to Formspree and are handled in `assets/js/v2.js` (section 15).
 
 | Form         | Endpoint                          | On success                |
 |--------------|-----------------------------------|---------------------------|
-| Contact      | `formspree.io/f/mkolkrqb`         | Inline confirmation       |
-| Registration | `formspree.io/f/xqpkbrwp`         | Redirects to `registered.html` |
-| Newsletter   | `formspree.io/f/mkolkrqb`         | Inline confirmation       |
-| Volunteers   | `formspree.io/f/mzezbggj`         | Shows the WhatsApp step   |
-| Opened Veil  | `formspree.io/f/mgavgvaz`         | Saves, then sends to Stripe or Flutterwave (see `assets/js/opened-veil.js`); both return to `opened-veil-confirmed` |
+| Contact      | Form collector (Apps Script)         | Inline confirmation       |
+| Registration | Form collector (Apps Script)         | Redirects to `registered.html` |
+| Newsletter   | Form collector (Apps Script)         | Inline confirmation       |
+| Volunteers   | Form collector (Apps Script)         | Shows the WhatsApp step   |
+| Opened Veil  | Form collector (Apps Script)         | Saves, then sends to Stripe or Flutterwave (see `assets/js/opened-veil.js`); both return to `opened-veil-confirmed` |
 
 The redirect is driven by `data-success-redirect` on the form element, with
 Formspree's `_next` field as a no-JavaScript fallback.

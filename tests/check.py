@@ -5,7 +5,7 @@ Functionality guard for apologeticsnigeria.com
   python3 tests/check.py snapshot   # record what the site does today -> tests/baseline.json
   python3 tests/check.py verify     # prove the current files still do all of it
 
-`verify` never sends real form submissions: Formspree is intercepted.
+`verify` never sends real form submissions: the form collector (Google Apps Script) is intercepted.
 Needs: pip install playwright  (and a Chromium; run `playwright install chromium` once)
 """
 from urllib.parse import quote_plus
@@ -21,7 +21,7 @@ VERCEL = json.load(open(os.path.join(ROOT, 'vercel.json')))
 REWRITES = {r['source']: r['destination'] for r in VERCEL.get('rewrites', [])}
 PORT = 8931
 BASE = f'http://localhost:{PORT}'
-FORM_HOST = 'formspree.io'
+FORM_HOST = 'script.google.com'
 
 # ── a local server that behaves like Vercel (cleanUrls + rewrites) ──────────
 class Vercelish(SimpleHTTPRequestHandler):
@@ -93,7 +93,7 @@ def open_page(ctx, url, errors):
 def block_noise(ctx, form_status=200):
     ctx.add_init_script('window.__OV_PREVIEW = 1')  # show the full Opened Veil page even before registration opens
     ctx.route(re.compile(r'https://(i\.ytimg\.com|fonts\.(googleapis|gstatic)\.com|www\.youtube-nocookie\.com)/.*'), lambda r: r.abort())
-    ctx.route(re.compile(r'https://formspree\.io/.*'),
+    ctx.route(re.compile(r'https://(script\.google\.com|formspree\.io)/.*'),
               lambda r: r.fulfill(status=form_status, content_type='application/json', body='{"ok":true,"next":"/thanks"}' if form_status == 200 else '{"error":"x"}'))
 
 def snapshot():
@@ -181,7 +181,7 @@ def behaviours(ctx, ctx_err, ctx_mobile, rep, base):
             if not pg.query_selector(f'#{fd["id"]}'):
                 rep.ok(False, f, f'form #{fd["id"]} is missing'); pg.close(); continue
             submit_and_read(pg, fd['id'])
-            rep.ok(len(posted) == 1, f, f'form #{fd["id"]}: expected 1 POST to Formspree, saw {len(posted)}')
+            rep.ok(len(posted) == 1, f, f'form #{fd["id"]}: expected 1 POST to the form collector, saw {len(posted)}')
             if posted:
                 body = posted[0].post_data or ''
                 for fld in fd['fields']:
@@ -199,7 +199,7 @@ def behaviours(ctx, ctx_err, ctx_mobile, rep, base):
             errs = []; pg = open_page(ctx_err, f'{BASE}/{f}', errs)
             submit_and_read(pg, fd['id'])
             txt = pg.evaluate('() => document.body.innerText')
-            rep.ok(bool(re.search(r'went wrong|try again|error', txt, re.I)), f, f'form #{fd["id"]}: no error message when Formspree fails')
+            rep.ok(bool(re.search(r'went wrong|try again|error', txt, re.I)), f, f'form #{fd["id"]}: no error message when the form collector fails')
             btn = pg.query_selector(f'#{fd["id"]} button[type=submit], #{fd["id"]} button:not([type])')
             rep.ok(btn is None or btn.is_enabled(), f, f'form #{fd["id"]}: submit button stays disabled after a failure')
             pg.close()

@@ -22,7 +22,7 @@ var OV = {
   flwLink: 'https://flutterwave.com/pay/qjh7xrxiukiq',  // fallback until the 2027 pages are added
   confirmUrl: 'https://apologeticsnigeria.com/opened-veil-confirmed',
   // form collector (ops/forms-collector). Keep in step with the action on #veilForm.
-  formsUrl: 'https://formspree.io/f/mgavgvaz'
+  formsUrl: 'https://script.google.com/macros/s/AKfycbyPkD0LK8Uy80QZG6CxMhm0t3mB5YlRzBf0LkkiEaYke51wlyYVdV5wTGJYA66SX19oaA/exec'
 };
 
 (function () {
