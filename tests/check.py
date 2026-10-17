@@ -8,6 +8,7 @@ Functionality guard for apologeticsnigeria.com
 `verify` never sends real form submissions: Formspree is intercepted.
 Needs: pip install playwright  (and a Chromium; run `playwright install chromium` once)
 """
+from urllib.parse import quote_plus
 import json, os, re, sys, threading, mimetypes, functools
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from urllib.parse import urlparse, unquote
@@ -112,7 +113,7 @@ def fill_form(pg, form):
     for el in form.query_selector_all('input,select,textarea'):
         t = (el.get_attribute('type') or el.evaluate('e => e.tagName')).lower()
         if not el.is_visible() and t not in ('checkbox', 'radio'): continue
-        if t in ('hidden', 'submit', 'button', 'file'): continue
+        if t in ('hidden', 'submit', 'button', 'file') or el.get_attribute('name') == '_gotcha': continue
         if t in ('checkbox', 'radio'):
             name = el.get_attribute('name')
             if not form.query_selector(f'input[name="{name}"]:checked'): el.evaluate('e => { e.checked = true; e.dispatchEvent(new Event("change",{bubbles:true})) }')
@@ -185,7 +186,8 @@ def behaviours(ctx, ctx_err, ctx_mobile, rep, base):
                 body = posted[0].post_data or ''
                 for fld in fd['fields']:
                     if fld['type'] == 'hidden' or fld['required']:
-                        rep.ok(f'name="{fld["name"]}"' in body, f, f'form #{fd["id"]}: field "{fld["name"]}" not sent')
+                        sent = f'name="{fld["name"]}"' in body or re.search(r'(^|&)' + re.escape(quote_plus(fld['name'])) + '=', body)
+                        rep.ok(bool(sent), f, f'form #{fd["id"]}: field "{fld["name"]}" not sent')
             if fd['redirect']:
                 rep.ok(fd['redirect'].replace('.html', '') in pg.url, f, f'form #{fd["id"]}: did not go to {fd["redirect"]} after success (at {pg.url})')
             else:

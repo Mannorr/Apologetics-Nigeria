@@ -418,12 +418,21 @@
     requestAnimationFrame(cloop);
   }
 
-  /* ─── 15. Forms (Formspree) — same behaviour as v1 ─── */
-  var send = function (form, onOk, onErr) {
-    return fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
-      .then(function (res) { if (res.ok) onOk(); else onErr('Something went wrong. Please try again.'); })
-      .catch(function () { onErr('Network error. Please try again.'); });
+  /* ─── 15. Forms: post to the form collector (ops/forms-collector/Code.gs), only report success once it confirms the save ─── */
+  var FORM_FAIL = 'We could not save your details. Please try again, or email info.apologeticsnigeria@gmail.com.';
+  var formBody = function (form) {
+    var b = new URLSearchParams(new FormData(form));
+    b.set('_form', form.id); b.set('_page', location.href); b.set('_js', '1');
+    return b;
   };
+  window.anSaveForm = function (url, body) {  // shared with opened-veil.js; resolves with the submission id, rejects if not saved
+    return fetch(url, { method: 'POST', body: body, headers: { Accept: 'application/json' } })
+      .then(function (res) { return res.json().catch(function () { return {}; }).then(function (j) { if (!res.ok || !j || j.ok !== true) throw new Error('not saved'); return j.id || ''; }); });
+  };
+  var send = function (form, onOk, onErr) {
+    return window.anSaveForm(form.action, formBody(form)).then(function () { onOk(); }, function () { onErr(FORM_FAIL); });
+  };
+  window.anFormBody = formBody;
   [['newsForm', 'news-status', 'news-submit'], ['contactForm', 'cf-status', 'cf-submit'], ['trainingForm', 'tr-status', 'tr-submit']].forEach(function (ids) {
     var form = document.getElementById(ids[0]); if (!form) return;
     var st = document.getElementById(ids[1]), btn = document.getElementById(ids[2]);
@@ -452,7 +461,7 @@
       send(vol, function () {
         vol.style.display = 'none'; vst.textContent = ''; done.classList.add('on');
         done.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
-      }, function () { vst.className = 'form-status mono err'; vst.textContent = 'Something went wrong. Please try again in a moment.'; vbtn.disabled = false; });
+      }, function (msg) { vst.className = 'form-status mono err'; vst.textContent = msg; vbtn.disabled = false; });
     });
   }
   // "Request the curriculum" on the partner page pre-selects that reason on the contact form

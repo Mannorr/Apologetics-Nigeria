@@ -1108,3 +1108,6 @@ body.deck-open .bar{transform:translateY(-110%)}
 .give-body .bank-note{color:var(--stone-2)}
 .bank-note b{color:var(--paper);font-weight:600}
 @media (max-width:520px){.bank-rows div{grid-template-columns:1fr;gap:.25rem}}
+
+/* spam trap on forms: hidden from people and screen readers, bots fill it */
+.hp-field{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0;pointer-events:none}

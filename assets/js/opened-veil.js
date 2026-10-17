@@ -20,7 +20,9 @@ var OV = {
   // Set each page's "Redirect after payment" to https://apologeticsnigeria.com/opened-veil-confirmed
   flw: { 3000: '', 5000: '', 10000: '', custom: 'https://flutterwave.com/pay/openedveil' },
   flwLink: 'https://flutterwave.com/pay/qjh7xrxiukiq',  // fallback until the 2027 pages are added
-  confirmUrl: 'https://apologeticsnigeria.com/opened-veil-confirmed'
+  confirmUrl: 'https://apologeticsnigeria.com/opened-veil-confirmed',
+  // form collector (ops/forms-collector). Keep in step with the action on #veilForm.
+  formsUrl: 'https://formspree.io/f/mgavgvaz'
 };
 
 (function () {
@@ -80,9 +82,9 @@ var OV = {
     var d = { ref: ref, amount: a, provider: provider(), name: form.elements.name.value.trim(), email: form.elements.email.value.trim(), whatsapp: form.elements.whatsapp.value.trim() };
     try { sessionStorage.setItem('ov-reg', JSON.stringify({ ref: ref, amount: a, provider: d.provider, first: d.name.split(/\s+/)[0].slice(0, 40), email: d.email })); } catch (err) {}
     st.className = 'form-status mono'; st.textContent = 'Saving your registration…'; btn.disabled = true;
-    fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
-      .then(function (res) {
-        if (!res.ok) throw new Error('bad');
+    // pay only once the collector confirms the registration is saved; on failure the details stay in the form
+    window.anSaveForm(form.action, window.anFormBody(form))
+      .then(function () {
         st.classList.add('ok');
         var flwTyped = d.provider === 'flutterwave' && !OV.flwPublicKey && !OV.flw[String(d.amount)];
         st.textContent = 'Thank you, you are registered (ref ' + ref + '). ' + (flwTyped
@@ -90,7 +92,7 @@ var OV = {
           : 'Taking you to secure payment…');
         setTimeout(function () { go(d); }, flwTyped ? 3200 : 1600);
       })
-      .catch(function () { st.className = 'form-status mono err'; st.textContent = 'Something went wrong saving your registration. Please try again.'; btn.disabled = false; refresh(); });
+      .catch(function () { st.className = 'form-status mono err'; st.textContent = 'We could not save your registration, so you have not been sent to pay. Please try again, or email info.apologeticsnigeria@gmail.com.'; btn.disabled = false; refresh(); });
   });
 })();
 
@@ -124,7 +126,8 @@ var OV = {
     fd.append('payment_status', state === 'paid' ? 'Paid (returned from ' + prov + ')' : 'Not completed (' + status + ')');
     fd.append('ref', reg.ref || q.get('tx_ref') || ''); fd.append('email', reg.email || ''); fd.append('amount', reg.amount || '');
     fd.append('provider', prov); fd.append('stripe_session', q.get('session_id') || ''); fd.append('flutterwave_transaction', q.get('transaction_id') || '');
-    fetch('https://formspree.io/f/mgavgvaz', { method: 'POST', body: fd, headers: { Accept: 'application/json' } }).then(function () { try { sessionStorage.setItem(key, '1'); } catch (e) {} }).catch(function () {});
+    fd.append('_form', 'veilReturn'); fd.append('_page', location.href); fd.append('_js', '1');
+    window.anSaveForm(OV.formsUrl, new URLSearchParams(fd)).then(function () { try { sessionStorage.setItem(key, '1'); } catch (e) {} }).catch(function () {});
   }
 })();
 
